@@ -63,6 +63,15 @@ class DestinationOut(BaseModel):
     airport_iata: str
     tags: list[str]
     theme: str
+    latitude: float
+    longitude: float
+    timezone: str
+    best_months: list[int]
+    currency: str | None
+    languages: list[str]
+    origin: str | None = None
+    distance_km: int | None = None
+    approx_flight_minutes: int | None = None
 
 
 # --- flight search -------------------------------------------------------

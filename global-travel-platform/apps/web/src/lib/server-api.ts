@@ -28,11 +28,14 @@ export async function isDemoMode(): Promise<boolean> {
   return health?.demo_mode ?? true;
 }
 
+/** Destinations with approximate flight times from the home hub (YUL). */
 export async function getDestinations(locale: string): Promise<Destination[]> {
-  return (await apiGet<Destination[]>(`/api/v1/destinations?locale=${locale}`, 300)) ?? [];
+  return (
+    (await apiGet<Destination[]>(`/api/v1/destinations?locale=${locale}&origin=YUL`, 300)) ?? []
+  );
 }
 
 export async function getDestination(slug: string, locale: string): Promise<Destination | null> {
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) return null;
-  return apiGet<Destination>(`/api/v1/destinations/${slug}?locale=${locale}`, 300);
+  return apiGet<Destination>(`/api/v1/destinations/${slug}?locale=${locale}&origin=YUL`, 300);
 }

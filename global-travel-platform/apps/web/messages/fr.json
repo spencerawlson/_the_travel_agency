@@ -27,14 +27,14 @@
     "bannerShort": "Mode démo, tarifs fictifs"
   },
   "home": {
-    "eyebrow": "La recherche de vols pour les voyageurs du monde entier",
-    "title": "Trouvez votre prochain vol, puis réservez directement auprès du vendeur.",
-    "subtitle": "Comparez les offres de nos partenaires voyage en une seule recherche. Nous sommes un service de comparaison et de recommandation : nous ne prenons jamais votre paiement.",
+    "eyebrow": "Le monde est plus proche que vous ne le pensez",
+    "title": "Où vous réveillerez-vous la prochaine fois?",
+    "subtitle": "Plages turquoise, cafés de vieille ville, aurores boréales. Comparez les vols de nos partenaires en une seule recherche, puis réservez directement auprès du vendeur.",
     "trust1": "Aucuns frais de réservation facturés par nous",
     "trust2": "Transparence sur nos partenaires et nos commissions",
     "trust3": "Offert en français et en anglais",
-    "destinationsTitle": "Destinations populaires",
-    "destinationsSubtitle": "Quelques idées pour commencer.",
+    "destinationsTitle": "Des lieux dont on tombe amoureux",
+    "destinationsSubtitle": "Des idées choisies avec soin, avec la durée de vol approximative depuis Montréal.",
     "viewAll": "Voir toutes les destinations",
     "howTitle": "Comment ça fonctionne",
     "how1Title": "Recherchez",
@@ -42,7 +42,29 @@
     "how2Title": "Comparez",
     "how2": "Voyez les prix, les durées et les escales côte à côte.",
     "how3Title": "Réservez auprès du vendeur",
-    "how3": "Vous finalisez votre réservation sur le site de la compagnie aérienne ou de l'agence."
+    "how3": "Vous finalisez votre réservation sur le site de la compagnie aérienne ou de l'agence.",
+    "globeLabel": "Globe en rotation montrant les trajets au départ de Montréal vers nos destinations vedettes",
+    "globeCaption": "Trajets au départ de Montréal · faites glisser pour tourner",
+    "moodTitle": "Quel genre de voyage?",
+    "moodSubtitle": "Choisissez une envie, nous vous suggérons les lieux.",
+    "moods": {
+      "beach": {
+        "title": "Soleil et mer",
+        "blurb": "Eau chaude, sable blanc, longues journées."
+      },
+      "city": {
+        "title": "Escapades urbaines",
+        "blurb": "Musées, marchés et gratte-ciel."
+      },
+      "nature": {
+        "title": "Grand air",
+        "blurb": "Montagnes, océans et espaces ouverts."
+      },
+      "culture": {
+        "title": "Saveurs et culture",
+        "blurb": "Histoire, gastronomie et vieilles rues."
+      }
+    }
   },
   "search": {
     "formLabel": "Recherche de vols",
@@ -139,7 +161,20 @@
     "searchFlights": "Rechercher des vols vers {name}",
     "airport": "Aéroport principal : {iata}",
     "back": "Toutes les destinations",
-    "notFound": "Nous n'avons pas trouvé cette destination."
+    "notFound": "Nous n'avons pas trouvé cette destination.",
+    "flightChip": "{time} depuis Montréal",
+    "filterLabel": "Type de voyage",
+    "allMoods": "Toutes les destinations",
+    "facts": {
+      "title": "Bon à savoir",
+      "bestTime": "Meilleure période",
+      "flightTime": "Vol depuis Montréal",
+      "flightValue": "environ {time} sans escale",
+      "flightNote": "La durée de vol est une estimation fondée sur la distance; les horaires réels varient selon la compagnie et le trajet.",
+      "localTime": "Heure locale",
+      "currency": "Devise",
+      "languages": "Langues"
+    }
   },
   "deals": {
     "title": "Aubaines voyage",
@@ -193,7 +228,8 @@
     "explore": "Explorer",
     "company": "Entreprise",
     "legal": "Mentions légales",
-    "rights": "© {year} {entity}. Tous droits réservés."
+    "rights": "© {year} {entity}. Tous droits réservés.",
+    "credits": "Crédits photo"
   },
   "notFound": {
     "title": "Page introuvable",
@@ -292,5 +328,12 @@
       "rejected": "Rejetée",
       "paid": "Payée"
     }
+  },
+  "credits": {
+    "title": "Crédits photo",
+    "intro": "Les photographies de ce site sont l'œuvre de photographes talentueux qui partagent leur travail sous licence libre sur Wikimedia Commons. Merci!",
+    "by": "Photo : {author}",
+    "source": "Voir l'original sur Wikimedia Commons",
+    "note": "Les photos ont été redimensionnées et compressées pour le Web; aucune autre modification n'a été apportée. Chaque licence s'applique uniquement à sa photo."
   }
 }

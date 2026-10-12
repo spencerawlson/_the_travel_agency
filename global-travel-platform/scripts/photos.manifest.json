@@ -1,0 +1,80 @@
+{
+  "paris": {
+    "file": "File:Paris - The Eiffel Tower in spring - 2307.jpg",
+    "alt_en": "The Eiffel Tower framed by spring blossoms in Paris",
+    "alt_fr": "La tour Eiffel encadrée de fleurs printanières à Paris",
+    "focus": "50% 40%"
+  },
+  "london": {
+    "file": "File:Tower Bridge golden hour.jpg",
+    "alt_en": "Tower Bridge over the River Thames under a blue sky",
+    "alt_fr": "Le Tower Bridge sur la Tamise sous un ciel bleu",
+    "focus": "50% 55%"
+  },
+  "new-york": {
+    "file": "File:Lower Manhattan from Governors Island with a fishing boat (46294p).jpg",
+    "alt_en": "The Lower Manhattan skyline seen across the water on a sunny day",
+    "alt_fr": "Les gratte-ciel du sud de Manhattan vus depuis l'eau par une journée ensoleillée",
+    "focus": "50% 50%"
+  },
+  "tokyo": {
+    "file": "File:Minato City, Tokyo, Japan.jpg",
+    "alt_en": "Tokyo skyline with Tokyo Tower in golden evening light",
+    "alt_fr": "Les gratte-ciel de Tokyo et la tour de Tokyo dans la lumière dorée du soir",
+    "focus": "45% 50%"
+  },
+  "barcelona": {
+    "file": "File:Sagrada Familia Barcelona 2.jpg",
+    "alt_en": "The spires of the Sagrada Família against a deep blue sky in Barcelona",
+    "alt_fr": "Les flèches de la Sagrada Família sur un ciel bleu à Barcelone",
+    "focus": "50% 35%"
+  },
+  "lisbon": {
+    "file": "File:Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg",
+    "alt_en": "A yellow vintage tram passing pink buildings in Lisbon's Alfama district",
+    "alt_fr": "Un tramway jaune d'époque devant des façades roses dans l'Alfama, à Lisbonne",
+    "focus": "40% 60%"
+  },
+  "cancun": {
+    "file": "File:Cancun Beach.jpg",
+    "alt_en": "Turquoise Caribbean water and a white-sand beach in Cancún",
+    "alt_fr": "Eau turquoise des Caraïbes et plage de sable blanc à Cancún",
+    "focus": "50% 60%"
+  },
+  "reykjavik": {
+    "file": "File:Calle Skólavörðustígur, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 111.jpg",
+    "alt_en": "Skólavörðustígur street leading up to Hallgrímskirkja church in Reykjavík",
+    "alt_fr": "La rue Skólavörðustígur menant à l'église Hallgrímskirkja, à Reykjavik",
+    "focus": "65% 40%"
+  },
+  "marrakech": {
+    "file": "File:Babuchas 02 -- 2014 -- Marrakech, Marruecos.jpg",
+    "alt_en": "Rows of colourful leather babouche slippers in a Marrakech souk",
+    "alt_fr": "Rangées de babouches en cuir colorées dans un souk de Marrakech",
+    "focus": "50% 50%"
+  },
+  "vancouver": {
+    "file": "File:Kits-12.jpg",
+    "alt_en": "English Bay with downtown Vancouver and the North Shore mountains",
+    "alt_fr": "La baie English Bay, le centre-ville de Vancouver et les montagnes de la rive nord",
+    "focus": "50% 50%"
+  },
+  "rome": {
+    "file": "File:Colosseum in Rome (3).jpg",
+    "alt_en": "The Colosseum in Rome on a sunny day",
+    "alt_fr": "Le Colisée de Rome par une journée ensoleillée",
+    "focus": "45% 55%"
+  },
+  "bangkok": {
+    "file": "File:Phra Prang Wat Arun during day.jpg",
+    "alt_en": "Wat Arun temple across the Chao Phraya River in Bangkok",
+    "alt_fr": "Le temple Wat Arun au bord du fleuve Chao Phraya, à Bangkok",
+    "focus": "50% 45%"
+  },
+  "mood-beach": {
+    "file": "File:1000 Three domes of Oia in Santorini Photo by Giles Laurent.jpg",
+    "alt_en": "Whitewashed churches with blue domes above the sea in Oia, Santorini",
+    "alt_fr": "Églises blanches aux dômes bleus au-dessus de la mer à Oia, Santorin",
+    "focus": "60% 45%"
+  }
+}

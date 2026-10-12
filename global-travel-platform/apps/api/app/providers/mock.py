@@ -12,7 +12,6 @@
 from __future__ import annotations
 
 import hashlib
-import math
 import random
 from datetime import UTC, date, datetime, time, timedelta
 from decimal import ROUND_HALF_UP, Decimal
@@ -31,6 +30,7 @@ from app.providers.base import (
     Money,
     TripType,
 )
+from app.services.geo import haversine_km
 
 DEMO_CARRIERS = [
     ("DMA", "Demo Aurora Air"),
@@ -49,12 +49,7 @@ _CABIN_MULTIPLIER = {
 
 
 def great_circle_km(a: AirportRef, b: AirportRef) -> float:
-    lat1, lon1, lat2, lon2 = map(math.radians, (a.latitude, a.longitude, b.latitude, b.longitude))
-    h = (
-        math.sin((lat2 - lat1) / 2) ** 2
-        + math.cos(lat1) * math.cos(lat2) * math.sin((lon2 - lon1) / 2) ** 2
-    )
-    return 2 * 6371.0 * math.asin(math.sqrt(h))
+    return haversine_km(a.latitude, a.longitude, b.latitude, b.longitude)
 
 
 def _seed(*parts: object) -> int:

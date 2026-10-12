@@ -45,6 +45,16 @@ export interface Destination {
   airport_iata: string;
   tags: string[];
   theme: string;
+  latitude: number;
+  longitude: number;
+  timezone: string; // IANA
+  best_months: number[]; // 1-12
+  currency: string | null; // ISO 4217
+  languages: string[]; // BCP 47 language codes
+  /** Present when requested with ?origin=IATA. Approximate, for display only. */
+  origin: string | null;
+  distance_km: number | null;
+  approx_flight_minutes: number | null;
 }
 
 export interface FlightSearchRequest {

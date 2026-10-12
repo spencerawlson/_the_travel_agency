@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -9,6 +10,18 @@ import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { routing } from "@/i18n/routing";
 import { getSiteConfig } from "@/lib/site";
+
+// Self-hosted at build time by next/font (no runtime requests to Google).
+const heading = Fraunces({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-heading",
+  display: "swap",
+});
+const body = Plus_Jakarta_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export async function generateMetadata({
   params,
@@ -39,7 +52,7 @@ export default async function LocaleLayout({
   const site = getSiteConfig();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className={`${heading.variable} ${body.variable}`}>
       <body className="flex min-h-dvh flex-col font-sans">
         <NextIntlClientProvider>
           <ThemeProvider>

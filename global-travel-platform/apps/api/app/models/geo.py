@@ -10,6 +10,7 @@ from sqlalchemy import (
     Integer,
     String,
     UniqueConstraint,
+    text,
 )
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -89,7 +90,13 @@ class Destination(TimestampMixin, Base):
     translations: Mapped[dict] = mapped_column(JSON, nullable=False)
     tags: Mapped[list] = mapped_column(JSON, nullable=False, default=list)
     theme: Mapped[str] = mapped_column(String(32), nullable=False, default="ocean")
+    # Language-neutral travel facts: {"best_months": [4, 5], "currency": "EUR",
+    # "languages": ["fr"]}. Month/currency/language names are localised by the web app.
+    facts: Mapped[dict] = mapped_column(
+        JSON, nullable=False, default=dict, server_default=text("'{}'")
+    )
     is_published: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
     sort_order: Mapped[int] = mapped_column(Integer, nullable=False, default=100)
 
     city: Mapped[City] = relationship()
+    airport: Mapped[Airport] = relationship()

@@ -27,6 +27,7 @@ export async function Footer({ site }: { site: SiteConfig }) {
           links={[
             ["/about", nav("about")],
             ["/contact", nav("contact")],
+            ["/credits", t("credits")],
           ]}
         />
         <FooterColumn

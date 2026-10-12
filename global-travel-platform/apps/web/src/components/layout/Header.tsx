@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Link } from "@/i18n/navigation";
 import { DemoBanner } from "./DemoBanner";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -17,14 +18,11 @@ const NAV_ITEMS = [
 export async function Header({ siteName }: { siteName: string }) {
   const t = await getTranslations("nav");
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line/70 bg-canvas/80 backdrop-blur-md">
       <DemoBanner />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 font-display text-xl font-semibold">
-          <span aria-hidden className="text-brand-500">
-            ✦
-          </span>
-          {siteName}
+        <Link href="/" aria-label={siteName} className="text-ink">
+          <Logo name={siteName} />
         </Link>
         <nav aria-label={t("primary")} className="hidden md:block">
           <ul className="flex items-center gap-1">

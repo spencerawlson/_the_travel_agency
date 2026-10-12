@@ -27,14 +27,14 @@
     "bannerShort": "Demo mode, sample fares only"
   },
   "home": {
-    "eyebrow": "Flight search for travellers everywhere",
-    "title": "Find your next flight, then book directly with the seller.",
-    "subtitle": "Compare offers from travel partners in one search. We are a comparison and referral service; we never take your payment.",
+    "eyebrow": "The world is closer than you think",
+    "title": "Where will you wake up next?",
+    "subtitle": "Turquoise beaches, old-town cafés, northern lights. Compare flights from travel partners in one search, then book directly with the seller.",
     "trust1": "No booking fees charged by us",
     "trust2": "Transparent about partners and commissions",
     "trust3": "Available in English and French",
-    "destinationsTitle": "Popular destinations",
-    "destinationsSubtitle": "Ideas to get you started.",
+    "destinationsTitle": "Places to fall in love with",
+    "destinationsSubtitle": "Hand-picked ideas, with approximate flight times from Montréal.",
     "viewAll": "View all destinations",
     "howTitle": "How it works",
     "how1Title": "Search",
@@ -42,7 +42,29 @@
     "how2Title": "Compare",
     "how2": "See prices, durations and stops side by side.",
     "how3Title": "Book with the seller",
-    "how3": "You complete your booking on the airline's or agency's website."
+    "how3": "You complete your booking on the airline's or agency's website.",
+    "globeLabel": "Rotating globe with flight routes from Montréal to our featured destinations",
+    "globeCaption": "Routes from Montréal · drag to spin",
+    "moodTitle": "What kind of trip?",
+    "moodSubtitle": "Pick a feeling, we'll suggest the places.",
+    "moods": {
+      "beach": {
+        "title": "Sun & sea",
+        "blurb": "Warm water, white sand, long days."
+      },
+      "city": {
+        "title": "City breaks",
+        "blurb": "Museums, markets and skylines."
+      },
+      "nature": {
+        "title": "Wild & green",
+        "blurb": "Mountains, oceans and open air."
+      },
+      "culture": {
+        "title": "Food & culture",
+        "blurb": "History, flavours and old streets."
+      }
+    }
   },
   "search": {
     "formLabel": "Flight search",
@@ -134,12 +156,25 @@
   },
   "destinations": {
     "title": "Destinations",
-    "subtitle": "Inspiration for your next trip. Flight prices come from our partners at search time.",
+    "subtitle": "Inspiration for your next trip. Flight prices come from our partners when you search.",
     "highlights": "Highlights",
     "searchFlights": "Search flights to {name}",
     "airport": "Main airport: {iata}",
     "back": "All destinations",
-    "notFound": "We couldn't find that destination."
+    "notFound": "We couldn't find that destination.",
+    "flightChip": "{time} from Montréal",
+    "filterLabel": "Trip type",
+    "allMoods": "All destinations",
+    "facts": {
+      "title": "Good to know",
+      "bestTime": "Best time to go",
+      "flightTime": "Flight from Montréal",
+      "flightValue": "about {time} nonstop",
+      "flightNote": "Flight time is an estimate based on distance; actual schedules vary by airline and route.",
+      "localTime": "Local time",
+      "currency": "Currency",
+      "languages": "Languages"
+    }
   },
   "deals": {
     "title": "Travel deals",
@@ -193,7 +228,8 @@
     "explore": "Explore",
     "company": "Company",
     "legal": "Legal",
-    "rights": "© {year} {entity}. All rights reserved."
+    "rights": "© {year} {entity}. All rights reserved.",
+    "credits": "Photo credits"
   },
   "notFound": {
     "title": "Page not found",
@@ -292,5 +328,12 @@
       "rejected": "Rejected",
       "paid": "Paid"
     }
+  },
+  "credits": {
+    "title": "Photo credits",
+    "intro": "The photographs on this site are by talented photographers who share their work under free licences on Wikimedia Commons. Thank you!",
+    "by": "Photo by {author}",
+    "source": "View original on Wikimedia Commons",
+    "note": "Photos were resized and compressed for the web; no other changes were made. Each licence applies to its photo only."
   }
 }

@@ -1,0 +1,210 @@
+{
+  "paris": {
+    "src": "/photos/paris-1600.webp",
+    "srcSmall": "/photos/paris-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 40%",
+    "alt": {
+      "en": "The Eiffel Tower framed by spring blossoms in Paris",
+      "fr": "La tour Eiffel encadrée de fleurs printanières à Paris"
+    },
+    "title": "Paris - The Eiffel Tower in spring - 2307.jpg",
+    "author": "Jorge Royan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Paris_-_The_Eiffel_Tower_in_spring_-_2307.jpg"
+  },
+  "london": {
+    "src": "/photos/london-1600.webp",
+    "srcSmall": "/photos/london-800.webp",
+    "width": 1920,
+    "height": 1333,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Tower Bridge over the River Thames under a blue sky",
+      "fr": "Le Tower Bridge sur la Tamise sous un ciel bleu"
+    },
+    "title": "Tower Bridge golden hour.jpg",
+    "author": "The Cosmonaut",
+    "license": "CC BY-SA 2.5 ca",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/ca/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_golden_hour.jpg"
+  },
+  "new-york": {
+    "src": "/photos/new-york-1600.webp",
+    "srcSmall": "/photos/new-york-800.webp",
+    "width": 1920,
+    "height": 876,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Lower Manhattan skyline seen across the water on a sunny day",
+      "fr": "Les gratte-ciel du sud de Manhattan vus depuis l'eau par une journée ensoleillée"
+    },
+    "title": "Lower Manhattan from Governors Island with a fishing boat (46294p).jpg",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Governors_Island_with_a_fishing_boat_(46294p).jpg"
+  },
+  "tokyo": {
+    "src": "/photos/tokyo-1600.webp",
+    "srcSmall": "/photos/tokyo-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "45% 50%",
+    "alt": {
+      "en": "Tokyo skyline with Tokyo Tower in golden evening light",
+      "fr": "Les gratte-ciel de Tokyo et la tour de Tokyo dans la lumière dorée du soir"
+    },
+    "title": "Minato City, Tokyo, Japan.jpg",
+    "author": "David Kernan",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Minato_City,_Tokyo,_Japan.jpg"
+  },
+  "barcelona": {
+    "src": "/photos/barcelona-1600.webp",
+    "srcSmall": "/photos/barcelona-800.webp",
+    "width": 1920,
+    "height": 1293,
+    "focus": "50% 35%",
+    "alt": {
+      "en": "The spires of the Sagrada Família against a deep blue sky in Barcelona",
+      "fr": "Les flèches de la Sagrada Família sur un ciel bleu à Barcelone"
+    },
+    "title": "Sagrada Familia Barcelona 2.jpg",
+    "author": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sagrada_Familia_Barcelona_2.jpg"
+  },
+  "lisbon": {
+    "src": "/photos/lisbon-1600.webp",
+    "srcSmall": "/photos/lisbon-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "40% 60%",
+    "alt": {
+      "en": "A yellow vintage tram passing pink buildings in Lisbon's Alfama district",
+      "fr": "Un tramway jaune d'époque devant des façades roses dans l'Alfama, à Lisbonne"
+    },
+    "title": "Lissabon - Alfama - Largo de Santa Luzia - Streetcar - 2.jpg",
+    "author": "Ingo Mehling",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lissabon_-_Alfama_-_Largo_de_Santa_Luzia_-_Streetcar_-_2.jpg"
+  },
+  "cancun": {
+    "src": "/photos/cancun-1600.webp",
+    "srcSmall": "/photos/cancun-800.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 60%",
+    "alt": {
+      "en": "Turquoise Caribbean water and a white-sand beach in Cancún",
+      "fr": "Eau turquoise des Caraïbes et plage de sable blanc à Cancún"
+    },
+    "title": "Cancun Beach.jpg",
+    "author": "Keith Pomakis",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Cancun_Beach.jpg"
+  },
+  "reykjavik": {
+    "src": "/photos/reykjavik-1600.webp",
+    "srcSmall": "/photos/reykjavik-800.webp",
+    "width": 1920,
+    "height": 1192,
+    "focus": "65% 40%",
+    "alt": {
+      "en": "Skólavörðustígur street leading up to Hallgrímskirkja church in Reykjavík",
+      "fr": "La rue Skólavörðustígur menant à l'église Hallgrímskirkja, à Reykjavik"
+    },
+    "title": "Calle Skólavörðustígur, Reikiavik, Distrito de la Capital, Islandia, 2014-08-13, DD 111.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Calle_Sk%C3%B3lav%C3%B6r%C3%B0ust%C3%ADgur,_Reikiavik,_Distrito_de_la_Capital,_Islandia,_2014-08-13,_DD_111.jpg"
+  },
+  "marrakech": {
+    "src": "/photos/marrakech-1600.webp",
+    "srcSmall": "/photos/marrakech-800.webp",
+    "width": 1920,
+    "height": 1375,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Rows of colourful leather babouche slippers in a Marrakech souk",
+      "fr": "Rangées de babouches en cuir colorées dans un souk de Marrakech"
+    },
+    "title": "Babuchas 02 -- 2014 -- Marrakech, Marruecos.jpg",
+    "author": "I.Barrios & J.Ligero",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Babuchas_02_--_2014_--_Marrakech,_Marruecos.jpg"
+  },
+  "vancouver": {
+    "src": "/photos/vancouver-1600.webp",
+    "srcSmall": "/photos/vancouver-800.webp",
+    "width": 1920,
+    "height": 1035,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "English Bay with downtown Vancouver and the North Shore mountains",
+      "fr": "La baie English Bay, le centre-ville de Vancouver et les montagnes de la rive nord"
+    },
+    "title": "Kits-12.jpg",
+    "author": "Xicotencatl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kits-12.jpg"
+  },
+  "rome": {
+    "src": "/photos/rome-1600.webp",
+    "srcSmall": "/photos/rome-800.webp",
+    "width": 1920,
+    "height": 1094,
+    "focus": "45% 55%",
+    "alt": {
+      "en": "The Colosseum in Rome on a sunny day",
+      "fr": "Le Colisée de Rome par une journée ensoleillée"
+    },
+    "title": "Colosseum in Rome (3).jpg",
+    "author": "Tournasol7",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome_(3).jpg"
+  },
+  "bangkok": {
+    "src": "/photos/bangkok-1600.webp",
+    "srcSmall": "/photos/bangkok-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 45%",
+    "alt": {
+      "en": "Wat Arun temple across the Chao Phraya River in Bangkok",
+      "fr": "Le temple Wat Arun au bord du fleuve Chao Phraya, à Bangkok"
+    },
+    "title": "Phra Prang Wat Arun during day.jpg",
+    "author": "This Photo was taken by Supanut Arunoprayote.\n\nFeel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Phra_Prang_Wat_Arun_during_day.jpg"
+  },
+  "mood-beach": {
+    "src": "/photos/mood-beach-1600.webp",
+    "srcSmall": "/photos/mood-beach-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "60% 45%",
+    "alt": {
+      "en": "Whitewashed churches with blue domes above the sea in Oia, Santorini",
+      "fr": "Églises blanches aux dômes bleus au-dessus de la mer à Oia, Santorin"
+    },
+    "title": "1000 Three domes of Oia in Santorini Photo by Giles Laurent.jpg",
+    "author": "Giles Laurent",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1000_Three_domes_of_Oia_in_Santorini_Photo_by_Giles_Laurent.jpg"
+  }
+}

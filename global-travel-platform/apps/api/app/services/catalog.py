@@ -10,15 +10,24 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload
 
 from app.core.errors import AppError, NotFoundError
-from app.models import Destination, ExchangeRateRecord
+from app.models import Airport, Destination, ExchangeRateRecord
 from app.providers.base import CabinClass, FlightSearchRequest, TripType
 from app.providers.registry import get_registry
 from app.schemas.public import DestinationOut
+from app.services.geo import approx_nonstop_minutes, haversine_km
 from app.services.search import ensure_currency, resolve_airports
 
 
-def destination_out(d: Destination, locale: str) -> DestinationOut:
+def destination_out(d: Destination, locale: str, origin: Airport | None = None) -> DestinationOut:
     t = d.translations.get(locale) or d.translations["en"]
+    facts = d.facts or {}
+    distance: int | None = None
+    minutes: int | None = None
+    if origin is not None and origin.iata_code != d.airport_iata:
+        km = haversine_km(
+            origin.latitude, origin.longitude, d.airport.latitude, d.airport.longitude
+        )
+        distance, minutes = round(km), approx_nonstop_minutes(km)
     return DestinationOut(
         slug=d.slug,
         name=t["name"],
@@ -30,13 +39,22 @@ def destination_out(d: Destination, locale: str) -> DestinationOut:
         airport_iata=d.airport_iata,
         tags=list(d.tags),
         theme=d.theme,
+        latitude=d.airport.latitude,
+        longitude=d.airport.longitude,
+        timezone=d.airport.timezone,
+        best_months=list(facts.get("best_months", [])),
+        currency=facts.get("currency"),
+        languages=list(facts.get("languages", [])),
+        origin=origin.iata_code if origin is not None else None,
+        distance_km=distance,
+        approx_flight_minutes=minutes,
     )
 
 
 async def list_destinations(session: AsyncSession) -> list[Destination]:
     stmt = (
         select(Destination)
-        .options(joinedload(Destination.city))
+        .options(joinedload(Destination.city), joinedload(Destination.airport))
         .where(Destination.is_published.is_(True))
         .order_by(Destination.sort_order, Destination.slug)
     )
@@ -46,13 +64,20 @@ async def list_destinations(session: AsyncSession) -> list[Destination]:
 async def get_destination(session: AsyncSession, slug: str) -> Destination:
     stmt = (
         select(Destination)
-        .options(joinedload(Destination.city))
+        .options(joinedload(Destination.city), joinedload(Destination.airport))
         .where(Destination.slug == slug, Destination.is_published.is_(True))
     )
     dest = (await session.scalars(stmt)).first()
     if dest is None:
         raise NotFoundError("Destination not found")
     return dest
+
+
+async def get_origin_airport(session: AsyncSession, iata: str | None) -> Airport | None:
+    if not iata:
+        return None
+    stmt = select(Airport).where(Airport.iata_code == iata.upper(), Airport.is_active.is_(True))
+    return (await session.scalars(stmt)).first()
 
 
 async def demo_deals(

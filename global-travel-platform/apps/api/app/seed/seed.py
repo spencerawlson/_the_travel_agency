@@ -136,25 +136,37 @@ async def seed_reference_data(
         iata: cid
         for iata, cid in (await session.execute(select(Airport.iata_code, Airport.city_id)))
     }
-    existing_dest = set((await session.scalars(select(Destination.slug))).all())
-    added = 0
+    existing_dest = {d.slug: d for d in (await session.scalars(select(Destination))).all()}
+    added = refreshed = 0
     destinations = json.loads((DATA / "destinations.json").read_text(encoding="utf-8"))
     for order, dest in enumerate(destinations):
-        if dest["slug"] in existing_dest or dest["airport"] not in airport_city:
+        if dest["airport"] not in airport_city:
             continue
-        session.add(
-            Destination(
-                slug=dest["slug"],
-                city_id=airport_city[dest["airport"]],
-                airport_iata=dest["airport"],
-                translations={"en": dest["en"], "fr": dest["fr"]},
-                tags=dest["tags"],
-                theme=dest["theme"],
-                sort_order=order,
+        content = {
+            "translations": {"en": dest["en"], "fr": dest["fr"]},
+            "tags": dest["tags"],
+            "theme": dest["theme"],
+            "facts": dest.get("facts", {}),
+            "sort_order": order,
+        }
+        row = existing_dest.get(dest["slug"])
+        if row is None:
+            session.add(
+                Destination(
+                    slug=dest["slug"],
+                    city_id=airport_city[dest["airport"]],
+                    airport_iata=dest["airport"],
+                    **content,
+                )
             )
-        )
-        added += 1
+            added += 1
+        else:
+            # Editorial content is versioned in the repo; keep the DB in sync.
+            for key, value in content.items():
+                setattr(row, key, value)
+            refreshed += 1
     counts["destinations"] = added
+    counts["destinations_refreshed"] = refreshed
 
     existing_settings = set((await session.scalars(select(AppSetting.key))).all())
     for key, (value, desc) in DEFAULT_SETTINGS.items():

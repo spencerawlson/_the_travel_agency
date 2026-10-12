@@ -135,8 +135,17 @@ async def currencies(session: DB, response: Response) -> list[CurrencyOut]:
 
 
 @router.get("/destinations", response_model=list[DestinationOut], tags=["reference"])
-async def destinations(session: DB, locale: Locale = "en") -> list[DestinationOut]:
-    return [catalog.destination_out(d, locale) for d in await catalog.list_destinations(session)]
+async def destinations(
+    session: DB,
+    locale: Locale = "en",
+    origin: Annotated[str | None, Query(pattern=r"^[A-Za-z]{3}$")] = None,
+) -> list[DestinationOut]:
+    """`origin` (IATA) adds an approximate distance and nonstop flight time."""
+    from_airport = await catalog.get_origin_airport(session, origin)
+    return [
+        catalog.destination_out(d, locale, from_airport)
+        for d in await catalog.list_destinations(session)
+    ]
 
 
 @router.get("/destinations/{slug}", response_model=DestinationOut, tags=["reference"])
@@ -144,8 +153,12 @@ async def destination(
     session: DB,
     slug: Annotated[str, Path(pattern=r"^[a-z0-9-]{1,80}$")],
     locale: Locale = "en",
+    origin: Annotated[str | None, Query(pattern=r"^[A-Za-z]{3}$")] = None,
 ) -> DestinationOut:
-    return catalog.destination_out(await catalog.get_destination(session, slug), locale)
+    from_airport = await catalog.get_origin_airport(session, origin)
+    return catalog.destination_out(
+        await catalog.get_destination(session, slug), locale, from_airport
+    )
 
 
 @router.get(
