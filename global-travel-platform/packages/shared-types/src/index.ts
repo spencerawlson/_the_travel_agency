@@ -7,7 +7,8 @@
 export type Locale = "en" | "fr";
 export type TripType = "one_way" | "round_trip";
 export type CabinClass = "economy" | "premium_economy" | "business" | "first";
-export type DisclaimerCode = "demo_data" | "prices_may_change" | "seller_responsible";
+export type DisclaimerCode =
+  "demo_data" | "cached_prices" | "prices_may_change" | "seller_responsible";
 
 export interface ApiErrorBody {
   error: {
@@ -123,7 +124,12 @@ export interface FlightOffer {
   seller_name: string;
   seller_type: "airline" | "agency" | "demo";
   expires_at: string;
+  /** Codes: demo_fare, cached_fare, different_dates, economy_only, seller_on_partner. */
   notes: string[];
+  /** "total" = whole party; "per_adult" = one adult (cached fares). */
+  price_basis: "total" | "per_adult";
+  /** False while partner referrals are switched off. */
+  bookable: boolean;
 }
 
 export interface ProviderStatus {

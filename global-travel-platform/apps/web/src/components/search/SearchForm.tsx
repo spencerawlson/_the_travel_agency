@@ -2,11 +2,11 @@
 
 import type { Airport } from "@gtp/shared-types";
 import { Button } from "@gtp/ui";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
-import { IATA_ORIGIN } from "@/content/origin-airports";
 import {
+  type AirportChoice,
   addDays,
   CABINS,
   CURRENCIES,
@@ -23,6 +23,8 @@ import { PassengerPicker } from "./PassengerPicker";
 
 interface Props {
   initial?: SearchFormState;
+  /** Pre-filled origin when no `initial` is given (e.g. the visitor's location). */
+  defaultOrigin?: AirportChoice;
   compact?: boolean;
   /** Injectable for tests. */
   onSubmitValid?: (form: SearchFormState) => void;
@@ -33,21 +35,25 @@ const fieldClass =
   "w-full rounded-xl border border-line bg-surface-1 px-3 py-3 text-base text-ink focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 focus:outline-none aria-[invalid=true]:border-red-500";
 const labelClass = "mb-1 block text-xs font-semibold tracking-wide text-ink-muted uppercase";
 
-export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirports }: Props) {
+/** Persist the visitor's chosen origin (read server-side by getOrigin()). */
+function rememberOrigin(iata: string) {
+  if (typeof document === "undefined" || !/^[A-Za-z]{3}$/.test(iata)) return;
+  document.cookie = `gtp_origin=${iata.toUpperCase()}; path=/; max-age=${365 * 24 * 3600}; samesite=lax`;
+}
+
+export function SearchForm({
+  initial,
+  defaultOrigin,
+  compact = false,
+  onSubmitValid,
+  fetchAirports,
+}: Props) {
   const t = useTranslations("search");
-  const locale = useLocale();
   const router = useRouter();
-  const [form, setForm] = useState<SearchFormState>(() => {
-    const base = initial ?? defaultForm();
-    // Prefill the origin from the visitor's detected location (cookie set by
-    // the middleware), unless an explicit initial value was given.
-    if (!initial && !base.origin && typeof document !== "undefined") {
-      const m = document.cookie.match(/(?:^|;\s*)gtp_origin=([A-Za-z]{3})/);
-      const o = m?.[1] ? IATA_ORIGIN[m[1].toUpperCase()] : undefined;
-      if (o) base.origin = { iata: o.iata, label: `${locale === "fr" ? o.cityFr : o.city} (${o.iata})` };
-    }
-    return base;
-  });
+  // Server-provided origin (visitor location) keeps server and client renders identical.
+  const [form, setForm] = useState<SearchFormState>(
+    () => initial ?? { ...defaultForm(), origin: defaultOrigin ?? null },
+  );
   const [errors, setErrors] = useState<SearchErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const today = todayIso();
@@ -56,12 +62,7 @@ export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirpo
     const next = { ...form, [key]: value };
     setForm(next);
     // Remember a manually chosen origin so destination distances follow it.
-    if (key === "origin" && value && typeof document !== "undefined") {
-      const iata = (value as { iata?: string }).iata;
-      if (iata && /^[A-Za-z]{3}$/.test(iata)) {
-        document.cookie = `gtp_origin=${iata.toUpperCase()}; path=/; max-age=${365 * 24 * 3600}; samesite=lax`;
-      }
-    }
+    if (key === "origin" && value) rememberOrigin((value as AirportChoice).iata);
     if (submitted) setErrors(validateSearch(next, today));
   }
 

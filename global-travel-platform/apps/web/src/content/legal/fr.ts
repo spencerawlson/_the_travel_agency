@@ -8,7 +8,7 @@ export const fr: LegalContent = (s) => ({
       {
         heading: "Qui nous sommes",
         paragraphs: [
-          `${s.name} est exploité par ${s.legalEntity}, ${s.address}. Nous offrons un service de recherche et de comparaison de vols et dirigeons les voyageurs vers des vendeurs tiers. Nous ne vendons pas de voyages et ne prenons pas de paiements.`,
+          `${s.name} est exploité par ${s.legalEntity}, ${s.address || "établie au Québec, Canada"}. Vous pouvez nous joindre à ${s.contactEmail}. Nous offrons un service de recherche et de comparaison de vols et dirigeons les voyageurs vers des vendeurs tiers. Nous ne vendons pas de voyages et ne prenons pas de paiements.`,
           `Notre responsable de la protection des renseignements personnels peut être joint à ${s.privacyEmail}. Son titre et ses coordonnées sont publiés conformément à la Loi sur la protection des renseignements personnels dans le secteur privé du Québec (telle que modifiée par la Loi 25).`,
         ],
       },

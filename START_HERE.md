@@ -114,6 +114,18 @@ and `admin` (+ audit log).
 
 ---
 
+### Demo prices vs real prices
+Set in the server `.env`, then run `docker compose up -d` (no rebuild needed):
+
+| Setting | Effect |
+|---|---|
+| `ENABLED_PROVIDERS=mock` | Demo fares + "Demo mode" banner |
+| `ENABLED_PROVIDERS=travelpayouts` | **Real fares** found recently on Aviasales (per adult, economy). Needs `TRAVELPAYOUTS_API_TOKEN` (secret) and `TRAVELPAYOUTS_MARKER=584743` |
+| `REFERRALS_LIVE_ENABLED` | Stays `false` until the legal check. Until then, offers show "Partner booking coming soon" |
+| `TRAVELPAYOUTS_SCRIPT_ID=584743` | Travelpayouts Drive script (inactive until a visitor accepts partner cookies) |
+
+---
+
 ## 5. Update the server after changing code
 
 The server runs a **git clone** of `github.com/spencerawlson/_the_travel_agency`.

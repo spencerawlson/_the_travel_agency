@@ -76,9 +76,14 @@ class FlightSegment(BaseModel):
 class FlightSlice(BaseModel):
     segments: list[FlightSegment]
     duration_minutes: int
+    # Providers that only report a stop count (no per-leg detail) set this;
+    # otherwise stops are derived from the segments.
+    transfers: int | None = None
 
     @property
     def stops(self) -> int:
+        if self.transfers is not None:
+            return self.transfers
         return max(0, len(self.segments) - 1)
 
 
@@ -96,6 +101,8 @@ class FlightOffer(BaseModel):
     seller_name: str
     seller_type: Literal["airline", "agency", "demo"]
     redirect_url: str
+    # "total" = price for the whole party; "per_adult" = one adult (cached fares).
+    price_basis: Literal["total", "per_adult"] = "total"
     fetched_at: datetime
     expires_at: datetime
     notes: list[str] = Field(default_factory=list)

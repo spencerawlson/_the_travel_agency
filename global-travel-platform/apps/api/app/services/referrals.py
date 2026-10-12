@@ -33,6 +33,18 @@ class RedirectRejected(Exception):
     pass
 
 
+def referral_allowed(provider: AffiliateProvider) -> bool:
+    """Demo providers always go to the internal demo page; real partners need the
+    global kill switch ON, status=live and a verified agreement."""
+    if provider.is_demo:
+        return True
+    return (
+        get_settings().referrals_live_enabled
+        and provider.status == "live"
+        and provider.agreement_verified
+    )
+
+
 def validate_redirect(url: str, *, is_demo: bool, allowed_hosts: list[str]) -> str | None:
     """Return the redirect host (None for internal demo paths) or raise."""
     if any(ch in url for ch in ("\\", "\r", "\n", "\t", " ")):
@@ -92,11 +104,7 @@ async def record_click(
     )
 
     is_demo = redirect.is_demo and provider_row.is_demo
-    live_allowed = (
-        get_settings().referrals_live_enabled
-        and provider_row.status == "live"
-        and provider_row.agreement_verified
-    )
+    live_allowed = referral_allowed(provider_row) and not provider_row.is_demo
     error: AppError | None = None
     if not is_demo and not live_allowed:
         event.status = "blocked_live_disabled"

@@ -171,6 +171,10 @@ class OfferOut(BaseModel):
     seller_type: str
     expires_at: datetime
     notes: list[str]
+    # "total" (whole party) or "per_adult" (cached fares).
+    price_basis: str = "total"
+    # False while partner referrals are switched off (kill switch / not live yet).
+    bookable: bool = True
 
 
 class ProviderStatusOut(BaseModel):

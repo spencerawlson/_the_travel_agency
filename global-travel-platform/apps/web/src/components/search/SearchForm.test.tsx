@@ -163,6 +163,17 @@ describe("SearchForm", () => {
     expect(onSubmitValid).not.toHaveBeenCalled();
   });
 
+  it("pre-fills the origin passed from the server (visitor location)", () => {
+    renderWithIntl(
+      <SearchForm
+        defaultOrigin={{ iata: "YVR", label: "Vancouver (YVR)" }}
+        fetchAirports={fetchAirports}
+      />,
+    );
+    expect(screen.getByRole("combobox", { name: "From" })).toHaveValue("Vancouver (YVR)");
+    expect(screen.getByRole("combobox", { name: "To" })).toHaveValue("");
+  });
+
   it("renders in French", async () => {
     renderWithIntl(<SearchForm fetchAirports={fetchAirports} />, "fr");
     expect(screen.getByRole("button", { name: "Rechercher des vols" })).toBeInTheDocument();

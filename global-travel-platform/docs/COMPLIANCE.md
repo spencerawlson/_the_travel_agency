@@ -57,6 +57,15 @@
 | 3.7 | Ranking transparency                                                                                                            | Results sorted by price by default; commission does not affect order (stated in the disclosure)                                                                                    |
 | 3.8 | ⚖️ Terms of use enforceability (Québec CPA rules on consumer contracts, prohibited clauses)                                     | Draft terms preserve non-waivable consumer rights                                                                                                                                  |
 
+### Contact details without a postal address
+
+The public pages show email contacts only (`CONTACT_EMAIL`, `PRIVACY_EMAIL`), and `LEGAL_ADDRESS` is
+empty. Law 25 accepts an email contact for the person in charge of personal information.
+
+- [ ] ⚖️ Confirm that no postal address is required for this referral-only service (e.g. the
+      Québec CPA disclosure rules for merchants in distance contracts, and Canadian e-commerce
+      disclosure norms). Add one via `LEGAL_ADDRESS` (a business mailbox is fine) if counsel advises it.
+
 ## 4. Cookies and tracking
 
 - Essential only: `NEXT_LOCALE`, `theme` (localStorage), and the admin-only `gtp_admin_session`/`gtp_csrf`.

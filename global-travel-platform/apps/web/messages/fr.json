@@ -40,7 +40,6 @@
     "how3Title": "Réservez auprès du vendeur",
     "how3": "Vous finalisez votre réservation sur le site de la compagnie aérienne ou de l'agence.",
     "globeLabel": "Globe en rotation montrant les trajets au départ de {city} vers nos destinations vedettes",
-    "globeCaption": "Trajets au départ de {city} · faites glisser pour tourner",
     "moodTitle": "Quel genre de voyage?",
     "moodSubtitle": "Choisissez une envie, nous vous suggérons les lieux.",
     "moods": {
@@ -60,7 +59,9 @@
         "title": "Saveurs et culture",
         "blurb": "Histoire, gastronomie et vieilles rues."
       }
-    }
+    },
+    "globeLabelAny": "Globe en rotation montrant nos destinations vedettes dans le monde",
+    "destinationsSubtitleAny": "Des idées choisies avec soin, partout dans le monde."
   },
   "search": {
     "formLabel": "Recherche de vols",
@@ -142,13 +143,26 @@
       "offer_expired": "Cette offre a expiré. Veuillez relancer la recherche pour obtenir des résultats à jour.",
       "referrals_disabled": "Les réservations auprès des partenaires ne sont pas encore offertes.",
       "redirect_rejected": "Nous n'avons pas pu ouvrir ce lien partenaire en toute sécurité."
-    }
+    },
+    "from": "à partir de",
+    "perAdultEconomy": "par adulte, classe économique",
+    "comparedOn": "Comparez les vendeurs sur {provider}",
+    "bookingSoon": "Réservation partenaire bientôt offerte",
+    "bookingSoonHint": "Les liens de réservation seront activés une fois notre entente de partenariat finalisée. Les prix affichés sont de vrais tarifs trouvés récemment.",
+    "notes": {
+      "demo_fare": "Tarif de démonstration, pas un prix réel.",
+      "different_dates": "Tarif en cache le plus proche : les dates diffèrent de votre recherche.",
+      "economy_only": "Prix en classe économique; votre classe est tarifée sur le site du partenaire.",
+      "cached_fare": "Trouvé récemment par des voyageurs. Le prix en direct peut différer."
+    },
+    "fareFrom": "Tarif de {seller} · comparez les vendeurs sur Aviasales"
   },
   "disclaimers": {
     "demo_data": "Ces tarifs de démonstration sont générés à des fins de test. Il ne s'agit pas de prix ni de disponibilités réels, et ils ne peuvent pas être réservés.",
     "prices_may_change": "Les prix et les disponibilités sont fixés par le vendeur, peuvent changer à tout moment et ne sont confirmés que sur le site du vendeur.",
     "seller_responsible": "La compagnie aérienne ou l'agence de voyages indiquée est le vendeur. Elle est responsable de votre réservation, du paiement, du billet, des modifications et du service à la clientèle.",
-    "demo_fare": "Tarif de démonstration, pas un prix réel."
+    "demo_fare": "Tarif de démonstration, pas un prix réel.",
+    "cached_prices": "Les prix sont de vrais tarifs trouvés récemment par des voyageurs sur Aviasales (par adulte, classe économique). Ils ne sont pas en direct : le prix et la disponibilité actuels sont confirmés sur le site du partenaire."
   },
   "destinations": {
     "title": "Destinations",
@@ -186,7 +200,10 @@
     "dates": "{depart} – {return}",
     "search": "Voir les vols",
     "empty": "Aucune aubaine pour le moment.",
-    "loading": "Recherche d'aubaines…"
+    "loading": "Recherche d'aubaines…",
+    "roundTripPerAdult": "Aller-retour, à partir de, par adulte",
+    "subtitleAny": "Choisissez votre aéroport de départ pour voir les tarifs les plus bas trouvés pour un aller-retour d'une semaine, dans environ six semaines.",
+    "chooseOrigin": "Choisir un aéroport"
   },
   "partner": {
     "title": "Page partenaire de démonstration",

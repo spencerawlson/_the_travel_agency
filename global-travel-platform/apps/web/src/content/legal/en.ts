@@ -8,7 +8,7 @@ export const en: LegalContent = (s) => ({
       {
         heading: "Who we are",
         paragraphs: [
-          `${s.name} is operated by ${s.legalEntity}, ${s.address}. We provide a flight search and comparison service and refer travellers to third-party sellers. We do not sell travel or take payments.`,
+          `${s.name} is operated by ${s.legalEntity}, ${s.address || "based in Québec, Canada"}. You can reach us at ${s.contactEmail}. We provide a flight search and comparison service and refer travellers to third-party sellers. We do not sell travel or take payments.`,
           `Our ${s.privacyOfficer} can be reached at ${s.privacyEmail}. Their title and contact details are published as required by Quebec's Act respecting the protection of personal information in the private sector (as amended by Law 25).`,
         ],
       },

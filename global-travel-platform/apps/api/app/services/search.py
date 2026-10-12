@@ -36,6 +36,7 @@ MAX_DAYS_AHEAD = 361
 DISCLAIMER_DEMO = "demo_data"
 DISCLAIMER_PRICES = "prices_may_change"
 DISCLAIMER_SELLER = "seller_responsible"
+DISCLAIMER_CACHED = "cached_prices"
 
 
 def offer_cache_key(offer_id: str) -> str:

@@ -40,7 +40,6 @@
     "how3Title": "Book with the seller",
     "how3": "You complete your booking on the airline's or agency's website.",
     "globeLabel": "Rotating globe with flight routes from {city} to our featured destinations",
-    "globeCaption": "Routes from {city} · drag to spin",
     "moodTitle": "What kind of trip?",
     "moodSubtitle": "Pick a feeling, we'll suggest the places.",
     "moods": {
@@ -60,7 +59,9 @@
         "title": "Food & culture",
         "blurb": "History, flavours and old streets."
       }
-    }
+    },
+    "globeLabelAny": "Rotating globe showing our featured destinations around the world",
+    "destinationsSubtitleAny": "Hand-picked ideas from around the world."
   },
   "search": {
     "formLabel": "Flight search",
@@ -142,13 +143,26 @@
       "offer_expired": "This offer has expired. Please search again for current results.",
       "referrals_disabled": "Partner bookings are not available yet.",
       "redirect_rejected": "We couldn't open this partner link safely."
-    }
+    },
+    "from": "from",
+    "perAdultEconomy": "per adult, economy",
+    "comparedOn": "Compare sellers on {provider}",
+    "bookingSoon": "Partner booking coming soon",
+    "bookingSoonHint": "Booking links open once our partner agreement is finalised. Prices shown are real fares found recently.",
+    "notes": {
+      "demo_fare": "Demo fare, not a real price.",
+      "different_dates": "Nearest cached fare: dates differ from your search.",
+      "economy_only": "Economy price shown; your cabin is priced on the partner site.",
+      "cached_fare": "Found by travellers recently. The live price may differ."
+    },
+    "fareFrom": "Fare from {seller} · compare sellers on Aviasales"
   },
   "disclaimers": {
     "demo_data": "These are demo fares generated for testing. They are not real prices or availability, and cannot be booked.",
     "prices_may_change": "Prices and availability are set by the seller, can change at any time, and are confirmed only on the seller's website.",
     "seller_responsible": "The airline or travel agency shown is the seller. They are responsible for your booking, payment, ticket, changes and customer service.",
-    "demo_fare": "Demo fare, not a real price."
+    "demo_fare": "Demo fare, not a real price.",
+    "cached_prices": "Prices are real fares that travellers found on Aviasales recently (per adult, economy). They are not live: the current price and availability are confirmed on the partner site."
   },
   "destinations": {
     "title": "Destinations",
@@ -186,7 +200,10 @@
     "dates": "{depart} – {return}",
     "search": "See flights",
     "empty": "No deals available right now.",
-    "loading": "Finding deals…"
+    "loading": "Finding deals…",
+    "roundTripPerAdult": "Round trip, from, per adult",
+    "subtitleAny": "Choose your departure airport to see the lowest fares we found for a one-week round trip, about six weeks from now.",
+    "chooseOrigin": "Choose an airport"
   },
   "partner": {
     "title": "Demo partner page",

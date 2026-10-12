@@ -12,7 +12,8 @@ export interface GlobePoint {
 
 interface Props {
   points: GlobePoint[];
-  hub: { latitude: number; longitude: number };
+  /** Visitor's origin; null = unknown (markers only, no routes). */
+  hub: { latitude: number; longitude: number } | null;
   label: string;
 }
 
@@ -33,7 +34,7 @@ export function Globe({ points, hub, label }: Props) {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    // Start facing the Atlantic so Montréal and Europe are both visible.
+    // Start facing the Atlantic (Americas + Europe/Africa in view).
     let phi = 4.6;
     let velocity = 0;
     let dragX: number | null = null;
@@ -58,15 +59,23 @@ export function Globe({ points, hub, label }: Props) {
         markerColor: [1, 0.45, 0.3],
         glowColor: [0.86, 0.93, 1],
         markers: [
-          { location: [hub.latitude, hub.longitude], size: 0.09, color: [0.1, 0.45, 0.9] },
+          ...(hub
+            ? [
+                {
+                  location: [hub.latitude, hub.longitude] as [number, number],
+                  size: 0.09,
+                  color: [0.1, 0.45, 0.9] as [number, number, number],
+                },
+              ]
+            : []),
           ...points.map((p) => ({
             location: [p.latitude, p.longitude] as [number, number],
             size: 0.06,
             id: p.slug,
           })),
         ],
-        arcs: points.map((p) => ({
-          from: [hub.latitude, hub.longitude] as [number, number],
+        arcs: (hub ? points : []).map((p) => ({
+          from: [hub!.latitude, hub!.longitude] as [number, number],
           to: [p.latitude, p.longitude] as [number, number],
         })),
         arcColor: [0.18, 0.5, 0.95],

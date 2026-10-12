@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DealsView } from "@/components/DealsView";
+import { getOrigin } from "@/lib/server-api";
 
 export async function generateMetadata({
   params,
@@ -19,7 +20,7 @@ export default async function DealsPage({ params }: { params: Promise<{ locale: 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <h1 className="font-display text-4xl font-semibold">{t("title")}</h1>
-      <DealsView />
+      <DealsView defaultOrigin={(await getOrigin())?.iata} />
     </div>
   );
 }

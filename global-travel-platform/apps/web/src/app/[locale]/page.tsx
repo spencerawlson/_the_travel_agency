@@ -21,7 +21,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const destinations = await getDestinations(locale);
   const origin = await getOrigin();
   const city = originCity(origin, locale);
-  const hub = { latitude: origin.latitude, longitude: origin.longitude };
+  const hub = origin ? { latitude: origin.latitude, longitude: origin.longitude } : null;
   const featured = destinations.slice(0, 6);
   const globePoints = destinations.map((d) => ({
     slug: d.slug,
@@ -55,15 +55,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </ul>
           </div>
           <div className="relative mx-auto w-full max-w-[300px] sm:max-w-[420px] md:max-w-[520px]">
-            <Globe points={globePoints} hub={hub} label={t("globeLabel", { city })} />
-            <p className="mt-2 text-center text-xs font-medium text-ink-muted">
-              {t("globeCaption", { city })}
-            </p>
+            <Globe
+              points={globePoints}
+              hub={hub}
+              label={city ? t("globeLabel", { city }) : t("globeLabelAny")}
+            />
           </div>
         </div>
         <div className="mx-auto max-w-6xl px-4 pb-10">
           <div className="rounded-3xl border border-white/70 bg-white/90 p-4 shadow-2xl shadow-brand-900/10 backdrop-blur sm:p-6">
-            <SearchForm />
+            <SearchForm
+              defaultOrigin={
+                origin && city
+                  ? { iata: origin.iata, label: `${city} (${origin.iata})` }
+                  : undefined
+              }
+            />
           </div>
         </div>
       </section>
@@ -109,7 +116,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h2 className="font-display text-4xl font-semibold tracking-tight">
               {t("destinationsTitle")}
             </h2>
-            <p className="mt-2 text-ink-muted">{t("destinationsSubtitle", { city })}</p>
+            <p className="mt-2 text-ink-muted">
+              {city ? t("destinationsSubtitle", { city }) : t("destinationsSubtitleAny")}
+            </p>
           </div>
           <Link
             href="/destinations"
@@ -121,7 +130,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((d, i) => (
             <li key={d.slug}>
-              <DestinationCard destination={d} originCity={city} priority={i < 3} />
+              <DestinationCard destination={d} originCity={city ?? ""} priority={i < 3} />
             </li>
           ))}
         </ul>

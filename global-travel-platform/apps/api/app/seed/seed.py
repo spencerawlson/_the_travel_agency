@@ -131,6 +131,28 @@ async def seed_reference_data(
         )
         counts["providers"] = 1
 
+    if not (
+        await session.scalars(
+            select(AffiliateProvider).where(AffiliateProvider.code == "travelpayouts")
+        )
+    ).first():
+        session.add(
+            AffiliateProvider(
+                code="travelpayouts",
+                name="Aviasales (via Travelpayouts)",
+                kind="flights",
+                # Sandbox: real prices shown, referrals blocked until agreement and
+                # licensing are verified and REFERRALS_LIVE_ENABLED is switched on.
+                status="sandbox",
+                is_demo=False,
+                website="https://www.aviasales.com",
+                allowed_redirect_hosts=["www.aviasales.com", "aviasales.com"],
+                agreement_verified=False,
+                notes="Aviasales Data API (cached fares). Marker set via TRAVELPAYOUTS_MARKER.",
+            )
+        )
+        counts["providers"] = counts.get("providers", 0) + 1
+
     await session.flush()
     airport_city = {
         iata: cid

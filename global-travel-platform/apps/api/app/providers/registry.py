@@ -2,11 +2,14 @@ from __future__ import annotations
 
 from app.providers.base import FlightProvider
 from app.providers.mock import MockFlightProvider
+from app.providers.travelpayouts import TravelpayoutsProvider
 
-# Factories for every provider implementation known to the codebase. Phase 2
-# adds e.g. "travelpayouts": lambda: TravelpayoutsProvider(settings...).
+# Every provider implementation known to the codebase, by ENABLED_PROVIDERS code.
 PROVIDER_FACTORIES: dict[str, type[FlightProvider]] = {
     "mock": MockFlightProvider,
+    # Real cached fares. Needs TRAVELPAYOUTS_API_TOKEN and TRAVELPAYOUTS_MARKER;
+    # startup fails without them.
+    "travelpayouts": TravelpayoutsProvider,
 }
 
 
