@@ -1,5 +1,6 @@
 import { Card } from "@gtp/ui";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSiteConfig } from "@/lib/site";
 
@@ -10,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return { title: t("title") };
+  return pageMetadata(locale, "/contact", { title: t("title"), description: t("intro") });
 }
 
 /** No contact form in Phase 1: email avoids storing messages (data minimisation). */

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DealsView } from "@/components/DealsView";
 import { getOrigin } from "@/lib/server-api";
@@ -10,7 +11,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "deals" });
-  return { title: t("title") };
+  return pageMetadata(locale, "/deals", { title: t("title"), description: t("subtitleAny") });
 }
 
 export default async function DealsPage({ params }: { params: Promise<{ locale: string }> }) {

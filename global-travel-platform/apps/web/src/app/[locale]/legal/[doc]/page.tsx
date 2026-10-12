@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLegalDocument, isLegalDoc } from "@/content/legal";
 import { getSiteConfig } from "@/lib/site";
@@ -10,7 +11,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { locale, doc } = await params;
   if (!isLegalDoc(doc)) return {};
   const d = getLegalDocument(locale, doc, getSiteConfig());
-  return { title: d.title, description: d.summary };
+  return pageMetadata(locale, `/legal/${doc}`, { title: d.title, description: d.summary });
 }
 
 export default async function LegalPage({ params }: { params: Params }) {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DestinationCard } from "@/components/DestinationCard";
 import { Link } from "@/i18n/navigation";
@@ -12,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "destinations" });
-  return { title: t("title"), description: t("subtitle") };
+  return pageMetadata(locale, "/destinations", { title: t("title"), description: t("subtitle") });
 }
 
 export default async function DestinationsPage({
