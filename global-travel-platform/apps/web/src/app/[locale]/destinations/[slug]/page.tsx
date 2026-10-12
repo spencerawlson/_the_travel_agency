@@ -20,18 +20,40 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return d ? { title: d.name, description: d.summary } : {};
 }
 
+/** Capitalise the first letter only ("avril, mai et juin" -> "Avril, mai et juin"). */
+function sentenceCase(text: string, locale: string): string {
+  return text.charAt(0).toLocaleUpperCase(intlLocale(locale)) + text.slice(1);
+}
+
 function monthNames(months: number[], locale: string): string {
   const fmt = new Intl.DateTimeFormat(intlLocale(locale), { month: "long", timeZone: "UTC" });
   const names = months.map((m) => fmt.format(new Date(Date.UTC(2000, m - 1, 1))));
-  return new Intl.ListFormat(intlLocale(locale), { type: "conjunction" }).format(names);
+  return sentenceCase(
+    new Intl.ListFormat(intlLocale(locale), { type: "conjunction" }).format(names),
+    locale,
+  );
 }
 
 function displayName(type: "currency" | "language", code: string, locale: string): string {
   try {
-    return new Intl.DisplayNames([intlLocale(locale)], { type }).of(code) ?? code;
+    return sentenceCase(new Intl.DisplayNames([intlLocale(locale)], { type }).of(code) ?? code, locale);
   } catch {
     return code;
   }
+}
+
+function languageList(codes: string[], locale: string): string {
+  const names = codes.map((code) => {
+    try {
+      return new Intl.DisplayNames([intlLocale(locale)], { type: "language" }).of(code) ?? code;
+    } catch {
+      return code;
+    }
+  });
+  return sentenceCase(
+    new Intl.ListFormat(intlLocale(locale), { type: "conjunction" }).format(names),
+    locale,
+  );
 }
 
 function Fact({ icon, label, children }: { icon: string; label: string; children: ReactNode }) {
@@ -61,7 +83,7 @@ function Facts({
     <dl className="grid gap-3 sm:grid-cols-2">
       {d.best_months.length > 0 && (
         <Fact icon="☀️" label={t("facts.bestTime")}>
-          <span className="capitalize">{monthNames(d.best_months, locale)}</span>
+          {monthNames(d.best_months, locale)}
         </Fact>
       )}
       {d.approx_flight_minutes != null && (
@@ -74,15 +96,13 @@ function Facts({
       </Fact>
       {d.currency && (
         <Fact icon="💱" label={t("facts.currency")}>
-          <span className="capitalize">{displayName("currency", d.currency, locale)}</span> (
+          {displayName("currency", d.currency, locale)} (
           {d.currency})
         </Fact>
       )}
       {d.languages.length > 0 && (
         <Fact icon="💬" label={t("facts.languages")}>
-          <span className="capitalize">
-            {d.languages.map((l) => displayName("language", l, locale)).join(", ")}
-          </span>
+          {languageList(d.languages, locale)}
         </Fact>
       )}
     </dl>
