@@ -346,7 +346,12 @@
       "approved": "Approuvée",
       "rejected": "Rejetée",
       "paid": "Payée"
-    }
+    },
+    "importNow": "Importer depuis Travelpayouts",
+    "importing": "Importation…",
+    "importHint": "Récupère les gains des 90 derniers jours. S'exécute aussi automatiquement chaque nuit.",
+    "importDone": "Terminé : {fetched} actions vérifiées, {earning} gains, {created} nouveaux, {updated} mis à jour.",
+    "importFailed": "Échec de l'importation"
   },
   "credits": {
     "title": "Crédits photo",

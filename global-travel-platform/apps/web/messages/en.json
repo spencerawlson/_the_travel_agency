@@ -346,7 +346,12 @@
       "approved": "Approved",
       "rejected": "Rejected",
       "paid": "Paid"
-    }
+    },
+    "importNow": "Import from Travelpayouts",
+    "importing": "Importing…",
+    "importHint": "Pulls the last 90 days of earnings. Also runs automatically every night.",
+    "importDone": "Done: {fetched} actions checked, {earning} earnings, {created} new, {updated} updated.",
+    "importFailed": "Import failed"
   },
   "credits": {
     "title": "Photo credits",
