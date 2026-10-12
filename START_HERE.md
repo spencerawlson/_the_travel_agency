@@ -3,7 +3,7 @@
 Everything you need in one place: what this is, where it runs, how to open it, how to start
 and stop it, how to update it, and what's still left to decide.
 
-> **Short version:** it's already running. Open **http://192.168.1.88:8080** in a browser.
+> **Short version:** it's already running. Open **http://192.168.1.28** in a browser.
 
 ---
 
@@ -22,7 +22,7 @@ or travel agency to book. **The site never sells tickets, takes payments, or mak
 
 | Part | Technology |
 |---|---|
-| Website | Next.js 16 (React, TypeScript), Tailwind CSS, English/French, light/dark theme |
+| Website | Next.js 16 (React, TypeScript), Tailwind CSS, English/French, light theme |
 | Backend API | Python 3.12, FastAPI |
 | Database | PostgreSQL 17 |
 | Cache / rate limits | Redis 7 |
@@ -33,11 +33,11 @@ or travel agency to book. **The site never sells tickets, takes payments, or mak
 
 ## 2. Where it runs
 
-Everything runs in **Docker on your Proxmox container `Docker` (CT 104) at 192.168.1.88**.
+Everything runs in **Docker on your Fedora 44 server (FedServ) at 192.168.1.28**.
 
 | Container | What it does |
 |---|---|
-| `nginx` | Front door; the only thing reachable from the network (port **8080**) |
+| `nginx` | Front door; the only thing reachable from the network (port **80**) |
 | `web` | The website |
 | `api` | The backend (search, referrals, admin) |
 | `postgres` | The database (data lives in the Docker volume `gtp_pgdata`) |
@@ -46,11 +46,11 @@ Everything runs in **Docker on your Proxmox container `Docker` (CT 104) at 192.1
 
 | Server detail | Value |
 |---|---|
-| Login | `ssh spencer@192.168.1.88` (password login) |
-| Project folder on server | `~/gtp/_the_travel_agency/global-travel-platform` (a git clone of GitHub) |
-| Secrets file on server | `~/gtp/_the_travel_agency/global-travel-platform/.env` (never commit or share it) |
-| Resources | 2 CPU, 4 GB RAM, 20 GB disk |
-| Also on this server | A `k3d-homelab` Kubernetes cluster; unrelated, leave it alone |
+| Login | `ssh root@192.168.1.28` (password login) |
+| Project folder on server | `/opt/farelune/global-travel-platform` (a git clone of GitHub) |
+| Secrets file on server | `/opt/farelune/global-travel-platform/.env` (never commit or share it) |
+| Resources | 8 CPU, 7.7 GB RAM, 15 GB disk (Fedora 44, SELinux enforcing, firewalld allows HTTP) |
+| Software | Docker (moby-engine) + Compose and git from Fedora's repos; Docker starts at boot |
 
 Your Windows PC holds the **source code** (this folder). Docker Desktop on the PC is currently
 broken, so nothing runs here except development tools and tests.
@@ -61,17 +61,17 @@ broken, so nothing runs here except development tools and tests.
 
 | Address | What |
 |---|---|
-| **http://192.168.1.88:8080** | Website (goes to `/en` or `/fr`) |
-| **http://192.168.1.88:8080/en/admin** | Admin dashboard |
-| http://192.168.1.88:8080/api/docs | Interactive API documentation |
-| http://192.168.1.88:8080/api/v1/health | Health check (should say `"status":"ok"`) |
+| **http://192.168.1.28** | Website (goes to `/en` or `/fr`) |
+| **http://192.168.1.28/en/admin** | Admin dashboard |
+| http://192.168.1.28/api/docs | Interactive API documentation |
+| http://192.168.1.28/api/v1/health | Health check (should say `"status":"ok"`) |
 
 ### Admin login
 - **Email:** `admin@example.com`
 - **Password:** generated automatically and stored on the server. To see it, run this in a VS
   Code terminal (**Ctrl + `**):
   ```powershell
-  ssh spencer@192.168.1.88 "grep DEV_ADMIN_PASSWORD ~/gtp/_the_travel_agency/global-travel-platform/.env"
+  ssh root@192.168.1.28 "grep DEV_ADMIN_PASSWORD /opt/farelune/global-travel-platform/.env"
   ```
 
 The dashboard shows searches, referral clicks, click-through rate, top destinations, popular
@@ -83,7 +83,7 @@ reports one.
 
 ## 4. Start, stop, check (on the server)
 
-Log in first: `ssh spencer@192.168.1.88`, then `cd ~/gtp/_the_travel_agency/global-travel-platform`.
+Log in first: `ssh root@192.168.1.28`, then `cd /opt/farelune/global-travel-platform`.
 
 | Task | Command |
 |---|---|
@@ -115,15 +115,15 @@ git commit -m "describe the change"
 git push
 ```
 
-**On the server** (`ssh spencer@192.168.1.88`):
+**On the server** (`ssh root@192.168.1.28`):
 ```bash
-cd ~/gtp/_the_travel_agency && git pull && cd global-travel-platform && docker compose up -d --build --wait
+cd /opt/farelune && git pull && cd global-travel-platform && docker compose up -d --build --wait
 ```
 
 - The rebuild takes about 3–8 minutes. Database changes are applied automatically by `migrate`.
 - The server's `.env` (secrets) is **not** in git and is never touched by `git pull`.
 - Data is kept across updates (it lives in the Docker volume `gtp_pgdata`).
-- Check afterwards: `docker compose ps` (all healthy) and http://192.168.1.88:8080/api/v1/health.
+- Check afterwards: `docker compose ps` (all healthy) and http://192.168.1.28/api/v1/health.
 - **Undo a bad update:** `git log --oneline` to find the previous commit, then
   `git checkout <commit> && docker compose up -d --build --wait`. Return to normal later with
   `git checkout main`.
@@ -178,7 +178,7 @@ node ..\..\node_modules\next\dist\bin\next build           # production build
 
 **End-to-end browser tests** against the server (in `global-travel-platform`):
 ```powershell
-$env:E2E_BASE_URL="http://192.168.1.88:8080"; $env:E2E_ADMIN_PASSWORD="<admin password>"
+$env:E2E_BASE_URL="http://192.168.1.28"; $env:E2E_ADMIN_PASSWORD="<admin password>"
 node node_modules\@playwright\test\cli.js test -c tests\e2e\playwright.config.ts
 ```
 
@@ -193,7 +193,7 @@ node node_modules\@playwright\test\cli.js test -c tests\e2e\playwright.config.ts
 ## 8. Git and GitHub
 
 - The repository root is **this folder** (`_The_Agency`), remote
-  `github.com/spencerawlson/_the_travel_agency`. Nothing has been committed yet.
+  `github.com/spencerawlson/_the_travel_agency`.
 - `git status` shows only `global-travel-platform/` because the whole folder is new. Use
   `git status -uall` to list all ~167 files.
 - `.gitignore` already excludes secrets (`.env`, keys, certificates), `node_modules`, `.venv`,
@@ -216,7 +216,7 @@ git push
 ## 9. To-do list: decisions only you can make
 
 **Security (do now)**
-- [ ] Change the **root** and **spencer** passwords on 192.168.1.88; both were shared in chat.
+- [ ] Change the passwords on **192.168.1.28** (root) and **192.168.1.88** (root, spencer). The same password was shared in chat for all of them.
 
 **Before going public**
 - [x] Brand chosen: **Farelune**, *Connecting You to Everywhere*. farelune.com registered 2026-10-12.
