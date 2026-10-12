@@ -80,10 +80,17 @@ city prefix, IATA prefix and name prefix, with larger airports ahead of smaller 
 
 Returns `[{"code":"CAD","name":"Canadian dollar","symbol":"$","minor_units":2}, ...]`.
 
-### `GET /destinations?locale=en|fr` and `GET /destinations/{slug}?locale=en|fr`
+### `GET /destinations?locale=en|fr&origin=YUL` and `GET /destinations/{slug}?locale=en|fr&origin=YUL`
 
-Returns localised destination content: `name, summary, description, highlights[], city,
-country_code, airport_iata, tags[], theme`.
+Returns localised destination content (`name, summary, description, highlights[], city, country_code,
+airport_iata, tags[], theme`) plus language-neutral travel facts:
+
+| Field                                            | Meaning                                                                                                                                                                 |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `latitude`, `longitude`, `timezone`              | Main airport location and IANA time zone                                                                                                                                |
+| `best_months`                                    | Months (1–12) generally considered best to visit                                                                                                                        |
+| `currency`, `languages`                          | ISO 4217 code; BCP 47 language codes (the web app localises the names)                                                                                                  |
+| `origin`, `distance_km`, `approx_flight_minutes` | Only when `origin` (IATA) is given: great-circle distance and an **approximate** nonstop block time (830 km/h + 30 min, rounded to 5 min). Display-only; not a schedule |
 
 ### `GET /deals?origin=YUL&currency=CAD&locale=en`
 

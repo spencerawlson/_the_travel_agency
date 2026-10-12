@@ -75,6 +75,19 @@ token in `X-CSRF-Token`. All admin data comes from stored events.
 - **Dynamic rendering.** Pages render per request so legal identity and contact values
   (`LEGAL_ENTITY_NAME`, etc.) can change by environment without a rebuild.
 
+### Visual design and media
+
+- **Light theme by default** (bright sky/sand palette); dark theme available in the theme menu.
+- **Fonts** (Fraunces, Plus Jakarta Sans) are self-hosted at build time via `next/font`: no runtime calls to Google.
+- **Animated logo** (`components/layout/Logo.tsx`): CSS-only airplane flight; replays on hover.
+- **3D globe** (`components/Globe.tsx`): WebGL via [cobe](https://github.com/shuding/cobe) (MIT, ~5 KB),
+  with markers for destinations and arcs from Montréal. It pauses off-screen, can be dragged,
+  stays still for reduced-motion users, and falls back to a CSS sphere without WebGL.
+- **Photos**: freely licensed Wikimedia Commons images, curated in `scripts/photos.manifest.json`
+  and processed by `scripts/fetch_photos.py` into `apps/web/public/photos/*.webp`. Attribution
+  data goes to `apps/web/src/content/photos.json` and is shown in captions and on `/credits`.
+  Only CC0, public-domain, CC BY and CC BY-SA licences are accepted.
+
 ### Extensibility
 
 - **New language:** add the code to `src/i18n/routing.ts`, add `messages/<code>.json`
@@ -83,3 +96,5 @@ token in `X-CSRF-Token`. All admin data comes from stored events.
 - **New currency:** insert a row in `currencies` and add the code to `CURRENCIES` in
   `apps/web/src/lib/search.ts`.
 - **New provider:** see [PROVIDER_INTEGRATION.md](PROVIDER_INTEGRATION.md).
+- **New destination photo:** add an entry to `scripts/photos.manifest.json` (key = destination slug)
+  and run `python scripts/fetch_photos.py`.

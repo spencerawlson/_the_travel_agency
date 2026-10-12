@@ -1,7 +1,7 @@
 # Database
 
 PostgreSQL 17 is the system of record. The schema is managed by Alembic
-(`apps/api/alembic/versions/0001_initial_schema.py`) and defined in SQLAlchemy models
+(`apps/api/alembic/versions/0001_initial_schema.py`, `0002_destination_facts.py`) and defined in SQLAlchemy models
 (`apps/api/app/models/`). A test (`tests/test_migrations.py`) fails if models and
 migrations drift, and checks that upgrade → downgrade → upgrade works on SQLite and,
 in CI, PostgreSQL.
@@ -35,7 +35,7 @@ erDiagram
 | `countries`             | ISO 3166-1 alpha-2 countries                       | PK `code` (2 chars)                                                                                                                                                  |
 | `cities`                | Municipalities served by airports                  | unique (`name`, `country_code`); IANA `timezone`                                                                                                                     |
 | `airports`              | 3,194 large/medium airports with scheduled service | unique `iata_code`; lat/lon range checks; `size` enum; `search_text` (lower-case, accent-stripped) for autocomplete; index (`is_active`, `size`)                     |
-| `destinations`          | Editorial destination pages                        | unique `slug`; `translations` JSON `{en:{…}, fr:{…}}`; FK `airport_iata`                                                                                             |
+| `destinations`          | Editorial destination pages                        | unique `slug`; `translations` JSON `{en:{…}, fr:{…}}`; `facts` JSON `{best_months, currency, languages}`; FK `airport_iata`                                          |
 | `currencies`            | ISO 4217 currencies offered                        | PK `code`; `minor_units` 0–4                                                                                                                                         |
 | `exchange_rate_records` | Rates from a **named source**                      | `rate > 0`; base ≠ quote; unique (base, quote, effective_at, source). **None seeded**; conversion is refused without a record                                        |
 | `affiliate_providers`   | Partners and their redirect allowlists             | unique `code`; `status ∈ {inactive, sandbox, live}`; CHECK: `live` requires `is_demo OR agreement_verified`                                                          |
@@ -79,7 +79,8 @@ erDiagram
   rebuilt by `scripts/build_airport_dataset.py`.
 - Currencies CAD, USD, EUR, GBP.
 - The `mock` provider (`status=sandbox`, `is_demo=true`, empty allowlist).
-- 12 destinations with original EN/FR copy.
+- 12 destinations with original EN/FR copy and travel facts. Re-running `seed` refreshes
+  destination content from `app/seed/data/destinations.json` (the repo is the source of truth).
 - Default `app_settings`.
 
 ## Backup and restore

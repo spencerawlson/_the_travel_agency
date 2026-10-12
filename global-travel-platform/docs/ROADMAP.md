@@ -12,6 +12,7 @@
 - [x] Rate limiting, security headers, structured logs, health checks, Prometheus metrics, optional Sentry
 - [x] Docker Compose stack, Nginx, CI (lint, types, tests, audits, e2e), backup/restore scripts
 - [x] Documentation and compliance checklist
+- [x] Visual redesign: light theme, animated airplane logo, rotating 3D globe with routes, licensed destination photography with credits, trip-type filters, destination travel facts
 
 ## Phase 2: First real partner (prerequisite: compliance gate in COMPLIANCE.md)
 
