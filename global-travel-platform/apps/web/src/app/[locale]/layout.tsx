@@ -7,7 +7,6 @@ import type { ReactNode } from "react";
 import "../globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { routing } from "@/i18n/routing";
 import { getSiteConfig } from "@/lib/site";
 
@@ -52,22 +51,20 @@ export default async function LocaleLayout({
   const site = getSiteConfig();
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${heading.variable} ${body.variable}`}>
+    <html lang={locale} className={`${heading.variable} ${body.variable}`}>
       <body className="flex min-h-dvh flex-col font-sans">
         <NextIntlClientProvider>
-          <ThemeProvider>
-            <a
-              href="#main"
-              className="sr-only z-50 rounded-lg bg-brand-600 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
-            >
-              {t("skip")}
-            </a>
-            <Header siteName={site.name} />
-            <main id="main" className="flex-1">
-              {children}
-            </main>
-            <Footer site={site} />
-          </ThemeProvider>
+          <a
+            href="#main"
+            className="sr-only z-50 rounded-lg bg-brand-600 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+          >
+            {t("skip")}
+          </a>
+          <Header siteName={site.name} />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer site={site} />
         </NextIntlClientProvider>
       </body>
     </html>

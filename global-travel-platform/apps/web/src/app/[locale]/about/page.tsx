@@ -33,7 +33,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <p className="mt-8">
         <Link
           href="/legal/affiliate-disclosure"
-          className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+          className="font-semibold text-brand-600 hover:underline"
         >
           {legal("affiliate")} →
         </Link>

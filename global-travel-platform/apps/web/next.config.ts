@@ -8,7 +8,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const apiInternalUrl = process.env.API_INTERNAL_URL ?? "http://localhost:8000";
 const isDev = process.env.NODE_ENV !== "production";
 
-// Phase 1 CSP. Next.js and next-themes inject small inline bootstrap scripts, so
+// Phase 1 CSP. Next.js injects small inline bootstrap scripts, so
 // script-src needs 'unsafe-inline'; moving to nonce-based CSP is tracked in
 // docs/ROADMAP.md. Everything else is locked to 'self'.
 const csp = [

@@ -77,7 +77,7 @@ token in `X-CSRF-Token`. All admin data comes from stored events.
 
 ### Visual design and media
 
-- **Light theme by default** (bright sky/sand palette); dark theme available in the theme menu.
+- **Light theme only** (bright sky/sand palette).
 - **Fonts** (Fraunces, Plus Jakarta Sans) are self-hosted at build time via `next/font`: no runtime calls to Google.
 - **Animated logo** (`components/layout/Logo.tsx`): CSS-only airplane flight; replays on hover.
 - **3D globe** (`components/Globe.tsx`): WebGL via [cobe](https://github.com/shuding/cobe) (MIT, ~5 KB),

@@ -78,7 +78,7 @@ function StateGuard<T>({
   if (state.kind === "loading") return <p className="text-ink-muted">{t("loading")}</p>;
   if (state.kind === "error")
     return (
-      <p role="alert" className="text-red-700 dark:text-red-400">
+      <p role="alert" className="text-red-700">
         {state.status === 403 ? t("forbidden") : state.code}
       </p>
     );

@@ -66,7 +66,7 @@ export function LoginForm() {
           />
         </label>
         {error && (
-          <p role="alert" className="text-sm text-red-700 dark:text-red-400">
+          <p role="alert" className="text-sm text-red-700">
             {error}
           </p>
         )}

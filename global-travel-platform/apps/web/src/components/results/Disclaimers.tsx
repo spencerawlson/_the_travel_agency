@@ -9,9 +9,7 @@ export function Disclaimers({ codes }: { codes: DisclaimerCode[] }) {
       {codes.map((code) => (
         <li
           key={code}
-          className={
-            code === "demo_data" ? "font-semibold text-amber-900 dark:text-amber-200" : undefined
-          }
+          className={code === "demo_data" ? "font-semibold text-amber-900" : undefined}
         >
           {t(code)}
         </li>

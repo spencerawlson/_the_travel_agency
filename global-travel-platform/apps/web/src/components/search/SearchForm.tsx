@@ -160,7 +160,7 @@ export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirpo
             className={fieldClass}
           />
           {errors.departDate && (
-            <p id="depart-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+            <p id="depart-error" className="mt-1 text-sm text-red-600">
               {err("departDate")}
             </p>
           )}
@@ -182,7 +182,7 @@ export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirpo
             className={`${fieldClass} disabled:opacity-50`}
           />
           {errors.returnDate && (
-            <p id="return-error" className="mt-1 text-sm text-red-600 dark:text-red-400">
+            <p id="return-error" className="mt-1 text-sm text-red-600">
               {err("returnDate")}
             </p>
           )}

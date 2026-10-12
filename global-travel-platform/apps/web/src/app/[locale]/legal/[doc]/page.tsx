@@ -25,7 +25,7 @@ export default async function LegalPage({ params }: { params: Params }) {
     <article className="mx-auto max-w-3xl px-4 py-12">
       <p
         role="note"
-        className="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm font-medium text-amber-950 dark:border-amber-400/40 dark:bg-amber-400/10 dark:text-amber-100"
+        className="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm font-medium text-amber-950"
       >
         {t("draftBanner")}
       </p>

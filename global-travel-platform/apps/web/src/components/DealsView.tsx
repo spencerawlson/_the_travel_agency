@@ -60,7 +60,7 @@ export function DealsView() {
       <div aria-live="polite">
         {!data && !error && <p className="text-ink-muted">{t("loading")}</p>}
         {error && (
-          <p role="alert" className="text-red-700 dark:text-red-400">
+          <p role="alert" className="text-red-700">
             {results(error === "rate_limited" ? "errors.rate_limited" : "errors.generic")}
           </p>
         )}

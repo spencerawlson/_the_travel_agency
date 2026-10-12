@@ -162,17 +162,14 @@ export function ResultsView() {
           </div>
         )}
         {state.kind === "error" && (
-          <p
-            role="alert"
-            className="rounded-xl border border-red-300 bg-red-50 p-4 text-red-900 dark:border-red-400/40 dark:bg-red-400/10 dark:text-red-200"
-          >
+          <p role="alert" className="rounded-xl border border-red-300 bg-red-50 p-4 text-red-900">
             {t(errorKey(state.code))}
           </p>
         )}
         {state.kind === "done" && (
           <div className="space-y-4">
             {failedProviders.length > 0 && (
-              <p role="status" className="text-sm text-amber-800 dark:text-amber-300">
+              <p role="status" className="text-sm text-amber-800">
                 {t("providerIssue", { providers: failedProviders.map((p) => p.name).join(", ") })}
               </p>
             )}
@@ -192,7 +189,7 @@ export function ResultsView() {
               </label>
             </div>
             {visibleClickError && (
-              <p role="alert" className="text-sm text-red-700 dark:text-red-400">
+              <p role="alert" className="text-sm text-red-700">
                 {t(errorKey(visibleClickError))}
               </p>
             )}

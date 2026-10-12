@@ -30,7 +30,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <dd className="mt-1">
             <a
               href={`mailto:${site.contactEmail}`}
-              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+              className="font-semibold text-brand-600 hover:underline"
             >
               {site.contactEmail}
             </a>
@@ -41,7 +41,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <dd className="mt-1">
             <a
               href={`mailto:${site.privacyEmail}`}
-              className="font-semibold text-brand-600 hover:underline dark:text-brand-300"
+              className="font-semibold text-brand-600 hover:underline"
             >
               {site.privacyEmail}
             </a>

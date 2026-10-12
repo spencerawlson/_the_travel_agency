@@ -34,9 +34,7 @@ function SliceRow({ label, slice }: { label: string; slice: FlightSlice }) {
             />
           ))}
         </div>
-        <p
-          className={`text-xs ${slice.stops === 0 ? "text-emerald-700 dark:text-emerald-400" : "text-ink-muted"}`}
-        >
+        <p className={`text-xs ${slice.stops === 0 ? "text-emerald-700" : "text-ink-muted"}`}>
           {t("stops", { count: slice.stops })}
         </p>
       </div>
@@ -84,7 +82,7 @@ export function OfferCard({ offer, onSelect, busy }: Props) {
           {t("via", { provider: offer.provider_name })}
         </p>
         {offer.notes.includes("demo_fare") && (
-          <p className="text-xs text-amber-800 dark:text-amber-300">{disclaimers("demo_fare")}</p>
+          <p className="text-xs text-amber-800">{disclaimers("demo_fare")}</p>
         )}
         <Button onClick={() => onSelect(offer)} disabled={busy} className="mt-1">
           {busy ? t("redirecting") : t("viewDeal")}

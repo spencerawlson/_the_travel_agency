@@ -16,7 +16,7 @@ export interface SiteConfig {
 export function getSiteConfig(): SiteConfig {
   const env = process.env;
   return {
-    name: env.SITE_NAME || "Northstar Fares",
+    name: env.SITE_NAME || "Farelune",
     legalEntity: env.LEGAL_ENTITY_NAME || "[Legal entity name, to be confirmed]",
     contactEmail: env.CONTACT_EMAIL || "hello@example.com",
     privacyEmail: env.PRIVACY_EMAIL || "privacy@example.com",

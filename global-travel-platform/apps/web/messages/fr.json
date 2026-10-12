@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "{site} : comparez les vols partout dans le monde",
+    "title": "{site} · Vers partout, avec vous",
     "description": "Recherchez et comparez les offres de vols de nos partenaires voyage, puis réservez directement auprès du vendeur."
   },
   "nav": {
@@ -15,10 +15,6 @@
     "close": "Fermer le menu",
     "language": "Langue",
     "switchTo": "English",
-    "theme": "Thème",
-    "themeLight": "Clair",
-    "themeDark": "Sombre",
-    "themeSystem": "Système",
     "primary": "Principale"
   },
   "demo": {
@@ -223,13 +219,14 @@
     "cookies": "Avis sur les témoins"
   },
   "footer": {
-    "tagline": "Comparaison de vols et recommandations. Nous ne vendons pas de billets.",
+    "tagline": "Vers partout, avec vous.",
     "disclosure": "Nous pouvons recevoir une commission de nos partenaires lorsque vous réservez par nos liens, sans frais supplémentaires pour vous.",
     "explore": "Explorer",
     "company": "Entreprise",
     "legal": "Mentions légales",
     "rights": "© {year} {entity}. Tous droits réservés.",
-    "credits": "Crédits photo"
+    "credits": "Crédits photo",
+    "about": "Comparaison de vols et recommandations. Nous ne vendons pas de billets."
   },
   "notFound": {
     "title": "Page introuvable",

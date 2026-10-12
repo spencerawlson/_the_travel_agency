@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "{site}: compare flights worldwide",
+    "title": "{site} · Connecting You to Everywhere",
     "description": "Search and compare flight offers from travel partners, then book directly with the seller."
   },
   "nav": {
@@ -15,10 +15,6 @@
     "close": "Close menu",
     "language": "Language",
     "switchTo": "Français",
-    "theme": "Theme",
-    "themeLight": "Light",
-    "themeDark": "Dark",
-    "themeSystem": "System",
     "primary": "Primary"
   },
   "demo": {
@@ -223,13 +219,14 @@
     "cookies": "Cookie notice"
   },
   "footer": {
-    "tagline": "Flight comparison and referrals. We don't sell tickets.",
+    "tagline": "Connecting You to Everywhere.",
     "disclosure": "We may earn a commission from partners when you book through our links, at no extra cost to you.",
     "explore": "Explore",
     "company": "Company",
     "legal": "Legal",
     "rights": "© {year} {entity}. All rights reserved.",
-    "credits": "Photo credits"
+    "credits": "Photo credits",
+    "about": "Flight comparison and referrals. We don't sell tickets."
   },
   "notFound": {
     "title": "Page not found",

@@ -3,7 +3,7 @@
 ## Phase 1: Foundation (this release)
 
 - [x] Monorepo with a Next.js web app, FastAPI API, and shared TS types and UI packages
-- [x] Bilingual site (EN/FR) with light/dark themes: home, results, destinations (list and detail), deals, about, contact, legal ×4, demo partner page
+- [x] Bilingual site (EN/FR), light theme: home, results, destinations (list and detail), deals, about, contact, legal ×4, demo partner page
 - [x] Flight search form with validation, accessible airport autocomplete (3,194 airports), one-way/round-trip, passengers, cabin, currency
 - [x] Provider abstraction plus a deterministic, clearly labelled mock provider
 - [x] PostgreSQL schema (15 tables) with Alembic migration, seed data, retention purge

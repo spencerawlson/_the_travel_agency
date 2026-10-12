@@ -1,4 +1,4 @@
-# START HERE: Global Travel Platform
+# START HERE: Farelune (Global Travel Platform)
 
 Everything you need in one place: what this is, where it runs, how to open it, how to start
 and stop it, how to update it, and what's still left to decide.
@@ -219,7 +219,9 @@ git push
 - [ ] Change the **root** and **spencer** passwords on 192.168.1.88; both were shared in chat.
 
 **Before going public**
-- [ ] Choose the real brand. "Northstar Fares" is a placeholder (`SITE_NAME`) and needs a trademark check.
+- [x] Brand chosen: **Farelune**, *Connecting You to Everywhere*. farelune.com registered 2026-10-12.
+- [ ] Register **farelune.ca** too (still available when checked).
+- [ ] Have a trademark agent do a formal clearance and file a Canadian application (classes 35, 39, 42).
 - [ ] Fill in the real legal identity in the server `.env`: `LEGAL_ENTITY_NAME`, `LEGAL_ADDRESS`,
       `CONTACT_EMAIL`, `PRIVACY_EMAIL`.
 - [ ] Have a Québec lawyer review the legal pages (privacy, terms, affiliate disclosure,

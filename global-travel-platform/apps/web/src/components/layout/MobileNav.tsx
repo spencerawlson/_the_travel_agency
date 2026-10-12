@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { useId, useState } from "react";
 import { Link } from "@/i18n/navigation";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function MobileNav({ items }: { items: { href: string; label: string }[] }) {
   const t = useTranslations("nav");
@@ -39,9 +38,6 @@ export function MobileNav({ items }: { items: { href: string; label: string }[] 
               </li>
             ))}
           </ul>
-          <div className="mt-3 border-t border-line pt-3 sm:hidden">
-            <ThemeToggle />
-          </div>
         </nav>
       )}
     </div>

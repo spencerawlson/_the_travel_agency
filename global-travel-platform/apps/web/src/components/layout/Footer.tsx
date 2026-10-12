@@ -13,7 +13,8 @@ export async function Footer({ site }: { site: SiteConfig }) {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-display text-lg font-semibold">{site.name}</p>
-          <p className="mt-2 text-sm text-ink-muted">{t("tagline")}</p>
+          <p className="mt-1 font-display text-base text-accent-600 italic">{t("tagline")}</p>
+          <p className="mt-2 text-sm text-ink-muted">{t("about")}</p>
         </div>
         <FooterColumn
           title={t("explore")}

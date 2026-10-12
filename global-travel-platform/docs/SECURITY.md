@@ -67,8 +67,8 @@ backslash confusion, credentials, ports, CRLF injection, cache tampering and the
   `Permissions-Policy`, COOP/CORP, and HSTS when `COOKIE_SECURE=true`.
 - **Web headers:** a CSP with `default-src 'self'`, `frame-ancestors 'none'`,
   `object-src 'none'` and `form-action 'self'`.
-  - **Known gap:** `script-src` includes `'unsafe-inline'` for the Next.js and
-    next-themes bootstrap scripts. A nonce-based CSP is on the roadmap.
+  - **Known gap:** `script-src` includes `'unsafe-inline'` for the Next.js bootstrap
+    scripts. A nonce-based CSP is on the roadmap.
 - **CORS:** an explicit origin allowlist (`CORS_ORIGINS`), with wildcards refused in
   production. Only GET and POST are allowed, with three allowed headers.
 - **TLS:** Cloudflare "Full (strict)" plus an origin certificate on Nginx (see

@@ -5,7 +5,6 @@ import { DemoBanner } from "./DemoBanner";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { Logo } from "./Logo";
 import { MobileNav } from "./MobileNav";
-import { ThemeToggle } from "./ThemeToggle";
 
 const NAV_ITEMS = [
   { href: "/", key: "home" },
@@ -42,9 +41,6 @@ export async function Header({ siteName }: { siteName: string }) {
           <Suspense fallback={null}>
             <LocaleSwitcher />
           </Suspense>
-          <div className="hidden sm:block">
-            <ThemeToggle />
-          </div>
           <MobileNav items={NAV_ITEMS.map((i) => ({ href: i.href, label: t(i.key) }))} />
         </div>
       </div>

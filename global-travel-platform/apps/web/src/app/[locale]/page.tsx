@@ -33,7 +33,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="hero-sky relative overflow-hidden border-b border-line/60">
         <div className="mx-auto grid max-w-6xl items-center gap-6 px-4 pt-10 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-14 md:pb-10">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-sm font-semibold text-brand-700 shadow-sm ring-1 ring-brand-100 dark:bg-white/10 dark:text-brand-300 dark:ring-white/10">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-sm font-semibold text-brand-700 shadow-sm ring-1 ring-brand-100">
               <span aria-hidden>✈</span> {t("eyebrow")}
             </p>
             <h1 className="mt-5 font-display text-5xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-6xl">
@@ -59,7 +59,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
         <div className="mx-auto max-w-6xl px-4 pb-10">
-          <div className="rounded-3xl border border-white/70 bg-white/90 p-4 shadow-2xl shadow-brand-900/10 backdrop-blur sm:p-6 dark:border-white/10 dark:bg-surface-1/90">
+          <div className="rounded-3xl border border-white/70 bg-white/90 p-4 shadow-2xl shadow-brand-900/10 backdrop-blur sm:p-6">
             <SearchForm />
           </div>
         </div>

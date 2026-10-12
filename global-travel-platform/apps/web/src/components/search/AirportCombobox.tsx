@@ -152,7 +152,7 @@ export function AirportCombobox({
               id={`${id}-opt-${i}`}
               role="option"
               aria-selected={i === active}
-              className="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 aria-selected:bg-brand-50 dark:aria-selected:bg-brand-900/40"
+              className="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 aria-selected:bg-brand-50"
               onMouseEnter={() => setActive(i)}
               onClick={() => select(a)}
             >
@@ -170,7 +170,7 @@ export function AirportCombobox({
         </ul>
       )}
       {error && (
-        <p id={errorId} className="mt-1 text-sm text-red-600 dark:text-red-400">
+        <p id={errorId} className="mt-1 text-sm text-red-600">
           {error}
         </p>
       )}

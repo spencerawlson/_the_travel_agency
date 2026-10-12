@@ -10,12 +10,12 @@ creates reservations.**
 > switch until partner agreements and licensing are verified (see
 > [docs/COMPLIANCE.md](docs/COMPLIANCE.md)).
 
-| Area | Stack                                                                                 |
-| ---- | ------------------------------------------------------------------------------------- |
-| Web  | Next.js 16 (App Router, TypeScript, React 19), Tailwind CSS 4, next-intl, next-themes |
-| API  | Python 3.12, FastAPI, Pydantic 2, SQLAlchemy 2.1 (async), Alembic                     |
-| Data | PostgreSQL 17, Redis 7 (offer cache, rate limits)                                     |
-| Ops  | Docker Compose, Nginx, GitHub Actions; DigitalOcean + Cloudflare ready                |
+| Area | Stack                                                                    |
+| ---- | ------------------------------------------------------------------------ |
+| Web  | Next.js 16 (App Router, TypeScript, React 19), Tailwind CSS 4, next-intl |
+| API  | Python 3.12, FastAPI, Pydantic 2, SQLAlchemy 2.1 (async), Alembic        |
+| Data | PostgreSQL 17, Redis 7 (offer cache, rate limits)                        |
+| Ops  | Docker Compose, Nginx, GitHub Actions; DigitalOcean + Cloudflare ready   |
 
 ## Quick start (Docker)
 
@@ -119,7 +119,8 @@ docs/              architecture, database, API, deployment, security, compliance
 
 ## Important notices
 
-- **Brand name.** "Northstar Fares" is a placeholder (`SITE_NAME`); clear the trademark before launch.
+- **Brand.** Farelune, _Connecting You to Everywhere_ (farelune.com). Have a trademark agent run a
+  formal clearance and file in Canada before launch (`SITE_NAME` sets the displayed name).
 - **Legal pages are drafts** for review by a qualified lawyer. They are not legal advice.
 - **Data sources.** Airports come from [OurAirports](https://ourairports.com/data/) (public domain);
   time zones are derived with `timezonefinder`. No exchange rates are seeded or invented.
