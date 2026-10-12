@@ -61,7 +61,10 @@
       }
     },
     "globeLabelAny": "Rotating globe showing our featured destinations around the world",
-    "destinationsSubtitleAny": "Hand-picked ideas from around the world."
+    "destinationsSubtitleAny": "Hand-picked ideas from around the world.",
+    "slideLink": "Explore {name}",
+    "pauseSlides": "Pause background photos",
+    "playSlides": "Play background photos"
   },
   "search": {
     "formLabel": "Flight search",

@@ -1,10 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { DestinationCard } from "@/components/DestinationCard";
 import { Globe } from "@/components/Globe";
+import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { Photo } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { Link } from "@/i18n/navigation";
-import { getPhoto, type Mood } from "@/lib/photos";
+import { getPhoto, photoAlt, type Mood } from "@/lib/photos";
 import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
 
 const MOOD_PHOTOS: Record<Mood, string> = {
@@ -22,7 +22,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const origin = await getOrigin();
   const city = originCity(origin, locale);
   const hub = origin ? { latitude: origin.latitude, longitude: origin.longitude } : null;
-  const featured = destinations.slice(0, 6);
+  const slides = destinations.flatMap((d) => {
+    const p = getPhoto(d.slug);
+    return p
+      ? [
+          {
+            slug: d.slug,
+            name: d.name,
+            src: p.src,
+            srcSmall: p.srcSmall,
+            alt: photoAlt(p, locale),
+            focus: p.focus,
+            credit: `© ${p.author}`,
+          },
+        ]
+      : [];
+  });
   const globePoints = destinations.map((d) => ({
     slug: d.slug,
     name: d.name,
@@ -32,8 +47,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      {/* ---------- Hero: headline + rotating globe ---------- */}
-      <section className="hero-sky relative overflow-hidden border-b border-line/60">
+      {/* ---------- Hero: photo carousel backdrop + headline + globe ---------- */}
+      <section className="relative isolate overflow-hidden border-b border-line/60">
+        <HeroBackdrop slides={slides} />
         <div className="mx-auto grid max-w-6xl items-center gap-6 px-4 pt-10 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-14 md:pb-10">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-sm font-semibold text-brand-700 shadow-sm ring-1 ring-brand-100">
@@ -77,8 +93,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* ---------- What kind of trip? ---------- */}
       <section className="mx-auto max-w-6xl px-4 pt-16">
-        <h2 className="font-display text-4xl font-semibold tracking-tight">{t("moodTitle")}</h2>
-        <p className="mt-2 text-ink-muted">{t("moodSubtitle")}</p>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-4xl font-semibold tracking-tight">{t("moodTitle")}</h2>
+            <p className="mt-2 text-ink-muted">{t("moodSubtitle")}</p>
+          </div>
+          <Link
+            href="/destinations"
+            className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
+          >
+            {t("viewAll")} →
+          </Link>
+        </div>
         <ul className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {(Object.keys(MOOD_PHOTOS) as Mood[]).map((mood) => (
             <li key={mood}>
@@ -104,33 +130,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </p>
                 </div>
               </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* ---------- Popular destinations ---------- */}
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-4xl font-semibold tracking-tight">
-              {t("destinationsTitle")}
-            </h2>
-            <p className="mt-2 text-ink-muted">
-              {city ? t("destinationsSubtitle", { city }) : t("destinationsSubtitleAny")}
-            </p>
-          </div>
-          <Link
-            href="/destinations"
-            className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700"
-          >
-            {t("viewAll")} →
-          </Link>
-        </div>
-        <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((d, i) => (
-            <li key={d.slug}>
-              <DestinationCard destination={d} originCity={city ?? ""} priority={i < 3} />
             </li>
           ))}
         </ul>

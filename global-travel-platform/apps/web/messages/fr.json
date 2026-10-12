@@ -61,7 +61,10 @@
       }
     },
     "globeLabelAny": "Globe en rotation montrant nos destinations vedettes dans le monde",
-    "destinationsSubtitleAny": "Des idées choisies avec soin, partout dans le monde."
+    "destinationsSubtitleAny": "Des idées choisies avec soin, partout dans le monde.",
+    "slideLink": "Découvrir {name}",
+    "pauseSlides": "Mettre en pause les photos d'arrière-plan",
+    "playSlides": "Lire les photos d'arrière-plan"
   },
   "search": {
     "formLabel": "Recherche de vols",
