@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* Shared UI package classes must be scanned too. */
+@source "../../../../packages/ui/src";
+
+/* Class-based dark mode (next-themes sets .dark on <html>). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Semantic design tokens. Components use these names, so themes only change here. */
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+
+  --color-brand-50: oklch(0.97 0.02 250);
+  --color-brand-100: oklch(0.93 0.04 250);
+  --color-brand-300: oklch(0.78 0.1 250);
+  --color-brand-400: oklch(0.68 0.14 250);
+  --color-brand-500: oklch(0.58 0.17 252);
+  --color-brand-600: oklch(0.5 0.17 255);
+  --color-brand-700: oklch(0.43 0.15 257);
+  --color-brand-900: oklch(0.27 0.08 260);
+  --color-accent-500: oklch(0.74 0.15 60);
+
+  --color-canvas: var(--canvas);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-chart-1: var(--chart-1);
+}
+
+:root {
+  --canvas: oklch(0.985 0.004 250);
+  --surface-1: oklch(1 0 0);
+  --surface-2: oklch(0.965 0.006 250);
+  --surface-3: oklch(0.93 0.01 250);
+  --ink: oklch(0.22 0.03 260);
+  --ink-muted: oklch(0.47 0.03 260);
+  --line: oklch(0.9 0.01 250);
+  --chart-1: #2f78d4; /* validated: dataviz validate_palette --mode light */
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: oklch(0.17 0.02 260);
+  --surface-1: oklch(0.21 0.025 260);
+  --surface-2: oklch(0.25 0.025 260);
+  --surface-3: oklch(0.3 0.03 260);
+  --ink: oklch(0.95 0.01 250);
+  --ink-muted: oklch(0.74 0.02 250);
+  --line: oklch(0.32 0.03 260);
+  --chart-1: #4a8ae6; /* validated: --mode dark */
+  color-scheme: dark;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Decorative destination gradients (no third-party imagery). */
+.theme-dusk {
+  background-image: linear-gradient(135deg, #3b2f63, #c2667a 60%, #f2b880);
+}
+.theme-slate {
+  background-image: linear-gradient(135deg, #1f2a3a, #46607d 55%, #9fb4c8);
+}
+.theme-night {
+  background-image: linear-gradient(135deg, #0b1630, #283c7a 55%, #e0a84a);
+}
+.theme-sakura {
+  background-image: linear-gradient(135deg, #3a1f3d, #b4507a 55%, #f6c1d1);
+}
+.theme-sunset {
+  background-image: linear-gradient(135deg, #2d1b3a, #d0573a 55%, #f4c26b);
+}
+.theme-lagoon {
+  background-image: linear-gradient(135deg, #003a4d, #0a8ea0 55%, #8fe3d8);
+}
+.theme-aurora {
+  background-image: linear-gradient(135deg, #07142b, #136b6b 55%, #7de0a8);
+}
+.theme-desert {
+  background-image: linear-gradient(135deg, #4a2412, #b8662e 55%, #f0c48a);
+}
+.theme-forest {
+  background-image: linear-gradient(135deg, #0f2a1f, #2f6b4a 55%, #a7cf9a);
+}
+.theme-terracotta {
+  background-image: linear-gradient(135deg, #3c1d15, #a9472f 55%, #e8b48a);
+}
+.theme-tropic {
+  background-image: linear-gradient(135deg, #10283a, #1f7a5c 55%, #f0c048);
+}
+.theme-ocean {
+  background-image: linear-gradient(135deg, #0b2545, #13466e 55%, #8db8d8);
+}
+
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 15% 20%, oklch(0.58 0.17 252 / 0.25), transparent 45%),
+    radial-gradient(circle at 85% 10%, oklch(0.74 0.15 60 / 0.2), transparent 40%),
+    radial-gradient(circle at 70% 90%, oklch(0.5 0.17 255 / 0.18), transparent 45%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

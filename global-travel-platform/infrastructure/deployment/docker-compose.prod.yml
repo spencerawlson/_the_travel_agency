@@ -1,0 +1,37 @@
+# Production overrides. Use with:
+#   docker compose -f docker-compose.yml -f infrastructure/deployment/docker-compose.prod.yml up -d --build
+# Requires in .env: ENVIRONMENT=production, COOKIE_SECURE=true, CORS_ORIGINS=https://<domain>,
+# strong POSTGRES_PASSWORD / SECRET_KEY, and TLS files in infrastructure/nginx/certs/.
+services:
+  migrate:
+    environment:
+      ENVIRONMENT: production
+      DEV_ADMIN_EMAIL: ""
+      DEV_ADMIN_PASSWORD: ""
+
+  api:
+    environment:
+      ENVIRONMENT: production
+      ENABLE_DOCS: "false"
+      WEB_CONCURRENCY: "3"
+    deploy:
+      resources:
+        limits: { memory: 768m }
+
+  web:
+    deploy:
+      resources:
+        limits: { memory: 512m }
+
+  postgres:
+    deploy:
+      resources:
+        limits: { memory: 1g }
+
+  nginx:
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../nginx/production-tls.conf.example:/etc/nginx/nginx.conf:ro
+      - ../nginx/certs:/etc/nginx/certs:ro

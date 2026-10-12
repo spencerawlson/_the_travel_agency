@@ -1,0 +1,23 @@
+{
+  "name": "global-travel-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/web", "packages/*"],
+  "engines": { "node": ">=20.9" },
+  "scripts": {
+    "dev:web": "npm run dev -w @gtp/web",
+    "build:web": "npm run build -w @gtp/web",
+    "lint": "npm run lint -w @gtp/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test -w @gtp/web",
+    "test:e2e": "playwright test -c tests/e2e/playwright.config.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "typescript": "5.9.3"
+  }
+}

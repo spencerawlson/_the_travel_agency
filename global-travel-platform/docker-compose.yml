@@ -1,0 +1,116 @@
+# Full local stack: Nginx -> (Next.js web, FastAPI api) -> PostgreSQL + Redis.
+#   cp .env.example .env && docker compose up --build -d
+#   open http://localhost:${HTTP_PORT:-8080}
+# Only Nginx publishes a port; databases are reachable only on the internal network.
+name: gtp
+
+x-api-env: &api-env
+  ENVIRONMENT: ${ENVIRONMENT:-development}
+  DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-gtp}:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@postgres:5432/${POSTGRES_DB:-gtp}
+  REDIS_URL: redis://redis:6379/0
+  SECRET_KEY: ${SECRET_KEY:?set SECRET_KEY in .env}
+  CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+  COOKIE_SECURE: ${COOKIE_SECURE:-false}
+  ENABLE_DOCS: ${ENABLE_DOCS:-true}
+  ENABLED_PROVIDERS: mock
+  REFERRALS_LIVE_ENABLED: "false"
+  METRICS_TOKEN: ${METRICS_TOKEN:-}
+  SENTRY_DSN: ${SENTRY_DSN:-}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-gtp}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-gtp}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    command:
+      [
+        "redis-server",
+        "--save",
+        "",
+        "--appendonly",
+        "no",
+        "--maxmemory",
+        "128mb",
+        "--maxmemory-policy",
+        "allkeys-lru",
+      ]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # One-shot: apply migrations, seed reference data, create dev admin (dev only).
+  migrate:
+    build: { context: ., dockerfile: infrastructure/docker/api.Dockerfile }
+    image: gtp-api:local
+    environment:
+      <<: *api-env
+      DEV_ADMIN_EMAIL: ${DEV_ADMIN_EMAIL:-}
+      DEV_ADMIN_PASSWORD: ${DEV_ADMIN_PASSWORD:-}
+    command: >
+      sh -c "alembic upgrade head &&
+             python -m app.cli seed &&
+             (python -m app.cli ensure-dev-admin || true)"
+    depends_on:
+      postgres: { condition: service_healthy }
+    restart: "no"
+
+  api:
+    image: gtp-api:local
+    restart: unless-stopped
+    environment:
+      <<: *api-env
+      # Only reachable from inside the compose network (no published port).
+      FORWARDED_ALLOW_IPS: "*"
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+
+  web:
+    build: { context: ., dockerfile: infrastructure/docker/web.Dockerfile }
+    image: gtp-web:local
+    restart: unless-stopped
+    environment:
+      API_INTERNAL_URL: http://api:8000
+      SITE_NAME: ${SITE_NAME:-Northstar Fares}
+      LEGAL_ENTITY_NAME: ${LEGAL_ENTITY_NAME:-}
+      CONTACT_EMAIL: ${CONTACT_EMAIL:-}
+      PRIVACY_EMAIL: ${PRIVACY_EMAIL:-}
+      LEGAL_ADDRESS: ${LEGAL_ADDRESS:-}
+    depends_on:
+      api: { condition: service_healthy }
+
+  nginx:
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    volumes:
+      - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      web: { condition: service_healthy }
+      api: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/nginx-health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata:

@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "paris", "airport": "CDG", "theme": "dusk", "tags": ["city", "culture", "food"],
+    "en": {"name": "Paris", "summary": "Boulevards, bistros and world-class museums.",
+      "description": "Paris rewards slow wandering: riverside walks along the Seine, neighbourhood markets, and museums that could fill a week on their own. Spring and early autumn bring mild weather and fewer queues.",
+      "highlights": ["Seine riverbanks at sunset", "Neighbourhood food markets", "Art from antiquity to modern"]},
+    "fr": {"name": "Paris", "summary": "Boulevards, bistrots et musées d'envergure mondiale.",
+      "description": "Paris se découvre lentement : promenades le long de la Seine, marchés de quartier et musées qui pourraient remplir une semaine entière. Le printemps et le début de l'automne offrent un temps doux et moins d'attente.",
+      "highlights": ["Les quais de Seine au coucher du soleil", "Marchés alimentaires de quartier", "De l'art antique à l'art moderne"]}
+  },
+  {
+    "slug": "london", "airport": "LHR", "theme": "slate", "tags": ["city", "culture", "theatre"],
+    "en": {"name": "London", "summary": "Royal parks, free museums and a legendary theatre scene.",
+      "description": "London blends centuries of history with a constantly changing food and arts scene. Many major museums are free to enter, and the parks offer green space in every direction.",
+      "highlights": ["Free national museums", "West End theatre", "Riverside walks on the South Bank"]},
+    "fr": {"name": "Londres", "summary": "Parcs royaux, musées gratuits et une scène théâtrale légendaire.",
+      "description": "Londres marie des siècles d'histoire à une scène culinaire et artistique en perpétuel mouvement. Plusieurs grands musées sont gratuits et les parcs offrent de la verdure dans toutes les directions.",
+      "highlights": ["Musées nationaux gratuits", "Théâtre du West End", "Promenades sur la South Bank"]}
+  },
+  {
+    "slug": "new-york", "airport": "JFK", "theme": "night", "tags": ["city", "food", "shopping"],
+    "en": {"name": "New York", "summary": "Skylines, neighbourhoods and food from every corner of the world.",
+      "description": "Each New York neighbourhood feels like its own city. Walk the bridges, explore the parks, and eat your way through one of the most diverse food scenes anywhere.",
+      "highlights": ["Walking across the bridges", "Central Park in every season", "Neighbourhood food tours"]},
+    "fr": {"name": "New York", "summary": "Gratte-ciel, quartiers vivants et cuisines du monde entier.",
+      "description": "Chaque quartier de New York ressemble à une ville en soi. Traversez les ponts à pied, explorez les parcs et goûtez à l'une des scènes culinaires les plus diversifiées qui soient.",
+      "highlights": ["Traverser les ponts à pied", "Central Park en toute saison", "Visites gourmandes de quartier"]}
+  },
+  {
+    "slug": "tokyo", "airport": "HND", "theme": "sakura", "tags": ["city", "food", "culture"],
+    "en": {"name": "Tokyo", "summary": "Neon districts, quiet shrines and exceptional food.",
+      "description": "Tokyo moves between calm and electric in a few steps: shrine gardens beside busy crossings, tiny counters serving exceptional meals, and efficient trains linking it all.",
+      "highlights": ["Shrine and temple gardens", "Food halls and small counters", "Day trips by rail"]},
+    "fr": {"name": "Tokyo", "summary": "Quartiers néon, sanctuaires paisibles et cuisine exceptionnelle.",
+      "description": "À Tokyo, on passe du calme à l'effervescence en quelques pas : jardins de sanctuaires près des carrefours animés, petits comptoirs aux repas remarquables et trains efficaces pour tout relier.",
+      "highlights": ["Jardins de sanctuaires et de temples", "Halles gourmandes et petits comptoirs", "Excursions d'une journée en train"]}
+  },
+  {
+    "slug": "barcelona", "airport": "BCN", "theme": "sunset", "tags": ["beach", "city", "architecture"],
+    "en": {"name": "Barcelona", "summary": "Modernist architecture meets the Mediterranean.",
+      "description": "Barcelona combines a walkable old town, striking modernist buildings and city beaches. Evenings start late, so plan long dinners and leisurely strolls.",
+      "highlights": ["Modernist architecture", "City beaches", "Late-evening dining"]},
+    "fr": {"name": "Barcelone", "summary": "L'architecture moderniste au bord de la Méditerranée.",
+      "description": "Barcelone réunit une vieille ville à parcourir à pied, des bâtiments modernistes saisissants et des plages urbaines. Les soirées commencent tard : prévoyez de longs dîners.",
+      "highlights": ["Architecture moderniste", "Plages urbaines", "Dîners en soirée"]}
+  },
+  {
+    "slug": "lisbon", "airport": "LIS", "theme": "sunset", "tags": ["city", "food", "coast"],
+    "en": {"name": "Lisbon", "summary": "Hillside viewpoints, tiled facades and Atlantic light.",
+      "description": "Lisbon's hills reward the climb with wide river views. Historic trams, tiled facades and an easy reach to Atlantic beaches make it a favourite for city breaks.",
+      "highlights": ["Hilltop viewpoints", "Historic trams", "Nearby Atlantic beaches"]},
+    "fr": {"name": "Lisbonne", "summary": "Belvédères, façades en azulejos et lumière atlantique.",
+      "description": "Les collines de Lisbonne récompensent l'effort par de vastes vues sur le fleuve. Tramways historiques, façades carrelées et plages atlantiques à proximité en font une escapade prisée.",
+      "highlights": ["Belvédères sur les collines", "Tramways historiques", "Plages atlantiques à proximité"]}
+  },
+  {
+    "slug": "cancun", "airport": "CUN", "theme": "lagoon", "tags": ["beach", "sun", "family"],
+    "en": {"name": "Cancún", "summary": "Turquoise water, reefs and archaeological sites.",
+      "description": "Cancún is a gateway to Caribbean beaches, snorkelling reefs, freshwater cenotes and ancient Maya sites along the Yucatán Peninsula.",
+      "highlights": ["Caribbean beaches", "Cenotes for swimming", "Maya archaeological sites"]},
+    "fr": {"name": "Cancún", "summary": "Eaux turquoise, récifs et sites archéologiques.",
+      "description": "Cancún est la porte d'entrée vers les plages des Caraïbes, les récifs propices à la plongée en apnée, les cénotes et les anciens sites mayas de la péninsule du Yucatán.",
+      "highlights": ["Plages des Caraïbes", "Baignade dans les cénotes", "Sites archéologiques mayas"]}
+  },
+  {
+    "slug": "reykjavik", "airport": "KEF", "theme": "aurora", "tags": ["nature", "adventure"],
+    "en": {"name": "Reykjavík", "summary": "Geothermal pools, waterfalls and northern lights.",
+      "description": "Reykjavík is a compact base for exploring Iceland's volcanic landscapes. Winter brings the chance of northern lights; summer brings near-endless daylight.",
+      "highlights": ["Geothermal pools", "Waterfall day trips", "Northern lights in winter"]},
+    "fr": {"name": "Reykjavik", "summary": "Bains géothermiques, chutes et aurores boréales.",
+      "description": "Reykjavik est une base compacte pour explorer les paysages volcaniques de l'Islande. L'hiver offre la chance d'aurores boréales; l'été, une lumière presque continue.",
+      "highlights": ["Bains géothermiques", "Excursions vers les chutes", "Aurores boréales en hiver"]}
+  },
+  {
+    "slug": "marrakech", "airport": "RAK", "theme": "desert", "tags": ["culture", "food", "markets"],
+    "en": {"name": "Marrakech", "summary": "Lively souks, riads and gardens at the foot of the Atlas.",
+      "description": "Marrakech's medina is a maze of markets and courtyards. Escape the bustle in quiet gardens, or head to the Atlas Mountains for a day of fresh air.",
+      "highlights": ["Medina markets", "Courtyard riads", "Atlas Mountains day trips"]},
+    "fr": {"name": "Marrakech", "summary": "Souks animés, riads et jardins au pied de l'Atlas.",
+      "description": "La médina de Marrakech est un dédale de marchés et de cours intérieures. Fuyez l'agitation dans des jardins paisibles, ou partez une journée dans l'Atlas.",
+      "highlights": ["Marchés de la médina", "Riads et cours intérieures", "Excursions dans l'Atlas"]}
+  },
+  {
+    "slug": "vancouver", "airport": "YVR", "theme": "forest", "tags": ["nature", "city", "outdoors"],
+    "en": {"name": "Vancouver", "summary": "Mountains, ocean and rainforest in one city.",
+      "description": "Vancouver puts seawall cycling, forest trails and ski slopes within easy reach of downtown, with a food scene shaped by the Pacific.",
+      "highlights": ["Seawall walks and rides", "Coastal rainforest trails", "Pacific seafood"]},
+    "fr": {"name": "Vancouver", "summary": "Montagnes, océan et forêt pluviale dans une même ville.",
+      "description": "Vancouver met la promenade du bord de mer, les sentiers forestiers et les pentes de ski à deux pas du centre-ville, avec une cuisine inspirée du Pacifique.",
+      "highlights": ["Promenade du bord de mer", "Sentiers en forêt pluviale côtière", "Fruits de mer du Pacifique"]}
+  },
+  {
+    "slug": "rome", "airport": "FCO", "theme": "terracotta", "tags": ["culture", "history", "food"],
+    "en": {"name": "Rome", "summary": "Ancient ruins, piazzas and long Italian lunches.",
+      "description": "Rome layers thousands of years of history into its streets. Mornings at the ancient sites, afternoons in shaded piazzas and evenings in neighbourhood trattorias.",
+      "highlights": ["Ancient forums and ruins", "Fountains and piazzas", "Neighbourhood trattorias"]},
+    "fr": {"name": "Rome", "summary": "Ruines antiques, places animées et longs repas italiens.",
+      "description": "Rome superpose des millénaires d'histoire dans ses rues. Le matin aux sites antiques, l'après-midi sur des places ombragées et le soir dans les trattorias de quartier.",
+      "highlights": ["Forums et ruines antiques", "Fontaines et places", "Trattorias de quartier"]}
+  },
+  {
+    "slug": "bangkok", "airport": "BKK", "theme": "tropic", "tags": ["city", "food", "culture"],
+    "en": {"name": "Bangkok", "summary": "Temples, river life and legendary street food.",
+      "description": "Bangkok pairs gilded temples and river ferries with night markets and some of the world's best-loved street food.",
+      "highlights": ["Riverside temples", "River ferries", "Night markets and street food"]},
+    "fr": {"name": "Bangkok", "summary": "Temples, vie au fil du fleuve et cuisine de rue légendaire.",
+      "description": "Bangkok associe temples dorés et traversiers sur le fleuve à des marchés de nuit et à l'une des cuisines de rue les plus appréciées au monde.",
+      "highlights": ["Temples au bord du fleuve", "Traversiers sur le fleuve", "Marchés de nuit et cuisine de rue"]}
+  }
+]
