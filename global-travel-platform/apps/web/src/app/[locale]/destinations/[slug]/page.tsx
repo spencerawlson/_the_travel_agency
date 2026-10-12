@@ -36,7 +36,10 @@ function monthNames(months: number[], locale: string): string {
 
 function displayName(type: "currency" | "language", code: string, locale: string): string {
   try {
-    return sentenceCase(new Intl.DisplayNames([intlLocale(locale)], { type }).of(code) ?? code, locale);
+    return sentenceCase(
+      new Intl.DisplayNames([intlLocale(locale)], { type }).of(code) ?? code,
+      locale,
+    );
   } catch {
     return code;
   }
@@ -96,8 +99,7 @@ function Facts({
       </Fact>
       {d.currency && (
         <Fact icon="💱" label={t("facts.currency")}>
-          {displayName("currency", d.currency, locale)} (
-          {d.currency})
+          {displayName("currency", d.currency, locale)} ({d.currency})
         </Fact>
       )}
       {d.languages.length > 0 && (
