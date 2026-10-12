@@ -1,517 +1,1381 @@
 [
- {
-  "slug": "paris",
-  "airport": "CDG",
-  "theme": "dusk",
-  "tags": [
-   "city",
-   "culture",
-   "food"
-  ],
-  "en": {
-   "name": "Paris",
-   "summary": "Boulevards, bistros and world-class museums.",
-   "description": "Paris rewards slow wandering: riverside walks along the Seine, neighbourhood markets, and museums that could fill a week on their own. Spring and early autumn bring mild weather and fewer queues.",
-   "highlights": [
-    "Seine riverbanks at sunset",
-    "Neighbourhood food markets",
-    "Art from antiquity to modern"
-   ]
+  {
+    "slug": "paris",
+    "airport": "CDG",
+    "theme": "dusk",
+    "tags": [
+      "city",
+      "culture",
+      "food"
+    ],
+    "en": {
+      "name": "Paris",
+      "summary": "Boulevards, bistros and world-class museums.",
+      "description": "Paris rewards slow wandering: riverside walks along the Seine, neighbourhood markets, and museums that could fill a week on their own. Spring and early autumn bring mild weather and fewer queues.",
+      "highlights": [
+        "Seine riverbanks at sunset",
+        "Neighbourhood food markets",
+        "Art from antiquity to modern"
+      ],
+      "history": "Paris began as Lutetia, a fishing settlement of the Parisii tribe on the marshy islands of the Seine, seized by Julius Caesar's legions in 52 BC. Clovis made it the capital of the Frankish kingdom in 508, and it has rarely looked back. The medieval city raised Notre-Dame from 1163 and founded the Sorbonne in 1257, drawing scholars from across Europe. Philippe Auguste built the first Louvre as a fortress around 1190. Louis XIV moved the court to Versailles in 1682, but the Revolution dragged power back — the Bastille fell on 14 July 1789, and Paris became the stage for the Terror, Napoleon, and three more revolutions. Baron Haussmann's rebuilding under Napoleon III (1853–1870) carved the grand boulevards through medieval lanes and gave the city its limestone face. The Eiffel Tower rose for the 1889 World's Fair. Occupied in 1940 and liberated in August 1944, Paris emerged as the capital of existentialism, cinema's New Wave, and couture. Today you walk it all at once: Roman baths in the Latin Quarter, medieval timber in the Marais, Haussmann's façades everywhere.",
+      "culture": "Parisian life runs on ritual. The morning starts at the café counter — espresso taken standing, croissant still warm — because the café is the city's living room. Lunch remains a proper pause, not a sandwich at a desk. Each arrondissement keeps its market street, and on Sundays the parks fill with families while most shops stay shuttered. The flâneur tradition is alive: the Seine's quays, car-free on Sundays in places, belong to walkers, readers and picnickers. Intellectual life still concentrates in Saint-Germain-des-Prés, though the real creative energy has moved east to Belleville and Ménilmontant. Fashion is not an industry here so much as a daily observance — even teenagers dress with intent. Evenings mean the apéro: a glass of wine on a terrace as the light goes gold on the limestone. Museums are not tourist duty but part of the week — Parisians queue for the big retrospectives like everyone else.",
+      "landmarks": [
+        {
+          "name": "Eiffel Tower",
+          "description": "Built by Gustave Eiffel for the 1889 World's Fair, the 330-metre iron lattice was meant to stand for twenty years — Parisians of the era called it a metal monstrosity. It survived because it made a perfect radio antenna. Repainted every seven years, its puddled-iron frame is now the most visited paid monument on earth."
+        },
+        {
+          "name": "Notre-Dame de Paris",
+          "description": "Begun in 1163 on the Île de la Cité, the cathedral took nearly two centuries to complete and defined Gothic architecture for Europe. Victor Hugo's 1831 novel saved it from ruin; Viollet-le-Duc restored it, adding the famous spire. After the 2019 fire it reopened in December 2024, rebuilt by a thousand artisans."
+        },
+        {
+          "name": "The Louvre",
+          "description": "Philippe Auguste's 1190 fortress became a Renaissance palace, then the world's most visited museum when revolutionaries opened the royal collection to the public in 1793. I.M. Pei's glass pyramid (1989) still divides opinion. Beyond the Mona Lisa: the medieval foundations in the basement, and the Denon wing at 9am before the crowds."
+        },
+        {
+          "name": "Musée d'Orsay",
+          "description": "A Beaux-Arts railway station built for the 1900 World's Fair, saved from demolition in the 1970s and reborn as the museum of Impressionism. Monet, Van Gogh and Degas hang under the great glass vault; the giant station clock on the top floor frames the Sacré-Cœur like a painting."
+        },
+        {
+          "name": "Sacré-Cœur & Montmartre",
+          "description": "The white-domed basilica, consecrated in 1919, was built as national penance after the Franco-Prussian War — radicals have resented it ever since. Climb past the carousel to the parvis for the city's best free view. Behind it, Montmartre's vineyard and artists' square keep the village that housed Picasso and Modigliani."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Paris Convention and Visitors Bureau",
+          "url": "https://www.parisjetaime.com/eng"
+        },
+        {
+          "label": "France.fr – Official French Tourism",
+          "url": "https://www.france.fr/en"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Paris",
+      "summary": "Boulevards, bistrots et musées d'envergure mondiale.",
+      "description": "Paris se découvre lentement : promenades le long de la Seine, marchés de quartier et musées qui pourraient remplir une semaine entière. Le printemps et le début de l'automne offrent un temps doux et moins d'attente.",
+      "highlights": [
+        "Les quais de Seine au coucher du soleil",
+        "Marchés alimentaires de quartier",
+        "De l'art antique à l'art moderne"
+      ],
+      "history": "Paris naît sous le nom de Lutèce, un village de pêcheurs de la tribu des Parisii sur les îles marécageuses de la Seine, conquis par les légions de César en 52 avant J.-C. Clovis en fait la capitale du royaume franc en 508, et la ville ne cessera plus de grandir. Au Moyen Âge, on y élève Notre-Dame à partir de 1163 et on y fonde la Sorbonne en 1257, qui attire les savants de toute l'Europe. Philippe Auguste fait construire le premier Louvre, une forteresse, vers 1190. Louis XIV installe la cour à Versailles en 1682, mais la Révolution ramène le pouvoir à Paris : la Bastille tombe le 14 juillet 1789, et la ville devient le théâtre de la Terreur, de Napoléon puis de trois autres révolutions. Le baron Haussmann, sous Napoléon III (1853-1870), perce les grands boulevards à travers le lacis médiéval et donne à Paris son visage de pierre calcaire. La tour Eiffel s'élève pour l'Exposition universelle de 1889. Occupée en 1940, libérée en août 1944, Paris devient la capitale de l'existentialisme, de la Nouvelle Vague et de la haute couture. Aujourd'hui, on y traverse les siècles à pied : thermes romains au Quartier latin, maisons à pans de bois dans le Marais, façades haussmanniennes partout.",
+      "culture": "La vie parisienne obéit à des rituels. Le matin commence au comptoir du café — un express bu debout, un croissant encore tiède — car le café est le salon de la ville. Le déjeuner reste une vraie pause, pas un sandwich avalé au bureau. Chaque arrondissement garde sa rue commerçante et son marché, et le dimanche les parcs se remplissent de familles pendant que les boutiques restent fermées. La tradition du flâneur est bien vivante : les quais de Seine, fermés aux voitures par endroits le dimanche, appartiennent aux promeneurs, aux lecteurs et aux pique-niqueurs. La vie intellectuelle se concentre toujours à Saint-Germain-des-Prés, même si l'énergie créative s'est déplacée vers l'est, à Belleville et Ménilmontant. La mode n'est pas ici une industrie, plutôt une pratique quotidienne — même les adolescents s'habillent avec intention. Le soir, c'est l'apéro : un verre de vin en terrasse pendant que la lumière dore la pierre. Les musées ne sont pas un devoir de touriste mais un rendez-vous de la semaine — les Parisiens font la queue pour les grandes rétrospectives comme tout le monde.",
+      "landmarks": [
+        {
+          "name": "Tour Eiffel",
+          "description": "Construite par Gustave Eiffel pour l'Exposition universelle de 1889, cette dentelle de fer de 330 mètres ne devait durer que vingt ans — les Parisiens de l'époque la traitaient de monstruosité métallique. Elle a survécu parce qu'elle faisait une antenne radio idéale. Repeinte tous les sept ans, sa structure de fer puddlé est aujourd'hui le monument payant le plus visité au monde."
+        },
+        {
+          "name": "Notre-Dame de Paris",
+          "description": "Commencée en 1163 sur l'île de la Cité, la cathédrale a demandé près de deux siècles de chantier et a défini l'architecture gothique en Europe. Le roman de Victor Hugo (1831) l'a sauvée de la ruine ; Viollet-le-Duc l'a restaurée en ajoutant la célèbre flèche. Après l'incendie de 2019, elle a rouvert en décembre 2024, rebâtie par un millier d'artisans."
+        },
+        {
+          "name": "Le Louvre",
+          "description": "La forteresse de Philippe Auguste (vers 1190) est devenue palais de la Renaissance, puis le musée le plus visité au monde quand les révolutionnaires ouvrent la collection royale au public en 1793. La pyramide de verre de I. M. Pei (1989) divise encore les opinions. Au-delà de la Joconde : les fondations médiévales au sous-sol, et l'aile Denon à 9 heures avant la foule."
+        },
+        {
+          "name": "Musée d'Orsay",
+          "description": "Gare de style Beaux-Arts construite pour l'Exposition de 1900, sauvée de la démolition dans les années 1970 et devenue le musée de l'impressionnisme. Monet, Van Gogh et Degas sous la grande verrière ; l'horloge géante du dernier étage cadre le Sacré-Cœur comme un tableau."
+        },
+        {
+          "name": "Sacré-Cœur et Montmartre",
+          "description": "La basilique au dôme blanc, consacrée en 1919, fut élevée en expiation nationale après la guerre franco-prussienne — les esprits radicaux ne le lui ont jamais pardonné. Montez jusqu'au parvis, après le manège, pour la plus belle vue gratuite de Paris. Derrière, la vigne de Montmartre et la place des artistes perpétuent le village de Picasso et Modigliani."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Office de tourisme de Paris",
+          "url": "https://www.parisjetaime.com/"
+        },
+        {
+          "label": "France.fr – Le tourisme officiel en France",
+          "url": "https://www.france.fr/fr"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "currency": "EUR",
+      "languages": [
+        "fr"
+      ]
+    }
   },
-  "fr": {
-   "name": "Paris",
-   "summary": "Boulevards, bistrots et musées d'envergure mondiale.",
-   "description": "Paris se découvre lentement : promenades le long de la Seine, marchés de quartier et musées qui pourraient remplir une semaine entière. Le printemps et le début de l'automne offrent un temps doux et moins d'attente.",
-   "highlights": [
-    "Les quais de Seine au coucher du soleil",
-    "Marchés alimentaires de quartier",
-    "De l'art antique à l'art moderne"
-   ]
+  {
+    "slug": "london",
+    "airport": "LHR",
+    "theme": "slate",
+    "tags": [
+      "city",
+      "culture",
+      "theatre"
+    ],
+    "en": {
+      "name": "London",
+      "summary": "Royal parks, free museums and a legendary theatre scene.",
+      "description": "London blends centuries of history with a constantly changing food and arts scene. Many major museums are free to enter, and the parks offer green space in every direction.",
+      "highlights": [
+        "Free national museums",
+        "West End theatre",
+        "Riverside walks on the South Bank"
+      ],
+      "history": "London was founded as Londinium around 43 AD, a Roman bridgehead on the Thames that Boudica burned to the ground within twenty years — the charred layer is still visible in excavations. The Normans raised the Tower of London after 1066 to cow the city; the medieval square mile grew rich on wool and trade. The Great Fire of 1666 destroyed four-fifths of the old city in four days, and Christopher Wren rebuilt 52 churches including St Paul's. Georgian London laid out its great squares; Victorian London became the capital of an empire, the largest city on earth, fed by the docks and the world's first underground railway (1863). The Blitz of 1940–41 killed 30,000 Londoners and flattened the East End. Postwar, the Windrush generation reshaped the city's culture, the Sixties made it the capital of pop, and the Docklands became Canary Wharf. You feel it in the street plan: Roman wall fragments by the Barbican, medieval alleys in the City, Victorian terraces for miles.",
+      "culture": "London runs on the pub — the local is a community hall where deals, wakes and football are all conducted over a pint of bitter, and last orders still shape the evening. Mornings mean the commute, a choreography of newspapers and silence on the Tube. The Sunday roast, preferably in a pub with a dog asleep by the fire, remains a civic duty. The city's 300-plus languages surface in its food: pie and mash in the East End, curry houses on Brick Lane, Sichuan in Soho. Markets set the weekly rhythm — flowers at Columbia Road on Sunday, antiques at Portobello on Saturday, Borough's food hall whenever hunger strikes. The great museums are free and used like libraries; the parks — Hyde Park, Hampstead Heath, Richmond — are the city's lungs and its debating chambers. Theatre is not an occasion but a habit: twenty-pound day seats at the National, Shakespeare under the sky at the Globe.",
+      "landmarks": [
+        {
+          "name": "Tower of London",
+          "description": "William the Conqueror's White Tower (c. 1078) was built to intimidate Londoners, and it worked — it has been fortress, palace, prison and execution ground. Anne Boleyn lost her head on Tower Green in 1536. The Crown Jewels glitter in the Waterloo Barracks, guarded by the Beefeaters, whose ravens are said to keep the kingdom standing."
+        },
+        {
+          "name": "Palace of Westminster & Big Ben",
+          "description": "The neo-Gothic palace by Charles Barry and Augustus Pugin rose from the ashes of the 1834 fire that destroyed the medieval Parliament. The 96-metre Elizabeth Tower — Big Ben is the bell, not the tower — has marked London's hours since 1859. The best view is from the South Bank at dusk, when the stone glows."
+        },
+        {
+          "name": "Westminster Abbey",
+          "description": "Every English monarch since William the Conqueror in 1066 has been crowned here, and seventeen lie buried within. Henry III's 13th-century Gothic rebuilding made it a forest of stone; Poets' Corner holds Chaucer, Dickens and Austen. Come for Evensong — the choir is free and the light through the west window is the show."
+        },
+        {
+          "name": "St Paul's Cathedral",
+          "description": "Christopher Wren's dome, completed in 1710 after the Great Fire, was the city's defiant answer to disaster — and it survived the Blitz while everything around it burned. Climb the 528 steps to the Golden Gallery for the panorama. The Whispering Gallery carries a murmur across the dome's full width."
+        },
+        {
+          "name": "British Museum",
+          "description": "Founded in 1753, the first national public museum in the world, and still free. The Rosetta Stone, the Parthenon sculptures, Egyptian mummies — two million years of human craft under Norman Foster's glass roof over the Great Court. Go early; the Egyptian hall fills by eleven."
+        },
+        {
+          "name": "Tower Bridge",
+          "description": "Completed in 1894, the combined bascule-and-suspension bridge was Victorian engineering at its most theatrical: Gothic towers concealing a steel frame, painted in the City's blue and white. The high-level walkways, once the haunt of pickpockets, now have glass floors. It still lifts around 800 times a year for river traffic."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit London – Official Visitor Guide",
+          "url": "https://www.visitlondon.com/"
+        },
+        {
+          "label": "VisitBritain – Official British Tourist Board",
+          "url": "https://www.visitbritain.com/en"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Londres",
+      "summary": "Parcs royaux, musées gratuits et une scène théâtrale légendaire.",
+      "description": "Londres marie des siècles d'histoire à une scène culinaire et artistique en perpétuel mouvement. Plusieurs grands musées sont gratuits et les parcs offrent de la verdure dans toutes les directions.",
+      "highlights": [
+        "Musées nationaux gratuits",
+        "Théâtre du West End",
+        "Promenades sur la South Bank"
+      ],
+      "history": "Londres naît vers 43 après J.-C. sous le nom de Londinium, une tête de pont romaine sur la Tamise que Boudicée réduit en cendres vingt ans plus tard — la couche calcinée reste visible dans les fouilles. Après 1066, les Normands élèvent la tour de Londres pour mater la ville ; la cité médiévale s'enrichit de la laine et du commerce. Le grand incendie de 1666 détruit les quatre cinquièmes de la vieille ville en quatre jours, et Christopher Wren reconstruit 52 églises, dont Saint-Paul. L'époque géorgienne trace les grandes places ; le Londres victorien devient la capitale d'un empire, la plus grande ville du monde, nourrie par les docks et le premier métro de l'histoire (1863). Le Blitz de 1940-1941 tue 30 000 Londoniens et rase l'East End. Après la guerre, la génération Windrush transforme la culture de la ville, les années soixante en font la capitale de la pop, et les Docklands deviennent Canary Wharf. On le sent dans le plan des rues : fragments du mur romain près du Barbican, ruelles médiévales dans la City, rangées de maisons victoriennes à perte de vue.",
+      "culture": "Londres tourne autour du pub — le « local » est une salle commune où l'on conclut des affaires, où l'on veille les morts et où l'on suit le foot autour d'une pinte de bitter, et le « last orders » rythme encore la soirée. Le matin, c'est le trajet pendulaire, une chorégraphie de journaux et de silence dans le métro. Le rôti du dimanche, de préférence dans un pub avec un chien endormi près du feu, reste un devoir civique. Les plus de 300 langues de la ville affleurent dans son assiette : tourtes à l'East End, curry houses sur Brick Lane, cuisine du Sichuan à Soho. Les marchés rythment la semaine — les fleurs de Columbia Road le dimanche, les antiquités de Portobello le samedi, les étals de Borough dès que la faim se fait sentir. Les grands musées sont gratuits et fréquentés comme des bibliothèques ; les parcs — Hyde Park, Hampstead Heath, Richmond — sont les poumons de la ville et ses salles de débat. Le théâtre n'est pas une sortie exceptionnelle mais une habitude : des places à 20 livres le jour même au National, Shakespeare sous le ciel du Globe.",
+      "landmarks": [
+        {
+          "name": "Tour de Londres",
+          "description": "La tour Blanche de Guillaume le Conquérant (vers 1078) fut bâtie pour intimider les Londoniens — et cela fonctionna : forteresse, palais, prison et lieu d'exécution. Anne Boleyn y perdit la tête en 1536. Les joyaux de la Couronne étincellent dans la caserne de Waterloo, gardés par les Beefeaters, dont on dit que les corbeaux maintiennent le royaume debout."
+        },
+        {
+          "name": "Palais de Westminster et Big Ben",
+          "description": "Le palais néogothique de Charles Barry et Augustus Pugin s'éleva des cendres de l'incendie de 1834 qui détruisit le Parlement médiéval. La tour Élisabeth de 96 mètres — Big Ben est la cloche, pas la tour — rythme les heures de Londres depuis 1859. La plus belle vue : depuis la South Bank au crépuscule, quand la pierre s'embrase."
+        },
+        {
+          "name": "Abbaye de Westminster",
+          "description": "Tous les monarques anglais depuis Guillaume le Conquérant en 1066 y ont été couronnés, et dix-sept y reposent. La reconstruction gothique d'Henri III au XIIIe siècle en fit une forêt de pierre ; le coin des Poètes abrite Chaucer, Dickens et Austen. Venez aux vêpres chantées — le chœur est gratuit et la lumière de la rosace ouest fait le spectacle."
+        },
+        {
+          "name": "Cathédrale Saint-Paul",
+          "description": "Le dôme de Christopher Wren, achevé en 1710 après le Grand Incendie, fut la réponse insoumise de la ville au désastre — et il survécut au Blitz quand tout brûlait autour. Gravissez les 528 marches de la galerie dorée pour le panorama. La galerie des murmures porte un chuchotement d'un bout à l'autre du dôme."
+        },
+        {
+          "name": "British Museum",
+          "description": "Fondé en 1753, premier musée national public au monde, et toujours gratuit. La pierre de Rosette, les marbres du Parthénon, les momies égyptiennes — deux millions d'années d'artisanat humain sous la verrière de Norman Foster. Venez tôt : la salle égyptienne est pleine dès onze heures."
+        },
+        {
+          "name": "Tower Bridge",
+          "description": "Achevé en 1894, ce pont à la fois basculant et suspendu affichait l'orgueil victorien : des tours néogothiques cachant une ossature d'acier, peintes aux couleurs bleu et blanc de la City. Les passerelles supérieures, autrefois repaire de pickpockets, ont désormais des planchers de verre. Il se lève encore environ 800 fois par an pour le trafic fluvial."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit London – Guide officiel des visiteurs",
+          "url": "https://www.visitlondon.com/fr"
+        },
+        {
+          "label": "VisitBritain – Office de tourisme officiel de Grande-Bretagne",
+          "url": "https://www.visitbritain.com/fr"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "currency": "GBP",
+      "languages": [
+        "en"
+      ]
+    }
   },
-  "facts": {
-   "best_months": [
-    4,
-    5,
-    6,
-    9,
-    10
-   ],
-   "currency": "EUR",
-   "languages": [
-    "fr"
-   ]
+  {
+    "slug": "new-york",
+    "airport": "JFK",
+    "theme": "night",
+    "tags": [
+      "city",
+      "food",
+      "shopping"
+    ],
+    "en": {
+      "name": "New York",
+      "summary": "Skylines, neighbourhoods and food from every corner of the world.",
+      "description": "Each New York neighbourhood feels like its own city. Walk the bridges, explore the parks, and eat your way through one of the most diverse food scenes anywhere.",
+      "highlights": [
+        "Walking across the bridges",
+        "Central Park in every season",
+        "Neighbourhood food tours"
+      ],
+      "history": "Four centuries of reinvention are stacked in New York's streets like geological strata. The Dutch bought Manhattan in 1626 and built New Amsterdam, a rough trading post of warehouses and taverns; the English seized it in 1664 and renamed it for the Duke of York. By the 1800s the Erie Canal made it America's commercial throat, and between 1892 and 1954 some twelve million immigrants passed through Ellis Island — Irish, Italian, Jewish, and later Puerto Rican, Dominican, Chinese — each wave rewriting the city's accent. The five boroughs were welded into one metropolis in 1898. The 1920s gave Harlem its Renaissance — Langston Hughes, Duke Ellington at the Cotton Club — while the Depression raised the Empire State Building in thirteen months. The city nearly went bankrupt in 1975, then reinvented itself again through art, finance, and sheer nerve. September 11, 2001 scarred Lower Manhattan; the memorial's twin voids now sit where the towers stood. What a visitor feels is that nothing here is ever finished — the past isn't preserved so much as built over, argued with, and put back to work.",
+      "culture": "New York runs on rituals performed at speed. The day starts at the bodega — coffee, light and sweet, and a baconeggandcheese ordered as one word. Commuters read on the subway with the practiced indifference of people who have seen everything; tourists are forgiven, gawking is not. Lunch might be a two-dollar pizza slice folded lengthwise, eaten walking, or hand-pulled noodles in Flushing, or a pastrami sandwich at Katz's the size of a brick. Evenings belong to stoops in summer, to gallery openings in Chelsea on Thursday nights, to the roar of Yankee Stadium or a basement jazz club in the Village. Sundays, Central Park fills with runners, saxophonists, and chess hustlers at the stone tables. What locals care about is the block — the Dominican bakery on 181st, the Ukrainian diner in the East Village, the argument over which borough has the real Chinatown. The city is expensive, loud, and occasionally rude; it is also the only place where a Senegalese taxi driver will give you restaurant advice worth crossing town for.",
+      "landmarks": [
+        {
+          "description": "A gift from France dedicated in 1886, Bartholdi's copper colossus was the first thing twelve million immigrants saw after weeks at sea. Her torch was once a working lighthouse. Climb to the crown — 354 steps — and the harbour spreads out exactly as it did for every arrival since.",
+          "name": "Statue of Liberty"
+        },
+        {
+          "description": "Raised in thirteen months during the Depression and opened in 1931, it was a bet that the future would come to Fifth Avenue. It won. The Art Deco lobby is a temple to optimism; the 86th-floor observatory still gives the best lesson in the city's geography — five boroughs laid out like a map.",
+          "name": "Empire State Building"
+        },
+        {
+          "description": "When it opened in 1883 it was the longest suspension bridge on earth, and twenty-one elephants were marched across it to prove it wouldn't fall. Walk it at sunset from Brooklyn: the cables frame the skyline, and the wooden promenade creaks under twenty thousand feet a day.",
+          "name": "Brooklyn Bridge"
+        },
+        {
+          "description": "Frederick Law Olmsted and Calvert Vaux won the 1858 design competition with a radical idea: a democratic landscape where a banker and a bricklayer share the same meadow. Eight hundred and forty-three acres later it remains exactly that — the city's shared backyard, from the Ramble's birdwatchers to the Great Lawn's picnics.",
+          "name": "Central Park"
+        },
+        {
+          "description": "Founded in 1870 by civic boosters who thought New York deserved a Louvre, the Met now holds five thousand years of art across two million square feet. Don't try to see it all. Do the Temple of Dendur at closing light, then climb to the roof garden for the skyline.",
+          "name": "The Metropolitan Museum of Art"
+        },
+        {
+          "description": "Two acre-sized voids drop thirty feet into the footprints of the Twin Towers, water falling into darkness you can't see the bottom of. The names of 2,983 victims are cut into bronze parapets. Survivors' trees and the museum's slurry wall make grief architectural — and somehow bearable.",
+          "name": "9/11 Memorial"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "NYC Tourism — Official Visitor Guide",
+          "url": "https://nyctourism.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "New York",
+      "summary": "Gratte-ciel, quartiers vivants et cuisines du monde entier.",
+      "description": "Chaque quartier de New York ressemble à une ville en soi. Traversez les ponts à pied, explorez les parcs et goûtez à l'une des scènes culinaires les plus diversifiées qui soient.",
+      "highlights": [
+        "Traverser les ponts à pied",
+        "Central Park en toute saison",
+        "Visites gourmandes de quartier"
+      ],
+      "history": "Quatre siècles de réinvention se superposent dans les rues de New York comme des couches géologiques. Les Hollandais achètent Manhattan en 1626 et fondent La Nouvelle-Amsterdam, comptoir rugueux d'entrepôts et de tavernes ; les Anglais s'en emparent en 1664 et la rebaptisent du nom du duc d'York. Au XIXe siècle, le canal Érié en fait la gorge commerciale de l'Amérique, et entre 1892 et 1954, quelque douze millions d'immigrants transitent par Ellis Island — Irlandais, Italiens, Juifs, puis Portoricains, Dominicains, Chinois — chaque vague réécrivant l'accent de la ville. Les cinq arrondissements sont soudés en une seule métropole en 1898. Les années 1920 offrent à Harlem sa Renaissance — Langston Hughes, Duke Ellington au Cotton Club — tandis que la Dépression fait surgir l'Empire State Building en treize mois. La ville frôle la faillite en 1975, puis se réinvente par l'art, la finance et le cran. Le 11 septembre 2001 endeuille Lower Manhattan ; les deux vides du mémorial occupent aujourd'hui l'empreinte des tours. Ce que le visiteur ressent, c'est que rien ici n'est jamais achevé — le passé n'est pas conservé, il est recouvert, contesté, remis au travail.",
+      "culture": "New York fonctionne sur des rituels exécutés à toute vitesse. La journée commence au bodega — café allongé et sucré, et un sandwich bacon-œuf-fromage commandé d'un seul mot. Dans le métro, les habitués lisent avec l'indifférence experte de ceux qui ont tout vu ; on pardonne aux touristes, pas aux badauds. Le déjeuner ? Une part de pizza à deux dollars pliée en deux, mangée en marchant, ou des nouilles tirées à la main à Flushing, ou un pastrami chez Katz's gros comme une brique. Le soir appartient aux perrons en été, aux vernissages de Chelsea le jeudi, au grondement du Yankee Stadium ou à une cave de jazz du Village. Le dimanche, Central Park se remplit de coureurs, de saxophonistes et d'arnaqueurs d'échecs aux tables de pierre. Ce qui compte pour les habitants, c'est le pâté de maisons — la boulangerie dominicaine de la 181e rue, le restaurant ukrainien de l'East Village, le débat sur le vrai Chinatown. La ville est chère, bruyante, parfois brusque ; c'est aussi le seul endroit où un chauffeur de taxi sénégalais vous donnera une adresse de restaurant qui vaut le déplacement.",
+      "landmarks": [
+        {
+          "description": "Offerte par la France et inaugurée en 1886, le colosse de cuivre de Bartholdi fut la première image de douze millions d'immigrants après des semaines de traversée. Sa torche servit un temps de phare. Montez jusqu'à la couronne — 354 marches — et le port s'étend comme pour chaque arrivée depuis.",
+          "name": "Statue de la Liberté"
+        },
+        {
+          "description": "Érigé en treize mois pendant la Dépression et inauguré en 1931, ce fut un pari : l'avenir passerait par la Cinquième Avenue. Pari gagné. Le hall Art déco est un temple de l'optimisme ; l'observatoire du 86e étage offre la meilleure leçon de géographie urbaine — cinq arrondissements déployés comme une carte.",
+          "name": "Empire State Building"
+        },
+        {
+          "description": "À son ouverture en 1883, c'était le plus long pont suspendu du monde ; on y fit défiler vingt et un éléphants pour prouver qu'il ne s'effondrerait pas. Traversez-le au coucher du soleil depuis Brooklyn : les câbles cadrent les gratte-ciel, et la promenade de bois craque sous vingt mille pas quotidiens.",
+          "name": "Pont de Brooklyn"
+        },
+        {
+          "description": "Frederick Law Olmsted et Calvert Vaux remportèrent le concours de 1858 avec une idée radicale : un paysage démocratique où banquier et maçon partagent la même prairie. Huit cent quarante-trois acres plus tard, c'est toujours cela — le jardin commun de la ville, des ornithologues du Ramble aux pique-niques de la Great Lawn.",
+          "name": "Central Park"
+        },
+        {
+          "description": "Fondé en 1870 par des notables convaincus que New York méritait son Louvre, le Met conserve cinq mille ans d'art sur près de deux cent mille mètres carrés. N'essayez pas de tout voir. Faites le temple de Dendour à la lumière du soir, puis montez au jardin sur le toit pour la vue.",
+          "name": "Metropolitan Museum of Art"
+        },
+        {
+          "description": "Deux vides grands comme des terrains plongent de neuf mètres dans l'empreinte des tours Jumelles, l'eau tombant vers une obscurité sans fond visible. Les noms des 2 983 victimes sont gravés dans des parapets de bronze. Arbres rescapés et mur de boue du musée font du deuil une architecture — supportable, d'une certaine façon.",
+          "name": "Mémorial du 11-Septembre"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "NYC Tourism — guide officiel des visiteurs",
+          "url": "https://nyctourism.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "currency": "USD",
+      "languages": [
+        "en"
+      ]
+    }
+  },
+  {
+    "slug": "tokyo",
+    "airport": "HND",
+    "theme": "sakura",
+    "tags": [
+      "city",
+      "food",
+      "culture"
+    ],
+    "en": {
+      "name": "Tokyo",
+      "summary": "Neon districts, quiet shrines and exceptional food.",
+      "description": "Tokyo moves between calm and electric in a few steps: shrine gardens beside busy crossings, tiny counters serving exceptional meals, and efficient trains linking it all.",
+      "highlights": [
+        "Shrine and temple gardens",
+        "Food halls and small counters",
+        "Day trips by rail"
+      ],
+      "history": "In 1457, the warlord Ōta Dōkan built a modest castle on a bluff above Edo Bay — a fishing village of little consequence. Everything changed in 1603, when Tokugawa Ieyasu made Edo the seat of his shogunate. His successors compelled regional lords to keep residences in the city, and Edo swelled: by the early 1700s it held roughly a million people, likely the largest city on earth. Woodblock prints, kabuki, and a pleasure-quarter culture flourished behind its moats. The Meiji Restoration of 1868 toppled the shogunate; the young emperor moved into the castle and Edo was renamed Tokyo — 'eastern capital.' What followed was a deliberate sprint into modernity: railways, brick ministries, gaslight. The 1923 Great Kantō earthquake flattened most of the city; American firebombing in March 1945 did it again. Each time Tokyo rebuilt itself denser and stranger. The 1964 Olympics announced its return, the Shinkansen its velocity. Walk it today and the layers press against each other — a 17th-century shrine wedged between towers, a shitamachi alley of wooden houses two streets from a glass canyon.",
+      "culture": "Tokyo runs on small rituals performed at scale. Mornings begin at the kissaten — old coffee houses where toast sets arrive thick-cut and the master has poured the same way for forty years — or standing at a tachigui soba counter, eaten in six minutes flat. Lunch is a science: office workers queue twenty deep for a twelve-seat ramen shop, because the queue is the review. Evenings belong to the izakaya, where beer arrives with a small dish you didn't order and the day loosens its tie. Food is everywhere and taken seriously at every price: basement depachika food halls gleam like jewelry counters; convenience-store onigiri are engineered to a standard most restaurants would envy. Neighborhoods keep their own weather — Shimokitazawa's theater kids and vintage racks, Kōenji's punk bars, Yanaka's old-town quiet where cats outnumber cars. The city marks time by seasons: cherry blossoms in Ueno, summer matsuri drums, autumn maples at Rikugien, the first snow on shrine roofs. What locals prize, above all, is the doing-well of small things.",
+      "landmarks": [
+        {
+          "name": "Sensō-ji, Asakusa",
+          "description": "Tokyo's oldest temple, founded in 628 when two fishermen pulled a statue of Kannon from the Sumida River. The great Kaminarimon lantern — four meters of paper and bamboo — marks the entrance to Nakamise-dōri, a shopping street serving pilgrims for centuries. Burned in the 1945 air raids and rebuilt in the 1950s, it is Tokyo's living room as much as its shrine."
+        },
+        {
+          "name": "Meiji Jingū",
+          "description": "Completed in 1920 for Emperor Meiji and Empress Shōken, this Shinto shrine sits inside a forest of 100,000 trees planted by volunteers from across Japan. Step through the towering torii off Harajuku's noise and the city simply stops. On New Year's Day three million visitors pass through — Japan's most-visited hatsumōde."
+        },
+        {
+          "name": "Tokyo Skytree",
+          "description": "At 634 meters, the world's tallest tower, completed in 2012 as the city's digital broadcast mast. Its earthquake resistance borrows from five-story pagodas: a central concrete shinbashira column that sways independently of the outer steel. The number 634 can be read as 'Mu-sa-shi,' the old province name."
+        },
+        {
+          "name": "Imperial Palace East Gardens",
+          "description": "The grounds of Edo Castle, seat of the Tokugawa shoguns for 260 years. Almost nothing of the castle survives above the foundation stones — the main keep burned in 1657 and was never rebuilt — but the massive moats, gates, and stone walls remain, free to wander. The quietest history lesson in central Tokyo."
+        },
+        {
+          "name": "Shibuya Crossing",
+          "description": "Up to 3,000 people cross at each light change, from five directions at once — the busiest pedestrian scramble on the planet. It has become Tokyo's unofficial emblem: the ordered chaos of the city made visible. The bronze Hachikō statue by the station honors the Akita dog who waited for his master here daily from 1925 to 1935."
+        },
+        {
+          "name": "Tsukiji Outer Market",
+          "description": "When the inner wholesale market moved to Toyosu in 2018, the outer market stayed: four hundred stalls and tiny restaurants along narrow lanes, doing what they've done for generations. Come hungry and graze — tamagoyaki on sticks, sea-urchin rice bowls, knife shops older than the market's fame."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Go Tokyo — Official Travel Guide",
+          "url": "https://www.gotokyo.org/en/"
+        },
+        {
+          "label": "Japan National Tourism Organization",
+          "url": "https://www.japan.travel/en/"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Tokyo",
+      "summary": "Quartiers néon, sanctuaires paisibles et cuisine exceptionnelle.",
+      "description": "À Tokyo, on passe du calme à l'effervescence en quelques pas : jardins de sanctuaires près des carrefours animés, petits comptoirs aux repas remarquables et trains efficaces pour tout relier.",
+      "highlights": [
+        "Jardins de sanctuaires et de temples",
+        "Halles gourmandes et petits comptoirs",
+        "Excursions d'une journée en train"
+      ],
+      "history": "En 1457, le seigneur de guerre Ōta Dōkan fait élever un modeste château sur une falaise dominant la baie d'Edo — un village de pêcheurs sans importance. Tout bascule en 1603, quand Tokugawa Ieyasu fait d'Edo le siège de son shogunat. Les daimyos, contraints d'y entretenir des résidences, affluent ; au début du XVIIIe siècle, la ville compte près d'un million d'habitants — sans doute la plus grande cité du monde. Derrière ses douves fleurissent estampes, kabuki et quartiers de plaisir. La restauration de Meiji, en 1868, renverse le shogunat ; le jeune empereur s'installe au château et Edo devient Tokyo, la « capitale de l'est ». S'ensuit une marche forcée vers la modernité : chemins de fer, ministères de brique, becs de gaz. Le séisme du Kantō de 1923 rase l'essentiel de la ville ; les bombardements américains de mars 1945 recommencent. À chaque fois, Tokyo se reconstruit plus dense et plus singulière. Les Jeux de 1964 annoncent son retour, le Shinkansen sa vitesse. Aujourd'hui, les époques s'y côtoient : un sanctuaire du XVIIe siècle coincé entre deux tours, une ruelle de shitamachi à deux pas d'un canyon de verre.",
+      "culture": "Tokyo fonctionne sur de petits rituels accomplis à grande échelle. Le matin commence au kissaten — ces vieux cafés où le toast arrive en tranches épaisses et où le maître verse son café comme il y a quarante ans — ou debout devant un comptoir de soba, avalé en six minutes. Le déjeuner est une science : les employés font la queue à vingt devant un ramen de douze places, car la file d'attente est le meilleur des guides. Le soir appartient à l'izakaya, où la bière arrive avec un petit plat qu'on n'a pas commandé et où la journée desserre sa cravate. La nourriture est partout, prise au sérieux à tous les prix : les depachika, halls alimentaires en sous-sol, brillent comme des vitrines de joaillerie ; les onigiri des konbini feraient pâlir bien des restaurants. Chaque quartier a son climat — les théâtres et friperies de Shimokitazawa, les bars punk de Kōenji, le calme d'antan de Yanaka où les chats sont plus nombreux que les voitures. La ville vit au rythme des saisons : cerisiers à Ueno, tambours des matsuri d'été, érables de Rikugien, première neige sur les toits des sanctuaires. Ce que les habitants prisent par-dessus tout, c'est le bien-faire des petites choses.",
+      "landmarks": [
+        {
+          "name": "Sensō-ji, Asakusa",
+          "description": "Le plus vieux temple de Tokyo, fondé en 628 quand deux pêcheurs repêchèrent une statue de Kannon dans la Sumida. L'immense lanterne du Kaminarimon — quatre mètres de papier et de bambou — ouvre sur Nakamise-dōri, rue commerçante au service des pèlerins depuis des siècles. Incendié en 1945, reconstruit dans les années 1950, le temple est autant le salon de Tokyo que son sanctuaire."
+        },
+        {
+          "name": "Meiji Jingū",
+          "description": "Achevé en 1920 en l'honneur de l'empereur Meiji et de l'impératrice Shōken, ce sanctuaire shintoïste s'enfonce dans une forêt de 100 000 arbres plantés par des bénévoles venus de tout le Japon. Franchissez le torii monumental depuis l'agitation de Harajuku et la ville s'éteint d'un coup. Au Nouvel An, trois millions de visiteurs s'y pressent — le hatsumōde le plus fréquenté du pays."
+        },
+        {
+          "name": "Tokyo Skytree",
+          "description": "Haute de 634 mètres, la Skytree est la plus haute tour du monde, achevée en 2012 comme pylône de diffusion numérique. Sa résistance aux séismes emprunte aux pagodes à cinq étages : un pilier central en béton, le shinbashira, qui oscille indépendamment de la structure d'acier. Le nombre 634 se lit « Mu-sa-shi », ancien nom de la province."
+        },
+        {
+          "name": "Jardins Est du palais impérial",
+          "description": "L'enceinte du château d'Edo, siège des shoguns Tokugawa pendant deux cent soixante ans. Il ne reste presque rien du château au-dessus des fondations — le donjon brûla en 1657 et ne fut jamais reconstruit — mais douves, portes et murailles de pierre demeurent, en accès libre. C'est la leçon d'histoire la plus silencieuse du centre de Tokyo."
+        },
+        {
+          "name": "Carrefour de Shibuya",
+          "description": "Jusqu'à 3 000 personnes traversent à chaque feu vert, depuis cinq directions à la fois — le passage piéton le plus fréquenté de la planète. Il est devenu l'emblème officieux de Tokyo : le chaos ordonné de la ville rendu visible. La statue de bronze de Hachikō, près de la sortie, honore le chien akita qui attendit son maître ici chaque jour de 1925 à 1935."
+        },
+        {
+          "name": "Marché extérieur de Tsukiji",
+          "description": "Quand le marché de gros intérieur déménagea à Toyosu en 2018, le marché extérieur resta : quatre cents étals et minuscules restaurants le long de ruelles étroites, fidèles à des générations de savoir-faire. Venez l'estomac vide et picorez — tamagoyaki en brochette, bols de riz à l'oursin, coutelleries plus anciennes que la renommée du marché."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Go Tokyo — Guide officiel",
+          "url": "https://www.gotokyo.org/en/"
+        },
+        {
+          "label": "Office national du tourisme japonais",
+          "url": "https://www.japan.travel/en/"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "currency": "JPY",
+      "languages": [
+        "ja"
+      ]
+    }
+  },
+  {
+    "slug": "barcelona",
+    "airport": "BCN",
+    "theme": "sunset",
+    "tags": [
+      "beach",
+      "city",
+      "architecture"
+    ],
+    "en": {
+      "name": "Barcelona",
+      "summary": "Modernist architecture meets the Mediterranean.",
+      "description": "Barcelona combines a walkable old town, striking modernist buildings and city beaches. Evenings start late, so plan long dinners and leisurely strolls.",
+      "highlights": [
+        "Modernist architecture",
+        "City beaches",
+        "Late-evening dining"
+      ],
+      "history": "Barcelona was Barcino, a modest Roman retirement town founded around 15 BC under Augustus — you can still walk its walls in the Gothic Quarter's basements. The medieval counts of Barcelona built a Mediterranean empire through the Crown of Aragon, and the city's Gothic churches date from that confident age. Everything changed in 1714, when Bourbon troops stormed the city after a thirteen-month siege in the War of the Spanish Succession; Catalonia's institutions were abolished and the great Ciutadella fortress was raised to watch the citizens. The 19th-century Renaixença revived Catalan language and pride, Ildefons Cerdà's 1859 Eixample plan laid the famous grid, and Gaudí turned Modernisme into a civic religion. Franco's dictatorship (1939–75) repressed Catalan again. The 1992 Olympics rebuilt the waterfront and gave the city its beaches. Today's Barcelona still negotiates its identity — Catalan first, Spanish second — in street names, schools and referendum posters.",
+      "culture": "Catalan identity shapes everything: the language on street signs, the castellers building human towers in the squares, the sardana danced in circles on Sundays. The day's sacred hour is the vermut — a bitter-sweet aperitif with olives and crisps, taken around noon before lunch. Lunch is the main meal; dinner rarely starts before nine. Tapeo — moving from bar to bar for a tapa and a caña — is the evening's natural form. The markets, especially La Boqueria and Santa Caterina, are cathedrals of produce where chefs shop at dawn. Beach life at Barceloneta is democratic: office workers, old men playing petanca, teenagers with guitars. FC Barcelona is genuinely més que un club — a civic institution that carried Catalan pride through the Franco years. And in August, Gràcia's Festa Major turns whole streets into decorated rival neighbourhoods competing for the prize.",
+      "landmarks": [
+        {
+          "name": "Sagrada Família",
+          "description": "Gaudí took over the project in 1883 and made it his life's work — he is buried in its crypt. The forest of leaning columns and light-stained glass was still unfinished at his death in 1926, and cranes remain part of the silhouette. The Nativity façade is organic stone lace; the Passion façade, by Subirachs, is all anguished angles. Target completion: 2026, the centenary of Gaudí's death."
+        },
+        {
+          "name": "Park Güell",
+          "description": "Eusebi Güell's failed garden-city development became Gaudí's mosaic playground: the dragon staircase, the wavy bench of broken tile (trencadís), columns like tree trunks. The city bought it in 1923 and made it a public park. Go at opening — by midday the terrace is a slow-moving river of selfie sticks."
+        },
+        {
+          "name": "Casa Batlló",
+          "description": "Gaudí's 1906 remodelling of an ordinary apartment block into a dragon: the scaly tile roof is its back, the balconies its skull-like masks, the stairwell a spine. Inside, there is not a single straight line — doors, windows and ceilings all curve. The rooftop at sunset, with Montjuïc behind, is the photograph everyone wants."
+        },
+        {
+          "name": "Barcelona Cathedral & Gothic Quarter",
+          "description": "The 14th-century Cathedral of the Holy Cross sits on Roman and Visigothic foundations — look for the Roman wall in the Casa de l'Ardiaca next door. Around it, the Barri Gòtic's lanes follow the medieval street plan, though much of the 'Gothic' is 19th-century romantic restoration. The cloister's geese have honked here for 700 years."
+        },
+        {
+          "name": "Palau de la Música Catalana",
+          "description": "Lluís Domènech i Montaner's 1908 concert hall is Modernisme at full throttle: a stained-glass skylight like a golden drop, mosaics, sculptures and wrought iron everywhere. Built for the Orfeó Català choir, it still hosts the city's best concerts. The guided tour is worth it for the auditorium alone."
+        },
+        {
+          "name": "Camp Nou",
+          "description": "Europe's largest stadium (99,000 seats) is FC Barcelona's cathedral — and the club's museum is Spain's most visited. 'Més que un club' is carved into the seats: under Franco, the stadium was the one place Catalans could shout in their own language. Currently being rebuilt as the Nou Camp Nou; check what's open before visiting."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Barcelona Turisme – Official Visitor Guide",
+          "url": "https://www.barcelonaturisme.com/"
+        },
+        {
+          "label": "Catalunya.com – Official Catalan Tourism",
+          "url": "https://www.catalunya.com/"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Barcelone",
+      "summary": "L'architecture moderniste au bord de la Méditerranée.",
+      "description": "Barcelone réunit une vieille ville à parcourir à pied, des bâtiments modernistes saisissants et des plages urbaines. Les soirées commencent tard : prévoyez de longs dîners.",
+      "highlights": [
+        "Architecture moderniste",
+        "Plages urbaines",
+        "Dîners en soirée"
+      ],
+      "history": "Barcelone fut Barcino, une modeste ville romaine de vétérans fondée vers 15 avant J.-C. sous Auguste — on peut encore longer ses murailles dans les sous-sols du quartier gothique. Les comtes de Barcelone du Moyen Âge bâtissent un empire méditerranéen à travers la couronne d'Aragon, et les églises gothiques de la ville datent de cette époque assurée. Tout bascule en 1714, quand les troupes bourboniennes prennent la ville après treize mois de siège, pendant la guerre de Succession d'Espagne ; les institutions catalanes sont abolies et l'on élève la forteresse de la Ciutadella pour surveiller les habitants. La Renaixença du XIXe siècle ranime la langue et la fierté catalanes, le plan de l'Eixample d'Ildefons Cerdà (1859) trace la célèbre trame quadrillée, et Gaudí fait du modernisme une religion civique. La dictature franquiste (1939-1975) réprime à nouveau le catalan. Les Jeux olympiques de 1992 reconstruisent le front de mer et dotent la ville de ses plages. La Barcelone d'aujourd'hui négocie toujours son identité — catalane d'abord, espagnole ensuite — dans les noms de rues, les écoles et les affiches référendaires.",
+      "culture": "L'identité catalane façonne tout : la langue sur les panneaux, les castellers qui dressent des tours humaines sur les places, la sardane dansée en rond le dimanche. L'heure sacrée de la journée, c'est le vermut — un apéritif amer et doux, avec olives et chips, pris vers midi avant le déjeuner. Le déjeuner est le repas principal ; le dîner commence rarement avant vingt et une heures. Le tapeo — passer de bar en bar pour une tapa et une caña — est la forme naturelle de la soirée. Les marchés, surtout la Boqueria et Santa Caterina, sont des cathédrales de produits frais où les chefs font leurs courses à l'aube. La vie de plage à la Barceloneta est démocratique : employés de bureau, vieillards jouant à la pétanque, adolescents et leurs guitares. Le FC Barcelone est vraiment més que un club — une institution civique qui a porté la fierté catalane pendant les années Franco. Et en août, la Festa Major de Gràcia transforme des rues entières en quartiers rivaux décorés qui se disputent le prix.",
+      "landmarks": [
+        {
+          "name": "Sagrada Família",
+          "description": "Gaudí reprend le chantier en 1883 et en fait l'œuvre de sa vie — il repose dans sa crypte. La forêt de colonnes inclinées et de vitraux colorés était inachevée à sa mort en 1926, et les grues font toujours partie de la silhouette. La façade de la Nativité est une dentelle de pierre organique ; celle de la Passion, par Subirachs, n'est qu'angles tourmentés. Achèvement prévu : 2026, centenaire de la mort de Gaudí."
+        },
+        {
+          "name": "Park Güell",
+          "description": "La cité-jardin ratée d'Eusebi Güell est devenue le terrain de jeu en mosaïque de Gaudí : l'escalier du dragon, le banc ondulant en trencadís, des colonnes comme des troncs d'arbres. La ville l'achète en 1923 et en fait un parc public. Venez à l'ouverture — à midi, la terrasse est un fleuve lent de perches à selfie."
+        },
+        {
+          "name": "Casa Batlló",
+          "description": "En 1906, Gaudí transforme un immeuble ordinaire en dragon : le toit d'écailles est son dos, les balcons ses masques, la cage d'escalier son échine. À l'intérieur, pas une seule ligne droite — portes, fenêtres et plafonds ondulent. Le toit-terrasse au coucher du soleil, avec Montjuïc en arrière-plan, est la photo que tout le monde veut."
+        },
+        {
+          "name": "Cathédrale de Barcelone et quartier gothique",
+          "description": "La cathédrale Sainte-Croix du XIVe siècle repose sur des fondations romaines et wisigothiques — cherchez le mur romain dans la Casa de l'Ardiaca voisine. Autour, les ruelles du Barri Gòtic suivent le plan médiéval, même si l'essentiel du « gothique » est une reconstitution romantique du XIXe siècle. Les oies du cloître caquettent ici depuis 700 ans."
+        },
+        {
+          "name": "Palau de la Música Catalana",
+          "description": "La salle de concert de Lluís Domènech i Montaner (1908) est le modernisme à plein régime : une verrière en vitrail comme une goutte d'or, mosaïques, sculptures et fer forgé partout. Construite pour le chœur de l'Orfeó Català, elle accueille toujours les plus beaux concerts de la ville. La visite guidée vaut le détour pour la seule salle."
+        },
+        {
+          "name": "Camp Nou",
+          "description": "Le plus grand stade d'Europe (99 000 places) est la cathédrale du FC Barcelone — et le musée du club est le plus visité d'Espagne. « Més que un club » est inscrit dans les sièges : sous Franco, le stade était le seul endroit où les Catalans pouvaient crier dans leur langue. En pleine reconstruction (Nou Camp Nou) ; vérifiez ce qui est ouvert avant de venir."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Barcelona Turisme – Guide officiel des visiteurs",
+          "url": "https://www.barcelonaturisme.com/"
+        },
+        {
+          "label": "Catalunya.com – Tourisme officiel de la Catalogne",
+          "url": "https://www.catalunya.com/"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "currency": "EUR",
+      "languages": [
+        "es",
+        "ca"
+      ]
+    }
+  },
+  {
+    "slug": "lisbon",
+    "airport": "LIS",
+    "theme": "sunset",
+    "tags": [
+      "city",
+      "food",
+      "coast"
+    ],
+    "en": {
+      "name": "Lisbon",
+      "summary": "Hillside viewpoints, tiled facades and Atlantic light.",
+      "description": "Lisbon's hills reward the climb with wide river views. Historic trams, tiled facades and an easy reach to Atlantic beaches make it a favourite for city breaks.",
+      "highlights": [
+        "Hilltop viewpoints",
+        "Historic trams",
+        "Nearby Atlantic beaches"
+      ],
+      "history": "Lisbon's story starts with the river. Phoenicians traded here, Greeks named it Olisipo, and Rome made it a proper municipium — Julius Caesar's Felicitas Julia. In 711 the Moors took it, and for four centuries it was al-Ushbuna, a walled medina whose tight lanes survive in today's Alfama. Christian forces under Afonso Henriques seized it in 1147, and from this harbor Portugal launched the venture that remade the world: in 1498 Vasco da Gama reached India, and Manuel I poured spice-trade wealth into the limestone fantasies of Belém. Then came 1 November 1755 — earthquake, tsunami, and fire in a single morning. The Marquês de Pombal rebuilt downtown on a rational grid, the world's first earthquake-resistant city, with a single order: 'Bury the dead and feed the living.' The 20th century brought the long Estado Novo dictatorship, ended almost bloodlessly on 25 April 1974, when soldiers put carnations in their rifle barrels. EU membership in 1986 opened the taps of renewal. Today's Lisbon wears every layer at once: Moorish alley, Manueline cloister, Pombaline façade, azulejo, fado.",
+      "culture": "Lisbon runs on small pleasures taken slowly. The day starts with a bica — a short, strong espresso — drunk standing at the counter, because sitting costs more and standing tastes better. Lunch stretches: grilled sardines in June, when the whole city smells of charcoal for the Santo António festivals, or a tasca counter where the menu is whatever the owner felt like cooking. Afternoons drift toward the miradouros, the tiled viewpoints where old men argue about Benfica and teenagers pass wine in plastic cups as the Tagus turns to hammered copper. Fado still leaks from cellar taverns in Alfama and Mouraria — twelve-string guitar, a voice, and a room that goes silent. The Atlantic is twenty minutes away by train, and locals use it: surfboards on the suburban railway to Costa da Caparica, Sunday cataplana in Cascais. What defines the lisboeta is a particular shrug toward hurry — desenrascanço, the art of getting by with style — and a devotion to the neighborhood: the café, the corner, the view.",
+      "landmarks": [
+        {
+          "name": "Belém Tower",
+          "description": "Built between 1515 and 1519 under Manuel I, this limestone fortress guarded the mouth of the Tagus at the height of the spice trade. Its Manueline stonework — ropes, knots, armillary spheres — is Portugal's Age of Discovery carved in rock. Ships bound for India and Brazil weighed anchor in its shadow; UNESCO listed it in 1983."
+        },
+        {
+          "name": "Jerónimos Monastery",
+          "description": "Commissioned by Manuel I and funded by the pepper trade, this is the masterpiece of Manueline architecture, begun in 1502. Vasco da Gama is entombed here, as is the poet Luís de Camões. The two-story cloister — every column a different carved fantasy — survived the 1755 earthquake intact; the monks' prayers were said to have protected it."
+        },
+        {
+          "name": "São Jorge Castle & Alfama",
+          "description": "The castle's walls date to the 11th-century Moorish alcáçova, though Romans and Visigoths fortified the hill before. Below it, Alfama is the old Islamic quarter that survived 1755: a maze of alleys, whitewashed houses, and fado taverns. Climb at dusk, when the river goes gold and swallows cut across the ramparts."
+        },
+        {
+          "name": "Tram 28",
+          "description": "The yellow Remodelado cars, built in the 1930s, rattle on a route threading Martim Moniz to Prazeres through Alfama, Baixa, and Estrela — squeezing past corners the modern city forgot to straighten. It's public transport, not a ride, which is exactly why it matters: the screech of brakes on the Rua da Conceição curves is Lisbon's own soundtrack."
+        },
+        {
+          "name": "LX Factory",
+          "description": "A 19th-century thread-and-textile complex under the 25 de Abril bridge, reborn in 2008 as the city's creative quarter: bookshops, studios, and restaurants in the old factory sheds. Sunday's market fills the central street. The clearest proof that Lisbon's industrial bones make excellent cultural ones."
+        },
+        {
+          "name": "Miradouro da Senhora do Monte",
+          "description": "The highest of Lisbon's viewpoints, in Graça, looking down over São Jorge Castle to the river and the far bank. Pine shade, tiled panels, and usually a guitarist. Come at sunset with nothing planned — this is the view the postcards keep trying to catch."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Lisboa",
+          "url": "https://www.visitlisboa.com"
+        },
+        {
+          "label": "Visit Portugal",
+          "url": "https://www.visitportugal.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Lisbonne",
+      "summary": "Belvédères, façades en azulejos et lumière atlantique.",
+      "description": "Les collines de Lisbonne récompensent l'effort par de vastes vues sur le fleuve. Tramways historiques, façades carrelées et plages atlantiques à proximité en font une escapade prisée.",
+      "highlights": [
+        "Belvédères sur les collines",
+        "Tramways historiques",
+        "Plages atlantiques à proximité"
+      ],
+      "history": "L'histoire de Lisbonne commence avec le fleuve. Les Phéniciens y commerçaient, les Grecs la nommèrent Olisipo, et Rome en fit un vrai municipe — la Felicitas Julia de Jules César. En 711, les Maures s'en emparent : pendant quatre siècles, ce fut al-Ushbuna, médina fortifiée dont les ruelles serrées survivent dans l'Alfama d'aujourd'hui. Les troupes chrétiennes d'Afonso Henriques la reprennent en 1147, et de ce port le Portugal lança l'entreprise qui refit le monde : en 1498, Vasco de Gama atteint l'Inde, et Manuel Ier déverse les richesses du commerce des épices dans les fantaisies de calcaire de Belém. Puis vint le 1er novembre 1755 — tremblement de terre, tsunami et incendie en une seule matinée. Le marquis de Pombal reconstruit le centre sur un plan en damier rationnel, première ville antisismique du monde, avec pour mot d'ordre : « Enterrez les morts et nourrissez les vivants. » Le XXe siècle apporta la longue dictature de l'Estado Novo, achevée presque sans effusion de sang le 25 avril 1974, quand les soldats glissèrent des œillets dans leurs fusils. L'entrée dans l'Union européenne, en 1986, rouvrit les vannes du renouveau. La Lisbonne d'aujourd'hui porte toutes ses couches à la fois : ruelle maure, cloître manuélin, façade pombaline, azulejo, fado.",
+      "culture": "Lisbonne fonctionne sur de petits plaisirs pris sans hâte. La journée commence par une bica — un express court et fort — bue debout au comptoir, parce qu'assis ça coûte plus cher et que debout c'est meilleur. Le déjeuner s'étire : sardines grillées en juin, quand toute la ville sent le charbon de bois pour les fêtes de Santo António, ou comptoir de tasca où le menu est ce que le patron a eu envie de cuisiner. L'après-midi dérive vers les miradouros, belvédères carrelés où les anciens débattent du Benfica pendant que les jeunes se passent du vin en gobelets plastique, le Tage virant au cuivre martelé. Le fado s'échappe encore des tavernes-caves de l'Alfama et de la Mouraria — guitare à douze cordes, une voix, une salle qui se tait. L'Atlantique est à vingt minutes de train, et les habitants s'en servent : planches de surf dans le train de banlieue vers Costa da Caparica, cataplana du dimanche à Cascais. Ce qui définit le Lisboète, c'est une certaine indifférence à la hâte — le desenrascanço, l'art de s'en sortir avec panache — et une dévotion au quartier : le café, le coin de rue, la vue.",
+      "landmarks": [
+        {
+          "name": "Tour de Belém",
+          "description": "Édifiée de 1515 à 1519 sous Manuel Ier, cette forteresse de calcaire gardait l'embouchure du Tage à l'apogée du commerce des épices. Sa pierre manuéline — cordages, nœuds, sphères armillaires — est le siècle des Découvertes sculpté dans le roc. Les navires pour l'Inde et le Brésil jetaient l'ancre à son ombre ; l'UNESCO l'a classée en 1983."
+        },
+        {
+          "name": "Monastère des Hiéronymites",
+          "description": "Commandé par Manuel Ier et financé par le commerce du poivre, c'est le chef-d'œuvre de l'art manuélin, commencé en 1502. Vasco de Gama y repose, ainsi que le poète Luís de Camões. Le cloître à deux étages — chaque colonne une fantaisie sculptée différente — survécut intact au séisme de 1755 ; on dit que les prières des moines l'avaient protégé."
+        },
+        {
+          "name": "Château São Jorge et Alfama",
+          "description": "Les murailles remontent à l'alcáçova maure du XIe siècle, même si Romains et Wisigoths avaient déjà fortifié la colline. En contrebas, l'Alfama est l'ancien quartier islamique qui survécut à 1755 : dédale de ruelles, maisons blanchies à la chaux, tavernes de fado. Montez-y au crépuscule, quand le fleuve devient or et que les hirondelles fendent le ciel des remparts."
+        },
+        {
+          "name": "Tramway 28",
+          "description": "Les voitures jaunes Remodelado, construites dans les années 1930, cahotent sur un parcours qui relie Martim Moniz à Prazeres en traversant l'Alfama, la Baixa et Estrela — se faufilant dans des virages que la ville moderne a oublié de redresser. C'est un transport public, pas une attraction, et c'est bien pour ça qu'il compte : le crissement des freins dans les courbes de la Rua da Conceição est la bande-son de Lisbonne."
+        },
+        {
+          "name": "LX Factory",
+          "description": "Complexe textile du XIXe siècle sous le pont du 25-Avril, renaît en 2008 comme quartier créatif de la ville : librairies, ateliers et restaurants dans les anciens hangars. Le marché du dimanche emplit la rue centrale. C'est la preuve la plus nette que les os industriels de Lisbonne font d'excellents os culturels."
+        },
+        {
+          "name": "Miradouro da Senhora do Monte",
+          "description": "Le plus haut des belvédères de Lisbonne, à Graça, plongeant sur le château São Jorge, le fleuve et l'autre rive. Ombre des pins, panneaux d'azulejos, et souvent un guitariste. Venez au coucher du soleil sans rien de prévu — c'est la vue que les cartes postales essaient toujours de saisir."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Lisboa",
+          "url": "https://www.visitlisboa.com"
+        },
+        {
+          "label": "Visit Portugal",
+          "url": "https://www.visitportugal.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "currency": "EUR",
+      "languages": [
+        "pt"
+      ]
+    }
+  },
+  {
+    "slug": "cancun",
+    "airport": "CUN",
+    "theme": "lagoon",
+    "tags": [
+      "beach",
+      "sun",
+      "family"
+    ],
+    "en": {
+      "name": "Cancún",
+      "summary": "Turquoise water, reefs and archaeological sites.",
+      "description": "Cancún is a gateway to Caribbean beaches, snorkelling reefs, freshwater cenotes and ancient Maya sites along the Yucatán Peninsula.",
+      "highlights": [
+        "Caribbean beaches",
+        "Cenotes for swimming",
+        "Maya archaeological sites"
+      ],
+      "history": "In 1970, Cancún was barely a place: a coconut plantation, a fishing camp, and a caretaker's family on a narrow barrier island shaped like a seven. Then the Mexican government did something unusual — it invented a resort. The state tourism fund FONATUR chose the site by computer analysis, dredged the lagoon, and laid out the Zona Hotelera on 22 kilometers of white sand; the first hotels opened in 1974. The gamble worked beyond anyone's forecast: from a few hundred residents to nearly a million in two generations. But Cancún is two cities. Behind the hotel zone's manicured boulevards lies the centro — the grid of supermanzanas where three-quarters of cancunenses actually live — and beyond that, the older story: the island held a Maya ceremonial site, El Rey, and the coast was dotted with trading ports when the Spanish arrived in the 1500s. Hurricane Wilma in 2005 stripped the famous beaches down to rock; the government rebuilt them grain by grain. What a visitor feels today is that engineered optimism — a city that willed itself into existence — pressed against a Maya past that was here three thousand years earlier.",
+      "culture": "Cancún wakes early. By seven the malecón is full of runners and the beach vendors are raking the sand into corduroy, because the Caribbean here is a morning sea — glassy until the afternoon breeze. Breakfast is marquesitas, the thin rolled crepes with Edam cheese sold from bicycle carts, or cochinita pibil tacos from a lonchería in the centro. The workday splits the city: hotel staff in pressed uniforms ride the Ruta 1 buses down Kukulkán Boulevard while the centro hums with its own commerce — laundries, phone shops, cevicherías. Evenings, families gather at the Parque de las Palapas, where food stalls ring the square and children chase each other between the palapa roofs. Sunday means the beach, all of it, coolers and portable speakers included. The Maya presence isn't folklore: Yucatec Maya is spoken in the markets, Día de Muertos altars go up in earnest, and the cenotes — the collapsed limestone sinkholes the Maya considered portals — are where everyone, local or visitor, learns to swim in water the color of jade.",
+      "landmarks": [
+        {
+          "name": "El Rey Archaeological Zone",
+          "description": "A Maya ceremonial center right in the hotel zone, with 47 structures dating from 1200 to 1500 AD — proof the island mattered long before the resorts. Iguanas the size of housecats sun themselves on the platforms. It's small, shaded, and best visited in the morning before the heat settles."
+        },
+        {
+          "name": "Museo Maya de Cancún & San Miguelito",
+          "description": "Opened in 2012, this museum holds one of the country's finest Maya collections — jade masks, carved stelae, pottery spanning two millennia. Next door, the San Miguelito ruins wind through the jungle the hotel zone was built around. Air-conditioned history, then the real thing."
+        },
+        {
+          "name": "Playa Delfines",
+          "description": "The great public beach: two kilometers of powder sand, no hotels directly on it, and the famous blue 'Cancún' letters for the obligatory photo. The surf here is livelier than the sheltered north beaches, and the palapa-shaded lifeguard stands are the most photographed lifeguards in Mexico."
+        },
+        {
+          "name": "Isla Mujeres",
+          "description": "Twenty minutes by ferry from Puerto Juárez, the 'Island of Women' — named for the Maya goddess Ixchel's shrine — is Cancún's easy escape. Playa Norte's shallow water stays waist-deep a hundred meters out. Rent a golf cart, circle the island in an hour, and be back for sunset."
+        },
+        {
+          "name": "Chichén Itzá (day trip)",
+          "description": "Two and a half hours inland, the great Maya-Toltec city and its Kukulkán pyramid — 365 steps, one for each day of the solar calendar. At the spring and autumn equinoxes, the afternoon sun throws a serpent of light down the staircase. Go early; the tour buses arrive by ten."
+        },
+        {
+          "name": "Parque de las Palapas",
+          "description": "Downtown Cancún's living room: a square roofed in palapas where the centro eats. Nights and weekends bring elote vendors, marquesita carts, live music, and hundreds of families. If the hotel zone is Cancún's face, this is its pulse."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Mexico — Official Tourism Board",
+          "url": "https://www.visitmexico.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Cancún",
+      "summary": "Eaux turquoise, récifs et sites archéologiques.",
+      "description": "Cancún est la porte d'entrée vers les plages des Caraïbes, les récifs propices à la plongée en apnée, les cénotes et les anciens sites mayas de la péninsule du Yucatán.",
+      "highlights": [
+        "Plages des Caraïbes",
+        "Baignade dans les cénotes",
+        "Sites archéologiques mayas"
+      ],
+      "history": "En 1970, Cancún était à peine un lieu : une cocoteraie, un campement de pêcheurs et la famille d'un gardien sur une étroite île-barrière en forme de sept. Puis le gouvernement mexicain fit quelque chose d'inédit : il inventa une station balnéaire. Le fonds public FONATUR choisit le site par analyse informatique, dragua la lagune et traça la Zona Hotelera sur 22 kilomètres de sable blanc ; les premiers hôtels ouvrirent en 1974. Le pari dépassa toutes les prévisions : de quelques centaines d'habitants à près d'un million en deux générations. Mais Cancún est deux villes. Derrière les boulevards policés de la zone hôtelière s'étend le centro — la grille des supermanzanas où vivent les trois quarts des Cancunenses — et au-delà, l'histoire plus ancienne : l'île abritait un site cérémoniel maya, El Rey, et la côte était semée de ports de commerce quand les Espagnols arrivèrent au XVIe siècle. L'ouragan Wilma, en 2005, mit les plages célèbres à nu jusqu'au rocher ; l'État les reconstruisit grain par grain. Ce que le visiteur ressent aujourd'hui, c'est cet optimisme d'ingénieur — une ville qui s'est voulue elle-même — adossé à un passé maya vieux de trois mille ans.",
+      "culture": "Cancún s'éveille tôt. À sept heures, le malecón est plein de joggeurs et les plagistes ratissent le sable en velours côtelé, car la Caraïbe ici est une mer du matin — d'huile jusqu'à la brise de l'après-midi. Au petit-déjeuner : des marquesitas, ces fines crêpes roulées au fromage Edam vendues sur des charrettes-vélos, ou des tacos de cochinita pibil dans une lonchería du centro. La journée de travail coupe la ville en deux : le personnel des hôtels en uniforme impeccable emprunte les bus de la Ruta 1 sur le boulevard Kukulkán pendant que le centro bourdonne de son propre commerce — blanchisseries, boutiques de téléphonie, cevicherías. Le soir, les familles se retrouvent au Parque de las Palapas, où les stands de nourriture encerclent la place et où les enfants se poursuivent entre les toits de palapa. Le dimanche, c'est la plage, toute la plage, glacières et enceintes portables comprises. La présence maya n'est pas du folklore : le maya yucatèque se parle au marché, les autels du Día de Muertos se dressent pour de vrai, et les cenotes — ces gouffres calcaires que les Mayas tenaient pour des portails — sont l'endroit où tout le monde, d'ici ou d'ailleurs, apprend à nager dans une eau couleur de jade.",
+      "landmarks": [
+        {
+          "name": "Zone archéologique d'El Rey",
+          "description": "Un centre cérémoniel maya en pleine zone hôtelière, avec 47 structures datant de 1200 à 1500 après J.-C. — la preuve que l'île comptait bien avant les complexes touristiques. Des iguanes gros comme des chats se chauffent sur les plateformes. Petit site ombragé, à visiter le matin avant que la chaleur ne s'installe."
+        },
+        {
+          "name": "Museo Maya de Cancún et San Miguelito",
+          "description": "Ouvert en 2012, ce musée abrite l'une des plus belles collections mayas du pays — masques de jade, stèles sculptées, poteries couvrant deux millénaires. À côté, les ruines de San Miguelito serpentent dans la jungle autour de laquelle la zone hôtelière fut bâtie. L'histoire climatisée, puis la vraie."
+        },
+        {
+          "name": "Playa Delfines",
+          "description": "La grande plage publique : deux kilomètres de sable poudreux, aucun hôtel en front de mer, et les célèbres lettres bleues « Cancún » pour la photo obligée. La houle y est plus vive que sur les plages abritées du nord, et ses postes de secours coiffés de palapa sont les plus photographiés du Mexique."
+        },
+        {
+          "name": "Isla Mujeres",
+          "description": "À vingt minutes de ferry de Puerto Juárez, l'« île des Femmes » — nommée d'après le sanctuaire de la déesse maya Ixchel — est l'échappée facile de Cancún. L'eau de Playa Norte reste à hauteur de taille à cent mètres du bord. Louez une voiturette, faites le tour de l'île en une heure, et soyez de retour pour le coucher du soleil."
+        },
+        {
+          "name": "Chichén Itzá (excursion)",
+          "description": "À deux heures et demie dans les terres, la grande cité maya-toltèque et sa pyramide de Kukulkán — 365 marches, une par jour du calendrier solaire. Aux équinoxes de printemps et d'automne, le soleil de l'après-midi projette un serpent de lumière le long de l'escalier. Partez tôt ; les cars de touristes arrivent à dix heures."
+        },
+        {
+          "name": "Parque de las Palapas",
+          "description": "Le salon du centre-ville de Cancún : une place coiffée de palapas où le centro vient manger. Soirs et week-ends y amènent vendeurs d'elote, charrettes de marquesitas, musique live et des centaines de familles. Si la zone hôtelière est le visage de Cancún, ceci en est le pouls."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Mexico — Office officiel du tourisme",
+          "url": "https://www.visitmexico.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "currency": "MXN",
+      "languages": [
+        "es"
+      ]
+    }
+  },
+  {
+    "slug": "reykjavik",
+    "airport": "KEF",
+    "theme": "aurora",
+    "tags": [
+      "nature",
+      "adventure"
+    ],
+    "en": {
+      "name": "Reykjavík",
+      "summary": "Geothermal pools, waterfalls and northern lights.",
+      "description": "Reykjavík is a compact base for exploring Iceland's volcanic landscapes. Winter brings the chance of northern lights; summer brings near-endless daylight.",
+      "highlights": [
+        "Geothermal pools",
+        "Waterfall day trips",
+        "Northern lights in winter"
+      ],
+      "history": "Reykjavík began with smoke. When the Norse chieftain Ingólfr Arnarson landed around 874 — the first permanent settler of Iceland — he named the bay Reykjavík, 'smoky bay,' for the steam rising from geothermal vents. For nine centuries it stayed a cluster of farms under Danish rule, a trading post the Danish crown mostly ignored; when it received a town charter in 1786 it had 167 residents. The nineteenth century brought Jón Sigurðsson's independence movement and a slow national awakening. Iceland became a republic on 17 June 1944 while Denmark was under Nazi occupation. British and then American troops occupied the island in the Second World War — Keflavík's base stayed until 2006 — and the Cod Wars of the 1950s–70s saw tiny Iceland face down Britain over fishing rights and win. The 2008 banking collapse, the kreppa, wiped out fortunes and pride in a week. What rose from it is the Reykjavík you meet today: smaller, surer, and done apologizing for being itself.",
+      "culture": "The city's real social club is the swimming pool. Every neighbourhood has its sundlaug — a geothermally heated outdoor pool where Icelanders conduct friendships, business, and gossip in 40-degree hot pots, winter and summer, in any weather. Afterwards: rye bread baked in geothermal sand, or a pylsa from Bæjarins Beztu Pylsur, the harbour hot-dog stand Bill Clinton made famous. Midwinter brings Þorrablót, when Icelanders toast the dark with fermented shark and Brennivín schnapps, daring each other to eat the worst of it. December belongs to the Jólabókaflóð, the 'Christmas book flood' — publishers release nearly every book of the year in November, and families give each other books on Christmas Eve and spend the night reading. Music runs deep: from the Airwaves festival to choirs in Hallgrímskirkja. And the nightlife has its own verb-worthy ritual, the rúnturinn — the weekend pub crawl around a downtown you can cross on foot in ten minutes.",
+      "landmarks": [
+        {
+          "description": "Guðjón Samúelsson's concrete church took 41 years to build (1945–1986), its stepped facade modelled on Iceland's basalt columns. At 73 metres it's the country's tallest church. Take the lift to the tower: the whole city, the harbour, and the mountains across the bay arrange themselves below.",
+          "name": "Hallgrímskirkja"
+        },
+        {
+          "description": "Opened in 2011 in the middle of the financial wreckage, the concert hall was Iceland's defiant answer to the kreppa. Henning Larsen's honeycomb glass facade — designed with artist Olafur Eliasson — catches the harbour light and throws it back in colour. Inside, the acoustics are worth a concert on their own.",
+          "name": "Harpa"
+        },
+        {
+          "description": "Jón Gunnar Árnason's 1990 steel sculpture is often mistaken for a Viking ship; it's actually an ode to the sun, a dream-boat of light. Set on the waterfront promenade, it frames Mount Esja across the water — the most photographed silhouette in the city, best at midnight sun or winter dawn.",
+          "name": "Sun Voyager"
+        },
+        {
+          "description": "Five giant hot-water tanks built in 1988, crowned with a glass dome — Reykjavík's most unlikely landmark. Inside: a real ice cave, a planetarium, and the 'Wonders of Iceland' exhibition. The observation deck gives a 360-degree read of a city with nowhere to hide.",
+          "name": "Perlan"
+        },
+        {
+          "description": "Forty minutes from the city, this rift valley is where the Alþingi — the world's oldest surviving parliament — met outdoors from 930 AD. You can walk between the North American and Eurasian tectonic plates, which drift two centimetres further apart every year.",
+          "name": "Þingvellir National Park"
+        },
+        {
+          "description": "The milky-blue lagoon at Grindavík, forty minutes southwest, began as runoff from the Svartsengi power plant in 1976 — workers noticed the silica-rich water healed their psoriasis. Now it's Iceland's most-visited spa: 39-degree water, silica face masks, and steam rising off black lava fields.",
+          "name": "Blue Lagoon"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Reykjavík — Official City Guide",
+          "url": "https://visitreykjavik.is"
+        },
+        {
+          "label": "Visit Iceland — Official Tourism Board",
+          "url": "https://visiticeland.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Reykjavik",
+      "summary": "Bains géothermiques, chutes et aurores boréales.",
+      "description": "Reykjavik est une base compacte pour explorer les paysages volcaniques de l'Islande. L'hiver offre la chance d'aurores boréales; l'été, une lumière presque continue.",
+      "highlights": [
+        "Bains géothermiques",
+        "Excursions vers les chutes",
+        "Aurores boréales en hiver"
+      ],
+      "history": "Reykjavik commença par de la fumée. Quand le chef norrois Ingólfr Arnarson débarque vers 874 — premier colon permanent de l'Islande — il nomme la baie Reykjavik, « baie fumante », pour la vapeur qui monte des sources géothermiques. Pendant neuf siècles, ce ne fut qu'un chapelet de fermes sous domination danoise, un comptoir que la couronne du Danemark ignorait ; en recevant sa charte urbaine en 1786, la ville comptait 167 habitants. Le XIXe siècle apporte le mouvement indépendantiste de Jón Sigurðsson et un lent éveil national. L'Islande devient république le 17 juin 1944, pendant l'occupation nazie du Danemark. Britanniques puis Américains occupent l'île durant la Seconde Guerre mondiale — la base de Keflavik restera jusqu'en 2006 — et les « guerres de la morue » des années 1950 à 1970 voient la minuscule Islande tenir tête à la Grande-Bretagne pour ses droits de pêche, et gagner. L'effondrement bancaire de 2008, la kreppa, anéantit fortunes et fierté en une semaine. De ses cendres naît le Reykjavik d'aujourd'hui : plus petit, plus sûr de lui, et qui ne s'excuse plus d'être lui-même.",
+      "culture": "Le vrai club social de la ville, c'est la piscine. Chaque quartier a sa sundlaug — un bassin extérieur chauffé par géothermie où les Islandais entretiennent amitiés, affaires et commérages dans des bains à 40 degrés, été comme hiver, par tous les temps. Ensuite : pain de seigle cuit dans le sable géothermique, ou un pylsa chez Bæjarins Beztu Pylsur, le stand de hot-dogs du port rendu célèbre par Bill Clinton. Au cœur de l'hiver vient le Þorrablót, où l'on trinque à l'obscurité avec du requin fermenté et du schnaps Brennivín, en se défiant de manger le pire. Décembre appartient au Jólabókaflóð, le « déluge de livres de Noël » — les éditeurs publient presque tous les livres de l'année en novembre, et les familles s'offrent des livres à la veillée de Noël pour passer la nuit à lire. La musique est partout : du festival Airwaves aux chorales de Hallgrímskirkja. Et la vie nocturne a son rituel, le rúnturinn — la tournée des bars du week-end dans un centre-ville traversé à pied en dix minutes.",
+      "landmarks": [
+        {
+          "description": "L'église de béton de Guðjón Samúelsson prit 41 ans à bâtir (1945-1986), sa façade en gradins inspirée des orgues basaltiques islandaises. À 73 mètres, c'est la plus haute église du pays. Prenez l'ascenseur jusqu'à la tour : la ville entière, le port et les montagnes d'en face s'ordonnent en dessous.",
+          "name": "Hallgrímskirkja"
+        },
+        {
+          "description": "Inaugurée en 2011 en pleine débâcle financière, la salle de concert fut la réponse de défi de l'Islande à la kreppa. La façade de verre en nid d'abeilles de Henning Larsen — dessinée avec l'artiste Olafur Eliasson — capte la lumière du port et la renvoie en couleurs. À l'intérieur, l'acoustique vaut à elle seule un concert.",
+          "name": "Harpa"
+        },
+        {
+          "description": "La sculpture d'acier de Jón Gunnar Árnason (1990) passe souvent pour un drakkar ; c'est en fait une ode au soleil, un bateau de rêve et de lumière. Posée sur la promenade du front de mer, elle cadre le mont Esja de l'autre côté de l'eau — la silhouette la plus photographiée, au soleil de minuit ou à l'aube d'hiver.",
+          "name": "Le Voyageur du Soleil"
+        },
+        {
+          "description": "Cinq immenses réservoirs d'eau chaude construits en 1988, coiffés d'un dôme de verre — le monument le plus improbable de Reykjavik. À l'intérieur : une vraie grotte de glace, un planétarium et l'exposition « Merveilles de l'Islande ». La terrasse d'observation offre une lecture à 360 degrés d'une ville sans cachette.",
+          "name": "Perlan"
+        },
+        {
+          "description": "À quarante minutes de la ville, cette vallée de rift est le lieu où l'Alþingi — le plus vieux parlement encore existant au monde — siégea en plein air dès 930. On peut marcher entre les plaques tectoniques nord-américaine et eurasienne, qui s'écartent de deux centimètres chaque année.",
+          "name": "Parc national de Þingvellir"
+        },
+        {
+          "description": "Le lagon laiteux de Grindavik, à quarante minutes au sud-ouest, naquit en 1976 des eaux de rejet de la centrale de Svartsengi — des ouvriers remarquèrent que cette eau riche en silice guérissait leur psoriasis. C'est aujourd'hui le spa le plus visité d'Islande : eau à 39 degrés, masques de silice, et vapeur sur les champs de lave noire.",
+          "name": "Lagon bleu"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Reykjavík — guide officiel de la ville",
+          "url": "https://visitreykjavik.is"
+        },
+        {
+          "label": "Visit Iceland — office de tourisme officiel",
+          "url": "https://visiticeland.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "currency": "ISK",
+      "languages": [
+        "is"
+      ]
+    }
+  },
+  {
+    "slug": "marrakech",
+    "airport": "RAK",
+    "theme": "desert",
+    "tags": [
+      "culture",
+      "food",
+      "markets"
+    ],
+    "en": {
+      "name": "Marrakech",
+      "summary": "Lively souks, riads and gardens at the foot of the Atlas.",
+      "description": "Marrakech's medina is a maze of markets and courtyards. Escape the bustle in quiet gardens, or head to the Atlas Mountains for a day of fresh air.",
+      "highlights": [
+        "Medina markets",
+        "Courtyard riads",
+        "Atlas Mountains day trips"
+      ],
+      "history": "Marrakech was a deliberate act of empire. In 1070 the Almoravid leader Youssef ben Tachfine pitched his camp on the Haouz plain, at the foot of the Atlas, and founded a capital designed to command the caravan routes to Timbuktu and the gold of the Sudan. His successor Ali Ben Youssef raised the great mosque and the city's first walls. In 1147 the Almohads stormed in, tore down the Almoravid palace, and built the Koutoubia — its minaret still the city's compass. The golden age came under the Saadians in the sixteenth century: Sultan Ahmed al-Mansour, enriched by the Battle of the Three Kings in 1578, built the El Badi Palace with Italian marble and Sudanese gold, and the Ben Youssef Madrasa taught 900 students beneath carved cedar. The Alaouites let it decline; the French, arriving in 1912, built the orderly Guéliz district outside the walls while leaving the medina to its labyrinth. What the visitor feels is deep time worn smooth — every dynasty rebuilt the same red city, and the red dust gets into everything.",
+      "culture": "The day in Marrakech is measured in tea. Mint tea — gunpowder green, fresh mint, enough sugar to stand a spoon in — is poured from a height to raise the foam, and refused only at the cost of offence. Mornings belong to the souks: dyers' vats of indigo and saffron, hammered brass, the smell of cedar shavings and tanning leather. At dusk the whole city drains toward Jemaa el-Fnaa, where a hundred grills light at once and the smoke carries cumin and grilled lamb across the square; storytellers, gnawa musicians, and henna artists work the crowds between the food stalls. Friday is couscous day, steamed fluffy and heaped with seven vegetables. The hammam is a weekly ritual — black soap, the kessa glove, eucalyptus steam — as social as it is cleansing. And behind unmarked wooden doors, riads hide interior courtyards of orange trees and fountains, where the medina's roar drops to birdsong.",
+      "landmarks": [
+        {
+          "description": "Completed in 1199 under the Almohad caliph Yaqub al-Mansur, the 77-metre minaret is the prototype for the Giralda in Seville and Rabat's Hassan Tower — Marrakech exported its architecture to an empire. Non-Muslims can't enter, but the gardens around it are the city's evening promenade.",
+          "name": "Koutoubia Mosque"
+        },
+        {
+          "description": "By day a vast dusty esplanade of orange-juice carts and snake charmers; at dusk it becomes the greatest open-air restaurant in Africa. The square has been the city's stage since the Almoravids — its name may mean 'assembly of the dead,' a reminder of older, harsher centuries.",
+          "name": "Jemaa el-Fnaa"
+        },
+        {
+          "description": "The Saadian theological college, rebuilt 1564–65, housed 900 students in cells around one of the most beautiful courtyards in the Islamic world — zellige tilework, carved cedar, marble, and stucco lace. It ran as a school until 1960; the silence now feels studious.",
+          "name": "Ben Youssef Madrasa"
+        },
+        {
+          "description": "French painter Jacques Majorelle created this garden in 1923 and painted its villa the famous 'Majorelle blue' — a cobalt that seems to vibrate against the bamboo and bougainvillea. Yves Saint Laurent and Pierre Bergé bought it in 1980, saving it from a hotel development; Saint Laurent's ashes were scattered here.",
+          "name": "Jardin Majorelle"
+        },
+        {
+          "description": "Built between 1866 and 1900 for the grand vizier Si Musa and his son Ba Ahmed, the palace sprawls across eight hectares of painted ceilings, stained glass, and courtyards with orange trees. The name means 'brilliance' — Ba Ahmed built it for his favourite wife, Lalla Zina.",
+          "name": "Bahia Palace"
+        },
+        {
+          "description": "Sealed behind walls for two centuries after the Alaouites took power, the tombs were rediscovered by the French in 1917. The Chamber of the Twelve Columns, where Sultan Ahmed al-Mansour lies under carved cedar and Italian marble, is the finest room the Saadians left behind.",
+          "name": "Saadian Tombs"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Morocco — Official Tourism Board",
+          "url": "https://visitmorocco.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Marrakech",
+      "summary": "Souks animés, riads et jardins au pied de l'Atlas.",
+      "description": "La médina de Marrakech est un dédale de marchés et de cours intérieures. Fuyez l'agitation dans des jardins paisibles, ou partez une journée dans l'Atlas.",
+      "highlights": [
+        "Marchés de la médina",
+        "Riads et cours intérieures",
+        "Excursions dans l'Atlas"
+      ],
+      "history": "Marrakech fut un acte d'empire délibéré. En 1070, le chef almoravide Youssef ben Tachfine plante sa tente sur la plaine du Haouz, au pied de l'Atlas, et fonde une capitale faite pour commander les routes caravanières vers Tombouctou et l'or du Soudan. Son successeur Ali Ben Youssef élève la grande mosquée et les premiers remparts. En 1147, les Almohades s'emparent de la ville, rasent le palais almoravide et bâtissent la Koutoubia — son minaret reste la boussole de la cité. L'âge d'or vient avec les Saadiens au XVIe siècle : le sultan Ahmed al-Mansour, enrichi par la bataille des Trois Rois en 1578, fait construire le palais El Badi en marbre italien et or soudanais, et la médersa Ben Youssef instruit 900 étudiants sous des cèdres sculptés. Les Alaouites la laissent décliner ; les Français, arrivés en 1912, tracent le quartier ordonné de Guéliz hors les murs en laissant la médina à son labyrinthe. Ce que ressent le visiteur, c'est un temps profond patiné — chaque dynastie rebâtit la même ville rouge, et la poussière rouge s'insinue partout.",
+      "culture": "À Marrakech, la journée se mesure en thé. Le thé à la menthe — thé vert gunpowder, menthe fraîche, assez de sucre pour y tenir une cuillère — se verse de haut pour faire mousser, et ne se refuse qu'au prix d'une offense. Les matins appartiennent aux souks : cuves de teinturiers à l'indigo et au safran, laiton martelé, odeur de copeaux de cèdre et de cuir au tannage. Au crépuscule, la ville entière s'écoule vers Jemaa el-Fna, où une centaine de grills s'allument d'un coup et où la fumée porte le cumin et l'agneau grillé à travers la place ; conteurs, musiciens gnaouas et artistes au henné travaillent la foule entre les étals. Le vendredi est jour de couscous, gonflé à la vapeur et couronné de sept légumes. Le hammam est un rituel hebdomadaire — savon noir, gant kessa, vapeur d'eucalyptus — aussi social que purifiant. Et derrière des portes de bois sans enseigne, les riads cachent des cours intérieures d'orangers et de fontaines, où le vacarme de la médina retombe en chants d'oiseaux.",
+      "landmarks": [
+        {
+          "description": "Achevée en 1199 sous le calife almohade Yacoub al-Mansour, le minaret de 77 mètres est le prototype de la Giralda de Séville et de la tour Hassan de Rabat — Marrakech exporta son architecture à tout un empire. Les non-musulmans n'y entrent pas, mais les jardins alentour sont la promenade du soir des habitants.",
+          "name": "Mosquée de la Koutoubia"
+        },
+        {
+          "description": "Le jour, vaste esplanade poussiéreuse de charrettes de jus d'orange et de charmeurs de serpents ; au crépuscule, elle devient le plus grand restaurant à ciel ouvert d'Afrique. La place est la scène de la ville depuis les Almoravides — son nom signifierait « assemblée des morts », rappel de siècles plus rudes.",
+          "name": "Jemaa el-Fna"
+        },
+        {
+          "description": "Le collège théologique saadien, reconstruit en 1564-1565, logeait 900 étudiants dans des cellules autour d'une des plus belles cours du monde islamique — zelliges, cèdre sculpté, marbre et dentelle de stuc. École jusqu'en 1960 ; le silence y semble studieux.",
+          "name": "Médersa Ben Youssef"
+        },
+        {
+          "description": "Le peintre français Jacques Majorelle crée ce jardin en 1923 et peint sa villa du fameux « bleu Majorelle » — un cobalt qui semble vibrer contre bambous et bougainvillées. Yves Saint Laurent et Pierre Bergé l'achètent en 1980, le sauvant d'un projet d'hôtel ; les cendres de Saint Laurent y furent dispersées.",
+          "name": "Jardin Majorelle"
+        },
+        {
+          "description": "Construit entre 1866 et 1900 pour le grand vizir Si Musa puis son fils Ba Ahmed, le palais s'étend sur huit hectares de plafonds peints, de vitraux et de cours d'orangers. Son nom signifie « brillance » — Ba Ahmed le fit bâtir pour son épouse favorite, Lalla Zina.",
+          "name": "Palais de la Bahia"
+        },
+        {
+          "description": "Murés pendant deux siècles après la prise de pouvoir alaouite, les tombeaux furent redécouverts par les Français en 1917. La chambre des Douze Colonnes, où repose le sultan Ahmed al-Mansour sous cèdre sculpté et marbre italien, est la plus belle salle léguée par les Saadiens.",
+          "name": "Tombeaux saadiens"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Visit Morocco — office de tourisme officiel",
+          "url": "https://visitmorocco.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "currency": "MAD",
+      "languages": [
+        "ar",
+        "zgh",
+        "fr"
+      ]
+    }
+  },
+  {
+    "slug": "vancouver",
+    "airport": "YVR",
+    "theme": "forest",
+    "tags": [
+      "nature",
+      "city",
+      "outdoors"
+    ],
+    "en": {
+      "name": "Vancouver",
+      "summary": "Mountains, ocean and rainforest in one city.",
+      "description": "Vancouver puts seawall cycling, forest trails and ski slopes within easy reach of downtown, with a food scene shaped by the Pacific.",
+      "highlights": [
+        "Seawall walks and rides",
+        "Coastal rainforest trails",
+        "Pacific seafood"
+      ],
+      "history": "People have lived at the mouth of the Fraser for at least ten thousand years — the Musqueam, Squamish, and Tsleil-Waututh nations were here long before any European map named the place. Captain George Vancouver charted the coast in 1792; the city that took his name began as Gastown in 1867, when an English pub-keeper called Gassy Jack Deighton hauled a barrel of whisky onto the beach and promised free drinks to mill workers who would help him raise a saloon. Incorporated in 1886, Vancouver burned to the ground in the Great Fire that same year and rebuilt itself around the Canadian Pacific Railway terminus. Chinese labourers who had built the railway settled into what became one of North America's oldest Chinatowns; Japanese and South Asian communities followed, each leaving streets, temples, and kitchens. The 1986 World's Fair remade the False Creek waterfront, and the 2010 Winter Olympics rebuilt the city's confidence. What you feel today is a young city still negotiating with its older story — glass towers beside longhouses' descendants, and an official reckoning with the land it stands on.",
+      "culture": "Vancouver's daily rhythm is set by weather and water. Locals check the mountain webcams the way other cities check traffic — if Grouse is clear, the Grind's 2,830 steps are calling after work. Mornings run on craft coffee and rain-jacket decisions; the seawall fills with cyclists doing the full ten kilometres around Stanley Park before the office opens. Food is the city's truest autobiography: spot prawns in season, salmon candy from Granville Island, sushi as good as Tokyo's because half the chefs trained there, and Richmond's night markets where dumpling stalls draw longer lines than clubs. Saturday means the farmers' market at Trout Lake or dim sum in a Chinatown banquet hall. When the Canucks play, the whole downtown holds its breath. Nobody here brags about the mountains — they just disappear into them every weekend, and return Monday smelling of cedar. The rain, which outsiders complain about, is treated as a season with its own etiquette: good boots, better beer, and no umbrellas — umbrellas mark you as a visitor instantly.",
+      "landmarks": [
+        {
+          "description": "Opened in 1888 and larger than New York's Central Park, this 400-hectare peninsula is Vancouver's front yard: the seawall loop, old-growth cedars, and the totem poles at Brockton Point — carved by Haida, Kwakwaka'wakw, and Nuu-chah-nulth artists — standing where villages stood for millennia.",
+          "name": "Stanley Park"
+        },
+        {
+          "description": "George Grant Mackay strung the first hemp-rope bridge across this canyon in 1889 to reach his cabin; today's 137-metre span sways 70 metres above the river. The cliff walk bolts glass platforms to granite. Go early — by noon the bridge bounces with a thousand footsteps.",
+          "name": "Capilano Suspension Bridge"
+        },
+        {
+          "description": "A sandbar of factories and sawmills until the 1970s, remade as a public market in 1979 without losing its corrugated-iron bones. The food hall still sells what the fishing boats land; buskers play the courtyards; the Emily Carr art school's old building anchors the island's working-artist soul.",
+          "name": "Granville Island"
+        },
+        {
+          "description": "Built in 1977, not 1877 — a charming fake, and everyone knows it. The world's first steam-powered clock whistles Westminster chimes every fifteen minutes from a lamppost base. It marks the corner where Gassy Jack's saloon started the city, which is history enough.",
+          "name": "Gastown Steam Clock"
+        },
+        {
+          "description": "Arthur Erickson's 1976 concrete-and-glass longhouse at the University of British Columbia holds one of the world's great Indigenous collections. Bill Reid's 'The Raven and the First Men' — a yellow-cedar carving of the trickster prying humans from a clamshell — stops visitors mid-stride.",
+          "name": "Museum of Anthropology"
+        },
+        {
+          "description": "Built in 1986 by fifty-two artisans from Suzhou using no nails or screws, this is the first Ming-dynasty-style garden outside China. Every rock was chosen for its character; the asymmetrical courtyards are designed for scholars' contemplation — and for excellent tea.",
+          "name": "Dr. Sun Yat-Sen Classical Chinese Garden"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Destination Vancouver — Official Visitor Guide",
+          "url": "https://destinationvancouver.com"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Vancouver",
+      "summary": "Montagnes, océan et forêt pluviale dans une même ville.",
+      "description": "Vancouver met la promenade du bord de mer, les sentiers forestiers et les pentes de ski à deux pas du centre-ville, avec une cuisine inspirée du Pacifique.",
+      "highlights": [
+        "Promenade du bord de mer",
+        "Sentiers en forêt pluviale côtière",
+        "Fruits de mer du Pacifique"
+      ],
+      "history": "On habite l'embouchure du Fraser depuis au moins dix mille ans — les nations musqueam, squamish et tsleil-waututh étaient là bien avant que les cartes européennes ne nomment l'endroit. Le capitaine George Vancouver cartographie la côte en 1792 ; la ville qui porte son nom naît comme Gastown en 1867, quand un tenancier anglais surnommé Gassy Jack Deighton traîne un tonneau de whisky sur la plage et promet à boire aux scieurs qui l'aideront à monter son saloon. Incorporée en 1886, Vancouver brûle la même année dans le Grand Incendie et se reconstruit autour du terminus du Canadien Pacifique. Les ouvriers chinois du chemin de fer s'installent dans ce qui devient l'un des plus vieux quartiers chinois d'Amérique du Nord ; suivent les communautés japonaise et sud-asiatique, chacune léguant rues, temples et cuisines. L'Expo 86 transforme le front de False Creek, et les Jeux d'hiver de 2010 redonnent confiance à la ville. On y sent aujourd'hui une jeune cité qui négocie encore avec son histoire ancienne — tours de verre à côté des descendants des maisons longues, et un examen officiel du territoire sur lequel elle se dresse.",
+      "culture": "Le rythme quotidien de Vancouver se règle sur la météo et l'eau. Les habitants consultent les webcams des montagnes comme ailleurs on consulte la circulation — si Grouse est dégagé, les 2 830 marches du Grind appellent après le travail. Les matins filent au café de spécialité et au choix du coupe-vent ; la digue se remplit de cyclistes qui bouclent les dix kilomètres autour de Stanley Park avant l'ouverture des bureaux. La cuisine est la plus vraie autobiographie de la ville : crevettes tachetées de saison, saumon confit de Granville Island, sushis dignes de Tokyo car la moitié des chefs y ont été formés, et les marchés nocturnes de Richmond où les stands de raviolis font plus la queue que les clubs. Le samedi, c'est le marché fermier de Trout Lake ou les dim sum dans une salle de banquet du quartier chinois. Quand les Canucks jouent, tout le centre-ville retient son souffle. Personne ici ne se vante des montagnes — on s'y perd chaque fin de semaine, et on revient le lundi en sentant le cèdre. La pluie, dont les visiteurs se plaignent, est traitée comme une saison avec son étiquette : bonnes bottes, meilleure bière, et pas de parapluie — le parapluie trahit le touriste aussitôt.",
+      "landmarks": [
+        {
+          "description": "Ouvert en 1888 et plus vaste que Central Park, cette presqu'île de 400 hectares est le jardin de devant de Vancouver : la boucle de la digue, les cèdres millénaires, et les mâts totémiques de Brockton Point — sculptés par des artistes haïdas, kwakwaka'wakw et nuu-chah-nulth — là où des villages se dressaient depuis des millénaires.",
+          "name": "Parc Stanley"
+        },
+        {
+          "description": "George Grant Mackay tendit en 1889 le premier pont de chanvre au-dessus du canyon pour rejoindre sa cabane ; la travée actuelle de 137 mètres oscille à 70 mètres au-dessus de la rivière. La promenade de la falaise visse des plateformes de verre au granit. Venez tôt — à midi, le pont rebondit sous mille pas.",
+          "name": "Pont suspendu de Capilano"
+        },
+        {
+          "description": "Banc de sable d'usines et de scieries jusqu'aux années 1970, transformé en marché public en 1979 sans perdre son ossature de tôle ondulée. La halle alimentaire vend toujours ce que débarquent les bateaux de pêche ; les musiciens jouent dans les cours ; l'ancien bâtiment de l'école d'art Emily Carr ancre l'âme ouvrière et artiste de l'île.",
+          "name": "Granville Island"
+        },
+        {
+          "description": "Construite en 1977, pas en 1877 — un charmant faux, tout le monde le sait. La première horloge à vapeur du monde sonne les quarts d'heure de Westminster depuis un fût de réverbère. Elle marque l'angle où le saloon de Gassy Jack fonda la ville, et c'est déjà de l'histoire.",
+          "name": "Horloge à vapeur de Gastown"
+        },
+        {
+          "description": "La maison longue de béton et de verre d'Arthur Erickson (1976), à l'Université de la Colombie-Britannique, abrite l'une des grandes collections autochtones du monde. « Le Corbeau et les Premiers Hommes » de Bill Reid — un cèdre jaune où le filou extirpe les humains d'une coquille — cloue le visiteur sur place.",
+          "name": "Musée d'anthropologie"
+        },
+        {
+          "description": "Construit en 1986 par cinquante-deux artisans de Suzhou sans clou ni vis, c'est le premier jardin de style Ming hors de Chine. Chaque rocher fut choisi pour son caractère ; les cours asymétriques sont faites pour la contemplation des lettrés — et pour un excellent thé.",
+          "name": "Jardin chinois classique Dr. Sun Yat-Sen"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Destination Vancouver — guide officiel des visiteurs",
+          "url": "https://destinationvancouver.com"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "currency": "CAD",
+      "languages": [
+        "en"
+      ]
+    }
+  },
+  {
+    "slug": "rome",
+    "airport": "FCO",
+    "theme": "terracotta",
+    "tags": [
+      "culture",
+      "history",
+      "food"
+    ],
+    "en": {
+      "name": "Rome",
+      "summary": "Ancient ruins, piazzas and long Italian lunches.",
+      "description": "Rome layers thousands of years of history into its streets. Mornings at the ancient sites, afternoons in shaded piazzas and evenings in neighbourhood trattorias.",
+      "highlights": [
+        "Ancient forums and ruins",
+        "Fountains and piazzas",
+        "Neighbourhood trattorias"
+      ],
+      "history": "Rome claims 753 BC and the twins Romulus and Remus, raised by a she-wolf — the archaeology says hilltop villages, which is close enough for legend. The Republic (509 BC) conquered the Mediterranean; Augustus then declared he 'found Rome a city of brick and left it a city of marble.' The Colosseum (70–80 AD) seated 50,000. When the Western Empire fell in 476, the popes inherited the city and rebuilt it as Christendom's capital: St Peter's rose over the apostle's tomb, Michelangelo painted the Sistine ceiling between 1508 and 1512, and Bernini gave the Baroque its stage. Rome became capital of unified Italy in 1870, endured Mussolini's bombast, and emerged after the war into Fellini's dolce vita. The past is not behind glass here — a Renaissance palazzo sits on a medieval tower on Roman apartments, and the Metro dig keeps hitting temples.",
+      "culture": "Roman life is lived outside. The passeggiata — the unhurried evening stroll — still empties apartments onto the streets at dusk, ending wherever the piazza looks best. Coffee is a precise science: drunk standing at the bar, a cappuccino never after eleven, a caffè that costs double if you sit. Lunch is the day's anchor; dinner starts at eight at the earliest. The trattorias of Testaccio and Trastevere guard recipes like state secrets — carbonara has no cream, and Romans will tell you so at length. Markets set the morning: Campo de' Fiori's produce, Testaccio's tripe stands. Football divides the city between Roma and Lazio with tribal seriousness. Sundays belong to family lunches that run to four courses and no fixed end. And gelato is not dessert but a discipline — the good shops make it daily, pistachio from Bronte, and close when it runs out.",
+      "landmarks": [
+        {
+          "name": "Colosseum",
+          "description": "Vespasian's amphitheatre (70–80 AD) staged gladiatorial games for crowds of 50,000, with a canvas awning rigged by sailors to shade them. Christians were not, despite the legend, routinely martyred here. Stand on the arena floor's partial reconstruction and look up — the scale still intimidates, two thousand years on."
+        },
+        {
+          "name": "Pantheon",
+          "description": "Hadrian's temple to all gods (c. 125 AD) has the largest unreinforced concrete dome ever built — 43 metres across, with an open oculus that turns rain into theatre. It survived because it became a church in 609. Raphael is buried here. Arrive at noon on a bright day and watch the sunbeam move."
+        },
+        {
+          "name": "Roman Forum & Palatine Hill",
+          "description": "For five centuries this valley was the centre of the Western world — senate, courts, triumphal arches, and the rostra where Cicero spoke. The Palatine above was the emperors' address; our word 'palace' comes from it. Come at opening: the stones are empty and the umbrella pines throw long shadows."
+        },
+        {
+          "name": "St Peter's Basilica",
+          "description": "The largest church in Christendom, built over St Peter's tomb between 1506 and 1626 — Bramante, Michelangelo (the dome), Bernini (the colonnade that embraces the square like arms). The Pietà sits behind glass since 1972, when a hammer attack scarred it. Climb the dome: 551 steps, and Rome spreads below."
+        },
+        {
+          "name": "Trevi Fountain",
+          "description": "Nicola Salvi's 1732 Baroque cascade — Oceanus driving his shell chariot, water roaring over travertine — was a working aqueduct terminal, fed by the ancient Aqua Virgo. Fellini made it immortal when Anita Ekberg waded in. Toss a coin over your left shoulder: legend says it guarantees your return."
+        },
+        {
+          "name": "Piazza Navona",
+          "description": "Bernini's Fountain of the Four Rivers (1651) crowns a piazza built on Domitian's stadium — the long oval still follows the running track. Street artists and cafés fill it now, but look down: the stadium's entrances survive in the basements of the surrounding buildings."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Turismo Roma – Official Tourist Board",
+          "url": "https://www.turismoroma.it/en"
+        },
+        {
+          "label": "Italia.it – Official Italian Tourism",
+          "url": "https://www.italia.it/en"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Rome",
+      "summary": "Ruines antiques, places animées et longs repas italiens.",
+      "description": "Rome superpose des millénaires d'histoire dans ses rues. Le matin aux sites antiques, l'après-midi sur des places ombragées et le soir dans les trattorias de quartier.",
+      "highlights": [
+        "Forums et ruines antiques",
+        "Fontaines et places",
+        "Trattorias de quartier"
+      ],
+      "history": "Rome revendique 753 avant J.-C. et les jumeaux Romulus et Rémus, élevés par une louve — l'archéologie parle de villages sur les collines, ce qui suffit à la légende. La République (509 av. J.-C.) conquiert la Méditerranée ; Auguste déclare ensuite avoir « trouvé une ville de brique et l'avoir laissée de marbre ». Le Colisée (70-80 apr. J.-C.) accueille 50 000 spectateurs. À la chute de l'Empire d'Occident en 476, les papes héritent de la ville et la rebâtissent en capitale de la chrétienté : Saint-Pierre s'élève sur le tombeau de l'apôtre, Michel-Ange peint le plafond de la Sixtine entre 1508 et 1512, et Le Bernin donne au baroque sa scène. Rome devient la capitale de l'Italie unifiée en 1870, subit la grandiloquence de Mussolini et renaît après la guerre dans la dolce vita de Fellini. Ici, le passé n'est pas sous vitrine : un palais Renaissance repose sur une tour médiévale elle-même bâtie sur des appartements romains, et le chantier du métro bute sans cesse sur des temples.",
+      "culture": "La vie romaine se vit dehors. La passeggiata — la promenade du soir, sans hâte — vide encore les appartements à la tombée du jour et s'achève là où la place est la plus belle. Le café est une science exacte : bu debout au comptoir, jamais de cappuccino après onze heures, un caffè qui coûte double si l'on s'assoit. Le déjeuner est le pivot de la journée ; le dîner ne commence pas avant vingt heures. Les trattorias du Testaccio et du Trastevere gardent leurs recettes comme des secrets d'État — la carbonara ne contient pas de crème, et les Romains vous l'expliqueront longuement. Les marchés rythment le matin : les étals de Campo de' Fiori, les tripiers du Testaccio. Le football divise la ville entre la Roma et la Lazio avec un sérieux tribal. Le dimanche appartient aux déjeuners de famille en quatre services, sans heure de fin fixée. Et la glace n'est pas un dessert mais une discipline — les bonnes gelaterie la fabriquent chaque jour, pistache de Bronte, et ferment quand il n'y en a plus.",
+      "landmarks": [
+        {
+          "name": "Colisée",
+          "description": "L'amphithéâtre de Vespasien (70-80 apr. J.-C.) offrait des jeux de gladiateurs à 50 000 spectateurs, sous un vélarium manœuvré par des marins. Contrairement à la légende, on n'y martyrisait pas systématiquement les chrétiens. Debout sur la reconstitution partielle de l'arène, levez les yeux — l'échelle impressionne encore, deux mille ans plus tard."
+        },
+        {
+          "name": "Panthéon",
+          "description": "Le temple d'Hadrien dédié à tous les dieux (vers 125 apr. J.-C.) possède la plus grande coupole en béton non armé jamais construite — 43 mètres de diamètre, avec un oculus ouvert qui transforme la pluie en spectacle. Il a survécu parce qu'il devint église en 609. Raphaël y est enterré. Venez à midi par beau temps et regardez le rayon de soleil se déplacer."
+        },
+        {
+          "name": "Forum romain et mont Palatin",
+          "description": "Pendant cinq siècles, cette vallée fut le centre du monde occidental — sénat, tribunaux, arcs de triomphe, et les rostres où parlait Cicéron. Le Palatin au-dessus était l'adresse des empereurs ; notre mot « palais » en vient. Venez à l'ouverture : les pierres sont désertes et les pins parasols allongent leurs ombres."
+        },
+        {
+          "name": "Basilique Saint-Pierre",
+          "description": "La plus grande église de la chrétienté, bâtie sur le tombeau de saint Pierre entre 1506 et 1626 — Bramante, Michel-Ange (la coupole), Le Bernin (la colonnade qui embrasse la place comme des bras). La Pietà est sous verre depuis 1972, après un coup de marteau qui l'endommagea. Montez à la coupole : 551 marches, et Rome s'étend en dessous."
+        },
+        {
+          "name": "Fontaine de Trevi",
+          "description": "La cascade baroque de Nicola Salvi (1732) — Océan sur son char de coquillages, l'eau rugissant sur le travertin — était l'arrivée d'un aqueduc en service, alimentée par l'antique Aqua Virgo. Fellini l'a rendue immortelle quand Anita Ekberg s'y est baignée. Jetez une pièce par-dessus votre épaule gauche : la légende garantit votre retour."
+        },
+        {
+          "name": "Piazza Navona",
+          "description": "La fontaine des Quatre-Fleuves du Bernin (1651) couronne une place bâtie sur le stade de Domitien — l'ovale allongé suit encore la piste de course. Artistes de rue et cafés l'animent aujourd'hui, mais regardez en bas : les entrées du stade survivent dans les caves des immeubles alentour."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Turismo Roma – Office de tourisme officiel",
+          "url": "https://www.turismoroma.it/fr"
+        },
+        {
+          "label": "Italia.it – Tourisme officiel italien",
+          "url": "https://www.italia.it/fr"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "currency": "EUR",
+      "languages": [
+        "it"
+      ]
+    }
+  },
+  {
+    "slug": "bangkok",
+    "airport": "BKK",
+    "theme": "tropic",
+    "tags": [
+      "city",
+      "food",
+      "culture"
+    ],
+    "en": {
+      "name": "Bangkok",
+      "summary": "Temples, river life and legendary street food.",
+      "description": "Bangkok pairs gilded temples and river ferries with night markets and some of the world's best-loved street food.",
+      "highlights": [
+        "Riverside temples",
+        "River ferries",
+        "Night markets and street food"
+      ],
+      "history": "Bangkok is a young capital by Asian standards, and it knows it. When Burmese armies sacked Ayutthaya in 1767 — the Siamese capital for four centuries — the kingdom nearly ended. General Taksin regrouped at Thonburi, on the Chao Phraya's west bank; in 1782 his successor Rama I moved the court across the river, founded the Chakri dynasty, and built the Grand Palace and the Temple of the Emerald Buddha on Rattanakosin Island. The new city kept one eye on the old: Ayutthaya's layout, its ceremonies, its Buddha images rescued from the ruins. The 19th century brought deliberate modernization — Rama IV studied astronomy, Rama V abolished slavery and built railways — and Siam's canniest achievement: it was never colonized. The 20th century was turbulence — the 1932 end of absolute monarchy, Japanese occupation, coups, the 1997 financial crisis that began with the baht's collapse. Through it all the river remained the city's spine and the khlongs, the canals that earned it the name 'Venice of the East,' its memory. Modern Bangkok stacks condos over shophouses, but the old city still sets the terms.",
+      "culture": "Bangkok eats out because home kitchens are optional — the street is the kitchen. Mornings start with jok, rice porridge, or patongo dough sticks dunked in soy milk from a cart that's held the same corner for thirty years. Office workers lunch on boat noodles at forty baht a bowl, eaten fast and standing if the shop is good. The city's social life happens in malls the size of towns and night markets that materialize at dusk: Chatuchak's fifteen thousand stalls on weekends, the neon food lanes of Yaowarat where the whole street smells of wok hei. Mornings also belong to the monks — saffron lines of alms-bearers moving through the sois as residents kneel with rice and curry. Thais greet with the wai, palms together, and mean it. The guiding philosophy is sanuk: life should contain fun, and work without it is a design flaw. Evenings end high — literally — on rooftop bars above the traffic, or low, on a plastic stool with a cold Leo and a plate of som tam, watching the city do what it does best: keep moving.",
+      "landmarks": [
+        {
+          "name": "Grand Palace & Wat Phra Kaew",
+          "description": "Founded in 1782 by Rama I, the palace complex was the Chakri kings' residence for 150 years — a hundred-plus buildings of gold and mirrored tile. Inside stands Wat Phra Kaew, the Temple of the Emerald Buddha, Thailand's most sacred site; the jade statue, barely 66 centimeters tall, is dressed by the king himself with the seasons."
+        },
+        {
+          "name": "Wat Pho",
+          "description": "Next door to the palace, Wat Pho holds the 46-meter Reclining Buddha, its soles inlaid with 108 mother-of-pearl scenes from the Buddha's lives. Founded in the 16th century and rebuilt by Rama I, it's also Thailand's oldest center of learning and the birthplace of traditional Thai massage — the school still trains masseurs on site."
+        },
+        {
+          "name": "Wat Arun",
+          "description": "The 'Temple of Dawn' rises 82 meters over the river's west bank, its prang encrusted with millions of pieces of Chinese porcelain — ballast from 19th-century trading ships, repurposed as mosaic. Climb the steep steps at sunset, when the porcelain catches the light and the river turns to hammered gold."
+        },
+        {
+          "name": "Yaowarat (Chinatown)",
+          "description": "Settled by Chinese merchants in the 1780s, Yaowarat is Bangkok's great food street: by day gold shops and herbalists, by night a neon canyon of wok stalls. The bird's-nest soup and roast duck draw lines; the real move is to graze — a plate here, a plate there, a mango sticky rice to finish."
+        },
+        {
+          "name": "Chatuchak Weekend Market",
+          "description": "Fifteen thousand stalls across 27 acres, running since 1942 — the world's largest weekend market, and still primarily for Thais, not tourists. Ceramics, fighting fish, vintage Levi's, orchids, grilled squid: the inventory of an entire country under canvas. Go early, bring cash, get lost on purpose."
+        },
+        {
+          "name": "Jim Thompson House",
+          "description": "The teakwood compound of the American silk magnate who revived Thailand's silk industry in the 1950s and vanished in Malaysia in 1967, never found. Six traditional houses reassembled around a garden, filled with his Southeast Asian art collection. The guided tour is mandatory — and worth it."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Tourism Authority of Thailand",
+          "url": "https://www.tourismthailand.org"
+        }
+      ]
+    },
+    "fr": {
+      "name": "Bangkok",
+      "summary": "Temples, vie au fil du fleuve et cuisine de rue légendaire.",
+      "description": "Bangkok associe temples dorés et traversiers sur le fleuve à des marchés de nuit et à l'une des cuisines de rue les plus appréciées au monde.",
+      "highlights": [
+        "Temples au bord du fleuve",
+        "Traversiers sur le fleuve",
+        "Marchés de nuit et cuisine de rue"
+      ],
+      "history": "Bangkok est une jeune capitale à l'échelle asiatique, et elle le sait. Quand les armées birmanes mirent à sac Ayutthaya en 1767 — capitale siamoise depuis quatre siècles — le royaume faillit disparaître. Le général Taksin se replia à Thonburi, sur la rive ouest du Chao Phraya ; en 1782, son successeur Rama Ier transféra la cour sur l'autre rive, fonda la dynastie Chakri et bâtit le Grand Palais et le temple du Bouddha d'émeraude sur l'île de Rattanakosin. La ville neuve garda un œil sur l'ancienne : son plan, ses cérémonies, ses bouddhas sauvés des ruines. Le XIXe siècle apporta une modernisation délibérée — Rama IV étudia l'astronomie, Rama V abolit l'esclavage et construisit des chemins de fer — et la plus habile réussite du Siam : ne jamais être colonisé. Le XXe siècle fut la turbulence — fin de la monarchie absolue en 1932, occupation japonaise, coups d'État, la crise financière de 1997 née de l'effondrement du baht. À travers tout, le fleuve resta l'épine dorsale de la ville et les khlongs, ces canaux qui lui valurent le nom de « Venise de l'Orient », sa mémoire. Le Bangkok moderne empile les résidences sur les échoppes, mais la vieille ville dicte toujours les règles.",
+      "culture": "Bangkok mange dehors parce que la cuisine à la maison est facultative — la rue est la cuisine. Le matin commence avec le jok, porridge de riz, ou les beignets patongo trempés dans du lait de soja, à une charrette qui tient le même coin depuis trente ans. Les employés déjeunent de nouilles en bateau à quarante bahts le bol, vite et debout si l'échoppe est bonne. La vie sociale se joue dans des centres commerciaux grands comme des villes et des marchés de nuit qui surgissent au crépuscule : les quinze mille étals de Chatuchak le week-end, les ruelles néon de Yaowarat où toute la rue sent le wok. Le matin appartient aussi aux moines — files safranées de quêteurs glissant dans les sois pendant que les habitants s'agenouillent avec riz et curry. Les Thaïs saluent du wai, paumes jointes, et le pensent. La philosophie directrice, c'est le sanuk : la vie doit contenir du plaisir, et le travail sans plaisir est un défaut de conception. Le soir finit haut — littéralement — sur les rooftops au-dessus du trafic, ou bas, sur un tabouret en plastique avec une Leo bien fraîche et une assiette de som tam, à regarder la ville faire ce qu'elle fait le mieux : continuer d'avancer.",
+      "landmarks": [
+        {
+          "name": "Grand Palais et Wat Phra Kaew",
+          "description": "Fondé en 1782 par Rama Ier, le complexe palatial fut la résidence des rois Chakri pendant cent cinquante ans — plus de cent bâtiments d'or et de mosaïques. À l'intérieur se dresse le Wat Phra Kaew, temple du Bouddha d'émeraude, lieu le plus sacré de Thaïlande ; la statue de jade, à peine 66 centimètres, est habillée par le roi lui-même au fil des saisons."
+        },
+        {
+          "name": "Wat Pho",
+          "description": "Voisin du palais, le Wat Pho abrite le Bouddha couché de 46 mètres, dont les plantes de pieds sont incrustées de 108 scènes de nacre tirées des vies du Bouddha. Fondé au XVIe siècle et reconstruit par Rama Ier, c'est aussi le plus ancien centre d'enseignement de Thaïlande et le berceau du massage thaï traditionnel — l'école y forme encore des masseurs."
+        },
+        {
+          "name": "Wat Arun",
+          "description": "Le « temple de l'Aube » s'élève à 82 mètres sur la rive ouest du fleuve, son prang incrusté de millions d'éclats de porcelaine chinoise — du lest de navires marchands du XIXe siècle, reconverti en mosaïque. Grimpez ses marches raides au coucher du soleil, quand la porcelaine accroche la lumière et que le fleuve devient or martelé."
+        },
+        {
+          "name": "Yaowarat (Chinatown)",
+          "description": "Fondé par des marchands chinois dans les années 1780, Yaowarat est la grande rue gourmande de Bangkok : le jour, orfèvres et herboristes ; la nuit, un canyon de néons et d'étals au wok. La soupe aux nids d'hirondelle et le canard laqué font la queue ; la vraie tactique, c'est de picorer — une assiette ici, une assiette là, un mango sticky rice pour finir."
+        },
+        {
+          "name": "Marché de Chatuchak",
+          "description": "Quinze mille étals sur onze hectares, depuis 1942 — le plus grand marché de week-end du monde, et toujours d'abord pour les Thaïs, pas pour les touristes. Céramiques, poissons combattants, Levi's vintage, orchidées, calamars grillés : l'inventaire d'un pays entier sous des bâches. Venez tôt, avec du liquide, et perdez-vous exprès."
+        },
+        {
+          "name": "Maison de Jim Thompson",
+          "description": "Le domaine en teck du magnat américain de la soie qui relança l'industrie thaïe dans les années 1950 et disparut en Malaisie en 1967, sans jamais être retrouvé. Six maisons traditionnelles remontées autour d'un jardin, emplies de sa collection d'art sud-est asiatique. La visite guidée est obligatoire — et elle vaut le détour."
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Office du tourisme de Thaïlande",
+          "url": "https://www.tourismthailand.org"
+        }
+      ]
+    },
+    "facts": {
+      "best_months": [
+        11,
+        12,
+        1,
+        2
+      ],
+      "currency": "THB",
+      "languages": [
+        "th"
+      ]
+    }
   }
- },
- {
-  "slug": "london",
-  "airport": "LHR",
-  "theme": "slate",
-  "tags": [
-   "city",
-   "culture",
-   "theatre"
-  ],
-  "en": {
-   "name": "London",
-   "summary": "Royal parks, free museums and a legendary theatre scene.",
-   "description": "London blends centuries of history with a constantly changing food and arts scene. Many major museums are free to enter, and the parks offer green space in every direction.",
-   "highlights": [
-    "Free national museums",
-    "West End theatre",
-    "Riverside walks on the South Bank"
-   ]
-  },
-  "fr": {
-   "name": "Londres",
-   "summary": "Parcs royaux, musées gratuits et une scène théâtrale légendaire.",
-   "description": "Londres marie des siècles d'histoire à une scène culinaire et artistique en perpétuel mouvement. Plusieurs grands musées sont gratuits et les parcs offrent de la verdure dans toutes les directions.",
-   "highlights": [
-    "Musées nationaux gratuits",
-    "Théâtre du West End",
-    "Promenades sur la South Bank"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    5,
-    6,
-    7,
-    8,
-    9
-   ],
-   "currency": "GBP",
-   "languages": [
-    "en"
-   ]
-  }
- },
- {
-  "slug": "new-york",
-  "airport": "JFK",
-  "theme": "night",
-  "tags": [
-   "city",
-   "food",
-   "shopping"
-  ],
-  "en": {
-   "name": "New York",
-   "summary": "Skylines, neighbourhoods and food from every corner of the world.",
-   "description": "Each New York neighbourhood feels like its own city. Walk the bridges, explore the parks, and eat your way through one of the most diverse food scenes anywhere.",
-   "highlights": [
-    "Walking across the bridges",
-    "Central Park in every season",
-    "Neighbourhood food tours"
-   ]
-  },
-  "fr": {
-   "name": "New York",
-   "summary": "Gratte-ciel, quartiers vivants et cuisines du monde entier.",
-   "description": "Chaque quartier de New York ressemble à une ville en soi. Traversez les ponts à pied, explorez les parcs et goûtez à l'une des scènes culinaires les plus diversifiées qui soient.",
-   "highlights": [
-    "Traverser les ponts à pied",
-    "Central Park en toute saison",
-    "Visites gourmandes de quartier"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    4,
-    5,
-    6,
-    9,
-    10,
-    11
-   ],
-   "currency": "USD",
-   "languages": [
-    "en"
-   ]
-  }
- },
- {
-  "slug": "tokyo",
-  "airport": "HND",
-  "theme": "sakura",
-  "tags": [
-   "city",
-   "food",
-   "culture"
-  ],
-  "en": {
-   "name": "Tokyo",
-   "summary": "Neon districts, quiet shrines and exceptional food.",
-   "description": "Tokyo moves between calm and electric in a few steps: shrine gardens beside busy crossings, tiny counters serving exceptional meals, and efficient trains linking it all.",
-   "highlights": [
-    "Shrine and temple gardens",
-    "Food halls and small counters",
-    "Day trips by rail"
-   ]
-  },
-  "fr": {
-   "name": "Tokyo",
-   "summary": "Quartiers néon, sanctuaires paisibles et cuisine exceptionnelle.",
-   "description": "À Tokyo, on passe du calme à l'effervescence en quelques pas : jardins de sanctuaires près des carrefours animés, petits comptoirs aux repas remarquables et trains efficaces pour tout relier.",
-   "highlights": [
-    "Jardins de sanctuaires et de temples",
-    "Halles gourmandes et petits comptoirs",
-    "Excursions d'une journée en train"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    3,
-    4,
-    5,
-    10,
-    11
-   ],
-   "currency": "JPY",
-   "languages": [
-    "ja"
-   ]
-  }
- },
- {
-  "slug": "barcelona",
-  "airport": "BCN",
-  "theme": "sunset",
-  "tags": [
-   "beach",
-   "city",
-   "architecture"
-  ],
-  "en": {
-   "name": "Barcelona",
-   "summary": "Modernist architecture meets the Mediterranean.",
-   "description": "Barcelona combines a walkable old town, striking modernist buildings and city beaches. Evenings start late, so plan long dinners and leisurely strolls.",
-   "highlights": [
-    "Modernist architecture",
-    "City beaches",
-    "Late-evening dining"
-   ]
-  },
-  "fr": {
-   "name": "Barcelone",
-   "summary": "L'architecture moderniste au bord de la Méditerranée.",
-   "description": "Barcelone réunit une vieille ville à parcourir à pied, des bâtiments modernistes saisissants et des plages urbaines. Les soirées commencent tard : prévoyez de longs dîners.",
-   "highlights": [
-    "Architecture moderniste",
-    "Plages urbaines",
-    "Dîners en soirée"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    5,
-    6,
-    9,
-    10
-   ],
-   "currency": "EUR",
-   "languages": [
-    "es",
-    "ca"
-   ]
-  }
- },
- {
-  "slug": "lisbon",
-  "airport": "LIS",
-  "theme": "sunset",
-  "tags": [
-   "city",
-   "food",
-   "coast"
-  ],
-  "en": {
-   "name": "Lisbon",
-   "summary": "Hillside viewpoints, tiled facades and Atlantic light.",
-   "description": "Lisbon's hills reward the climb with wide river views. Historic trams, tiled facades and an easy reach to Atlantic beaches make it a favourite for city breaks.",
-   "highlights": [
-    "Hilltop viewpoints",
-    "Historic trams",
-    "Nearby Atlantic beaches"
-   ]
-  },
-  "fr": {
-   "name": "Lisbonne",
-   "summary": "Belvédères, façades en azulejos et lumière atlantique.",
-   "description": "Les collines de Lisbonne récompensent l'effort par de vastes vues sur le fleuve. Tramways historiques, façades carrelées et plages atlantiques à proximité en font une escapade prisée.",
-   "highlights": [
-    "Belvédères sur les collines",
-    "Tramways historiques",
-    "Plages atlantiques à proximité"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    4,
-    5,
-    6,
-    9,
-    10
-   ],
-   "currency": "EUR",
-   "languages": [
-    "pt"
-   ]
-  }
- },
- {
-  "slug": "cancun",
-  "airport": "CUN",
-  "theme": "lagoon",
-  "tags": [
-   "beach",
-   "sun",
-   "family"
-  ],
-  "en": {
-   "name": "Cancún",
-   "summary": "Turquoise water, reefs and archaeological sites.",
-   "description": "Cancún is a gateway to Caribbean beaches, snorkelling reefs, freshwater cenotes and ancient Maya sites along the Yucatán Peninsula.",
-   "highlights": [
-    "Caribbean beaches",
-    "Cenotes for swimming",
-    "Maya archaeological sites"
-   ]
-  },
-  "fr": {
-   "name": "Cancún",
-   "summary": "Eaux turquoise, récifs et sites archéologiques.",
-   "description": "Cancún est la porte d'entrée vers les plages des Caraïbes, les récifs propices à la plongée en apnée, les cénotes et les anciens sites mayas de la péninsule du Yucatán.",
-   "highlights": [
-    "Plages des Caraïbes",
-    "Baignade dans les cénotes",
-    "Sites archéologiques mayas"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    12,
-    1,
-    2,
-    3,
-    4
-   ],
-   "currency": "MXN",
-   "languages": [
-    "es"
-   ]
-  }
- },
- {
-  "slug": "reykjavik",
-  "airport": "KEF",
-  "theme": "aurora",
-  "tags": [
-   "nature",
-   "adventure"
-  ],
-  "en": {
-   "name": "Reykjavík",
-   "summary": "Geothermal pools, waterfalls and northern lights.",
-   "description": "Reykjavík is a compact base for exploring Iceland's volcanic landscapes. Winter brings the chance of northern lights; summer brings near-endless daylight.",
-   "highlights": [
-    "Geothermal pools",
-    "Waterfall day trips",
-    "Northern lights in winter"
-   ]
-  },
-  "fr": {
-   "name": "Reykjavik",
-   "summary": "Bains géothermiques, chutes et aurores boréales.",
-   "description": "Reykjavik est une base compacte pour explorer les paysages volcaniques de l'Islande. L'hiver offre la chance d'aurores boréales; l'été, une lumière presque continue.",
-   "highlights": [
-    "Bains géothermiques",
-    "Excursions vers les chutes",
-    "Aurores boréales en hiver"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    6,
-    7,
-    8,
-    9
-   ],
-   "currency": "ISK",
-   "languages": [
-    "is"
-   ]
-  }
- },
- {
-  "slug": "marrakech",
-  "airport": "RAK",
-  "theme": "desert",
-  "tags": [
-   "culture",
-   "food",
-   "markets"
-  ],
-  "en": {
-   "name": "Marrakech",
-   "summary": "Lively souks, riads and gardens at the foot of the Atlas.",
-   "description": "Marrakech's medina is a maze of markets and courtyards. Escape the bustle in quiet gardens, or head to the Atlas Mountains for a day of fresh air.",
-   "highlights": [
-    "Medina markets",
-    "Courtyard riads",
-    "Atlas Mountains day trips"
-   ]
-  },
-  "fr": {
-   "name": "Marrakech",
-   "summary": "Souks animés, riads et jardins au pied de l'Atlas.",
-   "description": "La médina de Marrakech est un dédale de marchés et de cours intérieures. Fuyez l'agitation dans des jardins paisibles, ou partez une journée dans l'Atlas.",
-   "highlights": [
-    "Marchés de la médina",
-    "Riads et cours intérieures",
-    "Excursions dans l'Atlas"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    3,
-    4,
-    5,
-    10,
-    11
-   ],
-   "currency": "MAD",
-   "languages": [
-    "ar",
-    "zgh",
-    "fr"
-   ]
-  }
- },
- {
-  "slug": "vancouver",
-  "airport": "YVR",
-  "theme": "forest",
-  "tags": [
-   "nature",
-   "city",
-   "outdoors"
-  ],
-  "en": {
-   "name": "Vancouver",
-   "summary": "Mountains, ocean and rainforest in one city.",
-   "description": "Vancouver puts seawall cycling, forest trails and ski slopes within easy reach of downtown, with a food scene shaped by the Pacific.",
-   "highlights": [
-    "Seawall walks and rides",
-    "Coastal rainforest trails",
-    "Pacific seafood"
-   ]
-  },
-  "fr": {
-   "name": "Vancouver",
-   "summary": "Montagnes, océan et forêt pluviale dans une même ville.",
-   "description": "Vancouver met la promenade du bord de mer, les sentiers forestiers et les pentes de ski à deux pas du centre-ville, avec une cuisine inspirée du Pacifique.",
-   "highlights": [
-    "Promenade du bord de mer",
-    "Sentiers en forêt pluviale côtière",
-    "Fruits de mer du Pacifique"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    6,
-    7,
-    8,
-    9
-   ],
-   "currency": "CAD",
-   "languages": [
-    "en"
-   ]
-  }
- },
- {
-  "slug": "rome",
-  "airport": "FCO",
-  "theme": "terracotta",
-  "tags": [
-   "culture",
-   "history",
-   "food"
-  ],
-  "en": {
-   "name": "Rome",
-   "summary": "Ancient ruins, piazzas and long Italian lunches.",
-   "description": "Rome layers thousands of years of history into its streets. Mornings at the ancient sites, afternoons in shaded piazzas and evenings in neighbourhood trattorias.",
-   "highlights": [
-    "Ancient forums and ruins",
-    "Fountains and piazzas",
-    "Neighbourhood trattorias"
-   ]
-  },
-  "fr": {
-   "name": "Rome",
-   "summary": "Ruines antiques, places animées et longs repas italiens.",
-   "description": "Rome superpose des millénaires d'histoire dans ses rues. Le matin aux sites antiques, l'après-midi sur des places ombragées et le soir dans les trattorias de quartier.",
-   "highlights": [
-    "Forums et ruines antiques",
-    "Fontaines et places",
-    "Trattorias de quartier"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    4,
-    5,
-    6,
-    9,
-    10
-   ],
-   "currency": "EUR",
-   "languages": [
-    "it"
-   ]
-  }
- },
- {
-  "slug": "bangkok",
-  "airport": "BKK",
-  "theme": "tropic",
-  "tags": [
-   "city",
-   "food",
-   "culture"
-  ],
-  "en": {
-   "name": "Bangkok",
-   "summary": "Temples, river life and legendary street food.",
-   "description": "Bangkok pairs gilded temples and river ferries with night markets and some of the world's best-loved street food.",
-   "highlights": [
-    "Riverside temples",
-    "River ferries",
-    "Night markets and street food"
-   ]
-  },
-  "fr": {
-   "name": "Bangkok",
-   "summary": "Temples, vie au fil du fleuve et cuisine de rue légendaire.",
-   "description": "Bangkok associe temples dorés et traversiers sur le fleuve à des marchés de nuit et à l'une des cuisines de rue les plus appréciées au monde.",
-   "highlights": [
-    "Temples au bord du fleuve",
-    "Traversiers sur le fleuve",
-    "Marchés de nuit et cuisine de rue"
-   ]
-  },
-  "facts": {
-   "best_months": [
-    11,
-    12,
-    1,
-    2
-   ],
-   "currency": "THB",
-   "languages": [
-    "th"
-   ]
-  }
- }
 ]

@@ -32,6 +32,11 @@ export function getSiteConfig(): SiteConfig {
   };
 }
 
+/** Public canonical URL of the site (for sitemaps, canonical links, OG tags). */
+export function siteUrl(): string {
+  return (process.env.SITE_URL || "https://farelune.com").replace(/\/$/, "");
+}
+
 /** Server-side base URL for calling FastAPI directly (not through the browser). */
 export function apiInternalUrl(): string {
   return process.env.API_INTERNAL_URL || "http://localhost:8000";

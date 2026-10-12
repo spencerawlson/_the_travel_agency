@@ -42,3 +42,24 @@ async def test_destination_origin_validation(client: AsyncClient) -> None:
     assert bad.status_code == 422
     unknown = await client.get("/api/v1/destinations/paris", params={"origin": "ZZQ"})
     assert unknown.status_code == 200 and unknown.json()["distance_km"] is None
+
+
+async def test_destination_editorial_content(client: AsyncClient) -> None:
+    """History, culture, landmarks and official links flow from seed to API."""
+    for locale in ("en", "fr"):
+        resp = await client.get("/api/v1/destinations/paris", params={"locale": locale})
+        assert resp.status_code == 200
+        body = resp.json()
+        assert body["history"] and len(body["history"]) > 300
+        assert body["culture"] and len(body["culture"]) > 300
+        assert 4 <= len(body["landmarks"]) <= 6
+        assert all(lm["name"] and lm["description"] for lm in body["landmarks"])
+        assert 1 <= len(body["official_links"]) <= 3
+        assert all(
+            ol["label"] and ol["url"].startswith("https://") for ol in body["official_links"]
+        )
+    # Localised: the French copy must differ from the English one.
+    en = (await client.get("/api/v1/destinations/paris", params={"locale": "en"})).json()
+    fr = (await client.get("/api/v1/destinations/paris", params={"locale": "fr"})).json()
+    assert en["history"] != fr["history"]
+    assert en["landmarks"][0]["name"] != fr["landmarks"][0]["name"]

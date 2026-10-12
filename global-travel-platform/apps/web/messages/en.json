@@ -170,7 +170,12 @@
       "localTime": "Local time",
       "currency": "Currency",
       "languages": "Languages"
-    }
+    },
+    "history": "History",
+    "culture": "Culture",
+    "landmarks": "Landmarks",
+    "officialLinks": "Official visitor resources",
+    "officialLinksNote": "Official tourism boards and visitor bureaus."
   },
   "deals": {
     "title": "Travel deals",

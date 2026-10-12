@@ -52,6 +52,16 @@ class CurrencyOut(BaseModel):
     minor_units: int
 
 
+class DestinationLandmarkOut(BaseModel):
+    name: str
+    description: str
+
+
+class DestinationOfficialLinkOut(BaseModel):
+    label: str
+    url: str
+
+
 class DestinationOut(BaseModel):
     slug: str
     name: str
@@ -72,6 +82,11 @@ class DestinationOut(BaseModel):
     origin: str | None = None
     distance_km: int | None = None
     approx_flight_minutes: int | None = None
+    # Editorial deep content (travel-writer voice, localised in translations).
+    history: str | None = None
+    culture: str | None = None
+    landmarks: list[DestinationLandmarkOut] = []
+    official_links: list[DestinationOfficialLinkOut] = []
 
 
 # --- flight search -------------------------------------------------------

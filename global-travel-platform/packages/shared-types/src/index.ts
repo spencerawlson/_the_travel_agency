@@ -34,6 +34,16 @@ export interface Currency {
   minor_units: number;
 }
 
+export interface DestinationLandmark {
+  name: string;
+  description: string;
+}
+
+export interface DestinationOfficialLink {
+  label: string;
+  url: string;
+}
+
 export interface Destination {
   slug: string;
   name: string;
@@ -55,6 +65,14 @@ export interface Destination {
   origin: string | null;
   distance_km: number | null;
   approx_flight_minutes: number | null;
+  /** Travel-writer history of the destination (localised). */
+  history: string | null;
+  /** Travel-writer culture column (localised). */
+  culture: string | null;
+  /** Landmarks with their stories (localised). */
+  landmarks: DestinationLandmark[];
+  /** Official tourism websites. */
+  official_links: DestinationOfficialLink[];
 }
 
 export interface FlightSearchRequest {

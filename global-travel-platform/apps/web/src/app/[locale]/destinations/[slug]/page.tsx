@@ -7,17 +7,46 @@ import { LocalTime } from "@/components/LocalTime";
 import { Photo, PhotoCaption } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import { formatDuration, intlLocale } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
 import { defaultForm } from "@/lib/search";
 import { getDestination } from "@/lib/server-api";
+import { siteUrl } from "@/lib/site";
 
 type Params = Promise<{ locale: string; slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale, slug } = await params;
   const d = await getDestination(slug, locale);
-  return d ? { title: d.name, description: d.summary } : {};
+  if (!d) return {};
+  const base = siteUrl();
+  const canonical = `${base}/${locale}/destinations/${d.slug}`;
+  const photo = getPhoto(d.slug);
+  const languages: Record<string, string> = {};
+  for (const l of routing.locales) languages[l] = `${base}/${l}/destinations/${d.slug}`;
+  return {
+    title: d.name,
+    description: d.summary,
+    metadataBase: new URL(base),
+    alternates: { canonical, languages },
+    openGraph: {
+      title: `${d.name} — travel guide`,
+      description: d.summary,
+      url: canonical,
+      siteName: "Farelune",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      alternateLocale: locale === "fr" ? "en_US" : "fr_FR",
+      type: "article",
+      ...(photo ? { images: [{ url: photo.src, width: photo.width, height: photo.height, alt: photo.alt[locale as "en" | "fr"] ?? photo.alt.en }] } : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${d.name} — travel guide`,
+      description: d.summary,
+      ...(photo ? { images: [photo.src] } : {}),
+    },
+  };
 }
 
 /** Capitalise the first letter only ("avril, mai et juin" -> "Avril, mai et juin"). */
@@ -124,8 +153,29 @@ export default async function DestinationPage({ params }: { params: Params }) {
     destination: { iata: d.airport_iata, label: `${d.name} (${d.airport_iata})` },
   };
 
+  // Structured data for search engines: the destination plus its landmarks
+  // as tourist attractions. This is what earns rich results.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    name: d.name,
+    description: d.summary,
+    inLanguage: locale,
+    geo: { "@type": "GeoCoordinates", latitude: d.latitude, longitude: d.longitude },
+    ...(d.landmarks.length > 0
+      ? {
+          touristAttraction: d.landmarks.map((lm) => ({
+            "@type": "TouristAttraction",
+            name: lm.name,
+            description: lm.description,
+          })),
+        }
+      : {}),
+  };
+
   return (
     <article>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <header className="relative isolate flex min-h-[62vh] items-end overflow-hidden sm:min-h-[70vh]">
         <Photo photo={photo} locale={locale} fallbackClass={`theme-${d.theme}`} priority />
         <div
@@ -177,6 +227,65 @@ export default async function DestinationPage({ params }: { params: Params }) {
               ))}
             </ul>
           </section>
+          {d.history && (
+            <section>
+              <h2 className="font-display text-3xl font-semibold">{t("history")}</h2>
+              <div className="mt-4 space-y-4 text-lg leading-relaxed text-ink-2">
+                {d.history.split(/\n\n+/).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </section>
+          )}
+          {d.culture && (
+            <section>
+              <h2 className="font-display text-3xl font-semibold">{t("culture")}</h2>
+              <div className="mt-4 space-y-4 text-lg leading-relaxed text-ink-2">
+                {d.culture.split(/\n\n+/).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </section>
+          )}
+          {d.landmarks.length > 0 && (
+            <section>
+              <h2 className="font-display text-3xl font-semibold">{t("landmarks")}</h2>
+              <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+                {d.landmarks.map((lm) => (
+                  <li
+                    key={lm.name}
+                    className="rounded-2xl bg-surface-1 p-5 shadow-sm ring-1 ring-line/60"
+                  >
+                    <h3 className="font-display text-xl font-semibold">{lm.name}</h3>
+                    <p className="mt-2 leading-relaxed text-ink-2">{lm.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+          {d.official_links.length > 0 && (
+            <section>
+              <h2 className="font-display text-3xl font-semibold">{t("officialLinks")}</h2>
+              <p className="mt-2 text-sm text-ink-muted">{t("officialLinksNote")}</p>
+              <ul className="mt-4 space-y-2">
+                {d.official_links.map((ol) => (
+                  <li key={ol.url}>
+                    <a
+                      href={ol.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 font-medium text-accent-700 underline decoration-accent-300 underline-offset-4 hover:decoration-accent-600"
+                    >
+                      {ol.label}
+                      <span aria-hidden className="text-sm transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                        ↗
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </div>
         <section
           aria-labelledby="dest-search"

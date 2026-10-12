@@ -170,7 +170,12 @@
       "localTime": "Heure locale",
       "currency": "Devise",
       "languages": "Langues"
-    }
+    },
+    "history": "Histoire",
+    "culture": "Culture",
+    "landmarks": "Lieux emblématiques",
+    "officialLinks": "Ressources officielles",
+    "officialLinksNote": "Offices de tourisme et organismes officiels."
   },
   "deals": {
     "title": "Aubaines voyage",

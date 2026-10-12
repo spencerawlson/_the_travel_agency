@@ -13,7 +13,7 @@ from app.core.errors import AppError, NotFoundError
 from app.models import Airport, Destination, ExchangeRateRecord
 from app.providers.base import CabinClass, FlightSearchRequest, TripType
 from app.providers.registry import get_registry
-from app.schemas.public import DestinationOut
+from app.schemas.public import DestinationLandmarkOut, DestinationOfficialLinkOut, DestinationOut
 from app.services.geo import approx_nonstop_minutes, haversine_km
 from app.services.search import ensure_currency, resolve_airports
 
@@ -48,6 +48,12 @@ def destination_out(d: Destination, locale: str, origin: Airport | None = None) 
         origin=origin.iata_code if origin is not None else None,
         distance_km=distance,
         approx_flight_minutes=minutes,
+        history=t.get("history"),
+        culture=t.get("culture"),
+        landmarks=[DestinationLandmarkOut(**lm) for lm in t.get("landmarks", [])],
+        official_links=[
+            DestinationOfficialLinkOut(**ol) for ol in t.get("official_links", [])
+        ],
     )
 
 
