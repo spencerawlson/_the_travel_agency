@@ -3,6 +3,8 @@
  * variables so legal identity and contact details can change without a rebuild.
  * The default brand name is a PLACEHOLDER pending trademark clearance.
  */
+import { getAffiliateScript } from "./affiliate";
+
 export interface SiteConfig {
   name: string;
   legalEntity: string;
@@ -11,6 +13,8 @@ export interface SiteConfig {
   address: string;
   privacyOfficer: string;
   legalLastUpdated: string;
+  /** Optional partner script enabled (TRAVELPAYOUTS_SCRIPT_ID). */
+  partnerScript: boolean;
 }
 
 export function getSiteConfig(): SiteConfig {
@@ -24,6 +28,7 @@ export function getSiteConfig(): SiteConfig {
     privacyOfficer:
       env.PRIVACY_OFFICER_TITLE || "Person in charge of the protection of personal information",
     legalLastUpdated: env.LEGAL_LAST_UPDATED || "2026-10-12",
+    partnerScript: getAffiliateScript(env) !== null,
   };
 }
 

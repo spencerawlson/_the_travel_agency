@@ -3,7 +3,7 @@
 Everything you need in one place: what this is, where it runs, how to open it, how to start
 and stop it, how to update it, and what's still left to decide.
 
-> **Short version:** it's already running. Open **http://192.168.1.28** in a browser.
+> **Short version:** it's live on the internet at **https://farelune.com** (also on your network at http://192.168.1.28).
 
 ---
 
@@ -33,7 +33,9 @@ or travel agency to book. **The site never sells tickets, takes payments, or mak
 
 ## 2. Where it runs
 
-Everything runs in **Docker on your Fedora 44 server (FedServ) at 192.168.1.28**.
+Everything runs in **Docker on your Fedora 44 server (FedServ) at 192.168.1.28**, published to the
+internet at **https://farelune.com** through a **Cloudflare Tunnel**. No ports are open on your router:
+the `cloudflared` container connects *out* to Cloudflare, which serves HTTPS to visitors.
 
 | Container | What it does |
 |---|---|
@@ -43,14 +45,18 @@ Everything runs in **Docker on your Fedora 44 server (FedServ) at 192.168.1.28**
 | `postgres` | The database (data lives in the Docker volume `gtp_pgdata`) |
 | `redis` | Short-term cache and rate limiting |
 | `migrate` | Runs at startup to create/upgrade tables and load reference data, then exits |
+| `cloudflared` | The Cloudflare Tunnel; carries public traffic from farelune.com to `nginx` |
 
 | Server detail | Value |
 |---|---|
-| Login | `ssh root@192.168.1.28` (password login) |
+| Login | `ssh root@192.168.1.28` (this PC's SSH key is authorized; no password needed) |
 | Project folder on server | `/opt/farelune/global-travel-platform` (a git clone of GitHub) |
 | Secrets file on server | `/opt/farelune/global-travel-platform/.env` (never commit or share it) |
 | Resources | 8 CPU, 7.7 GB RAM, 15 GB disk (Fedora 44, SELinux enforcing, firewalld allows HTTP) |
 | Software | Docker (moby-engine) + Compose and git from Fedora's repos; Docker starts at boot |
+| Mode | **Production**: HTTPS-only admin cookies, API docs off, no example admin |
+| Tunnel | Token in `.env` (`CLOUDFLARE_TUNNEL_TOKEN`); `COMPOSE_FILE` in `.env` makes every `docker compose` command include the tunnel |
+| Cloudflare | DNS + tunnel for farelune.com (Zero Trust → Networks → Tunnels → `farelune`, hostnames `farelune.com` and `www` → `nginx:80`) |
 
 Your Windows PC holds the **source code** (this folder). Docker Desktop on the PC is currently
 broken, so nothing runs here except development tools and tests.
@@ -61,18 +67,22 @@ broken, so nothing runs here except development tools and tests.
 
 | Address | What |
 |---|---|
-| **http://192.168.1.28** | Website (goes to `/en` or `/fr`) |
-| **http://192.168.1.28/en/admin** | Admin dashboard |
-| http://192.168.1.28/api/docs | Interactive API documentation |
-| http://192.168.1.28/api/v1/health | Health check (should say `"status":"ok"`) |
+| **https://farelune.com** | Public website (goes to `/en` or `/fr`) |
+| **https://farelune.com/en/admin** | Admin dashboard (works **only over https**) |
+| https://farelune.com/api/v1/health | Health check (should say `"status":"ok"`, `"environment":"production"`) |
+| http://192.168.1.28 | Same site on your home network (public pages only; admin needs https) |
+
+API docs (`/api/docs`) are switched off in production.
 
 ### Admin login
-- **Email:** `admin@example.com`
-- **Password:** generated automatically and stored on the server. To see it, run this in a VS
-  Code terminal (**Ctrl + `**):
-  ```powershell
-  ssh root@192.168.1.28 "grep DEV_ADMIN_PASSWORD /opt/farelune/global-travel-platform/.env"
-  ```
+There is no automatic admin in production (the old `admin@example.com` is disabled). Create your own
+once, in a terminal on the server; you'll be asked to type the password (12+ characters):
+```bash
+cd /opt/farelune/global-travel-platform
+docker compose exec api python -m app.cli create-admin --email you@farelune.com --role admin
+```
+Then sign in at **https://farelune.com/en/admin**. Other admin commands: `disable-admin --email …`,
+`enable-admin --email …`, `create-admin --email … --update` (reset password).
 
 The dashboard shows searches, referral clicks, click-through rate, top destinations, popular
 routes, a traffic chart, providers, commissions, errors and system health. **Every number
@@ -272,6 +282,9 @@ global-travel-platform/
 | Problem | Fix |
 |---|---|
 | Site doesn't load | `ssh` in, then `docker compose ps`. If something isn't healthy: `docker compose logs <service>`, then `docker compose up -d --wait` |
+| farelune.com shows Cloudflare **error 1033 / 530** | The tunnel isn't connected: `docker compose logs cloudflared`. Check the tunnel shows **HEALTHY** in Zero Trust → Tunnels, and that the hostname points to `nginx:80` |
+| farelune.com doesn't resolve | Cloudflare → farelune.com → DNS must have records for `farelune.com` and `www` created by the tunnel (type CNAME, target `….cfargotunnel.com`) |
+| Admin login does nothing on http://192.168.1.28 | Expected in production: admin cookies are HTTPS-only. Use https://farelune.com/en/admin |
 | Health check says `degraded` | Database or Redis is down: `docker compose restart postgres redis` |
 | Admin login says "Invalid email or password" | Check the password (section 3). After 5 wrong tries the account locks for 15 minutes |
 | Admin login refused when browsing from a new address | Add that address to `CORS_ORIGINS` in the server `.env`, then `docker compose up -d` |

@@ -60,7 +60,9 @@ Notes:
   therefore see real visitor IPs, and LAN clients can't spoof them.
 - With `COOKIE_SECURE=true`, admin sign-in works only over HTTPS (`https://farelune.com/en/admin`).
   The LAN address keeps serving public pages.
-- Updates: `git pull`, then rerun the same `docker compose -f ... -f ... up -d --build --wait` command.
+- Tip: add `COMPOSE_FILE=docker-compose.yml:infrastructure/deployment/docker-compose.tunnel.yml`
+  to `.env` so plain `docker compose ...` commands always include the tunnel.
+- Updates: `git pull`, then `docker compose up -d --build --wait`.
 
 ## 3. Production on DigitalOcean + Cloudflare (alternative)
 

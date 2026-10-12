@@ -63,6 +63,17 @@
 - No advertising pixels, no third-party analytics.
 - Partner sites set their own attribution cookies after the user leaves our site (disclosed).
 
+### Optional partner script and consent (implemented)
+
+- `TRAVELPAYOUTS_SCRIPT_ID` enables the Travelpayouts Drive/Emerald script **only with opt-in
+  consent**. A banner offers "Accept partner cookies" and "Essential only" with equal prominence.
+  The choice is stored in the `fl_consent` cookie (12 months). Visitors can withdraw at any time via
+  "Cookie settings" in the footer, which reloads the page so the script stops.
+- When the script is enabled, the privacy policy, cookie notice and affiliate disclosure gain
+  matching sections (EN/FR) automatically.
+- [ ] ⚖️ Confirm the consent wording and the 12-month storage period, add Travelpayouts to the PIA as a
+      third party receiving data outside Québec, and list it in the confidentiality-incident plan.
+
 ## 5. Data inventory (for the PIA)
 
 | Data                                           | Where                     | Personal?                   | Retention     |

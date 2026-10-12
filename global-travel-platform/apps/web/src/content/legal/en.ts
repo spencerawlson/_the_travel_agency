@@ -35,6 +35,11 @@ export const en: LegalContent = (s) => ({
         heading: "Sharing and transfers outside Quebec",
         paragraphs: [
           "When you click an offer, you leave our site and the partner receives your request directly from your browser. Partners may set their own cookies and apply their own privacy policies.",
+          ...(s.partnerScript
+            ? [
+                "Only if you consent, we load a script from our affiliate network, Travelpayouts, which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
+              ]
+            : []),
           "Our infrastructure providers (for example, hosting, content delivery and security services) may process data outside Quebec and Canada. Before such transfers, we assess privacy risks and put contractual safeguards in place, as required by Law 25.",
         ],
       },
@@ -133,7 +138,12 @@ export const en: LegalContent = (s) => ({
       {
         heading: "Current status",
         paragraphs: [
-          "The service currently runs with demonstration data only. No partner agreements are active and no commissions are earned. Live partner links will be enabled only after partner agreements and any licensing requirements have been verified.",
+          "The service currently runs with demonstration data only. No commissions are earned from the flight results shown. Live partner links will be enabled only after partner agreements and any licensing requirements have been verified.",
+          ...(s.partnerScript
+            ? [
+                "We are a member of the Travelpayouts affiliate network. With your consent, its script may add affiliate links or previews to our pages; we may earn a commission if you book through them.",
+              ]
+            : []),
         ],
       },
     ],
@@ -143,16 +153,29 @@ export const en: LegalContent = (s) => ({
     summary: "The cookies and local storage we use.",
     sections: [
       {
-        heading: "Strictly necessary only",
+        heading: s.partnerScript ? "Strictly necessary" : "Strictly necessary only",
         paragraphs: [
-          "We do not use advertising or third-party analytics cookies. We use only what the site needs to work:",
+          s.partnerScript
+            ? "We do not use advertising or third-party analytics cookies. These cookies are needed for the site to work:"
+            : "We do not use advertising or third-party analytics cookies. We use only what the site needs to work:",
         ],
         list: [
           "NEXT_LOCALE: remembers your language choice.",
-          "theme (browser local storage): remembers light/dark mode.",
+          ...(s.partnerScript ? ["fl_consent: remembers your cookie choice."] : []),
           "gtp_admin_session and gtp_csrf: used only by administrators who sign in.",
         ],
       },
+      ...(s.partnerScript
+        ? [
+            {
+              heading: "Optional partner cookies (only with your consent)",
+              paragraphs: [
+                "If you choose \u201cAccept partner cookies\u201d, we load a script from Travelpayouts, the travel affiliate network we work with. It can add travel links and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
+                "If you choose \u201cEssential only\u201d, the script is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Travelpayouts is governed by its own privacy policy.",
+              ],
+            },
+          ]
+        : []),
       {
         heading: "Partner websites",
         paragraphs: [

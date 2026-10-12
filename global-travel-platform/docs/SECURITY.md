@@ -69,6 +69,14 @@ backslash confusion, credentials, ports, CRLF injection, cache tampering and the
   `object-src 'none'` and `form-action 'self'`.
   - **Known gap:** `script-src` includes `'unsafe-inline'` for the Next.js bootstrap
     scripts. A nonce-based CSP is on the roadmap.
+- **Runtime CSP:** the policy is built per request in `apps/web/src/proxy.ts` (`src/lib/csp.ts`).
+  When the optional partner script is enabled (`TRAVELPAYOUTS_SCRIPT_ID`), its single host is added
+  to `script-src`, `img-src` and `connect-src`. Nothing else is opened.
+- **Optional partner script (Travelpayouts):** off by default. When enabled, the loader is
+  rendered with `type="text/plain"`, so it doesn't execute, and runs only after the visitor clicks
+  "Accept partner cookies". The script patches browser APIs (`window.open`, `setAttribute`) and
+  hides those patches from `Function.prototype.toString`. That is third-party code with full page
+  access, so enable it only on the public site, after reviewing it in COMPLIANCE.md.
 - **CORS:** an explicit origin allowlist (`CORS_ORIGINS`), with wildcards refused in
   production. Only GET and POST are allowed, with three allowed headers.
 - **TLS:** Cloudflare "Full (strict)" plus an origin certificate on Nginx (see

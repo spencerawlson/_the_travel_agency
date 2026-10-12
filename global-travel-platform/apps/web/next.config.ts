@@ -6,28 +6,10 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 // Server-side URL of the FastAPI service (Docker network / localhost in dev).
 const apiInternalUrl = process.env.API_INTERNAL_URL ?? "http://localhost:8000";
-const isDev = process.env.NODE_ENV !== "production";
 
-// Phase 1 CSP. Next.js injects small inline bootstrap scripts, so
-// script-src needs 'unsafe-inline'; moving to nonce-based CSP is tracked in
-// docs/ROADMAP.md. Everything else is locked to 'self'.
-const csp = [
-  "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data:",
-  "font-src 'self' data:",
-  `connect-src 'self'${isDev ? " ws: http://localhost:*" : ""}`,
-  "frame-ancestors 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "object-src 'none'",
-  // No `upgrade-insecure-requests`: it breaks plain-HTTP deployments (LAN, CI).
-  // HTTPS is enforced by HSTS + Cloudflare/Nginx redirects in production.
-].join("; ");
-
+// Content-Security-Policy is set per request in src/proxy.ts (see src/lib/csp.ts),
+// so runtime settings such as an enabled partner script apply without a rebuild.
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: csp },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },

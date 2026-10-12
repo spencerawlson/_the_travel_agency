@@ -93,6 +93,9 @@ services:
       CONTACT_EMAIL: ${CONTACT_EMAIL:-}
       PRIVACY_EMAIL: ${PRIVACY_EMAIL:-}
       LEGAL_ADDRESS: ${LEGAL_ADDRESS:-}
+      # Optional partner script (off when empty); loaded only after visitor consent.
+      TRAVELPAYOUTS_SCRIPT_ID: ${TRAVELPAYOUTS_SCRIPT_ID:-}
+      TRAVELPAYOUTS_SCRIPT_HOST: ${TRAVELPAYOUTS_SCRIPT_HOST:-}
     depends_on:
       api: { condition: service_healthy }
 

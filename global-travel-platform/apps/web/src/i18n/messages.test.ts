@@ -18,6 +18,7 @@ const site: SiteConfig = {
   address: "Québec",
   privacyOfficer: "Officer",
   legalLastUpdated: "2030-01-01",
+  partnerScript: false,
 };
 
 describe("translations", () => {
@@ -37,11 +38,23 @@ describe("translations", () => {
   });
 
   it("every legal document exists in both languages with the same structure", () => {
-    for (const doc of LEGAL_DOCS) {
-      const e = getLegalDocument("en", doc, site);
-      const f = getLegalDocument("fr", doc, site);
-      expect(f.sections.length, doc).toBe(e.sections.length);
-      expect(f.title).not.toBe("");
+    for (const partnerScript of [false, true]) {
+      const cfg = { ...site, partnerScript };
+      for (const doc of LEGAL_DOCS) {
+        const e = getLegalDocument("en", doc, cfg);
+        const f = getLegalDocument("fr", doc, cfg);
+        expect(f.sections.length, `${doc} partner=${partnerScript}`).toBe(e.sections.length);
+        expect(f.title).not.toBe("");
+      }
     }
+  });
+
+  it("partner-script wording appears only when the script is enabled", () => {
+    const off = JSON.stringify(getLegalDocument("en", "cookies", site));
+    const on = JSON.stringify(getLegalDocument("en", "cookies", { ...site, partnerScript: true }));
+    expect(off).not.toContain("Travelpayouts");
+    expect(on).toContain("Travelpayouts");
+    expect(on).toContain("fl_consent");
+    expect(off).not.toContain("light/dark");
   });
 });

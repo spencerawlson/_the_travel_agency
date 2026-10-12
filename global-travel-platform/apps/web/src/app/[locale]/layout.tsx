@@ -5,9 +5,11 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import "../globals.css";
+import { ConsentBanner, LOADER_ID } from "@/components/ConsentBanner";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { routing } from "@/i18n/routing";
+import { getAffiliateScript } from "@/lib/affiliate";
 import { getSiteConfig } from "@/lib/site";
 
 // Self-hosted at build time by next/font (no runtime requests to Google).
@@ -49,9 +51,21 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const t = await getTranslations("nav");
   const site = getSiteConfig();
+  const partner = getAffiliateScript();
 
   return (
     <html lang={locale} className={`${heading.variable} ${body.variable}`}>
+      {partner && (
+        <head>
+          {/* Inert until the visitor consents (type=text/plain); see ConsentBanner. */}
+          <script
+            id={LOADER_ID}
+            type="text/plain"
+            data-consent="partners"
+            dangerouslySetInnerHTML={{ __html: partner.code }}
+          />
+        </head>
+      )}
       <body className="flex min-h-dvh flex-col font-sans">
         <NextIntlClientProvider>
           <a
@@ -65,6 +79,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer site={site} />
+          {partner && <ConsentBanner />}
         </NextIntlClientProvider>
       </body>
     </html>

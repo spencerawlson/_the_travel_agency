@@ -35,6 +35,11 @@ export const fr: LegalContent = (s) => ({
         heading: "Communication et transferts hors Québec",
         paragraphs: [
           "Lorsque vous cliquez sur une offre, vous quittez notre site et le partenaire reçoit votre demande directement de votre navigateur. Les partenaires peuvent installer leurs propres témoins et appliquer leurs propres politiques de confidentialité.",
+          ...(s.partnerScript
+            ? [
+                "Seulement si vous y consentez, nous chargeons un script de notre réseau d'affiliation, Travelpayouts, qui peut installer des témoins et recueillir des renseignements techniques sur votre visite afin d'attribuer les réservations. Consultez notre avis sur les témoins; vous pouvez retirer votre consentement à tout moment.",
+              ]
+            : []),
           "Nos fournisseurs d'infrastructure (par exemple, hébergement, diffusion de contenu et services de sécurité) peuvent traiter des données à l'extérieur du Québec et du Canada. Avant de tels transferts, nous évaluons les facteurs relatifs à la vie privée et mettons en place des protections contractuelles, comme l'exige la Loi 25.",
         ],
       },
@@ -134,7 +139,12 @@ export const fr: LegalContent = (s) => ({
       {
         heading: "Situation actuelle",
         paragraphs: [
-          "Le service fonctionne actuellement uniquement avec des données de démonstration. Aucune entente de partenariat n'est active et aucune commission n'est touchée. Les liens partenaires réels ne seront activés qu'après la vérification des ententes de partenariat et de toute exigence de permis applicable.",
+          "Le service fonctionne actuellement uniquement avec des données de démonstration. Aucune commission n'est touchée sur les résultats de vols affichés. Les liens partenaires réels ne seront activés qu'après la vérification des ententes de partenariat et de toute exigence de permis applicable.",
+          ...(s.partnerScript
+            ? [
+                "Nous sommes membres du réseau d'affiliation Travelpayouts. Avec votre consentement, son script peut ajouter des liens d'affiliation ou des aperçus à nos pages; nous pouvons toucher une commission si vous réservez par leur intermédiaire.",
+              ]
+            : []),
         ],
       },
     ],
@@ -144,16 +154,29 @@ export const fr: LegalContent = (s) => ({
     summary: "Les témoins (cookies) et le stockage local que nous utilisons.",
     sections: [
       {
-        heading: "Strictement nécessaires seulement",
+        heading: s.partnerScript ? "Strictement nécessaires" : "Strictement nécessaires seulement",
         paragraphs: [
-          "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Nous n'utilisons que ce dont le site a besoin pour fonctionner :",
+          s.partnerScript
+            ? "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Ces témoins sont nécessaires au fonctionnement du site :"
+            : "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Nous n'utilisons que ce dont le site a besoin pour fonctionner :",
         ],
         list: [
           "NEXT_LOCALE : mémorise votre choix de langue.",
-          "theme (stockage local du navigateur) : mémorise le mode clair ou sombre.",
+          ...(s.partnerScript ? ["fl_consent : mémorise votre choix de témoins."] : []),
           "gtp_admin_session et gtp_csrf : utilisés uniquement par les administrateurs qui se connectent.",
         ],
       },
+      ...(s.partnerScript
+        ? [
+            {
+              heading: "Témoins partenaires facultatifs (seulement avec votre consentement)",
+              paragraphs: [
+                "Si vous choisissez « Accepter les témoins partenaires », nous chargeons un script de Travelpayouts, le réseau d'affiliation voyage avec lequel nous travaillons. Il peut ajouter des liens de voyage et de courts aperçus à nos pages, et il permet à Travelpayouts et à ses partenaires d'installer des témoins et de recueillir des renseignements techniques (comme votre appareil, votre navigateur et les pages consultées) afin de nous attribuer les réservations.",
+                "Si vous choisissez « Essentiels seulement », le script n'est jamais chargé et le site fonctionne de la même façon. Vous pouvez modifier votre choix à tout moment grâce au lien « Paramètres des témoins » au bas de chaque page. Les données recueillies par Travelpayouts sont régies par sa propre politique de confidentialité.",
+              ],
+            },
+          ]
+        : []),
       {
         heading: "Sites des partenaires",
         paragraphs: [

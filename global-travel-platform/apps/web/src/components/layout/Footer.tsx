@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { SiteConfig } from "@/lib/site";
+import { CookieSettingsButton } from "../ConsentBanner";
 
 const linkClass = "text-sm text-ink-muted hover:text-ink";
 
@@ -43,6 +44,11 @@ export async function Footer({ site }: { site: SiteConfig }) {
       <div className="border-t border-line">
         <div className="mx-auto max-w-6xl space-y-1 px-4 py-4 text-xs text-ink-muted">
           <p>{t("disclosure")}</p>
+          {site.partnerScript && (
+            <p>
+              <CookieSettingsButton className="underline hover:text-ink" />
+            </p>
+          )}
           <p>{t("rights", { year: new Date().getFullYear(), entity: site.legalEntity })}</p>
         </div>
       </div>
