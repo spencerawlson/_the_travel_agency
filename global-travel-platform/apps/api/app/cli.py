@@ -72,6 +72,37 @@ async def _upsert_admin(email: str, password: str, role: str, *, update_existing
         return result
 
 
+async def _set_admin_active(email: str, active: bool) -> str:
+    """Enable/disable an admin. Disabling also revokes all of their sessions."""
+    from datetime import UTC, datetime
+
+    from sqlalchemy import update
+
+    from app.models import AdminSession
+
+    email = email.strip().lower()
+    async with get_sessionmaker()() as session:
+        user = (await session.scalars(select(AdminUser).where(AdminUser.email == email))).first()
+        if user is None:
+            return "not found"
+        user.is_active = active
+        if not active:
+            await session.execute(
+                update(AdminSession)
+                .where(AdminSession.user_id == user.id, AdminSession.revoked_at.is_(None))
+                .values(revoked_at=datetime.now(UTC))
+            )
+        audit(
+            session,
+            "admin.user_enabled" if active else "admin.user_disabled",
+            actor_label="cli",
+            target_type="admin_user",
+            target_id=user.id,
+        )
+        await session.commit()
+        return "enabled" if active else "disabled"
+
+
 async def _purge() -> None:
     async with get_sessionmaker()() as session:
         print("purged:", await purge_expired(session))
@@ -85,6 +116,9 @@ def main(argv: list[str] | None = None) -> int:
     ca.add_argument("--email", required=True)
     ca.add_argument("--role", choices=ROLES, default="admin")
     ca.add_argument("--update", action="store_true", help="reset password/role if exists")
+    for name in ("disable-admin", "enable-admin"):
+        cmd = sub.add_parser(name)
+        cmd.add_argument("--email", required=True)
     sub.add_parser("ensure-dev-admin")
     sub.add_parser("purge-expired")
     args = parser.parse_args(argv)
@@ -113,6 +147,10 @@ def main(argv: list[str] | None = None) -> int:
                     "dev admin:",
                     await _upsert_admin(dev_email, dev_password, "admin", update_existing=False),
                 )
+            elif args.cmd in ("disable-admin", "enable-admin"):
+                result = await _set_admin_active(args.email, args.cmd == "enable-admin")
+                print(result)
+                return 1 if result == "not found" else 0
             elif args.cmd == "purge-expired":
                 await _purge()
             return 0

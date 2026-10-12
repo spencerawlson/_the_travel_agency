@@ -17,7 +17,52 @@ docker compose ps         # all services "healthy"; migrate "exited (0)"
 Startup order is enforced by health checks:
 postgres → migrate (alembic + seed) → api (plus redis) → web → nginx.
 
-## 2. Production on DigitalOcean + Cloudflare
+## 2. Production on a home or office server via Cloudflare Tunnel (current: Farelune)
+
+A Cloudflare Tunnel publishes the site without opening any inbound ports. `cloudflared`
+makes an outbound connection to Cloudflare, Cloudflare serves HTTPS to visitors, and
+requests travel through the tunnel to Nginx. Farelune runs this way on a Fedora server
+(see `START_HERE.md`).
+
+**Cloudflare (one-time, in the browser):**
+
+1. Add `farelune.com` to a free Cloudflare account and switch the domain's nameservers at
+   the registrar to the two that Cloudflare gives you. Wait for the domain to show **Active**.
+2. Go to **Zero Trust → Networks → Tunnels → Create a tunnel → Cloudflared**, name it,
+   choose **Docker**, and copy the token (the long string after `--token`).
+3. **Public hostnames:** add `farelune.com` with service **HTTP** and URL `nginx:80`. Do the
+   same for `www.farelune.com`, or redirect `www` to the apex with a Redirect Rule.
+4. **SSL/TLS:** turn on **Always Use HTTPS**.
+
+**Server:**
+
+```bash
+cd /opt/farelune/global-travel-platform
+# Store the token without leaving it in shell history:
+read -rsp "Tunnel token: " T && echo "CLOUDFLARE_TUNNEL_TOKEN=$T" >> .env && unset T
+```
+
+Production values in `.env`: `ENVIRONMENT=production`, `COOKIE_SECURE=true`,
+`CORS_ORIGINS=https://farelune.com,https://www.farelune.com`, `ENABLE_DOCS=false`, empty
+`DEV_ADMIN_*`, and the real `LEGAL_*` / `*_EMAIL` values. Then:
+
+```bash
+docker compose down     # once only: the tunnel file sets a fixed network subnet (data is kept)
+docker compose -f docker-compose.yml -f infrastructure/deployment/docker-compose.tunnel.yml up -d --build --wait
+docker compose exec api python -m app.cli create-admin --email you@farelune.com --role admin
+docker compose exec api python -m app.cli disable-admin --email admin@example.com
+```
+
+Notes:
+
+- Nginx trusts `CF-Connecting-IP` only from the tunnel container's fixed address
+  (`172.30.10.250`, see `infrastructure/nginx/realip-cloudflared.conf`). Rate limits and logs
+  therefore see real visitor IPs, and LAN clients can't spoof them.
+- With `COOKIE_SECURE=true`, admin sign-in works only over HTTPS (`https://farelune.com/en/admin`).
+  The LAN address keeps serving public pages.
+- Updates: `git pull`, then rerun the same `docker compose -f ... -f ... up -d --build --wait` command.
+
+## 3. Production on DigitalOcean + Cloudflare (alternative)
 
 ### Infrastructure
 
@@ -100,7 +145,7 @@ backup first. Migrations are written to be backwards-compatible for one release
 2. If a migration must be reverted: `docker compose run --rm migrate alembic downgrade -1`.
    Only do this if it is safe; otherwise restore a backup with `scripts/restore_db.sh`.
 
-## 3. CI/CD
+## 4. CI/CD
 
 GitHub Actions (`.github/workflows/ci.yml`) runs on every push and PR:
 
@@ -112,7 +157,7 @@ Continuous deployment is intentionally not enabled in Phase 1. To add it, create
 `deploy` job on tags that SSHes to the Droplet with a deploy key stored in GitHub
 Environments (with required reviewers) and runs the update commands above.
 
-## 4. Health and monitoring
+## 5. Health and monitoring
 
 | Check                      | Endpoint / command                                                                        |
 | -------------------------- | ----------------------------------------------------------------------------------------- |

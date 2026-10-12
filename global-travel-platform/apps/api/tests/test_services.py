@@ -121,3 +121,30 @@ async def test_retention_purges_only_expired(db, settings) -> None:  # type: ign
     counts = await purge_expired(db)
     assert counts["flight_search_events"] == 1
     assert await db.scalar(select(func.count()).select_from(FlightSearchEvent)) == 1
+
+
+async def test_cli_disable_admin_revokes_access(client, db) -> None:  # type: ignore[no-untyped-def]
+    from app.cli import _set_admin_active
+    from app.models import AdminUser
+
+    from .conftest import login
+
+    await login(client, "viewer@example.com", "Viewer-Password-Long-77")
+    assert (await client.get("/api/v1/admin/auth/me")).status_code == 200
+
+    assert await _set_admin_active("VIEWER@example.com", False) == "disabled"
+    # Existing session is revoked immediately, and new logins are refused.
+    assert (await client.get("/api/v1/admin/auth/me")).status_code == 401
+    resp = await client.post(
+        "/api/v1/admin/auth/login",
+        json={"email": "viewer@example.com", "password": "Viewer-Password-Long-77"},
+    )
+    assert resp.status_code == 401
+
+    assert await _set_admin_active("viewer@example.com", True) == "enabled"
+    assert await _set_admin_active("nobody@example.com", False) == "not found"
+    user = (
+        await db.scalars(select(AdminUser).where(AdminUser.email == "viewer@example.com"))
+    ).one()
+    await db.refresh(user)
+    assert user.is_active
