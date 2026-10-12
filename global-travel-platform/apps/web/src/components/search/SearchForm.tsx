@@ -2,9 +2,10 @@
 
 import type { Airport } from "@gtp/shared-types";
 import { Button } from "@gtp/ui";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
+import { IATA_ORIGIN } from "@/content/origin-airports";
 import {
   addDays,
   CABINS,
@@ -34,8 +35,19 @@ const labelClass = "mb-1 block text-xs font-semibold tracking-wide text-ink-mute
 
 export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirports }: Props) {
   const t = useTranslations("search");
+  const locale = useLocale();
   const router = useRouter();
-  const [form, setForm] = useState<SearchFormState>(() => initial ?? defaultForm());
+  const [form, setForm] = useState<SearchFormState>(() => {
+    const base = initial ?? defaultForm();
+    // Prefill the origin from the visitor's detected location (cookie set by
+    // the middleware), unless an explicit initial value was given.
+    if (!initial && !base.origin && typeof document !== "undefined") {
+      const m = document.cookie.match(/(?:^|;\s*)gtp_origin=([A-Za-z]{3})/);
+      const o = m?.[1] ? IATA_ORIGIN[m[1].toUpperCase()] : undefined;
+      if (o) base.origin = { iata: o.iata, label: `${locale === "fr" ? o.cityFr : o.city} (${o.iata})` };
+    }
+    return base;
+  });
   const [errors, setErrors] = useState<SearchErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const today = todayIso();
@@ -43,6 +55,13 @@ export function SearchForm({ initial, compact = false, onSubmitValid, fetchAirpo
   function update<K extends keyof SearchFormState>(key: K, value: SearchFormState[K]) {
     const next = { ...form, [key]: value };
     setForm(next);
+    // Remember a manually chosen origin so destination distances follow it.
+    if (key === "origin" && value && typeof document !== "undefined") {
+      const iata = (value as { iata?: string }).iata;
+      if (iata && /^[A-Za-z]{3}$/.test(iata)) {
+        document.cookie = `gtp_origin=${iata.toUpperCase()}; path=/; max-age=${365 * 24 * 3600}; samesite=lax`;
+      }
+    }
     if (submitted) setErrors(validateSearch(next, today));
   }
 

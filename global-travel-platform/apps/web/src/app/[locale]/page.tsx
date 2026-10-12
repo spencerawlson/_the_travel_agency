@@ -4,8 +4,8 @@ import { Globe } from "@/components/Globe";
 import { Photo } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { Link } from "@/i18n/navigation";
-import { getPhoto, HUB, type Mood } from "@/lib/photos";
-import { getDestinations } from "@/lib/server-api";
+import { getPhoto, type Mood } from "@/lib/photos";
+import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
 
 const MOOD_PHOTOS: Record<Mood, string> = {
   beach: "mood-beach",
@@ -19,6 +19,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const destinations = await getDestinations(locale);
+  const origin = await getOrigin();
+  const city = originCity(origin, locale);
+  const hub = { latitude: origin.latitude, longitude: origin.longitude };
   const featured = destinations.slice(0, 6);
   const globePoints = destinations.map((d) => ({
     slug: d.slug,
@@ -52,9 +55,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </ul>
           </div>
           <div className="relative mx-auto w-full max-w-[300px] sm:max-w-[420px] md:max-w-[520px]">
-            <Globe points={globePoints} hub={HUB} label={t("globeLabel")} />
+            <Globe points={globePoints} hub={hub} label={t("globeLabel", { city })} />
             <p className="mt-2 text-center text-xs font-medium text-ink-muted">
-              {t("globeCaption")}
+              {t("globeCaption", { city })}
             </p>
           </div>
         </div>
@@ -106,7 +109,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h2 className="font-display text-4xl font-semibold tracking-tight">
               {t("destinationsTitle")}
             </h2>
-            <p className="mt-2 text-ink-muted">{t("destinationsSubtitle")}</p>
+            <p className="mt-2 text-ink-muted">{t("destinationsSubtitle", { city })}</p>
           </div>
           <Link
             href="/destinations"
@@ -118,7 +121,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((d, i) => (
             <li key={d.slug}>
-              <DestinationCard destination={d} priority={i < 3} />
+              <DestinationCard destination={d} originCity={city} priority={i < 3} />
             </li>
           ))}
         </ul>

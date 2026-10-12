@@ -7,9 +7,11 @@ import { Photo } from "./Photo";
 
 export function DestinationCard({
   destination: d,
+  originCity,
   priority = false,
 }: {
   destination: Destination;
+  originCity: string;
   priority?: boolean;
 }) {
   const t = useTranslations("destinations");
@@ -31,14 +33,17 @@ export function DestinationCard({
         aria-hidden
         className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/65 via-black/25 to-transparent"
       />
-      {d.approx_flight_minutes != null && (
-        <span className="absolute top-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-ink shadow-sm backdrop-blur">
-          ✈ {t("flightChip", { time: formatDuration(d.approx_flight_minutes) })}
-        </span>
-      )}
       <div className="absolute inset-x-0 bottom-0 p-5 text-white">
         <p className="font-display text-3xl font-semibold drop-shadow-sm">{d.name}</p>
-        <p className="mt-1 line-clamp-2 text-sm text-white/90">{d.summary}</p>
+        {d.approx_flight_minutes != null && (
+          <p className="mt-1 text-sm font-medium text-white/85">
+            ✈{" "}
+            {t("flightChip", {
+              time: formatDuration(d.approx_flight_minutes),
+              city: originCity,
+            })}
+          </p>
+        )}
       </div>
     </Link>
   );

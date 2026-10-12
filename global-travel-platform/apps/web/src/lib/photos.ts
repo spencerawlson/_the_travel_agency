@@ -46,6 +46,3 @@ export function isMood(value: string | undefined): value is Mood {
 export function matchesMood(tags: string[], mood: Mood): boolean {
   return tags.some((t) => (MOODS[mood] as readonly string[]).includes(t));
 }
-
-/** Montréal–Trudeau: the home hub for globe routes and flight-time estimates. */
-export const HUB = { iata: "YUL", latitude: 45.4678, longitude: -73.7423 } as const;

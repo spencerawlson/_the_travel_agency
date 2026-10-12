@@ -11,7 +11,7 @@ import { routing } from "@/i18n/routing";
 import { formatDuration, intlLocale } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
 import { defaultForm } from "@/lib/search";
-import { getDestination } from "@/lib/server-api";
+import { getDestination, getOrigin, originCity } from "@/lib/server-api";
 import { siteUrl } from "@/lib/site";
 
 type Params = Promise<{ locale: string; slug: string }>;
@@ -106,10 +106,12 @@ function Facts({
   d,
   locale,
   t,
+  city,
 }: {
   d: Destination;
   locale: string;
   t: (k: string, v?: Record<string, string>) => string;
+  city: string;
 }) {
   return (
     <dl className="grid gap-3 sm:grid-cols-2">
@@ -119,7 +121,7 @@ function Facts({
         </Fact>
       )}
       {d.approx_flight_minutes != null && (
-        <Fact icon="✈️" label={t("facts.flightTime")}>
+        <Fact icon="✈️" label={t("facts.flightTime", { city })}>
           {t("facts.flightValue", { time: formatDuration(d.approx_flight_minutes) })}
         </Fact>
       )}
@@ -147,9 +149,11 @@ export default async function DestinationPage({ params }: { params: Params }) {
   if (!d) notFound();
   const t = await getTranslations("destinations");
   const photo = getPhoto(d.slug);
+  const origin = await getOrigin();
+  const city = originCity(origin, locale);
   const initial = {
     ...defaultForm(),
-    origin: { iata: "YUL", label: "Montréal (YUL)" },
+    origin: { iata: origin.iata, label: `${city} (${origin.iata})` },
     destination: { iata: d.airport_iata, label: `${d.name} (${d.airport_iata})` },
   };
 
@@ -205,7 +209,7 @@ export default async function DestinationPage({ params }: { params: Params }) {
           <section>
             <h2 className="font-display text-3xl font-semibold">{t("facts.title")}</h2>
             <div className="mt-4">
-              <Facts d={d} locale={locale} t={t} />
+              <Facts d={d} locale={locale} t={t} city={city} />
             </div>
             {d.approx_flight_minutes != null && (
               <p className="mt-3 text-xs text-ink-muted">{t("facts.flightNote")}</p>

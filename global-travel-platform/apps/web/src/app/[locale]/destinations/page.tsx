@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DestinationCard } from "@/components/DestinationCard";
 import { Link } from "@/i18n/navigation";
 import { isMood, matchesMood, MOODS, type Mood } from "@/lib/photos";
-import { getDestinations } from "@/lib/server-api";
+import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
 
 export async function generateMetadata({
   params,
@@ -30,6 +30,7 @@ export default async function DestinationsPage({
   const mood: Mood | null = isMood(rawMood) ? rawMood : null;
   const all = await getDestinations(locale);
   const destinations = mood ? all.filter((d) => matchesMood(d.tags, mood)) : all;
+  const city = originCity(await getOrigin(), locale);
 
   const chip = (active: boolean) =>
     `rounded-full px-4 py-2 text-sm font-semibold transition ${
@@ -71,7 +72,7 @@ export default async function DestinationsPage({
       <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((d, i) => (
           <li key={d.slug}>
-            <DestinationCard destination={d} priority={i < 3} />
+            <DestinationCard destination={d} originCity={city} priority={i < 3} />
           </li>
         ))}
       </ul>
