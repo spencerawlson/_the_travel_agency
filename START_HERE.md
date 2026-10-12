@@ -47,8 +47,8 @@ Everything runs in **Docker on your Proxmox container `Docker` (CT 104) at 192.1
 | Server detail | Value |
 |---|---|
 | Login | `ssh spencer@192.168.1.88` (password login) |
-| Project folder on server | `~/gtp/global-travel-platform` |
-| Secrets file on server | `~/gtp/global-travel-platform/.env` (never commit or share it) |
+| Project folder on server | `~/gtp/_the_travel_agency/global-travel-platform` (a git clone of GitHub) |
+| Secrets file on server | `~/gtp/_the_travel_agency/global-travel-platform/.env` (never commit or share it) |
 | Resources | 2 CPU, 4 GB RAM, 20 GB disk |
 | Also on this server | A `k3d-homelab` Kubernetes cluster; unrelated, leave it alone |
 
@@ -71,7 +71,7 @@ broken, so nothing runs here except development tools and tests.
 - **Password:** generated automatically and stored on the server. To see it, run this in a VS
   Code terminal (**Ctrl + `**):
   ```powershell
-  ssh spencer@192.168.1.88 "grep DEV_ADMIN_PASSWORD ~/gtp/global-travel-platform/.env"
+  ssh spencer@192.168.1.88 "grep DEV_ADMIN_PASSWORD ~/gtp/_the_travel_agency/global-travel-platform/.env"
   ```
 
 The dashboard shows searches, referral clicks, click-through rate, top destinations, popular
@@ -83,7 +83,7 @@ reports one.
 
 ## 4. Start, stop, check (on the server)
 
-Log in first: `ssh spencer@192.168.1.88`, then `cd ~/gtp/global-travel-platform`.
+Log in first: `ssh spencer@192.168.1.88`, then `cd ~/gtp/_the_travel_agency/global-travel-platform`.
 
 | Task | Command |
 |---|---|
@@ -106,26 +106,34 @@ and `admin` (+ audit log).
 
 ## 5. Update the server after changing code
 
-From a **PowerShell** terminal on your PC, in `C:\Users\spenc\SaaS & Portfolio\_The_Agency`:
+The server runs a **git clone** of `github.com/spencerawlson/_the_travel_agency`.
 
+**On your PC:** commit and push as usual.
 ```powershell
-# 1. Package the code (leaves out secrets and generated folders)
-tar -czf gtp.tgz --exclude=node_modules --exclude=.next --exclude=.venv --exclude=__pycache__ --exclude=.env --exclude=test-results --exclude=playwright-report global-travel-platform
-
-# 2. Copy it to the server (asks for spencer's password)
-scp gtp.tgz spencer@192.168.1.88:gtp/
-
-# 3. Unpack and rebuild (asks for the password again; the server's .env is kept)
-ssh spencer@192.168.1.88 "cd ~/gtp && tar -xzf gtp.tgz && cd global-travel-platform && docker compose up -d --build --wait"
-
-# 4. Clean up
-del gtp.tgz
+git add .
+git commit -m "describe the change"
+git push
 ```
 
-The rebuild takes about 3–8 minutes. Database changes are applied automatically by `migrate`.
+**On the server** (`ssh spencer@192.168.1.88`):
+```bash
+cd ~/gtp/_the_travel_agency && git pull && cd global-travel-platform && docker compose up -d --build --wait
+```
 
-> **Tip:** to stop typing the password, install your SSH key on the server once (see
-> `DOCKER_HOST_SETUP.md`, which stays on this PC and is not committed).
+- The rebuild takes about 3–8 minutes. Database changes are applied automatically by `migrate`.
+- The server's `.env` (secrets) is **not** in git and is never touched by `git pull`.
+- Data is kept across updates (it lives in the Docker volume `gtp_pgdata`).
+- Check afterwards: `docker compose ps` (all healthy) and http://192.168.1.88:8080/api/v1/health.
+- **Undo a bad update:** `git log --oneline` to find the previous commit, then
+  `git checkout <commit> && docker compose up -d --build --wait`. Return to normal later with
+  `git checkout main`.
+
+> **The GitHub repository is public.** Anyone can read the code, which is fine because no secrets
+> are in it. Never commit `.env` files, keys or passwords (`.gitignore` blocks the usual ones).
+> If you make the repo private, the server will need a GitHub deploy key or access token to `git pull`.
+
+> **Tip:** to stop typing the password on every `ssh`, install your SSH key on the server once
+> (see `DOCKER_HOST_SETUP.md`, which stays on this PC and is not committed).
 
 ---
 
