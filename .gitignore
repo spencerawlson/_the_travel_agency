@@ -85,3 +85,6 @@ desktop.ini
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json.example
+
+# Server-only Docker Compose overrides
+docker-compose.local.yml

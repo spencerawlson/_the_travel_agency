@@ -17,7 +17,8 @@ x-api-env: &api-env
   TRAVELPAYOUTS_API_TOKEN: ${TRAVELPAYOUTS_API_TOKEN:-}
   TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
   TRAVELPAYOUTS_MARKET: ${TRAVELPAYOUTS_MARKET:-}
-  REFERRALS_LIVE_ENABLED: "false"
+  # Partner booking links. Keep false until partner agreement + licensing are confirmed.
+  REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
   METRICS_TOKEN: ${METRICS_TOKEN:-}
   SENTRY_DSN: ${SENTRY_DSN:-}
   LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -99,6 +100,7 @@ services:
       LEGAL_ADDRESS: ${LEGAL_ADDRESS:-}
       # Optional partner script (off when empty); loaded only after visitor consent.
       TRAVELPAYOUTS_SCRIPT_ID: ${TRAVELPAYOUTS_SCRIPT_ID:-}
+      REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
       TRAVELPAYOUTS_SCRIPT_HOST: ${TRAVELPAYOUTS_SCRIPT_HOST:-}
     depends_on:
       api: { condition: service_healthy }

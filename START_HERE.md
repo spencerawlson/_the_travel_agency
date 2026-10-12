@@ -121,7 +121,7 @@ Set in the server `.env`, then run `docker compose up -d` (no rebuild needed):
 |---|---|
 | `ENABLED_PROVIDERS=mock` | Demo fares + "Demo mode" banner |
 | `ENABLED_PROVIDERS=travelpayouts` | **Real fares** found recently on Aviasales (per adult, economy). Needs `TRAVELPAYOUTS_API_TOKEN` (secret) and `TRAVELPAYOUTS_MARKER=584743` |
-| `REFERRALS_LIVE_ENABLED` | Stays `false` until the legal check. Until then, offers show "Partner booking coming soon" |
+| `REFERRALS_LIVE_ENABLED` | **`true` since 2026-10-12 (owner decision):** "View deal" opens Aviasales with marker 584743. Set `false` + `docker compose up -d` to switch booking off instantly (offers then show "Partner booking coming soon") |
 | `TRAVELPAYOUTS_SCRIPT_ID=584743` | Travelpayouts Drive script (inactive until a visitor accepts partner cookies) |
 
 ---

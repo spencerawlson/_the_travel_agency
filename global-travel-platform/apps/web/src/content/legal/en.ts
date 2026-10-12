@@ -138,7 +138,9 @@ export const en: LegalContent = (s) => ({
       {
         heading: "Current status",
         paragraphs: [
-          "The service currently runs with demonstration data only. No commissions are earned from the flight results shown. Live partner links will be enabled only after partner agreements and any licensing requirements have been verified.",
+          s.referralsLive
+            ? "Partner links are active. When you click \u201cView deal\u201d, you go to Aviasales, a flight search site that compares offers from airlines and travel agencies. You choose your seller there and pay them directly. We may earn a commission from our affiliate network (Travelpayouts) if you book; it never changes the price you pay. Prices on our site are fares found recently and are confirmed on Aviasales before you pay."
+            : "Partner booking links are not active yet. Prices shown are for comparison only. Partner links will be enabled once partner agreements and any licensing requirements have been confirmed.",
           ...(s.partnerScript
             ? [
                 "We are a member of the Travelpayouts affiliate network. With your consent, its script may add affiliate links or previews to our pages; we may earn a commission if you book through them.",

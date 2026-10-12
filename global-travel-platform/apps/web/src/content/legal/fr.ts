@@ -139,7 +139,9 @@ export const fr: LegalContent = (s) => ({
       {
         heading: "Situation actuelle",
         paragraphs: [
-          "Le service fonctionne actuellement uniquement avec des données de démonstration. Aucune commission n'est touchée sur les résultats de vols affichés. Les liens partenaires réels ne seront activés qu'après la vérification des ententes de partenariat et de toute exigence de permis applicable.",
+          s.referralsLive
+            ? "Les liens partenaires sont actifs. Lorsque vous cliquez sur « Voir l'offre », vous êtes dirigé vers Aviasales, un site de recherche de vols qui compare les offres de compagnies aériennes et d'agences de voyages. Vous y choisissez votre vendeur et le payez directement. Nous pouvons toucher une commission de notre réseau d'affiliation (Travelpayouts) si vous réservez; cela ne change jamais le prix que vous payez. Les prix affichés sur notre site sont des tarifs trouvés récemment et sont confirmés sur Aviasales avant le paiement."
+            : "Les liens de réservation partenaires ne sont pas encore actifs. Les prix affichés servent uniquement à la comparaison. Les liens partenaires seront activés une fois les ententes de partenariat et toute exigence de permis applicable confirmées.",
           ...(s.partnerScript
             ? [
                 "Nous sommes membres du réseau d'affiliation Travelpayouts. Avec votre consentement, son script peut ajouter des liens d'affiliation ou des aperçus à nos pages; nous pouvons toucher une commission si vous réservez par leur intermédiaire.",

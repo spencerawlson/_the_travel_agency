@@ -22,6 +22,19 @@
 - [ ] Legal pages approved and the draft banner removed.
 - [ ] Only then set `REFERRALS_LIVE_ENABLED=true` (an audited configuration change).
 
+### Go-live record
+
+- **2026-10-12:** the owner (S. R. Spady) enabled live partner referrals for **Aviasales via
+  Travelpayouts** (marker 584743) and accepted the risk while the items marked ⚖️ above remain
+  open. The decision is audited as `provider.go_live`. Provider row: `status=live`,
+  `agreement_verified=true`, with a reference to the Travelpayouts/Aviasales program terms.
+- **Aviasales program:** joined in Travelpayouts (confirmed by the owner, 2026-10-12), so
+  commissions are attributed to marker 584743.
+- **Still open:** the ⚖️ OPC travel-agent licensing opinion; lawyer approval of the legal pages
+  (the DRAFT banner stays until then); REQ registration for operating as "Farelune".
+- **Turning referrals off immediately:** set `REFERRALS_LIVE_ENABLED=false` in the server `.env`,
+  then run `docker compose up -d`. Offers then show "Partner booking coming soon".
+
 ## 1. Québec Law 25 (_Act respecting the protection of personal information in the private sector_)
 
 | #    | Requirement                                                                                                                                                               | Implementation / status                                                                                                                                                                |
