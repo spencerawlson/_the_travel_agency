@@ -24,6 +24,8 @@ interface Props {
   locale: string;
   destinations: FlyDestination[];
   hub: { latitude: number; longitude: number };
+  /** Departure city shown during a flight (null: unknown, no label). */
+  hubName?: string | null;
 }
 
 const AUTO_SPEED = 0.0022;
@@ -42,12 +44,13 @@ const ARC_HEIGHT = 0.28;
  * NOTE: next-intl's router prefixes the locale itself, so navigation targets
  * must NOT include the locale ("/destinations/paris", never "/en/...").
  */
-export function DestinationsGlobe({ locale, destinations, hub }: Props) {
+export function DestinationsGlobe({ locale, destinations, hub, hubName = null }: Props) {
   const router = useRouter();
   const t = useTranslations("destinations");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const planeRef = useRef<HTMLDivElement>(null);
   const labelRefs = useRef(new Map<string, HTMLDivElement>());
+  const hubLabelRef = useRef<HTMLDivElement>(null);
   const [flyingTo, setFlyingTo] = useState<string | null>(null);
 
   const stateRef = useRef({
@@ -149,17 +152,22 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
       }
     };
 
-    // Labels that would overlap one already shown are hidden (the marker stays
-    // clickable); the destination being flown to always wins.
+    // Idle: labels that would overlap one already shown are hidden (the marker
+    // stays clickable). During a flight only two names show: where the plane
+    // leaves from and the destination.
     const LABEL_H = 22;
     const labelWidth = (name: string) => name.length * 6.5 + 22;
     const updateLabels = () => {
       const target = st.turning?.dest.slug ?? st.flying?.dest.slug;
-      const ordered = target
-        ? [...destinations].sort((a, b) => Number(b.slug === target) - Number(a.slug === target))
-        : destinations;
+      const hubEl = hubLabelRef.current;
+      if (hubEl) {
+        const hp = projectMarker(hubLoc[0], hubLoc[1], st.phi, THETA, MARKER_ELEVATION);
+        hubEl.style.opacity = target && hp.visible ? "1" : "0";
+        hubEl.style.left = `${hp.x * 100}%`;
+        hubEl.style.top = `${hp.y * 100}%`;
+      }
       const placed: { x: number; y: number; w: number }[] = [];
-      for (const d of ordered) {
+      for (const d of destinations) {
         const el = labelRefs.current.get(d.slug);
         if (!el) continue;
         const p = projectMarker(d.latitude, d.longitude, st.phi, THETA, MARKER_ELEVATION);
@@ -169,7 +177,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
         const clash = placed.some(
           (q) => Math.abs(q.x - x) < (q.w + w) / 2 && Math.abs(q.y - y) < LABEL_H,
         );
-        const show = p.visible && !clash;
+        const show = target ? d.slug === target && p.visible : p.visible && !clash;
         if (show) placed.push({ x, y, w });
         el.style.opacity = show ? "1" : "0";
         el.style.left = `${p.x * 100}%`;
@@ -340,6 +348,16 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
             {d.name}
           </div>
         ))}
+        {/* Departure city — shown only during a flight. */}
+        {hubName && (
+          <div
+            ref={hubLabelRef}
+            aria-hidden
+            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-brand-600/90 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 backdrop-blur-sm transition-opacity duration-200"
+          >
+            {hubName}
+          </div>
+        )}
         {/* The little airplane — positioned every frame during the flight. */}
         <div
           ref={planeRef}
@@ -351,7 +369,11 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
         </div>
       </div>
       <p aria-live="polite" className="mt-3 text-center text-sm font-medium text-ink-muted">
-        {flyingTo ? t("flyingTo", { city: flyingTo }) : t("globeHint")}
+        {flyingTo
+          ? hubName
+            ? t("flyingFromTo", { from: hubName, city: flyingTo })
+            : t("flyingTo", { city: flyingTo })
+          : t("globeHint")}
       </p>
     </div>
   );

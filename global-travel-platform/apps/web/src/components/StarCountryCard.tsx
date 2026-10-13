@@ -20,25 +20,24 @@ export async function StarCountryCard({ locale }: { locale: string }) {
 
   return (
     <section aria-label={t("starTitle")} className="mx-auto max-w-6xl px-4 pt-16">
-      <div
-        className={`star-card star-${country.theme} overflow-hidden rounded-3xl shadow-xl ring-1 ring-line/60`}
-      >
-        <div className="px-6 py-10 sm:px-10 sm:py-12">
-          <p className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30">
+      <div className="star-card overflow-hidden rounded-3xl ring-1 ring-white/70">
+        <div className="relative px-6 py-10 sm:px-10 sm:py-12">
+          <p className="glass-tile inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold text-brand-700">
             <span aria-hidden>⭐</span> {t("starTitle")}
           </p>
-          <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h2 className="star-name mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             {text.name}
           </h2>
-          <p className="mt-3 max-w-2xl text-lg text-white/90 italic">{text.tagline}</p>
+          <span aria-hidden className="star-rule mt-4 block h-1 w-20 rounded-full" />
+          <p className="mt-4 max-w-2xl text-lg text-ink-muted italic">{text.tagline}</p>
 
           <ul className="mt-8 grid gap-4 md:grid-cols-2">
             {blocks.map((b) => (
-              <li key={b.key} className="rounded-2xl bg-black/[0.18] p-5 ring-1 ring-white/15">
-                <h3 className="flex items-center gap-2 text-base font-semibold text-white">
+              <li key={b.key} className="glass-tile rounded-2xl p-5">
+                <h3 className="flex items-center gap-2 text-base font-semibold text-ink">
                   <span aria-hidden>{b.emoji}</span> {t(b.key)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/[0.92]">{b.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{b.body}</p>
               </li>
             ))}
           </ul>
@@ -46,7 +45,7 @@ export async function StarCountryCard({ locale }: { locale: string }) {
           <div className="mt-8">
             <Link
               href="/destinations"
-              className="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              className="inline-block rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-md"
             >
               {t("starCta")} →
             </Link>

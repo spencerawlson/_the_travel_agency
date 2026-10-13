@@ -210,7 +210,8 @@
     "searchLabel": "Vous cherchez un endroit en particulier?",
     "searchPlaceholder": "Tapez un pays ou une ville, p. ex. Portugal, Tokyo…",
     "searchCount": "{count, plural, =0 {Aucune destination trouvée} one {# destination trouvée} other {# destinations trouvées}}",
-    "searchNone": "Aucune destination ne correspond à « {query} » pour le moment."
+    "searchNone": "Aucune destination ne correspond à « {query} » pour le moment.",
+    "flyingFromTo": "✈️ En vol de {from} vers {city}…"
   },
   "deals": {
     "title": "Aubaines voyage",

@@ -5,7 +5,7 @@ import { DestinationSearch } from "@/components/DestinationSearch";
 import { DestinationsGlobe } from "@/components/DestinationsGlobe";
 import { Link } from "@/i18n/navigation";
 import { isMood, matchesMood, MOODS, type Mood } from "@/lib/photos";
-import { getDestinations, getOrigin } from "@/lib/server-api";
+import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
 import { fold } from "@/lib/text-search";
 
 export async function generateMetadata({
@@ -36,6 +36,7 @@ export default async function DestinationsPage({
   const origin = await getOrigin();
   // Fall back to Montréal when the visitor's origin is unknown.
   const hub = origin ?? { latitude: 45.5, longitude: -73.57 };
+  const hubName = originCity(origin, locale) ?? (origin ? null : "Montréal");
 
   // Search every destination (not only the selected mood) by name, city, airport
   // and country in both languages: "Japon" and "Japan" both find Tokyo.
@@ -118,6 +119,7 @@ export default async function DestinationsPage({
             longitude: d.longitude,
           }))}
           hub={hub}
+          hubName={hubName}
         />
       </div>
     </div>
