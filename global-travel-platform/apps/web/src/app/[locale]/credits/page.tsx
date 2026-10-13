@@ -57,7 +57,7 @@ export default async function CreditsPage({ params }: { params: Promise<{ locale
                 href={p.source}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 inline-block truncate text-brand-600 underline"
+                className="mt-1 inline-block max-w-full truncate align-bottom text-brand-600 underline"
               >
                 {t("source")}
               </a>

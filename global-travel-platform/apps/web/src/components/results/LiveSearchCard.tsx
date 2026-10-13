@@ -29,7 +29,7 @@ export function LiveSearchCard({
   const partner = brand(link.provider_name);
   return (
     <div
-      className={`flex flex-wrap items-center justify-between gap-4 rounded-2xl border p-4 sm:p-5 ${
+      className={`flex flex-col gap-4 rounded-2xl border p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5 ${
         empty ? "border-brand-200 bg-brand-50" : "border-line bg-surface-1"
       }`}
     >
@@ -42,7 +42,7 @@ export function LiveSearchCard({
           type="button"
           onClick={onSelect}
           disabled={busy}
-          className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:opacity-60"
+          className="w-full shrink-0 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:opacity-60 sm:w-auto"
         >
           {busy ? t("redirecting") : t("liveCta", { partner })} ↗
         </button>
@@ -50,7 +50,7 @@ export function LiveSearchCard({
         <button
           type="button"
           disabled
-          className="cursor-not-allowed rounded-full bg-surface-2 px-5 py-2.5 text-sm font-semibold text-ink-muted"
+          className="w-full shrink-0 cursor-not-allowed rounded-full bg-surface-2 px-5 py-2.5 text-sm font-semibold text-ink-muted sm:w-auto"
         >
           {t("bookingSoon")}
         </button>

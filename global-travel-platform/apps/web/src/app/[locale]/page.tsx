@@ -174,7 +174,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <ol className="mt-8 grid gap-6 md:grid-cols-3">
             {([1, 2, 3] as const).map((n) => (
               <li key={n} className="rounded-3xl bg-surface-1 p-6 shadow-sm ring-1 ring-line/60">
-                <span className="flex size-11 items-center justify-center rounded-full bg-accent-500 text-lg font-bold text-white">
+                <span className="flex size-11 items-center justify-center rounded-full bg-brand-600 text-lg font-bold text-white">
                   {n}
                 </span>
                 <h3 className="mt-4 text-lg font-semibold">{t(`how${n}Title`)}</h3>

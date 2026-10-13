@@ -69,8 +69,8 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
             />
           ) : null,
         )}
-        {/* Bright veil: strong on the text side, light over the photo side. */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/15" />
+        {/* Bright veil: even on phones (text covers the photo), strong on the text side from md up. */}
+        <div className="absolute inset-0 bg-white/80 md:bg-transparent md:bg-gradient-to-r md:from-white/90 md:via-white/70 md:to-white/15" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-canvas to-transparent" />
       </div>
 

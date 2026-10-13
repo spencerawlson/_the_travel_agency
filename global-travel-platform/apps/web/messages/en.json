@@ -208,7 +208,7 @@
     "officialLinks": "Official visitor resources",
     "officialLinksNote": "Official tourism boards and visitor bureaus.",
     "searchLabel": "Looking for a particular place?",
-    "searchPlaceholder": "Type a country or city, e.g. Portugal, Tokyo…",
+    "searchPlaceholder": "Country or city, e.g. Portugal",
     "searchCount": "{count, plural, =0 {No destinations found} one {# destination found} other {# destinations found}}",
     "searchNone": "No destination matches “{query}” yet.",
     "flyingFromTo": "✈️ Flying from {from} to {city}…"

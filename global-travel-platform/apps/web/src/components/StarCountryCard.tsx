@@ -31,9 +31,17 @@ export async function StarCountryCard({ locale }: { locale: string }) {
           <span aria-hidden className="star-rule mt-4 block h-1 w-20 rounded-full" />
           <p className="mt-4 max-w-2xl text-lg text-ink-muted italic">{text.tagline}</p>
 
-          <ul className="mt-8 grid gap-4 md:grid-cols-2">
+          <ul
+            // Phones: one swipeable row (saves four screens of scrolling); md+: 2x2 grid.
+            tabIndex={0}
+            aria-label={t("starTitle")}
+            className="-mx-6 mt-8 flex snap-x snap-mandatory [scrollbar-width:thin] gap-4 overflow-x-auto px-6 pb-3 focus-visible:outline-2 focus-visible:outline-brand-500 sm:-mx-10 sm:px-10 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0"
+          >
             {blocks.map((b) => (
-              <li key={b.key} className="glass-tile rounded-2xl p-5">
+              <li
+                key={b.key}
+                className="glass-tile w-[85%] shrink-0 snap-start rounded-2xl p-5 md:w-auto"
+              >
                 <h3 className="flex items-center gap-2 text-base font-semibold text-ink">
                   <span aria-hidden>{b.emoji}</span> {t(b.key)}
                 </h3>
