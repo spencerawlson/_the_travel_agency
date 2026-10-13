@@ -782,5 +782,4405 @@
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "source": "https://commons.wikimedia.org/wiki/File:The_Monastery,_Petra,_Jordan7.jpg"
+  },
+  "paris--history": {
+    "src": "/photos/paris--history-960.webp",
+    "srcSmall": "/photos/paris--history-480.webp",
+    "width": 1127,
+    "height": 757,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Paris",
+      "fr": "Une image historique de l'histoire de Paris"
+    },
+    "title": "Palais de la Cite.jpg",
+    "author": "Limbourg Brothers",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Palais_de_la_Cite.jpg"
+  },
+  "paris--culture": {
+    "src": "/photos/paris--culture-960.webp",
+    "srcSmall": "/photos/paris--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Everyday culture in Paris",
+      "fr": "Scène de la culture locale à Paris"
+    },
+    "title": "Patisserie Stohrer (Paris).jpg",
+    "author": "Tangopaso",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Patisserie_Stohrer_(Paris).jpg"
+  },
+  "paris--landmark-0": {
+    "src": "/photos/paris--landmark-0-960.webp",
+    "srcSmall": "/photos/paris--landmark-0-480.webp",
+    "width": 1920,
+    "height": 3198,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Eiffel Tower, Paris",
+      "fr": "Tour Eiffel, Paris"
+    },
+    "title": "Tour Eiffel Wikimedia Commons (cropped).jpg",
+    "author": "Benh LIEU SONG",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"
+  },
+  "paris--landmark-1": {
+    "src": "/photos/paris--landmark-1-960.webp",
+    "srcSmall": "/photos/paris--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1038,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Notre-Dame de Paris, Paris",
+      "fr": "Notre-Dame de Paris, Paris"
+    },
+    "title": "Notre Dame Paris front facade lower.jpg",
+    "author": "Benh LIEU SONG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Paris_front_facade_lower.jpg"
+  },
+  "paris--landmark-2": {
+    "src": "/photos/paris--landmark-2-960.webp",
+    "srcSmall": "/photos/paris--landmark-2-480.webp",
+    "width": 1920,
+    "height": 807,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Louvre, Paris",
+      "fr": "Le Louvre, Paris"
+    },
+    "title": "Louvre Museum Wikimedia Commons.jpg",
+    "author": "Benh LIEU SONG (Flickr)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Louvre_Museum_Wikimedia_Commons.jpg"
+  },
+  "paris--landmark-3": {
+    "src": "/photos/paris--landmark-3-960.webp",
+    "srcSmall": "/photos/paris--landmark-3-480.webp",
+    "width": 1920,
+    "height": 557,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Musée d'Orsay, Paris",
+      "fr": "Musée d'Orsay, Paris"
+    },
+    "title": "Musee d'Orsay and Pont Royal, North-West view 140402 1.jpg",
+    "author": "DXR",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Musee_d%27Orsay_and_Pont_Royal,_North-West_view_140402_1.jpg"
+  },
+  "paris--landmark-4": {
+    "src": "/photos/paris--landmark-4-960.webp",
+    "srcSmall": "/photos/paris--landmark-4-480.webp",
+    "width": 1920,
+    "height": 2165,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sacré-Cœur & Montmartre, Paris",
+      "fr": "Sacré-Cœur et Montmartre, Paris"
+    },
+    "title": "Le sacre coeur.jpg",
+    "author": "Tonchino",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_sacre_coeur.jpg"
+  },
+  "london--history": {
+    "src": "/photos/london--history-960.webp",
+    "srcSmall": "/photos/london--history-480.webp",
+    "width": 1920,
+    "height": 1465,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of London",
+      "fr": "Une image historique de l'histoire de Londres"
+    },
+    "title": "Rajpoots 2.png",
+    "author": "VD, ED, CD, and JMP. Victorian engravings can be very difficult to identify the authors of",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Rajpoots_2.png"
+  },
+  "london--culture": {
+    "src": "/photos/london--culture-960.webp",
+    "srcSmall": "/photos/london--culture-480.webp",
+    "width": 1653,
+    "height": 1322,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Notting Hill Carnival 2006 (London)",
+      "fr": "Scène de la culture locale à Londres"
+    },
+    "title": "Notting Hill Carnival 1 - August 2006.jpg",
+    "author": "Diliff",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Notting_Hill_Carnival_1_-_August_2006.jpg"
+  },
+  "london--landmark-0": {
+    "src": "/photos/london--landmark-0-960.webp",
+    "srcSmall": "/photos/london--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1246,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tower of London, London",
+      "fr": "Tour de Londres, Londres"
+    },
+    "title": "Tower of London from the Shard (8515883950).jpg",
+    "author": "[Duncan] from Nottingham, UK",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tower_of_London_from_the_Shard_(8515883950).jpg"
+  },
+  "london--landmark-1": {
+    "src": "/photos/london--landmark-1-960.webp",
+    "srcSmall": "/photos/london--landmark-1-480.webp",
+    "width": 1920,
+    "height": 3413,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Palace of Westminster & Big Ben, London",
+      "fr": "Palais de Westminster et Big Ben, Londres"
+    },
+    "title": "Elizabeth Tower and the north front of the Palace of Westminster, London.jpg",
+    "author": "Christian David",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+  },
+  "london--landmark-2": {
+    "src": "/photos/london--landmark-2-960.webp",
+    "srcSmall": "/photos/london--landmark-2-480.webp",
+    "width": 1920,
+    "height": 3860,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Westminster Abbey, London",
+      "fr": "Abbaye de Westminster, Londres"
+    },
+    "title": "Westminster Abbey, Westminster.jpg",
+    "author": "Antiquary",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Westminster_Abbey,_Westminster.jpg"
+  },
+  "london--landmark-3": {
+    "src": "/photos/london--landmark-3-960.webp",
+    "srcSmall": "/photos/london--landmark-3-480.webp",
+    "width": 1833,
+    "height": 1259,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "St Paul's Cathedral, London",
+      "fr": "Cathédrale Saint-Paul, Londres"
+    },
+    "title": "St Pauls aerial (cropped).jpg",
+    "author": "Mark Fosh",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg"
+  },
+  "london--landmark-4": {
+    "src": "/photos/london--landmark-4-960.webp",
+    "srcSmall": "/photos/london--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1377,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "British Museum, London",
+      "fr": "British Museum, Londres"
+    },
+    "title": "British Museum from NE 2.JPG",
+    "author": "Ham",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:British_Museum_from_NE_2.JPG"
+  },
+  "london--landmark-5": {
+    "src": "/photos/london--landmark-5-960.webp",
+    "srcSmall": "/photos/london--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tower Bridge, London",
+      "fr": "Tower Bridge, Londres"
+    },
+    "title": "Tower Bridge at Dawn.jpg",
+    "author": "Fuzzypiggy",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_at_Dawn.jpg"
+  },
+  "new-york--history": {
+    "src": "/photos/new-york--history-960.webp",
+    "srcSmall": "/photos/new-york--history-480.webp",
+    "width": 1920,
+    "height": 1379,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of New York",
+      "fr": "Une image historique de l'histoire de New York"
+    },
+    "title": "Manatvs gelegen op de Noot Riuier.jpg",
+    "author": "sometimes attributed to Johannes Vingboons",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Manatvs_gelegen_op_de_Noot_Riuier.jpg"
+  },
+  "new-york--culture": {
+    "src": "/photos/new-york--culture-960.webp",
+    "srcSmall": "/photos/new-york--culture-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "times square night 2013 new york city manhattan",
+      "fr": "Scène de la culture locale à New York"
+    },
+    "title": "1 times square night 2013.jpg",
+    "author": "chensiyuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1_times_square_night_2013.jpg"
+  },
+  "new-york--landmark-0": {
+    "src": "/photos/new-york--landmark-0-960.webp",
+    "srcSmall": "/photos/new-york--landmark-0-480.webp",
+    "width": 1920,
+    "height": 2942,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Statue of Liberty, New York",
+      "fr": "Statue de la Liberté, New York"
+    },
+    "title": "Front view of Statue of Liberty (cropped).jpg",
+    "author": "AskALotl",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg"
+  },
+  "new-york--landmark-1": {
+    "src": "/photos/new-york--landmark-1-960.webp",
+    "srcSmall": "/photos/new-york--landmark-1-480.webp",
+    "width": 846,
+    "height": 1270,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Empire State Building, New York",
+      "fr": "Empire State Building, New York"
+    },
+    "title": "Empire State Building (aerial view).jpg",
+    "author": "Sam Valadi",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_(aerial_view).jpg"
+  },
+  "new-york--landmark-2": {
+    "src": "/photos/new-york--landmark-2-960.webp",
+    "srcSmall": "/photos/new-york--landmark-2-480.webp",
+    "width": 1920,
+    "height": 640,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Brooklyn Bridge, New York",
+      "fr": "Pont de Brooklyn, New York"
+    },
+    "title": "Brooklyn Bridge and the Lower Manhattan skyline from Pebble Beach, New York.jpg",
+    "author": "Christian David",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach,_New_York.jpg"
+  },
+  "new-york--landmark-3": {
+    "src": "/photos/new-york--landmark-3-960.webp",
+    "srcSmall": "/photos/new-york--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Central Park, New York",
+      "fr": "Central Park, New York"
+    },
+    "title": "Global Citizen Festival Central Park New York City from NYonAir (15351915006).jpg",
+    "author": "Anthony Quintano from Hillsborough, NJ, United States",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Global_Citizen_Festival_Central_Park_New_York_City_from_NYonAir_(15351915006).jpg"
+  },
+  "new-york--landmark-4": {
+    "src": "/photos/new-york--landmark-4-960.webp",
+    "srcSmall": "/photos/new-york--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1072,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Metropolitan Museum of Art, New York",
+      "fr": "Metropolitan Museum of Art, New York"
+    },
+    "title": "Metropolitan Museum of Art (The Met) - Central Park, NYC.jpg",
+    "author": "Hugo Schneider",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_(The_Met)_-_Central_Park,_NYC.jpg"
+  },
+  "new-york--landmark-5": {
+    "src": "/photos/new-york--landmark-5-960.webp",
+    "srcSmall": "/photos/new-york--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "9/11 Memorial, New York",
+      "fr": "Mémorial du 11-Septembre, New York"
+    },
+    "title": "9-11 Memorial and Museum (28815276064).jpg",
+    "author": "Paul Sableman",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:9-11_Memorial_and_Museum_(28815276064).jpg"
+  },
+  "tokyo--history": {
+    "src": "/photos/tokyo--history-960.webp",
+    "srcSmall": "/photos/tokyo--history-480.webp",
+    "width": 1920,
+    "height": 2132,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Fishermen in their skiffs with a wave about to crash down on them, Mt Fuji in the background. From the series ‘Thirty-six Views of Mt Fuji’",
+      "fr": "Une image historique de l'histoire de Tokyo"
+    },
+    "title": "Great Wave Hokusai BM 1906.1220.0.533 n02.jpg",
+    "author": "Katsushika Hokusai",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Wave_Hokusai_BM_1906.1220.0.533_n02.jpg"
+  },
+  "tokyo--culture": {
+    "src": "/photos/tokyo--culture-960.webp",
+    "srcSmall": "/photos/tokyo--culture-480.webp",
+    "width": 1920,
+    "height": 951,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "六条御所花之夕宴 Evening Banquet for Cherry-blossom Viewing at the Rokujô Palace (Rokujô gosho hanami no yûen)",
+      "fr": "Scène de la culture locale à Tokyo"
+    },
+    "title": "Rukujogosho hanami.jpg",
+    "author": "歌川国貞　Utagawa Kunisada",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Rukujogosho_hanami.jpg"
+  },
+  "tokyo--landmark-0": {
+    "src": "/photos/tokyo--landmark-0-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1372,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sensō-ji, Asakusa, Tokyo",
+      "fr": "Sensō-ji, Asakusa, Tokyo"
+    },
+    "title": "Sensoji 2023.jpg",
+    "author": "Akonnchiroll",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sensoji_2023.jpg"
+  },
+  "tokyo--landmark-1": {
+    "src": "/photos/tokyo--landmark-1-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Meiji Jingū, Tokyo",
+      "fr": "Meiji Jingū, Tokyo"
+    },
+    "title": "Meiji Jingu 2023-3.jpg",
+    "author": "Akonnchiroll",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Meiji_Jingu_2023-3.jpg"
+  },
+  "tokyo--landmark-2": {
+    "src": "/photos/tokyo--landmark-2-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-2-480.webp",
+    "width": 1632,
+    "height": 2500,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tokyo Skytree, Tokyo",
+      "fr": "Tokyo Skytree, Tokyo"
+    },
+    "title": "Tokyo Skytree 2014 Ⅲ.jpg",
+    "author": "Kakidai",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_2014_%E2%85%A2.jpg"
+  },
+  "tokyo--landmark-3": {
+    "src": "/photos/tokyo--landmark-3-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Imperial Palace East Gardens, Tokyo",
+      "fr": "Jardins Est du palais impérial, Tokyo"
+    },
+    "title": "Seimon Ishibashi.JPG",
+    "author": "Kakidai",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seimon_Ishibashi.JPG"
+  },
+  "tokyo--landmark-4": {
+    "src": "/photos/tokyo--landmark-4-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Shibuya Crossing, Tokyo",
+      "fr": "Carrefour de Shibuya, Tokyo"
+    },
+    "title": "Shibuya Crossing, Aerial.jpg",
+    "author": "David Kernan",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Crossing,_Aerial.jpg"
+  },
+  "tokyo--landmark-5": {
+    "src": "/photos/tokyo--landmark-5-960.webp",
+    "srcSmall": "/photos/tokyo--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1235,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tsukiji Outer Market, Tokyo",
+      "fr": "Marché extérieur de Tsukiji, Tokyo"
+    },
+    "title": "2018 Tsukiji fish market.jpg",
+    "author": "Kakidai",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_Tsukiji_fish_market.jpg"
+  },
+  "barcelona--history": {
+    "src": "/photos/barcelona--history-960.webp",
+    "srcSmall": "/photos/barcelona--history-480.webp",
+    "width": 1029,
+    "height": 745,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sant Iu door, cathedral of Barcelona",
+      "fr": "Une image historique de l'histoire de Barcelone"
+    },
+    "title": "Relleu porta Sant Iu esquerra.jpg",
+    "author": "Pere López",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Relleu_porta_Sant_Iu_esquerra.jpg"
+  },
+  "barcelona--culture": {
+    "src": "/photos/barcelona--culture-960.webp",
+    "srcSmall": "/photos/barcelona--culture-480.webp",
+    "width": 1176,
+    "height": 1776,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "First performance Castellers de Barcelona",
+      "fr": "Scène de la culture locale à Barcelone"
+    },
+    "title": "Primera actuacio castellers de barcelona.jpg",
+    "author": "Castellers de Barcelona",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Primera_actuacio_castellers_de_barcelona.jpg"
+  },
+  "barcelona--landmark-0": {
+    "src": "/photos/barcelona--landmark-0-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-0-480.webp",
+    "width": 1227,
+    "height": 1786,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sagrada Família, Barcelona",
+      "fr": "Sagrada Família, Barcelone"
+    },
+    "title": "SF maig 2 cropped.jpg",
+    "author": "Canaan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SF_maig_2_cropped.jpg"
+  },
+  "barcelona--landmark-1": {
+    "src": "/photos/barcelona--landmark-1-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Park Güell, Barcelona",
+      "fr": "Park Güell, Barcelone"
+    },
+    "title": "Parc guell - panoramio.jpg",
+    "author": "essetefano",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Parc_guell_-_panoramio.jpg"
+  },
+  "barcelona--landmark-2": {
+    "src": "/photos/barcelona--landmark-2-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-2-480.webp",
+    "width": 1920,
+    "height": 2366,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Casa Batlló, Barcelona",
+      "fr": "Casa Batlló, Barcelone"
+    },
+    "title": "Casa Batllo Overview Barcelona Spain cut.jpg",
+    "author": "ChristianSchd",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casa_Batllo_Overview_Barcelona_Spain_cut.jpg"
+  },
+  "barcelona--landmark-3": {
+    "src": "/photos/barcelona--landmark-3-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-3-480.webp",
+    "width": 794,
+    "height": 1094,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Barcelona Cathedral & Gothic Quarter, Barcelona",
+      "fr": "Cathédrale de Barcelone et quartier gothique, Barcelone"
+    },
+    "title": "Barcelona - Carrer del Bisbe.jpg",
+    "author": "Llull",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Carrer_del_Bisbe.jpg"
+  },
+  "barcelona--landmark-4": {
+    "src": "/photos/barcelona--landmark-4-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1307,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Palau de la Música Catalana, Barcelona",
+      "fr": "Palau de la Música Catalana, Barcelone"
+    },
+    "title": "Palau de la Musica May 2026-4.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palau_de_la_Musica_May_2026-4.jpg"
+  },
+  "barcelona--landmark-5": {
+    "src": "/photos/barcelona--landmark-5-960.webp",
+    "srcSmall": "/photos/barcelona--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1443,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Camp Nou, Barcelona",
+      "fr": "Camp Nou, Barcelone"
+    },
+    "title": "Camp Nou aerial.jpg",
+    "author": "Oh-Barcelona.com from Barcelona, Spain",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Camp_Nou_aerial.jpg"
+  },
+  "lisbon--history": {
+    "src": "/photos/lisbon--history-960.webp",
+    "srcSmall": "/photos/lisbon--history-480.webp",
+    "width": 998,
+    "height": 593,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Lisbon",
+      "fr": "Une image historique de l'histoire de Lisbonne"
+    },
+    "title": "1755 Lisbon earthquake.jpg",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:1755_Lisbon_earthquake.jpg"
+  },
+  "lisbon--culture": {
+    "src": "/photos/lisbon--culture-960.webp",
+    "srcSmall": "/photos/lisbon--culture-480.webp",
+    "width": 771,
+    "height": 1304,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Everyday culture in Lisbon",
+      "fr": "Scène de la culture locale à Lisbonne"
+    },
+    "title": "Um casal de Viana (Portugal).jpg",
+    "author": "Singer Manufacturing Co.",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Um_casal_de_Viana_(Portugal).jpg"
+  },
+  "lisbon--landmark-0": {
+    "src": "/photos/lisbon--landmark-0-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1832,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Belém Tower, Lisbon",
+      "fr": "Tour de Belém, Lisbonne"
+    },
+    "title": "Torre Belém April 2009-4a.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Torre_Bel%C3%A9m_April_2009-4a.jpg"
+  },
+  "lisbon--landmark-1": {
+    "src": "/photos/lisbon--landmark-1-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1154,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jerónimos Monastery, Lisbon",
+      "fr": "Monastère des Hiéronymites, Lisbonne"
+    },
+    "title": "1502 legte König Manuel I. den Grundstein für das Hieronymus Kloster in Lissabon. 06.jpg",
+    "author": "Holger Uwe Schmitt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg"
+  },
+  "lisbon--landmark-2": {
+    "src": "/photos/lisbon--landmark-2-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "São Jorge Castle & Alfama, Lisbon",
+      "fr": "Château São Jorge et Alfama, Lisbonne"
+    },
+    "title": "Lisbon Alfama Sao Vicente Pantheon from Sao Jorge Castle, 20250604 1715 9412.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lisbon_Alfama_Sao_Vicente_Pantheon_from_Sao_Jorge_Castle,_20250604_1715_9412.jpg"
+  },
+  "lisbon--landmark-3": {
+    "src": "/photos/lisbon--landmark-3-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1200,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tram 28, Lisbon",
+      "fr": "Tramway 28, Lisbonne"
+    },
+    "title": "Lisbon-Day3-1 (34184431096).jpg",
+    "author": "Ajay Suresh from New York, NY, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lisbon-Day3-1_(34184431096).jpg"
+  },
+  "lisbon--landmark-4": {
+    "src": "/photos/lisbon--landmark-4-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1231,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "LX Factory, Lisbon",
+      "fr": "LX Factory, Lisbonne"
+    },
+    "title": "Lisboa - Portugal (52597836992).jpg",
+    "author": "Vitor Oliveira from Torres Vedras, PORTUGAL",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lisboa_-_Portugal_(52597836992).jpg"
+  },
+  "lisbon--landmark-5": {
+    "src": "/photos/lisbon--landmark-5-960.webp",
+    "srcSmall": "/photos/lisbon--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Miradouro da Senhora do Monte, Lisbon",
+      "fr": "Miradouro da Senhora do Monte, Lisbonne"
+    },
+    "title": "Miradouro Nossa Senhora do Monte II.jpg",
+    "author": "Filipe Rocha,user:sacavem (pt) http://pt.wikipedia.org/wiki/Usu%C3%A1rio:Sacavem",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Miradouro_Nossa_Senhora_do_Monte_II.jpg"
+  },
+  "cancun--history": {
+    "src": "/photos/cancun--history-960.webp",
+    "srcSmall": "/photos/cancun--history-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "This is a photo of a monument in Mexico, identified by ID",
+      "fr": "Une image historique de l'histoire de Cancún"
+    },
+    "title": "Tulum - 01.jpg",
+    "author": "Carlos Delgado",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tulum_-_01.jpg"
+  },
+  "cancun--culture": {
+    "src": "/photos/cancun--culture-960.webp",
+    "srcSmall": "/photos/cancun--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Everyday culture in Cancún",
+      "fr": "Scène de la culture locale à Cancún"
+    },
+    "title": "Jarana Yucateca dancers.jpg",
+    "author": "Gage Skidmore",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jarana_Yucateca_dancers.jpg"
+  },
+  "cancun--landmark-0": {
+    "src": "/photos/cancun--landmark-0-960.webp",
+    "srcSmall": "/photos/cancun--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1272,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "El Rey Archaeological Zone, Cancún",
+      "fr": "Zone archéologique d'El Rey, Cancún"
+    },
+    "title": "El Rey, Cancún (DerHexer) 2015-07-07 18.jpg",
+    "author": "DerHexer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Rey,_Canc%C3%BAn_(DerHexer)_2015-07-07_18.jpg"
+  },
+  "cancun--landmark-1": {
+    "src": "/photos/cancun--landmark-1-960.webp",
+    "srcSmall": "/photos/cancun--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1078,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Museo Maya de Cancún & San Miguelito, Cancún",
+      "fr": "Museo Maya de Cancún et San Miguelito, Cancún"
+    },
+    "title": "Cancun Strand Luftbild (22143397586).jpg",
+    "author": "dronepicr",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cancun_Strand_Luftbild_(22143397586).jpg"
+  },
+  "cancun--landmark-2": {
+    "src": "/photos/cancun--landmark-2-960.webp",
+    "srcSmall": "/photos/cancun--landmark-2-480.webp",
+    "width": 1920,
+    "height": 618,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Playa Delfines, Cancún",
+      "fr": "Playa Delfines, Cancún"
+    },
+    "title": "Playa Delfines, Cancún - Panorama.jpg",
+    "author": "Capmo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Playa_Delfines,_Canc%C3%BAn_-_Panorama.jpg"
+  },
+  "cancun--landmark-3": {
+    "src": "/photos/cancun--landmark-3-960.webp",
+    "srcSmall": "/photos/cancun--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Isla Mujeres, Cancún",
+      "fr": "Isla Mujeres, Cancún"
+    },
+    "title": "Church of the Immaculate Conception Isla Mujeres 2017.jpg",
+    "author": "Larry D. Moore",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Church_of_the_Immaculate_Conception_Isla_Mujeres_2017.jpg"
+  },
+  "cancun--landmark-4": {
+    "src": "/photos/cancun--landmark-4-960.webp",
+    "srcSmall": "/photos/cancun--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1021,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Chichén Itzá (day trip), Cancún",
+      "fr": "Chichén Itzá (excursion), Cancún"
+    },
+    "title": "Chichen Itza 3.jpg",
+    "author": "Daniel Schwen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chichen_Itza_3.jpg"
+  },
+  "cancun--landmark-5": {
+    "src": "/photos/cancun--landmark-5-960.webp",
+    "srcSmall": "/photos/cancun--landmark-5-480.webp",
+    "width": 1024,
+    "height": 768,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Parque de las Palapas, Cancún",
+      "fr": "Parque de las Palapas, Cancún"
+    },
+    "title": "Mercado 28, Cancún 2014.jpg",
+    "author": "David Stanley from Nanaimo, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercado_28,_Canc%C3%BAn_2014.jpg"
+  },
+  "reykjavik--history": {
+    "src": "/photos/reykjavik--history-960.webp",
+    "srcSmall": "/photos/reykjavik--history-480.webp",
+    "width": 1920,
+    "height": 1272,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Blick von der Hallgrímskirkja über Reykjavík",
+      "fr": "Une image historique de l'histoire de Reykjavik"
+    },
+    "title": "Reykjavík, view from Hallgrímskirkja (2).jpg",
+    "author": "Olga Ernst",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk,_view_from_Hallgr%C3%ADmskirkja_(2).jpg"
+  },
+  "reykjavik--culture": {
+    "src": "/photos/reykjavik--culture-960.webp",
+    "srcSmall": "/photos/reykjavik--culture-480.webp",
+    "width": 1920,
+    "height": 1442,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Daughters of Reykjavík in Vilnius",
+      "fr": "Scène de la culture locale à Reykjavik"
+    },
+    "title": "Daughters of Reykjavík in Vilnius - 223804.jpg",
+    "author": "putnik",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daughters_of_Reykjav%C3%ADk_in_Vilnius_-_223804.jpg"
+  },
+  "reykjavik--landmark-0": {
+    "src": "/photos/reykjavik--landmark-0-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-0-480.webp",
+    "width": 1318,
+    "height": 1157,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Hallgrímskirkja, Reykjavík",
+      "fr": "Hallgrímskirkja, Reykjavik"
+    },
+    "title": "Hallgrimskirkja mai 2026.jpg",
+    "author": "Steinninn",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg"
+  },
+  "reykjavik--landmark-1": {
+    "src": "/photos/reykjavik--landmark-1-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1205,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Harpa, Reykjavík",
+      "fr": "Harpa, Reykjavik"
+    },
+    "title": "*Das Opern- und Konzerthaus in Reykjavik. 01.jpg",
+    "author": "Holger Uwe Schmitt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:*Das_Opern-_und_Konzerthaus_in_Reykjavik._01.jpg"
+  },
+  "reykjavik--landmark-2": {
+    "src": "/photos/reykjavik--landmark-2-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1384,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sun Voyager, Reykjavík",
+      "fr": "Le Voyageur du Soleil, Reykjavik"
+    },
+    "title": "Aurora over the Sun Voyager, Central Reykjavik (37291306216).jpg",
+    "author": "john.purvis",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aurora_over_the_Sun_Voyager,_Central_Reykjavik_(37291306216).jpg"
+  },
+  "reykjavik--landmark-3": {
+    "src": "/photos/reykjavik--landmark-3-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Perlan, Reykjavík",
+      "fr": "Perlan, Reykjavik"
+    },
+    "title": "20190623 Perlan 8841 (48469867211).jpg",
+    "author": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20190623_Perlan_8841_(48469867211).jpg"
+  },
+  "reykjavik--landmark-4": {
+    "src": "/photos/reykjavik--landmark-4-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Þingvellir National Park, Reykjavík",
+      "fr": "Parc national de Þingvellir, Reykjavik"
+    },
+    "title": "Þingvellir from the information centre.JPG",
+    "author": "Ivan Sabljak",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%9Eingvellir_from_the_information_centre.JPG"
+  },
+  "reykjavik--landmark-5": {
+    "src": "/photos/reykjavik--landmark-5-960.webp",
+    "srcSmall": "/photos/reykjavik--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Blue Lagoon, Reykjavík",
+      "fr": "Lagon bleu, Reykjavik"
+    },
+    "title": "Blue-lagoon-spa-spring (Unsplash).jpg",
+    "author": "Frank Denney frnkdnny",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue-lagoon-spa-spring_(Unsplash).jpg"
+  },
+  "marrakech--history": {
+    "src": "/photos/marrakech--history-960.webp",
+    "srcSmall": "/photos/marrakech--history-480.webp",
+    "width": 1090,
+    "height": 690,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "La nouvelle porte Koutoubia à Marrakech (Maroc)",
+      "fr": "Une image historique de l'histoire de Marrakech"
+    },
+    "title": "Marrakech-Koutoubia 1919.jpg",
+    "author": "Auteur anonyme - éditeur inidentifiable",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Marrakech-Koutoubia_1919.jpg"
+  },
+  "marrakech--culture": {
+    "src": "/photos/marrakech--culture-960.webp",
+    "srcSmall": "/photos/marrakech--culture-480.webp",
+    "width": 1920,
+    "height": 1202,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Saadian Tombs",
+      "fr": "Scène de la culture locale à Marrakech"
+    },
+    "title": "Saadian Tombs (5038325373).jpg",
+    "author": "Mike Prince from Bangalore, India",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saadian_Tombs_(5038325373).jpg"
+  },
+  "marrakech--landmark-0": {
+    "src": "/photos/marrakech--landmark-0-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Koutoubia Mosque, Marrakech",
+      "fr": "Mosquée de la Koutoubia, Marrakech"
+    },
+    "title": "Mosquée de la Koutoubia - marakesh.jpg",
+    "author": "Baca12",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg"
+  },
+  "marrakech--landmark-1": {
+    "src": "/photos/marrakech--landmark-1-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jemaa el-Fnaa, Marrakech",
+      "fr": "Jemaa el-Fna, Marrakech"
+    },
+    "title": "Djemaa el Fna.jpg",
+    "author": "Boris Macek",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djemaa_el_Fna.jpg"
+  },
+  "marrakech--landmark-2": {
+    "src": "/photos/marrakech--landmark-2-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Ben Youssef Madrasa, Marrakech",
+      "fr": "Médersa Ben Youssef, Marrakech"
+    },
+    "title": "Coranic School (106589859).jpeg",
+    "author": "Wolfgang B",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coranic_School_(106589859).jpeg"
+  },
+  "marrakech--landmark-3": {
+    "src": "/photos/marrakech--landmark-3-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1275,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jardin Majorelle, Marrakech",
+      "fr": "Jardin Majorelle, Marrakech"
+    },
+    "title": "Le jardin des majorelle 40.JPG",
+    "author": "Viault",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_jardin_des_majorelle_40.JPG"
+  },
+  "marrakech--landmark-4": {
+    "src": "/photos/marrakech--landmark-4-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bahia Palace, Marrakech",
+      "fr": "Palais de la Bahia, Marrakech"
+    },
+    "title": "Bahia Palace large court.jpg",
+    "author": "Val Traveler",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahia_Palace_large_court.jpg"
+  },
+  "marrakech--landmark-5": {
+    "src": "/photos/marrakech--landmark-5-960.webp",
+    "srcSmall": "/photos/marrakech--landmark-5-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Saadian Tombs, Marrakech",
+      "fr": "Tombeaux saadiens, Marrakech"
+    },
+    "title": "Saadian Tombs 1044-HDR.jpg",
+    "author": "C messier",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saadian_Tombs_1044-HDR.jpg"
+  },
+  "vancouver--history": {
+    "src": "/photos/vancouver--history-960.webp",
+    "srcSmall": "/photos/vancouver--history-480.webp",
+    "width": 768,
+    "height": 598,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Vancouver as seen from Fairview, British Columbia, Canada, 1904",
+      "fr": "Une image historique de l'histoire de Vancouver"
+    },
+    "title": "Vancouver from Fairview, BC, 1904.jpg",
+    "author": "William McFarlane Notman",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Vancouver_from_Fairview,_BC,_1904.jpg"
+  },
+  "vancouver--culture": {
+    "src": "/photos/vancouver--culture-960.webp",
+    "srcSmall": "/photos/vancouver--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Granville Island view from Granville Bridge in 2010",
+      "fr": "Scène de la culture locale à Vancouver"
+    },
+    "title": "Granville Island view from Granville Bridge in 2010.jpg",
+    "author": "Joe Mabel",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Granville_Island_view_from_Granville_Bridge_in_2010.jpg"
+  },
+  "vancouver--landmark-0": {
+    "src": "/photos/vancouver--landmark-0-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-0-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Stanley Park, Vancouver",
+      "fr": "Parc Stanley, Vancouver"
+    },
+    "title": "Vancouver (BC, Canada), Stanley Park, Totem poles, Chief Skedans mortuary totem pole -- 2022 -- 2030.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC,_Canada),_Stanley_Park,_Totem_poles,_Chief_Skedans_mortuary_totem_pole_--_2022_--_2030.jpg"
+  },
+  "vancouver--landmark-1": {
+    "src": "/photos/vancouver--landmark-1-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1079,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Capilano Suspension Bridge, Vancouver",
+      "fr": "Pont suspendu de Capilano, Vancouver"
+    },
+    "title": "Capilano Suspension Bridge, Vancouver, Canada (July 2016) 1.jpg",
+    "author": "Markus Säynevirta",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Capilano_Suspension_Bridge,_Vancouver,_Canada_(July_2016)_1.jpg"
+  },
+  "vancouver--landmark-2": {
+    "src": "/photos/vancouver--landmark-2-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Granville Island, Vancouver",
+      "fr": "Granville Island, Vancouver"
+    },
+    "title": "Granville Island view from Granville Bridge in 2010.jpg",
+    "author": "Joe Mabel",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Granville_Island_view_from_Granville_Bridge_in_2010.jpg"
+  },
+  "vancouver--landmark-3": {
+    "src": "/photos/vancouver--landmark-3-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1045,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Gastown Steam Clock, Vancouver",
+      "fr": "Horloge à vapeur de Gastown, Vancouver"
+    },
+    "title": "Vancouver 2018-20180422-2108 (42138196834).jpg",
+    "author": "Lee Coursey from Decatur, GA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vancouver_2018-20180422-2108_(42138196834).jpg"
+  },
+  "vancouver--landmark-4": {
+    "src": "/photos/vancouver--landmark-4-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Museum of Anthropology, Vancouver",
+      "fr": "Musée d'anthropologie, Vancouver"
+    },
+    "title": "Museum of Anthropology UBC 01.jpg",
+    "author": "Xicotencatl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Museum_of_Anthropology_UBC_01.jpg"
+  },
+  "vancouver--landmark-5": {
+    "src": "/photos/vancouver--landmark-5-960.webp",
+    "srcSmall": "/photos/vancouver--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Dr. Sun Yat-Sen Classical Chinese Garden, Vancouver",
+      "fr": "Jardin chinois classique Dr. Sun Yat-Sen, Vancouver"
+    },
+    "title": "Dr. Sun Yat-Sen Classical Chinese Garden 07.jpg",
+    "author": "Ɱ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dr._Sun_Yat-Sen_Classical_Chinese_Garden_07.jpg"
+  },
+  "rome--history": {
+    "src": "/photos/rome--history-960.webp",
+    "srcSmall": "/photos/rome--history-480.webp",
+    "width": 700,
+    "height": 1235,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Rome",
+      "fr": "Une image historique de l'histoire de Rome"
+    },
+    "title": "Rome- Ruins of the Forum, Looking towards the Capitol.jpg",
+    "author": "Giovanni Antonio Canal",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Rome-_Ruins_of_the_Forum,_Looking_towards_the_Capitol.jpg"
+  },
+  "rome--culture": {
+    "src": "/photos/rome--culture-960.webp",
+    "srcSmall": "/photos/rome--culture-480.webp",
+    "width": 1920,
+    "height": 1278,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Facing Saint Peter's basilica, Rome, Italy, Vatican City",
+      "fr": "Scène de la culture locale à Rome"
+    },
+    "title": "Saint Peter's Basilica facade, Rome, Italy.jpg",
+    "author": "Jebulon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Peter%27s_Basilica_facade,_Rome,_Italy.jpg"
+  },
+  "rome--landmark-0": {
+    "src": "/photos/rome--landmark-0-960.webp",
+    "srcSmall": "/photos/rome--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1345,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Colosseum, Rome",
+      "fr": "Colisée, Rome"
+    },
+    "title": "Colosseo 2020.jpg",
+    "author": "FeaturedPics",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+  },
+  "rome--landmark-1": {
+    "src": "/photos/rome--landmark-1-960.webp",
+    "srcSmall": "/photos/rome--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1546,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Pantheon, Rome",
+      "fr": "Panthéon, Rome"
+    },
+    "title": "Pantheon (Rome) - Right side and front.jpg",
+    "author": "NikonZ7II",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Right_side_and_front.jpg"
+  },
+  "rome--landmark-2": {
+    "src": "/photos/rome--landmark-2-960.webp",
+    "srcSmall": "/photos/rome--landmark-2-480.webp",
+    "width": 1920,
+    "height": 788,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Roman Forum & Palatine Hill, Rome",
+      "fr": "Forum romain et mont Palatin, Rome"
+    },
+    "title": "Foro Romano Musei Capitolini Roma.jpg",
+    "author": "This Photo was taken by Wolfgang Moroder.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg"
+  },
+  "rome--landmark-3": {
+    "src": "/photos/rome--landmark-3-960.webp",
+    "srcSmall": "/photos/rome--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1003,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "St Peter's Basilica, Rome",
+      "fr": "Basilique Saint-Pierre, Rome"
+    },
+    "title": "Basilica di San Pietro in Vaticano September 2015-1a.jpg",
+    "author": "Alvesgaspar",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg"
+  },
+  "rome--landmark-4": {
+    "src": "/photos/rome--landmark-4-960.webp",
+    "srcSmall": "/photos/rome--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1042,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Trevi Fountain, Rome",
+      "fr": "Fontaine de Trevi, Rome"
+    },
+    "title": "Trevi Fountain - Roma.jpg",
+    "author": "NikonZ7II",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_-_Roma.jpg"
+  },
+  "rome--landmark-5": {
+    "src": "/photos/rome--landmark-5-960.webp",
+    "srcSmall": "/photos/rome--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1358,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Piazza Navona, Rome",
+      "fr": "Piazza Navona, Rome"
+    },
+    "title": "Piazza Navona (Rome) at night.jpg",
+    "author": "NikonZ7II",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_(Rome)_at_night.jpg"
+  },
+  "bangkok--history": {
+    "src": "/photos/bangkok--history-960.webp",
+    "srcSmall": "/photos/bangkok--history-480.webp",
+    "width": 850,
+    "height": 624,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Old photograph of the French consulate-general in Bangkok",
+      "fr": "Une image historique de l'histoire de Bangkok"
+    },
+    "title": "French consulate in Bangkok old photo.jpg",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:French_consulate_in_Bangkok_old_photo.jpg"
+  },
+  "bangkok--culture": {
+    "src": "/photos/bangkok--culture-960.webp",
+    "srcSmall": "/photos/bangkok--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Loy Krathong. Yee Peng. Siamese Lantern Festival. Full moon of the 12th month in the traditional Thai lunar calendar. Chiang Mai, Thailand",
+      "fr": "Scène de la culture locale à Bangkok"
+    },
+    "title": "Chiang Mai, Loy Krathong Lantern Festival, Thailand.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chiang_Mai,_Loy_Krathong_Lantern_Festival,_Thailand.jpg"
+  },
+  "bangkok--landmark-0": {
+    "src": "/photos/bangkok--landmark-0-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1056,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Grand Palace & Wat Phra Kaew, Bangkok",
+      "fr": "Grand Palais et Wat Phra Kaew, Bangkok"
+    },
+    "title": "Wat Phra Kaew by Ninara TSP edit crop.jpg",
+    "author": "Original image: Ninara from Helsinki, Finland.  Edit: TSP",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wat_Phra_Kaew_by_Ninara_TSP_edit_crop.jpg"
+  },
+  "bangkok--landmark-1": {
+    "src": "/photos/bangkok--landmark-1-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-1-480.webp",
+    "width": 1920,
+    "height": 2880,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Wat Pho, Bangkok",
+      "fr": "Wat Pho, Bangkok"
+    },
+    "title": "พระพุทธไสยาสวัดพระเชตุพน.jpg",
+    "author": "Mastertongapollo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg"
+  },
+  "bangkok--landmark-2": {
+    "src": "/photos/bangkok--landmark-2-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Wat Arun, Bangkok",
+      "fr": "Wat Arun, Bangkok"
+    },
+    "title": "เจดีย์ประธานทรงปรางค์วัดอรุณ2.jpg",
+    "author": "Mastertongapollo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg"
+  },
+  "bangkok--landmark-3": {
+    "src": "/photos/bangkok--landmark-3-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-3-480.webp",
+    "width": 1920,
+    "height": 1274,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Yaowarat (Chinatown), Bangkok",
+      "fr": "Yaowarat (Chinatown), Bangkok"
+    },
+    "title": "Yaowarat at night (32455695783).jpg",
+    "author": "Ninara from Helsinki, Finland",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yaowarat_at_night_(32455695783).jpg"
+  },
+  "bangkok--landmark-4": {
+    "src": "/photos/bangkok--landmark-4-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-4-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Chatuchak Weekend Market, Bangkok",
+      "fr": "Marché de Chatuchak, Bangkok"
+    },
+    "title": "Bangkok - Jatujak Market 02.JPG",
+    "author": "Azreey",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_Jatujak_Market_02.JPG"
+  },
+  "bangkok--landmark-5": {
+    "src": "/photos/bangkok--landmark-5-960.webp",
+    "srcSmall": "/photos/bangkok--landmark-5-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jim Thompson House, Bangkok",
+      "fr": "Maison de Jim Thompson, Bangkok"
+    },
+    "title": "Main House of Jim Thompson photo Don Ramey Logan.jpg",
+    "author": "Don Ramey Logan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Main_House_of_Jim_Thompson_photo_Don_Ramey_Logan.jpg"
+  },
+  "cape-town--history": {
+    "src": "/photos/cape-town--history-960.webp",
+    "srcSmall": "/photos/cape-town--history-480.webp",
+    "width": 1279,
+    "height": 949,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Cape Town and the Table Mountain",
+      "fr": "Une image historique de l'histoire de Le Cap"
+    },
+    "title": "Tobin Cape Town and the Table Mountain.png",
+    "author": "George Tobin",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Tobin_Cape_Town_and_the_Table_Mountain.png"
+  },
+  "cape-town--culture": {
+    "src": "/photos/cape-town--culture-960.webp",
+    "srcSmall": "/photos/cape-town--culture-480.webp",
+    "width": 855,
+    "height": 559,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sujet : Zoulous (Shakaland),Lieu : Province du Natal, Afrique du Sud,Année : 1991",
+      "fr": "Scène de la culture locale à Le Cap"
+    },
+    "title": "Zoulous (Shakaland).jpg",
+    "author": "Copyright : FC Georgio, The original uploader was Georgio at French Wikipedia.",
+    "license": "CC BY 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zoulous_(Shakaland).jpg"
+  },
+  "cape-town--landmark-0": {
+    "src": "/photos/cape-town--landmark-0-960.webp",
+    "srcSmall": "/photos/cape-town--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1256,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Table Mountain, Cape Town",
+      "fr": "Montagne de la Table, Le Cap"
+    },
+    "title": "Table Mountain DanieVDM.jpg",
+    "author": "Danie van der Merwe from Cape Town, South Africa",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Table_Mountain_DanieVDM.jpg"
+  },
+  "cape-town--landmark-1": {
+    "src": "/photos/cape-town--landmark-1-960.webp",
+    "srcSmall": "/photos/cape-town--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1486,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Robben Island, Cape Town",
+      "fr": "Robben Island, Le Cap"
+    },
+    "title": "Robben Island - Cape Town, South Africa (3883849594).jpg",
+    "author": "South African Tourism from South Africa",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Robben_Island_-_Cape_Town,_South_Africa_(3883849594).jpg"
+  },
+  "cape-town--landmark-2": {
+    "src": "/photos/cape-town--landmark-2-960.webp",
+    "srcSmall": "/photos/cape-town--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Cape of Good Hope, Cape Town",
+      "fr": "Cap de Bonne-Espérance, Le Cap"
+    },
+    "title": "Playa Dias, Cape Point, Sudáfrica, 2018-07-23, DD 103.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Playa_Dias,_Cape_Point,_Sud%C3%A1frica,_2018-07-23,_DD_103.jpg"
+  },
+  "nairobi--history": {
+    "src": "/photos/nairobi--history-960.webp",
+    "srcSmall": "/photos/nairobi--history-480.webp",
+    "width": 1920,
+    "height": 1139,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Nairobi",
+      "fr": "Une image historique de l'histoire de Nairobi"
+    },
+    "title": "Train at the old Nairobi Railway stations.jpg",
+    "author": "Erasmus Kamugisha",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Train_at_the_old_Nairobi_Railway_stations.jpg"
+  },
+  "nairobi--culture": {
+    "src": "/photos/nairobi--culture-960.webp",
+    "srcSmall": "/photos/nairobi--culture-480.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "This is an image from",
+      "fr": "Scène de la culture locale à Nairobi"
+    },
+    "title": "The Maasai antiGravity Dance - 1.jpg",
+    "author": "K15photos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Maasai_antiGravity_Dance_-_1.jpg"
+  },
+  "nairobi--landmark-0": {
+    "src": "/photos/nairobi--landmark-0-960.webp",
+    "srcSmall": "/photos/nairobi--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1373,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Nairobi National Park, Nairobi",
+      "fr": "Parc national de Nairobi, Nairobi"
+    },
+    "title": "Standing zebra at Nairobi National Park.jpg",
+    "author": "Brihaspati",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Standing_zebra_at_Nairobi_National_Park.jpg"
+  },
+  "nairobi--landmark-1": {
+    "src": "/photos/nairobi--landmark-1-960.webp",
+    "srcSmall": "/photos/nairobi--landmark-1-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sheldrick Wildlife Trust, Nairobi",
+      "fr": "Sheldrick Wildlife Trust, Nairobi"
+    },
+    "title": "Baby elephants at the Sheldrick Wildlife Trust nursery in Nairobi, Kenya.jpg",
+    "author": "CakeForBreakfast",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baby_elephants_at_the_Sheldrick_Wildlife_Trust_nursery_in_Nairobi,_Kenya.jpg"
+  },
+  "nairobi--landmark-2": {
+    "src": "/photos/nairobi--landmark-2-960.webp",
+    "srcSmall": "/photos/nairobi--landmark-2-480.webp",
+    "width": 640,
+    "height": 426,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Giraffe Centre, Nairobi",
+      "fr": "Giraffe Centre, Nairobi"
+    },
+    "title": "Giraffe Manor, Nairobi, Kenya.jpg",
+    "author": "Push the button",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Giraffe_Manor,_Nairobi,_Kenya.jpg"
+  },
+  "zanzibar--history": {
+    "src": "/photos/zanzibar--history-960.webp",
+    "srcSmall": "/photos/zanzibar--history-480.webp",
+    "width": 1920,
+    "height": 1459,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Rethymno (Crete, Greece): the olf fort or Fortezza",
+      "fr": "Une image historique de l'histoire de Zanzibar"
+    },
+    "title": "Rethymno Old Fort R01.jpg",
+    "author": "Marc Ryckaert (MJJR)",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rethymno_Old_Fort_R01.jpg"
+  },
+  "zanzibar--culture": {
+    "src": "/photos/zanzibar--culture-960.webp",
+    "srcSmall": "/photos/zanzibar--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Food Vendor in Forodhani Gardens at Night - Stone Town - Zanzibar - Tanzania",
+      "fr": "Scène de la culture locale à Zanzibar"
+    },
+    "title": "Food Vendor in Forodhani Gardens at Night - Stone Town - Zanzibar - Tanzania (8868676141).jpg",
+    "author": "Adam Jones from Kelowna, BC, Canada",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Food_Vendor_in_Forodhani_Gardens_at_Night_-_Stone_Town_-_Zanzibar_-_Tanzania_(8868676141).jpg"
+  },
+  "zanzibar--landmark-0": {
+    "src": "/photos/zanzibar--landmark-0-960.webp",
+    "srcSmall": "/photos/zanzibar--landmark-0-480.webp",
+    "width": 1536,
+    "height": 1024,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Stone Town, Zanzibar",
+      "fr": "Stone Town, Zanzibar"
+    },
+    "title": "Zanzibar sultan palace.jpg",
+    "author": "No machine-readable author provided. Mbz1 assumed (based on copyright claims).",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Zanzibar_sultan_palace.jpg"
+  },
+  "zanzibar--landmark-1": {
+    "src": "/photos/zanzibar--landmark-1-960.webp",
+    "srcSmall": "/photos/zanzibar--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Prison Island, Zanzibar",
+      "fr": "Prison Island, Zanzibar"
+    },
+    "title": "Restaurant in Chunguu Island, Mjini DC.jpg",
+    "author": "Mangapwani",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Restaurant_in_Chunguu_Island,_Mjini_DC.jpg"
+  },
+  "zanzibar--landmark-2": {
+    "src": "/photos/zanzibar--landmark-2-960.webp",
+    "srcSmall": "/photos/zanzibar--landmark-2-480.webp",
+    "width": 1920,
+    "height": 2217,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jozani Forest, Zanzibar",
+      "fr": "Forêt de Jozani, Zanzibar"
+    },
+    "title": "Zanzibar Red Colobus at Jozani Chwaka Bay National Park, Kusini DC, South Zanzibar, Tanzania.jpg",
+    "author": "Mnazini",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zanzibar_Red_Colobus_at_Jozani_Chwaka_Bay_National_Park,_Kusini_DC,_South_Zanzibar,_Tanzania.jpg"
+  },
+  "dakar--history": {
+    "src": "/photos/dakar--history-960.webp",
+    "srcSmall": "/photos/dakar--history-480.webp",
+    "width": 1024,
+    "height": 682,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "La place de l'Indépendance à Dakar (Sénégal). En arrière-plan le port et Gorée",
+      "fr": "Une image historique de l'histoire de Dakar"
+    },
+    "title": "Dakar-Indépendance.jpg",
+    "author": "mostroneddo",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dakar-Ind%C3%A9pendance.jpg"
+  },
+  "dakar--culture": {
+    "src": "/photos/dakar--culture-960.webp",
+    "srcSmall": "/photos/dakar--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "World African Wrestling world tour, Paris Bercy. Mame Balla vs Pape Mor Lô",
+      "fr": "Scène de la culture locale à Dakar"
+    },
+    "title": "Lutte sénégalaise Bercy 2013 - Mame Balla-Pape Mor Lô - 32.jpg",
+    "author": "Pierre-Yves Beaudouin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lutte_s%C3%A9n%C3%A9galaise_Bercy_2013_-_Mame_Balla-Pape_Mor_L%C3%B4_-_32.jpg"
+  },
+  "dakar--landmark-0": {
+    "src": "/photos/dakar--landmark-0-960.webp",
+    "srcSmall": "/photos/dakar--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1442,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Gorée Island, Dakar",
+      "fr": "Île de Gorée, Dakar"
+    },
+    "title": "Ile-de-goree.jpg",
+    "author": "Gregor Rom",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ile-de-goree.jpg"
+  },
+  "dakar--landmark-1": {
+    "src": "/photos/dakar--landmark-1-960.webp",
+    "srcSmall": "/photos/dakar--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "African Renaissance Monument, Dakar",
+      "fr": "Monument de la Renaissance africaine, Dakar"
+    },
+    "title": "Monument renaissance.jpg",
+    "author": "Tafsir207",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monument_renaissance.jpg"
+  },
+  "dakar--landmark-2": {
+    "src": "/photos/dakar--landmark-2-960.webp",
+    "srcSmall": "/photos/dakar--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Pink Lake (Lac Retba), Dakar",
+      "fr": "Lac Rose (lac Retba), Dakar"
+    },
+    "title": "RetbaLakeShore.jpg",
+    "author": "Jjm2311",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:RetbaLakeShore.jpg"
+  },
+  "cairo--history": {
+    "src": "/photos/cairo--history-960.webp",
+    "srcSmall": "/photos/cairo--history-480.webp",
+    "width": 1920,
+    "height": 1275,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Cairo",
+      "fr": "Une image historique de l'histoire de Le Caire"
+    },
+    "title": "Cairo Opera House, Al Hurriyah Park and the Nile river (14797782354).jpg",
+    "author": "Jorge Láscar from Melbourne, Australia",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House,_Al_Hurriyah_Park_and_the_Nile_river_(14797782354).jpg"
+  },
+  "cairo--culture": {
+    "src": "/photos/cairo--culture-960.webp",
+    "srcSmall": "/photos/cairo--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "This is an image of \"African people at work\" from",
+      "fr": "Scène de la culture locale à Le Caire"
+    },
+    "title": "Muizz street, photo by Hatem Moushir 31.jpg",
+    "author": "Hatem Moushir",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Muizz_street,_photo_by_Hatem_Moushir_31.jpg"
+  },
+  "cairo--landmark-0": {
+    "src": "/photos/cairo--landmark-0-960.webp",
+    "srcSmall": "/photos/cairo--landmark-0-480.webp",
+    "width": 1920,
+    "height": 800,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Pyramids of Giza, Cairo",
+      "fr": "Pyramides de Gizeh, Le Caire"
+    },
+    "title": "Pyramids of the Giza Necropolis.jpg",
+    "author": "KennyOMG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
+  },
+  "cairo--landmark-1": {
+    "src": "/photos/cairo--landmark-1-960.webp",
+    "srcSmall": "/photos/cairo--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1156,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Khan el-Khalili, Cairo",
+      "fr": "Khan el-Khalili, Le Caire"
+    },
+    "title": "خان الخليلي 1.jpg",
+    "author": "Heba otefy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%D8%AE%D8%A7%D9%86_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84%D9%8A_1.jpg"
+  },
+  "cairo--landmark-2": {
+    "src": "/photos/cairo--landmark-2-960.webp",
+    "srcSmall": "/photos/cairo--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1081,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Grand Egyptian Museum, Cairo",
+      "fr": "Grand Musée égyptien, Le Caire"
+    },
+    "title": "1897 bis 1902 wurde das Ägyptische Museum in Kairo gebaut. 04.jpg",
+    "author": "Holger Uwe Schmitt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1897_bis_1902_wurde_das_%C3%84gyptische_Museum_in_Kairo_gebaut._04.jpg"
+  },
+  "accra--history": {
+    "src": "/photos/accra--history-960.webp",
+    "srcSmall": "/photos/accra--history-480.webp",
+    "width": 1075,
+    "height": 803,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Accra",
+      "fr": "Une image historique de l'histoire de Accra"
+    },
+    "title": "Acca.jpg",
+    "author": "Amoat7",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Acca.jpg"
+  },
+  "accra--culture": {
+    "src": "/photos/accra--culture-960.webp",
+    "srcSmall": "/photos/accra--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Weaving of kente cloth",
+      "fr": "Scène de la culture locale à Accra"
+    },
+    "title": "Kente weave 02.jpg",
+    "author": "Ibn Dagara",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kente_weave_02.jpg"
+  },
+  "accra--landmark-0": {
+    "src": "/photos/accra--landmark-0-960.webp",
+    "srcSmall": "/photos/accra--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1452,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jamestown, Accra",
+      "fr": "Jamestown, Accra"
+    },
+    "title": "Jamestown Light House, Accra.jpg",
+    "author": "Livinba",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jamestown_Light_House,_Accra.jpg"
+  },
+  "accra--landmark-1": {
+    "src": "/photos/accra--landmark-1-960.webp",
+    "srcSmall": "/photos/accra--landmark-1-480.webp",
+    "width": 961,
+    "height": 671,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Kwame Nkrumah Memorial Park, Accra",
+      "fr": "Parc commémoratif Kwame Nkrumah, Accra"
+    },
+    "title": "Kwame Nkrumah Memorial Park.jpg",
+    "author": "Erik B. Anderson",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kwame_Nkrumah_Memorial_Park.jpg"
+  },
+  "accra--landmark-2": {
+    "src": "/photos/accra--landmark-2-960.webp",
+    "srcSmall": "/photos/accra--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Cape Coast Castle, Accra",
+      "fr": "Château de Cape Coast, Accra"
+    },
+    "title": "Castle, Cape Coast (P1100223).jpg",
+    "author": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Castle,_Cape_Coast_(P1100223).jpg"
+  },
+  "mauritius--history": {
+    "src": "/photos/mauritius--history-960.webp",
+    "srcSmall": "/photos/mauritius--history-480.webp",
+    "width": 1920,
+    "height": 1268,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Dutch Mauritius and Malagasy slaves",
+      "fr": "Une image historique de l'histoire de Maurice"
+    },
+    "title": "First African slaves to Mauritius.jpg",
+    "author": "Fenous",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:First_African_slaves_to_Mauritius.jpg"
+  },
+  "mauritius--culture": {
+    "src": "/photos/mauritius--culture-960.webp",
+    "srcSmall": "/photos/mauritius--culture-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A man playing flute during cavadee festival This media has been taken in the country: Mauritius",
+      "fr": "Scène de la culture locale à Maurice"
+    },
+    "title": "Wonderer.jpg",
+    "author": "Jimirain",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wonderer.jpg"
+  },
+  "mauritius--landmark-0": {
+    "src": "/photos/mauritius--landmark-0-960.webp",
+    "srcSmall": "/photos/mauritius--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1279,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Le Morne Brabant, Mauritius",
+      "fr": "Le Morne Brabant, Maurice"
+    },
+    "title": "Le Morne Peninsula in Mauritius (53697779236).jpg",
+    "author": "\"dronepicr\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Morne_Peninsula_in_Mauritius_(53697779236).jpg"
+  },
+  "mauritius--landmark-1": {
+    "src": "/photos/mauritius--landmark-1-960.webp",
+    "srcSmall": "/photos/mauritius--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Black River Gorges National Park, Mauritius",
+      "fr": "Parc national des Gorges de la Rivière Noire, Maurice"
+    },
+    "title": "Black River Gorges National Park IMG 0912.jpg",
+    "author": "User 72622",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_River_Gorges_National_Park_IMG_0912.jpg"
+  },
+  "mauritius--landmark-2": {
+    "src": "/photos/mauritius--landmark-2-960.webp",
+    "srcSmall": "/photos/mauritius--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Chamarel Seven Coloured Earth, Mauritius",
+      "fr": "Terres des Sept Couleurs de Chamarel, Maurice"
+    },
+    "title": "Seven Coloured Earths Geopark in Chamarel, Mauritius (53697998768).jpg",
+    "author": "\"dronepicr\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seven_Coloured_Earths_Geopark_in_Chamarel,_Mauritius_(53697998768).jpg"
+  },
+  "athens--history": {
+    "src": "/photos/athens--history-960.webp",
+    "srcSmall": "/photos/athens--history-480.webp",
+    "width": 1486,
+    "height": 1018,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Athens",
+      "fr": "Une image historique de l'histoire de Athènes"
+    },
+    "title": "Akropolis by Leo von Klenze.jpg",
+    "author": "Leo von Klenze",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Akropolis_by_Leo_von_Klenze.jpg"
+  },
+  "athens--culture": {
+    "src": "/photos/athens--culture-960.webp",
+    "srcSmall": "/photos/athens--culture-480.webp",
+    "width": 1144,
+    "height": 804,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Parthenon, Athens Greece. Photo taken in 1978",
+      "fr": "Scène de la culture locale à Athènes"
+    },
+    "title": "The Parthenon in Athens.jpg",
+    "author": "Steve Swayne",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg"
+  },
+  "athens--landmark-0": {
+    "src": "/photos/athens--landmark-0-960.webp",
+    "srcSmall": "/photos/athens--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Acropolis, Athens",
+      "fr": "Acropole, Athènes"
+    },
+    "title": "1029 Acropolis of Athens in Greece at night Photo by Giles Laurent.jpg",
+    "author": "Giles Laurent",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg"
+  },
+  "athens--landmark-1": {
+    "src": "/photos/athens--landmark-1-960.webp",
+    "srcSmall": "/photos/athens--landmark-1-480.webp",
+    "width": 1920,
+    "height": 909,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Acropolis Museum, Athens",
+      "fr": "Musée de l'Acropole, Athènes"
+    },
+    "title": "Athens Acropolis Museum Excavation-3.jpg",
+    "author": "Yair-haklai",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Athens_Acropolis_Museum_Excavation-3.jpg"
+  },
+  "athens--landmark-2": {
+    "src": "/photos/athens--landmark-2-960.webp",
+    "srcSmall": "/photos/athens--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Ancient Agora, Athens",
+      "fr": "Agora antique, Athènes"
+    },
+    "title": "Agora - Athènes (GRA1) - 2022-03-26 - 97.jpg",
+    "author": "Chabe01",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Agora_-_Ath%C3%A8nes_(GRA1)_-_2022-03-26_-_97.jpg"
+  },
+  "dubrovnik--history": {
+    "src": "/photos/dubrovnik--history-960.webp",
+    "srcSmall": "/photos/dubrovnik--history-480.webp",
+    "width": 1920,
+    "height": 1191,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "This is a photo of a cultural heritage in Croatia with ID: N-1",
+      "fr": "Une image historique de l'histoire de Dubrovnik"
+    },
+    "title": "The walls of the fortress and View of the old city. panorama.jpg",
+    "author": "Zysko serhii",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg"
+  },
+  "dubrovnik--culture": {
+    "src": "/photos/dubrovnik--culture-960.webp",
+    "srcSmall": "/photos/dubrovnik--culture-480.webp",
+    "width": 634,
+    "height": 349,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "HKUD Široka Kula - očuvanja zaboravljenih običaja Like: ličko kolo, ličko pjevanje, ličko ojkanje, nošnje, instrumente,",
+      "fr": "Scène de la culture locale à Dubrovnik"
+    },
+    "title": "HKUD Široka Kula.jpg",
+    "author": "Nhscare0",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:HKUD_%C5%A0iroka_Kula.jpg"
+  },
+  "dubrovnik--landmark-0": {
+    "src": "/photos/dubrovnik--landmark-0-960.webp",
+    "srcSmall": "/photos/dubrovnik--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "City Walls, Dubrovnik",
+      "fr": "Remparts, Dubrovnik"
+    },
+    "title": "Dubrovnik s 24.jpg",
+    "author": "Miroslav.vajdic",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dubrovnik_s_24.jpg"
+  },
+  "dubrovnik--landmark-1": {
+    "src": "/photos/dubrovnik--landmark-1-960.webp",
+    "srcSmall": "/photos/dubrovnik--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1279,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Stradun, Dubrovnik",
+      "fr": "Stradun, Dubrovnik"
+    },
+    "title": "Shopping street Stradun in the historical center of Dubrovnik, Croatia (48613019536).jpg",
+    "author": "dronepicr",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shopping_street_Stradun_in_the_historical_center_of_Dubrovnik,_Croatia_(48613019536).jpg"
+  },
+  "dubrovnik--landmark-2": {
+    "src": "/photos/dubrovnik--landmark-2-960.webp",
+    "srcSmall": "/photos/dubrovnik--landmark-2-480.webp",
+    "width": 1920,
+    "height": 700,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Lokrum Island, Dubrovnik",
+      "fr": "Île de Lokrum, Dubrovnik"
+    },
+    "title": "Isla de Lokrum, Croacia, 2014-04-14, DD 01.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Isla_de_Lokrum,_Croacia,_2014-04-14,_DD_01.JPG"
+  },
+  "amsterdam--history": {
+    "src": "/photos/amsterdam--history-960.webp",
+    "srcSmall": "/photos/amsterdam--history-480.webp",
+    "width": 1920,
+    "height": 1396,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Amsterdam",
+      "fr": "Une image historique de l'histoire de Amsterdam"
+    },
+    "title": "Gezicht op Amsterdam in vogelvlucht 1538 Cornelis Anthonisz.jpg",
+    "author": "Cornelis Anthonisz",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Gezicht_op_Amsterdam_in_vogelvlucht_1538_Cornelis_Anthonisz.jpg"
+  },
+  "amsterdam--culture": {
+    "src": "/photos/amsterdam--culture-960.webp",
+    "srcSmall": "/photos/amsterdam--culture-480.webp",
+    "width": 792,
+    "height": 278,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "photomontage",
+      "fr": "Scène de la culture locale à Amsterdam"
+    },
+    "title": "Hollande04.jpg",
+    "author": "Anne97432",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Hollande04.jpg"
+  },
+  "amsterdam--landmark-0": {
+    "src": "/photos/amsterdam--landmark-0-960.webp",
+    "srcSmall": "/photos/amsterdam--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1397,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Rijksmuseum, Amsterdam",
+      "fr": "Rijksmuseum, Amsterdam"
+    },
+    "title": "South facade of the Rijksmuseum Amsterdam (DSCF0528).jpg",
+    "author": "Trougnouf (Benoit Brummer)",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:South_facade_of_the_Rijksmuseum_Amsterdam_(DSCF0528).jpg"
+  },
+  "amsterdam--landmark-1": {
+    "src": "/photos/amsterdam--landmark-1-960.webp",
+    "srcSmall": "/photos/amsterdam--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1497,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Anne Frank House, Amsterdam",
+      "fr": "Maison d'Anne Frank, Amsterdam"
+    },
+    "title": "Amsterdam (NL), Anne-Frank-Huis -- 2015 -- 7185.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL),_Anne-Frank-Huis_--_2015_--_7185.jpg"
+  },
+  "amsterdam--landmark-2": {
+    "src": "/photos/amsterdam--landmark-2-960.webp",
+    "srcSmall": "/photos/amsterdam--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1281,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Canal Ring, Amsterdam",
+      "fr": "Ceinture des canaux, Amsterdam"
+    },
+    "title": "Imagen de los canales concéntricos en Ámsterdam.png",
+    "author": "Andrés Barrios",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png"
+  },
+  "prague--history": {
+    "src": "/photos/prague--history-960.webp",
+    "srcSmall": "/photos/prague--history-480.webp",
+    "width": 1280,
+    "height": 956,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Západní část Pražského hradu r. 1606",
+      "fr": "Une image historique de l'histoire de Prague"
+    },
+    "title": "Sadeler, Královský palác.jpg",
+    "author": "Philipp van der Bossche",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Sadeler,_Kr%C3%A1lovsk%C3%BD_pal%C3%A1c.jpg"
+  },
+  "prague--culture": {
+    "src": "/photos/prague--culture-960.webp",
+    "srcSmall": "/photos/prague--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Marionettes for Sale - Prague - Czech Republic",
+      "fr": "Scène de la culture locale à Prague"
+    },
+    "title": "Marionettes for Sale - Prague - Czech Republic.jpg",
+    "author": "Adam Jones, Ph.D.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marionettes_for_Sale_-_Prague_-_Czech_Republic.jpg"
+  },
+  "prague--landmark-0": {
+    "src": "/photos/prague--landmark-0-960.webp",
+    "srcSmall": "/photos/prague--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Charles Bridge, Prague",
+      "fr": "Pont Charles, Prague"
+    },
+    "title": "North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+    "author": "DXR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most,_Prague_20160808_1.jpg"
+  },
+  "prague--landmark-1": {
+    "src": "/photos/prague--landmark-1-960.webp",
+    "srcSmall": "/photos/prague--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1142,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Prague Castle, Prague",
+      "fr": "Château de Prague, Prague"
+    },
+    "title": "Prague (6365119737).jpg",
+    "author": "Moyan Brenn from Italy",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Prague_(6365119737).jpg"
+  },
+  "prague--landmark-2": {
+    "src": "/photos/prague--landmark-2-960.webp",
+    "srcSmall": "/photos/prague--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1288,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Old Town Square, Prague",
+      "fr": "Place de la Vieille-Ville, Prague"
+    },
+    "title": "Jan Hus Statue, Old Town Square.jpg",
+    "author": "Tadeáš Gregor",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_Hus_Statue,_Old_Town_Square.jpg"
+  },
+  "istanbul--history": {
+    "src": "/photos/istanbul--history-960.webp",
+    "srcSmall": "/photos/istanbul--history-480.webp",
+    "width": 1920,
+    "height": 1576,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "detail: head",
+      "fr": "Une image historique de l'histoire de Istanbul"
+    },
+    "title": "Couvercle sarcophage saïda Sidon Liban Louvre AO5012.jpg",
+    "author": "Jebulon",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Couvercle_sarcophage_sa%C3%AFda_Sidon_Liban_Louvre_AO5012.jpg"
+  },
+  "istanbul--culture": {
+    "src": "/photos/istanbul--culture-960.webp",
+    "srcSmall": "/photos/istanbul--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Turkish Festival DC 2013",
+      "fr": "Scène de la culture locale à Istanbul"
+    },
+    "title": "Turkish Festival DC 2013 (10010022295).jpg",
+    "author": "S Pakhrin from DC, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkish_Festival_DC_2013_(10010022295).jpg"
+  },
+  "istanbul--landmark-0": {
+    "src": "/photos/istanbul--landmark-0-960.webp",
+    "srcSmall": "/photos/istanbul--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1161,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Hagia Sophia, Istanbul",
+      "fr": "Sainte-Sophie, Istanbul"
+    },
+    "title": "Hagia Sophia (228968325).jpeg",
+    "author": "Adli Wahid",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_(228968325).jpeg"
+  },
+  "istanbul--landmark-1": {
+    "src": "/photos/istanbul--landmark-1-960.webp",
+    "srcSmall": "/photos/istanbul--landmark-1-480.webp",
+    "width": 1920,
+    "height": 960,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Topkapı Palace, Istanbul",
+      "fr": "Palais de Topkapı, Istanbul"
+    },
+    "title": "Topkapı - 01.jpg",
+    "author": "Carlos Delgado",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Topkap%C4%B1_-_01.jpg"
+  },
+  "istanbul--landmark-2": {
+    "src": "/photos/istanbul--landmark-2-960.webp",
+    "srcSmall": "/photos/istanbul--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1406,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Grand Bazaar, Istanbul",
+      "fr": "Grand Bazar, Istanbul"
+    },
+    "title": "Sample of Tee - Grand Bazaar.JPG",
+    "author": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sample_of_Tee_-_Grand_Bazaar.JPG"
+  },
+  "dublin--history": {
+    "src": "/photos/dublin--history-960.webp",
+    "srcSmall": "/photos/dublin--history-480.webp",
+    "width": 1920,
+    "height": 1512,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The General Post Office &amp; Henry Street from Nelson's Pillar, May 18 [1916]",
+      "fr": "Une image historique de l'histoire de Dublin"
+    },
+    "title": "The General Post Office & Henry Street from Nelson's Pillar, May 18.jpg",
+    "author": "Thomas Johnson Westropp",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:The_General_Post_Office_%26_Henry_Street_from_Nelson%27s_Pillar,_May_18.jpg"
+  },
+  "dublin--culture": {
+    "src": "/photos/dublin--culture-960.webp",
+    "srcSmall": "/photos/dublin--culture-480.webp",
+    "width": 1920,
+    "height": 1321,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Temple Bar Pub on Temple Lane in Dublin, Ireland, on May 23, 2008. The Temple Bar, 48 Temple Bar, Temple Lane South, Dublin 2, Ireland",
+      "fr": "Scène de la culture locale à Dublin"
+    },
+    "title": "2008-05-23 The Temple Bar, Dublin, Ireland.jpg",
+    "author": "Gordon Leggett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2008-05-23_The_Temple_Bar,_Dublin,_Ireland.jpg"
+  },
+  "dublin--landmark-0": {
+    "src": "/photos/dublin--landmark-0-960.webp",
+    "srcSmall": "/photos/dublin--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1450,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Trinity College and the Book of Kells, Dublin",
+      "fr": "Trinity College et le Livre de Kells, Dublin"
+    },
+    "title": "Long Room Interior, Trinity College Dublin, Ireland - Diliff.jpg",
+    "author": "Diliff",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Long_Room_Interior,_Trinity_College_Dublin,_Ireland_-_Diliff.jpg"
+  },
+  "dublin--landmark-1": {
+    "src": "/photos/dublin--landmark-1-960.webp",
+    "srcSmall": "/photos/dublin--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1272,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Guinness Storehouse, Dublin",
+      "fr": "Guinness Storehouse, Dublin"
+    },
+    "title": "Guinness Storehouse exterior 3.jpg",
+    "author": "Steven Lek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guinness_Storehouse_exterior_3.jpg"
+  },
+  "dublin--landmark-2": {
+    "src": "/photos/dublin--landmark-2-960.webp",
+    "srcSmall": "/photos/dublin--landmark-2-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Kilmainham Gaol, Dublin",
+      "fr": "Prison de Kilmainham, Dublin"
+    },
+    "title": "Kilmainham Gaol Main Hall 2016-06-03.jpg",
+    "author": "Colin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kilmainham_Gaol_Main_Hall_2016-06-03.jpg"
+  },
+  "vienna--history": {
+    "src": "/photos/vienna--history-960.webp",
+    "srcSmall": "/photos/vienna--history-480.webp",
+    "width": 1920,
+    "height": 1144,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Belagerung und Entsatz der Stadt Wien im September 1683",
+      "fr": "Une image historique de l'histoire de Vienne"
+    },
+    "title": "Anonym Entsatz Wien 1683.jpg",
+    "author": "Anonymer, zeitgenössischer Maler",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Anonym_Entsatz_Wien_1683.jpg"
+  },
+  "vienna--culture": {
+    "src": "/photos/vienna--culture-960.webp",
+    "srcSmall": "/photos/vienna--culture-480.webp",
+    "width": 1600,
+    "height": 1067,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Cafe Central in Vienna interior near entrance with statue of Peter Altenberg",
+      "fr": "Scène de la culture locale à Vienne"
+    },
+    "title": "Cafe Central in Vienna interior near entrance.JPG",
+    "author": "Clayton Tang",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cafe_Central_in_Vienna_interior_near_entrance.JPG"
+  },
+  "vienna--landmark-0": {
+    "src": "/photos/vienna--landmark-0-960.webp",
+    "srcSmall": "/photos/vienna--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1312,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Schönbrunn Palace, Vienna",
+      "fr": "Château de Schönbrunn, Vienne"
+    },
+    "title": "Wien - Schloss Schönbrunn.JPG",
+    "author": "C.Stadler/Bwag",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Schloss_Sch%C3%B6nbrunn.JPG"
+  },
+  "vienna--landmark-1": {
+    "src": "/photos/vienna--landmark-1-960.webp",
+    "srcSmall": "/photos/vienna--landmark-1-480.webp",
+    "width": 1920,
+    "height": 2880,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "St Stephen's Cathedral, Vienna",
+      "fr": "Cathédrale Saint-Étienne, Vienne"
+    },
+    "title": "Wien - Stephansdom (1).JPG",
+    "author": "C.Stadler/Bwag",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansdom_(1).JPG"
+  },
+  "vienna--landmark-2": {
+    "src": "/photos/vienna--landmark-2-960.webp",
+    "srcSmall": "/photos/vienna--landmark-2-480.webp",
+    "width": 1920,
+    "height": 845,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Belvedere, Vienna",
+      "fr": "Belvédère, Vienne"
+    },
+    "title": "Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere,_Viena,_Austria,_2020-02-01,_DD_93-95_HDR.jpg"
+  },
+  "budapest--history": {
+    "src": "/photos/budapest--history-960.webp",
+    "srcSmall": "/photos/budapest--history-480.webp",
+    "width": 1920,
+    "height": 1006,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Buda Castle as seen from the opposite side of the Danube river, Budapest, Hungary",
+      "fr": "Une image historique de l'histoire de Budapest"
+    },
+    "title": "Buda Castle from the Danube River.jpg",
+    "author": "Mgimelfarb",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Buda_Castle_from_the_Danube_River.jpg"
+  },
+  "budapest--culture": {
+    "src": "/photos/budapest--culture-960.webp",
+    "srcSmall": "/photos/budapest--culture-480.webp",
+    "width": 800,
+    "height": 600,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The ZORA Folkdancegroup of Mohács",
+      "fr": "Scène de la culture locale à Budapest"
+    },
+    "title": "The ZORA Folkdancegroup of Mohács in Hungarian traditional ethnic costume, 2008 Wisła 01.JPG",
+    "author": "Silar",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_ZORA_Folkdancegroup_of_Moh%C3%A1cs_in_Hungarian_traditional_ethnic_costume,_2008_Wis%C5%82a_01.JPG"
+  },
+  "budapest--landmark-0": {
+    "src": "/photos/budapest--landmark-0-960.webp",
+    "srcSmall": "/photos/budapest--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1075,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Hungarian Parliament Building, Budapest",
+      "fr": "Parlement hongrois, Budapest"
+    },
+    "title": "Hungarian Parliament Building from across the Danube, 2025-01-11.jpg",
+    "author": "Kilyann Le Hen",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hungarian_Parliament_Building_from_across_the_Danube,_2025-01-11.jpg"
+  },
+  "budapest--landmark-1": {
+    "src": "/photos/budapest--landmark-1-960.webp",
+    "srcSmall": "/photos/budapest--landmark-1-480.webp",
+    "width": 1920,
+    "height": 2560,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Buda Castle and Fisherman's Bastion, Budapest",
+      "fr": "Château de Buda et bastion des Pêcheurs, Budapest"
+    },
+    "title": "Halászbástya 2017.jpg",
+    "author": "Brian Adamson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hal%C3%A1szb%C3%A1stya_2017.jpg"
+  },
+  "budapest--landmark-2": {
+    "src": "/photos/budapest--landmark-2-960.webp",
+    "srcSmall": "/photos/budapest--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1275,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Széchenyi Thermal Bath, Budapest",
+      "fr": "Bains Széchenyi, Budapest"
+    },
+    "title": "Budapest Széchenyi Baths R02.jpg",
+    "author": "Marc Ryckaert (MJJR)",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Budapest_Sz%C3%A9chenyi_Baths_R02.jpg"
+  },
+  "mexico-city--history": {
+    "src": "/photos/mexico-city--history-960.webp",
+    "srcSmall": "/photos/mexico-city--history-480.webp",
+    "width": 1920,
+    "height": 909,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Model of Tenochtitlan - Templo Mayor Archeological Zone - Mexico",
+      "fr": "Une image historique de l'histoire de Mexico"
+    },
+    "title": "Model of Tenochtitlan - Templo Mayor Archeological Zone - Mexico 2024.jpg",
+    "author": "José Luiz",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Model_of_Tenochtitlan_-_Templo_Mayor_Archeological_Zone_-_Mexico_2024.jpg"
+  },
+  "mexico-city--culture": {
+    "src": "/photos/mexico-city--culture-960.webp",
+    "srcSmall": "/photos/mexico-city--culture-480.webp",
+    "width": 1920,
+    "height": 1442,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Plaza Garibaldi- statue of mariachi player",
+      "fr": "Scène de la culture locale à Mexico"
+    },
+    "title": "Plaza Garibaldi- statue of mariachi player.jpg",
+    "author": "Thayne Tuason",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaza_Garibaldi-_statue_of_mariachi_player.jpg"
+  },
+  "mexico-city--landmark-0": {
+    "src": "/photos/mexico-city--landmark-0-960.webp",
+    "srcSmall": "/photos/mexico-city--landmark-0-480.webp",
+    "width": 800,
+    "height": 600,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "National Museum of Anthropology, Mexico City",
+      "fr": "Musée national d'Anthropologie, Mexico"
+    },
+    "title": "Musee National Anthropologie-Entree.jpg",
+    "author": "kornemuz",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Musee_National_Anthropologie-Entree.jpg"
+  },
+  "mexico-city--landmark-1": {
+    "src": "/photos/mexico-city--landmark-1-960.webp",
+    "srcSmall": "/photos/mexico-city--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Zócalo and Templo Mayor, Mexico City",
+      "fr": "Zócalo et Templo Mayor, Mexico"
+    },
+    "title": "Model of Tenochtitlan Ceremonial Center Great Temple (9755406755).jpg",
+    "author": "Gary Todd from Xinzheng, China",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Model_of_Tenochtitlan_Ceremonial_Center_Great_Temple_(9755406755).jpg"
+  },
+  "mexico-city--landmark-2": {
+    "src": "/photos/mexico-city--landmark-2-960.webp",
+    "srcSmall": "/photos/mexico-city--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1277,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Teotihuacan, Mexico City",
+      "fr": "Teotihuacan, Mexico"
+    },
+    "title": "ZA77 Teotihuacán edo de mex Herberto de la rosa.jpg",
+    "author": "Hdlrosa",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ZA77_Teotihuac%C3%A1n_edo_de_mex_Herberto_de_la_rosa.jpg"
+  },
+  "lima--history": {
+    "src": "/photos/lima--history-960.webp",
+    "srcSmall": "/photos/lima--history-480.webp",
+    "width": 1517,
+    "height": 952,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jiron de la Unión in Lima, Peru",
+      "fr": "Une image historique de l'histoire de Lima"
+    },
+    "title": "Unionstreet-1930s.jpg",
+    "author": "Eugene Courret",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Unionstreet-1930s.jpg"
+  },
+  "lima--culture": {
+    "src": "/photos/lima--culture-960.webp",
+    "srcSmall": "/photos/lima--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Everyday culture in Lima",
+      "fr": "Scène de la culture locale à Lima"
+    },
+    "title": "Cancillería rinde homenaje al Señor de los Milagros - 48920646318.jpg",
+    "author": "Ministerio de Relaciones Exteriores",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Canciller%C3%ADa_rinde_homenaje_al_Se%C3%B1or_de_los_Milagros_-_48920646318.jpg"
+  },
+  "lima--landmark-0": {
+    "src": "/photos/lima--landmark-0-960.webp",
+    "srcSmall": "/photos/lima--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Historic Centre of Lima, Lima",
+      "fr": "Centre historique de Lima, Lima"
+    },
+    "title": "Plaza de Armas, Lima.jpg",
+    "author": "Art DiNo from Lima, Perú",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaza_de_Armas,_Lima.jpg"
+  },
+  "lima--landmark-1": {
+    "src": "/photos/lima--landmark-1-960.webp",
+    "srcSmall": "/photos/lima--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Huaca Pucllana, Lima",
+      "fr": "Huaca Pucllana, Lima"
+    },
+    "title": "Huaca Pucllana Miraflores.jpg",
+    "author": "McKay Savage",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Huaca_Pucllana_Miraflores.jpg"
+  },
+  "lima--landmark-2": {
+    "src": "/photos/lima--landmark-2-960.webp",
+    "srcSmall": "/photos/lima--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Barranco, Lima",
+      "fr": "Barranco, Lima"
+    },
+    "title": "Barranco District Lima Peru.jpg",
+    "author": "tadekk",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barranco_District_Lima_Peru.jpg"
+  },
+  "rio-de-janeiro--history": {
+    "src": "/photos/rio-de-janeiro--history-960.webp",
+    "srcSmall": "/photos/rio-de-janeiro--history-480.webp",
+    "width": 600,
+    "height": 639,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Rio de Janeiro",
+      "fr": "Une image historique de l'histoire de Rio de Janeiro"
+    },
+    "title": "Ile-de-villegagnon.jpg",
+    "author": "Unknown",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Ile-de-villegagnon.jpg"
+  },
+  "rio-de-janeiro--culture": {
+    "src": "/photos/rio-de-janeiro--culture-960.webp",
+    "srcSmall": "/photos/rio-de-janeiro--culture-480.webp",
+    "width": 700,
+    "height": 525,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Roda de capoeira no Parque da Redenção, Porto Alegre, Brasil",
+      "fr": "Scène de la culture locale à Rio de Janeiro"
+    },
+    "title": "Roda de capoeira4.jpg",
+    "author": "Ricardo André Frantz (User:Tetraktys)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Roda_de_capoeira4.jpg"
+  },
+  "rio-de-janeiro--landmark-0": {
+    "src": "/photos/rio-de-janeiro--landmark-0-960.webp",
+    "srcSmall": "/photos/rio-de-janeiro--landmark-0-480.webp",
+    "width": 1920,
+    "height": 2879,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Christ the Redeemer, Rio de Janeiro",
+      "fr": "Christ Rédempteur, Rio de Janeiro"
+    },
+    "title": "Christ the Redeemer - Cristo Redentor.jpg",
+    "author": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg"
+  },
+  "rio-de-janeiro--landmark-1": {
+    "src": "/photos/rio-de-janeiro--landmark-1-960.webp",
+    "srcSmall": "/photos/rio-de-janeiro--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sugarloaf Mountain, Rio de Janeiro",
+      "fr": "Pain de Sucre, Rio de Janeiro"
+    },
+    "title": "Pão de Açucar - Sugarloaf Mountain - Zuckerhut - 2022.jpg",
+    "author": "Arne Müseler",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:P%C3%A3o_de_A%C3%A7ucar_-_Sugarloaf_Mountain_-_Zuckerhut_-_2022.jpg"
+  },
+  "rio-de-janeiro--landmark-2": {
+    "src": "/photos/rio-de-janeiro--landmark-2-960.webp",
+    "srcSmall": "/photos/rio-de-janeiro--landmark-2-480.webp",
+    "width": 1845,
+    "height": 1613,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Selarón Steps, Rio de Janeiro",
+      "fr": "Escalier Selarón, Rio de Janeiro"
+    },
+    "title": "Selaron Stairs, Rio de Janeiro, Brasil.jpg",
+    "author": "Marshallhenrie",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Selaron_Stairs,_Rio_de_Janeiro,_Brasil.jpg"
+  },
+  "buenos-aires--history": {
+    "src": "/photos/buenos-aires--history-960.webp",
+    "srcSmall": "/photos/buenos-aires--history-480.webp",
+    "width": 1920,
+    "height": 1266,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Buenos Aires",
+      "fr": "Une image historique de l'histoire de Buenos Aires"
+    },
+    "title": "Buenos Aires - Avenida de Mayo 767 al 777.jpg",
+    "author": "Beatrice Murch from Buenos  Aires, Argentina",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Buenos_Aires_-_Avenida_de_Mayo_767_al_777.jpg"
+  },
+  "buenos-aires--culture": {
+    "src": "/photos/buenos-aires--culture-960.webp",
+    "srcSmall": "/photos/buenos-aires--culture-480.webp",
+    "width": 1920,
+    "height": 1114,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Casa Rosada, Buenos Aires, Argentina",
+      "fr": "Scène de la culture locale à Buenos Aires"
+    },
+    "title": "Casa Rosada, Buenos Aires, Argentina.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casa_Rosada,_Buenos_Aires,_Argentina.jpg"
+  },
+  "buenos-aires--landmark-0": {
+    "src": "/photos/buenos-aires--landmark-0-960.webp",
+    "srcSmall": "/photos/buenos-aires--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "La Boca and Caminito, Buenos Aires",
+      "fr": "La Boca et Caminito, Buenos Aires"
+    },
+    "title": "Caminito in 2026.jpg",
+    "author": "Gonzabar77",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caminito_in_2026.jpg"
+  },
+  "buenos-aires--landmark-1": {
+    "src": "/photos/buenos-aires--landmark-1-960.webp",
+    "srcSmall": "/photos/buenos-aires--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Recoleta Cemetery, Buenos Aires",
+      "fr": "Cimetière de Recoleta, Buenos Aires"
+    },
+    "title": "EstatuaentechoTumbaFliaAlzaga-jun2017.jpg",
+    "author": "Ezarate",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:EstatuaentechoTumbaFliaAlzaga-jun2017.jpg"
+  },
+  "buenos-aires--landmark-2": {
+    "src": "/photos/buenos-aires--landmark-2-960.webp",
+    "srcSmall": "/photos/buenos-aires--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1371,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Teatro Colón, Buenos Aires",
+      "fr": "Teatro Colón, Buenos Aires"
+    },
+    "title": "Fachada del Teatro Colón en Buenos Aires, Argentina.jpg",
+    "author": "EEJCC",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires,_Argentina.jpg"
+  },
+  "cartagena--history": {
+    "src": "/photos/cartagena--history-960.webp",
+    "srcSmall": "/photos/cartagena--history-480.webp",
+    "width": 1920,
+    "height": 1286,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Cartagena",
+      "fr": "Une image historique de l'histoire de Carthagène des Indes"
+    },
+    "title": "Cdral de Cartagena de Indias 1930.jpg",
+    "author": "Gumersindo Cuéllar Jiménez",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Cdral_de_Cartagena_de_Indias_1930.jpg"
+  },
+  "cartagena--culture": {
+    "src": "/photos/cartagena--culture-960.webp",
+    "srcSmall": "/photos/cartagena--culture-480.webp",
+    "width": 1920,
+    "height": 1276,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Demonstración de baile folclórico de Colombia durante el evento “Yo Amo Colombia” en ITESM Campus Ciudad de México [1]",
+      "fr": "Scène de la culture locale à Carthagène des Indes"
+    },
+    "title": "04162012Bailes032.JPG",
+    "author": "Talento Tec",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:04162012Bailes032.JPG"
+  },
+  "cartagena--landmark-0": {
+    "src": "/photos/cartagena--landmark-0-960.webp",
+    "srcSmall": "/photos/cartagena--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Walled City, Cartagena",
+      "fr": "Ville fortifiée, Carthagène des Indes"
+    },
+    "title": "Museo Naval del Caribe.JPG",
+    "author": "Sgonzalezb",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Museo_Naval_del_Caribe.JPG"
+  },
+  "cartagena--landmark-1": {
+    "src": "/photos/cartagena--landmark-1-960.webp",
+    "srcSmall": "/photos/cartagena--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1082,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Castillo San Felipe de Barajas, Cartagena",
+      "fr": "Château San Felipe de Barajas, Carthagène des Indes"
+    },
+    "title": "62 - Carthagène - Décembre 2008.jpg",
+    "author": "Martin St-Amant (S23678)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:62_-_Carthag%C3%A8ne_-_D%C3%A9cembre_2008.jpg"
+  },
+  "cartagena--landmark-2": {
+    "src": "/photos/cartagena--landmark-2-960.webp",
+    "srcSmall": "/photos/cartagena--landmark-2-480.webp",
+    "width": 604,
+    "height": 400,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Rosario Islands, Cartagena",
+      "fr": "Îles du Rosaire, Carthagène des Indes"
+    },
+    "title": "Karibiska havet i Colombia.jpg",
+    "author": "Segab",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Karibiska_havet_i_Colombia.jpg"
+  },
+  "san-jose-costa-rica--history": {
+    "src": "/photos/san-jose-costa-rica--history-960.webp",
+    "srcSmall": "/photos/san-jose-costa-rica--history-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Costa Rica",
+      "fr": "Une image historique de l'histoire de Costa Rica"
+    },
+    "title": "Stone spheres of Costa Rica. Museo Nacional.jpg",
+    "author": "Rodtico21",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stone_spheres_of_Costa_Rica._Museo_Nacional.jpg"
+  },
+  "san-jose-costa-rica--culture": {
+    "src": "/photos/san-jose-costa-rica--culture-960.webp",
+    "srcSmall": "/photos/san-jose-costa-rica--culture-480.webp",
+    "width": 1920,
+    "height": 1465,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Carreta típica auténtica fabricada alrededor de 1950 por Talleres Chaverri para el trabajo cotidiano, Sarchí, Alajuela, Costa Rica",
+      "fr": "Scène de la culture locale à Costa Rica"
+    },
+    "title": "Carreta tipica Sarchi (1).JPG",
+    "author": "Axxis10",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carreta_tipica_Sarchi_(1).JPG"
+  },
+  "san-jose-costa-rica--landmark-0": {
+    "src": "/photos/san-jose-costa-rica--landmark-0-960.webp",
+    "srcSmall": "/photos/san-jose-costa-rica--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1061,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Arenal Volcano National Park, Costa Rica",
+      "fr": "Parc national du Volcan Arenal, Costa Rica"
+    },
+    "title": "Arenal volcano (70785p) (cropped).jpg",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arenal_volcano_(70785p)_(cropped).jpg"
+  },
+  "san-jose-costa-rica--landmark-1": {
+    "src": "/photos/san-jose-costa-rica--landmark-1-960.webp",
+    "srcSmall": "/photos/san-jose-costa-rica--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Monteverde Cloud Forest Reserve, Costa Rica",
+      "fr": "Réserve de la forêt de nuages de Monteverde, Costa Rica"
+    },
+    "title": "Monteverde bosque.jpg",
+    "author": "Haakon S. Krohn",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monteverde_bosque.jpg"
+  },
+  "san-jose-costa-rica--landmark-2": {
+    "src": "/photos/san-jose-costa-rica--landmark-2-960.webp",
+    "srcSmall": "/photos/san-jose-costa-rica--landmark-2-480.webp",
+    "width": 1024,
+    "height": 768,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Manuel Antonio National Park, Costa Rica",
+      "fr": "Parc national Manuel Antonio, Costa Rica"
+    },
+    "title": "Manuel antonio 06 april 2005.jpeg",
+    "author": "No machine-readable author provided. Jakes19 assumed (based on copyright claims).",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Manuel_antonio_06_april_2005.jpeg"
+  },
+  "santiago--history": {
+    "src": "/photos/santiago--history-960.webp",
+    "srcSmall": "/photos/santiago--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Santiago",
+      "fr": "Une image historique de l'histoire de Santiago du Chili"
+    },
+    "title": "Palacio de La Moneda - miguelreflex.jpg",
+    "author": "Miguel hernandez",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palacio_de_La_Moneda_-_miguelreflex.jpg"
+  },
+  "santiago--culture": {
+    "src": "/photos/santiago--culture-960.webp",
+    "srcSmall": "/photos/santiago--culture-480.webp",
+    "width": 1920,
+    "height": 1336,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "After they finished dancing I asked for a picture, on my last day visiting my family in Chile",
+      "fr": "Scène de la culture locale à Santiago du Chili"
+    },
+    "title": "Traditional dress of the Chilean cueca, a national dance.jpg",
+    "author": "Quilicura",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Traditional_dress_of_the_Chilean_cueca,_a_national_dance.jpg"
+  },
+  "santiago--landmark-0": {
+    "src": "/photos/santiago--landmark-0-960.webp",
+    "srcSmall": "/photos/santiago--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1438,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "San Cristóbal Hill, Santiago",
+      "fr": "Colline San Cristóbal, Santiago du Chili"
+    },
+    "title": "San Cristóbal altura.jpg",
+    "author": "Carlos yo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:San_Crist%C3%B3bal_altura.jpg"
+  },
+  "santiago--landmark-1": {
+    "src": "/photos/santiago--landmark-1-960.webp",
+    "srcSmall": "/photos/santiago--landmark-1-480.webp",
+    "width": 1500,
+    "height": 1000,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Plaza de Armas, Santiago",
+      "fr": "Plaza de Armas, Santiago du Chili"
+    },
+    "title": "Plaza de Armas.JPG",
+    "author": "Apincheira",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaza_de_Armas.JPG"
+  },
+  "santiago--landmark-2": {
+    "src": "/photos/santiago--landmark-2-960.webp",
+    "srcSmall": "/photos/santiago--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Valparaíso, Santiago",
+      "fr": "Valparaíso, Santiago du Chili"
+    },
+    "title": "Casa Celeste Hostal, Cerro Alegre, Valparaíso 20201102 119.jpg",
+    "author": "Carlos Figueroa Rojas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casa_Celeste_Hostal,_Cerro_Alegre,_Valpara%C3%ADso_20201102_119.jpg"
+  },
+  "quito--history": {
+    "src": "/photos/quito--history-960.webp",
+    "srcSmall": "/photos/quito--history-480.webp",
+    "width": 1920,
+    "height": 1189,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Quito",
+      "fr": "Une image historique de l'histoire de Quito"
+    },
+    "title": "Quito as from panecillo Basilica.jpg",
+    "author": "Cayambe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Quito_as_from_panecillo_Basilica.jpg"
+  },
+  "quito--culture": {
+    "src": "/photos/quito--culture-960.webp",
+    "srcSmall": "/photos/quito--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Hand Made Alpaca Sweaters for sale at the Otavalo Artisan Market in the Andes Mountains, South America",
+      "fr": "Scène de la culture locale à Quito"
+    },
+    "title": "Otavalo Artisan Market - Andes Mountains - South America - photograph 018.JPG",
+    "author": "David Adam Kess",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Otavalo_Artisan_Market_-_Andes_Mountains_-_South_America_-_photograph_018.JPG"
+  },
+  "quito--landmark-0": {
+    "src": "/photos/quito--landmark-0-960.webp",
+    "srcSmall": "/photos/quito--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1235,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Historic Centre of Quito, Quito",
+      "fr": "Centre historique de Quito, Quito"
+    },
+    "title": "Iglesia de La Compañía, Quito, Ecuador, 2015-07-22, DD 149-151 HDR.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iglesia_de_La_Compa%C3%B1%C3%ADa,_Quito,_Ecuador,_2015-07-22,_DD_149-151_HDR.JPG"
+  },
+  "quito--landmark-1": {
+    "src": "/photos/quito--landmark-1-960.webp",
+    "srcSmall": "/photos/quito--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1446,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Mitad del Mundo, Quito",
+      "fr": "Mitad del Mundo, Quito"
+    },
+    "title": "Mitad del Mundo, Quito, Ecuador, 2015-07-22, DD 15.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mitad_del_Mundo,_Quito,_Ecuador,_2015-07-22,_DD_15.JPG"
+  },
+  "quito--landmark-2": {
+    "src": "/photos/quito--landmark-2-960.webp",
+    "srcSmall": "/photos/quito--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "TelefériQo, Quito",
+      "fr": "TelefériQo, Quito"
+    },
+    "title": "Gondolas of the TeleferiQo in Quito, Ecuador.jpg",
+    "author": "AndrewDressel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gondolas_of_the_TeleferiQo_in_Quito,_Ecuador.jpg"
+  },
+  "havana--history": {
+    "src": "/photos/havana--history-960.webp",
+    "srcSmall": "/photos/havana--history-480.webp",
+    "width": 1125,
+    "height": 743,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A plan of the city and harbour of the Havanna situated on the island of Cuba Date: 1740 Dimensions: 49.0 x 74.0 cm. Scale: Scale not given",
+      "fr": "Une image historique de l'histoire de La Havane"
+    },
+    "title": "1740 Plan of the city and harbour of the Havanna situated on the island of Cuba BPL m8628.png",
+    "author": "Author unknown",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:1740_Plan_of_the_city_and_harbour_of_the_Havanna_situated_on_the_island_of_Cuba_BPL_m8628.png"
+  },
+  "havana--culture": {
+    "src": "/photos/havana--culture-960.webp",
+    "srcSmall": "/photos/havana--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "antiguo casino español en la plaza de la libertada cuidad de matanzas hoy en dia convertida en la biblioteca gener y del monte",
+      "fr": "Scène de la culture locale à La Havane"
+    },
+    "title": "Casino Español, Matanzas Cuba.jpg",
+    "author": "Liu Fernandez Esparrech",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Casino_Espa%C3%B1ol,_Matanzas_Cuba.jpg"
+  },
+  "havana--landmark-0": {
+    "src": "/photos/havana--landmark-0-960.webp",
+    "srcSmall": "/photos/havana--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1127,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Old Havana, Havana",
+      "fr": "Vieille Havane, La Havane"
+    },
+    "title": "La havane plaza vieja.JPG",
+    "author": "Velvet",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_havane_plaza_vieja.JPG"
+  },
+  "havana--landmark-1": {
+    "src": "/photos/havana--landmark-1-960.webp",
+    "srcSmall": "/photos/havana--landmark-1-480.webp",
+    "width": 1280,
+    "height": 546,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Malecón, Havana",
+      "fr": "Malecón, La Havane"
+    },
+    "title": "Havana malecon (cropped).jpg",
+    "author": "Lukas Mathis",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Havana_malecon_(cropped).jpg"
+  },
+  "havana--landmark-2": {
+    "src": "/photos/havana--landmark-2-960.webp",
+    "srcSmall": "/photos/havana--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1278,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Castillo del Morro, Havana",
+      "fr": "Castillo del Morro, La Havane"
+    },
+    "title": "FaroCastillodelMoro-Cuba-ene2017.jpg",
+    "author": "Ezarate",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FaroCastillodelMoro-Cuba-ene2017.jpg"
+  },
+  "punta-cana--history": {
+    "src": "/photos/punta-cana--history-960.webp",
+    "srcSmall": "/photos/punta-cana--history-480.webp",
+    "width": 1920,
+    "height": 1233,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Santo Domingo - Alcázar de Colón, March 2016, part of UNESCO World Heritage Site Ref. Number 526",
+      "fr": "Une image historique de l'histoire de Punta Cana"
+    },
+    "title": "Santo Domingo - Alcazar de Colon 02.JPG",
+    "author": "Martin Falbisoner",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santo_Domingo_-_Alcazar_de_Colon_02.JPG"
+  },
+  "punta-cana--culture": {
+    "src": "/photos/punta-cana--culture-960.webp",
+    "srcSmall": "/photos/punta-cana--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Carnival in Concepción de La Vega, Dominican Republic",
+      "fr": "Scène de la culture locale à Punta Cana"
+    },
+    "title": "Carnival-3490.jpg",
+    "author": "Idobi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carnival-3490.jpg"
+  },
+  "punta-cana--landmark-0": {
+    "src": "/photos/punta-cana--landmark-0-960.webp",
+    "srcSmall": "/photos/punta-cana--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bávaro Beach, Punta Cana",
+      "fr": "Plage de Bávaro, Punta Cana"
+    },
+    "title": "Cap Cana Marina Dominican Republic.jpg",
+    "author": "https://www.flickr.com/photos/uira/",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cap_Cana_Marina_Dominican_Republic.jpg"
+  },
+  "punta-cana--landmark-1": {
+    "src": "/photos/punta-cana--landmark-1-960.webp",
+    "srcSmall": "/photos/punta-cana--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Saona Island, Punta Cana",
+      "fr": "Île Saona, Punta Cana"
+    },
+    "title": "Saona Island December 2020.jpg",
+    "author": "Danu Widjajanto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saona_Island_December_2020.jpg"
+  },
+  "punta-cana--landmark-2": {
+    "src": "/photos/punta-cana--landmark-2-960.webp",
+    "srcSmall": "/photos/punta-cana--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1171,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Colonial Zone of Santo Domingo, Punta Cana",
+      "fr": "Zone coloniale de Saint-Domingue, Punta Cana"
+    },
+    "title": "Santo Domingo Cathedral (1899).jpg",
+    "author": "AnonymousUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Santo_Domingo_Cathedral_(1899).jpg"
+  },
+  "montego-bay--history": {
+    "src": "/photos/montego-bay--history-960.webp",
+    "srcSmall": "/photos/montego-bay--history-480.webp",
+    "width": 1560,
+    "height": 904,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "West Indies - Jamaica - Kingston Harbour, ca.1870, size 13*21cm",
+      "fr": "Une image historique de l'histoire de Jamaïque"
+    },
+    "title": "Jamaica Kingston Harbor.png",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Jamaica_Kingston_Harbor.png"
+  },
+  "montego-bay--culture": {
+    "src": "/photos/montego-bay--culture-960.webp",
+    "srcSmall": "/photos/montego-bay--culture-480.webp",
+    "width": 1920,
+    "height": 2880,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Everyday culture in Jamaica",
+      "fr": "Scène de la culture locale à Jamaïque"
+    },
+    "title": "50th anniversary of Jamaican independence, Norland Scarecrow Festival, Norland, West Yorkshire (Taken by Flickr user 1st September 2012).jpg",
+    "author": "Flickr user:Tim Green aka atouch",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:50th_anniversary_of_Jamaican_independence,_Norland_Scarecrow_Festival,_Norland,_West_Yorkshire_(Taken_by_Flickr_user_1st_September_2012).jpg"
+  },
+  "montego-bay--landmark-0": {
+    "src": "/photos/montego-bay--landmark-0-960.webp",
+    "srcSmall": "/photos/montego-bay--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1285,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Dunn's River Falls, Jamaica",
+      "fr": "Chutes de Dunn's River, Jamaïque"
+    },
+    "title": "Dunns River Falls climb.JPG",
+    "author": "Breakyunit at English Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Dunns_River_Falls_climb.JPG"
+  },
+  "montego-bay--landmark-1": {
+    "src": "/photos/montego-bay--landmark-1-960.webp",
+    "srcSmall": "/photos/montego-bay--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1275,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Rose Hall Great House, Jamaica",
+      "fr": "Rose Hall Great House, Jamaïque"
+    },
+    "title": "Rose Hall Jamaica Photo Don Ramey Logan.jpg",
+    "author": "Don Ramey Logan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rose_Hall_Jamaica_Photo_Don_Ramey_Logan.jpg"
+  },
+  "montego-bay--landmark-2": {
+    "src": "/photos/montego-bay--landmark-2-960.webp",
+    "srcSmall": "/photos/montego-bay--landmark-2-480.webp",
+    "width": 1400,
+    "height": 933,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Seven Mile Beach, Negril, Jamaica",
+      "fr": "Seven Mile Beach, Negril, Jamaïque"
+    },
+    "title": "Negril Jamaica 2007-09.jpg",
+    "author": "Unknown",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Negril_Jamaica_2007-09.jpg"
+  },
+  "san-juan--history": {
+    "src": "/photos/san-juan--history-960.webp",
+    "srcSmall": "/photos/san-juan--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Museo de San Juan, former Old San Juan marketplace hall 1",
+      "fr": "Une image historique de l'histoire de San Juan"
+    },
+    "title": "Museo de San Juan (2025).jpg",
+    "author": "Ligocsicnarf89",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Museo_de_San_Juan_(2025).jpg"
+  },
+  "san-juan--culture": {
+    "src": "/photos/san-juan--culture-960.webp",
+    "srcSmall": "/photos/san-juan--culture-480.webp",
+    "width": 1920,
+    "height": 1199,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "\"La escuela del Maestro Cordero\" - 'The school of Master Cordero' - by Puerto Rican impressionist painter Francisco Oller",
+      "fr": "Scène de la culture locale à San Juan"
+    },
+    "title": "La escuela del Maestro Cordero by Francisco Oller.jpg",
+    "author": "Francisco Oller (1833-1917)",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:La_escuela_del_Maestro_Cordero_by_Francisco_Oller.jpg"
+  },
+  "san-juan--landmark-0": {
+    "src": "/photos/san-juan--landmark-0-960.webp",
+    "srcSmall": "/photos/san-juan--landmark-0-480.webp",
+    "width": 1920,
+    "height": 811,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Castillo San Felipe del Morro, San Juan",
+      "fr": "Castillo San Felipe del Morro, San Juan"
+    },
+    "title": "Castillo San Felipe Del Morro (16869927311).jpg",
+    "author": "Chad Sparkes from Kissimmee,Florida, United States",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Castillo_San_Felipe_Del_Morro_(16869927311).jpg"
+  },
+  "san-juan--landmark-1": {
+    "src": "/photos/san-juan--landmark-1-960.webp",
+    "srcSmall": "/photos/san-juan--landmark-1-480.webp",
+    "width": 1920,
+    "height": 953,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "El Yunque National Forest, San Juan",
+      "fr": "Forêt nationale d'El Yunque, San Juan"
+    },
+    "title": "Top of El Yunque, from the Yokahú Tower, an observation tower built in 1963 (cropped).jpg",
+    "author": "Harvey Barrison",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Top_of_El_Yunque,_from_the_Yokah%C3%BA_Tower,_an_observation_tower_built_in_1963_(cropped).jpg"
+  },
+  "san-juan--landmark-2": {
+    "src": "/photos/san-juan--landmark-2-960.webp",
+    "srcSmall": "/photos/san-juan--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1214,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bioluminescent bays, San Juan",
+      "fr": "Baies bioluminescentes, San Juan"
+    },
+    "title": "Las Cabezas de San Juan PR Fajardo IMG 2385 Laguna Grande.JPG",
+    "author": "Bjoertvedt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Las_Cabezas_de_San_Juan_PR_Fajardo_IMG_2385_Laguna_Grande.JPG"
+  },
+  "barbados--history": {
+    "src": "/photos/barbados--history-960.webp",
+    "srcSmall": "/photos/barbados--history-480.webp",
+    "width": 1000,
+    "height": 624,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Barbados, B.W.I. — Photomechanical print (postcard) Undivided back No. 2035",
+      "fr": "Une image historique de l'histoire de Barbade"
+    },
+    "title": "Barbados - Island scenes.jpg",
+    "author": "Unknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Barbados_-_Island_scenes.jpg"
+  },
+  "barbados--culture": {
+    "src": "/photos/barbados--culture-960.webp",
+    "srcSmall": "/photos/barbados--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Miami Beach by Oistins, Barbados - viewed from Enterprise Coast Road",
+      "fr": "Scène de la culture locale à Barbade"
+    },
+    "title": "Miami Beach, Barbados.jpg",
+    "author": "The original uploader was ROxBo at English Wikipedia.",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Miami_Beach,_Barbados.jpg"
+  },
+  "barbados--landmark-0": {
+    "src": "/photos/barbados--landmark-0-960.webp",
+    "srcSmall": "/photos/barbados--landmark-0-480.webp",
+    "width": 650,
+    "height": 488,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Harrison's Cave, Barbados",
+      "fr": "Harrison's Cave, Barbade"
+    },
+    "title": "Harrisoncave1.JPG",
+    "author": "NeilEvans at English Wikipedia",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Harrisoncave1.JPG"
+  },
+  "barbados--landmark-1": {
+    "src": "/photos/barbados--landmark-1-960.webp",
+    "srcSmall": "/photos/barbados--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bathsheba, Barbados",
+      "fr": "Bathsheba, Barbade"
+    },
+    "title": "Bathsheba, Barbados 08.jpg",
+    "author": "Postdlf",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Bathsheba,_Barbados_08.jpg"
+  },
+  "barbados--landmark-2": {
+    "src": "/photos/barbados--landmark-2-960.webp",
+    "srcSmall": "/photos/barbados--landmark-2-480.webp",
+    "width": 1600,
+    "height": 1200,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Mount Gay Rum Visitor Centre, Barbados",
+      "fr": "Centre des visiteurs de Mount Gay, Barbade"
+    },
+    "title": "Mount Gay Rum Visitors Centre, Spring Garden HWY, Barbados-002.jpg",
+    "author": "CaribDigita",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Gay_Rum_Visitors_Centre,_Spring_Garden_HWY,_Barbados-002.jpg"
+  },
+  "dubai--history": {
+    "src": "/photos/dubai--history-960.webp",
+    "srcSmall": "/photos/dubai--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "One of the old houses on Deira Grand Souk overlooking Dubai Creek; a saltwater creek that holds a great portion of Dubai's history",
+      "fr": "Une image historique de l'histoire de Dubaï"
+    },
+    "title": "Old Houses on the Creek.jpg",
+    "author": "Iwona Rege",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_Houses_on_the_Creek.jpg"
+  },
+  "dubai--culture": {
+    "src": "/photos/dubai--culture-960.webp",
+    "srcSmall": "/photos/dubai--culture-480.webp",
+    "width": 759,
+    "height": 753,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A dallah a traditional Arab coffee pot with cups and coffee beans",
+      "fr": "Scène de la culture locale à Dubaï"
+    },
+    "title": "A dallah a traditional Arabic coffee pot with cups and coffee beans.jpg",
+    "author": "Canbel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_dallah_a_traditional_Arabic_coffee_pot_with_cups_and_coffee_beans.jpg"
+  },
+  "dubai--landmark-0": {
+    "src": "/photos/dubai--landmark-0-960.webp",
+    "srcSmall": "/photos/dubai--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Burj Khalifa, Dubai",
+      "fr": "Burj Khalifa, Dubaï"
+    },
+    "title": "Burj Khalifa (worlds tallest building) and the Dubai skyline (25781049892).jpg",
+    "author": "imran shahabuddin",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_(worlds_tallest_building)_and_the_Dubai_skyline_(25781049892).jpg"
+  },
+  "dubai--landmark-1": {
+    "src": "/photos/dubai--landmark-1-960.webp",
+    "srcSmall": "/photos/dubai--landmark-1-480.webp",
+    "width": 1920,
+    "height": 2877,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Al Fahidi Historical Neighbourhood, Dubai",
+      "fr": "Quartier historique d'Al Fahidi, Dubaï"
+    },
+    "title": "Al Bastakiya of Dubai.jpg",
+    "author": "Phil6007",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al_Bastakiya_of_Dubai.jpg"
+  },
+  "dubai--landmark-2": {
+    "src": "/photos/dubai--landmark-2-960.webp",
+    "srcSmall": "/photos/dubai--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Museum of the Future, Dubai",
+      "fr": "Musée du Futur, Dubaï"
+    },
+    "title": "Museum of the Future 9.jpg",
+    "author": "EditQ",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Museum_of_the_Future_9.jpg"
+  },
+  "bali--history": {
+    "src": "/photos/bali--history-960.webp",
+    "srcSmall": "/photos/bali--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Bali",
+      "fr": "Une image historique de l'histoire de Bali"
+    },
+    "title": "Besakih Bali Indonesia Pura-Besakih-02.jpg",
+    "author": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Besakih_Bali_Indonesia_Pura-Besakih-02.jpg"
+  },
+  "bali--culture": {
+    "src": "/photos/bali--culture-960.webp",
+    "srcSmall": "/photos/bali--culture-480.webp",
+    "width": 1136,
+    "height": 1226,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Garuda wisnu kencana Statue in cultural park, Bali, Indonesia",
+      "fr": "Scène de la culture locale à Bali"
+    },
+    "title": "Statue of God Vishnu.jpg",
+    "author": "Grimm Faraday",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Statue_of_God_Vishnu.jpg"
+  },
+  "bali--landmark-0": {
+    "src": "/photos/bali--landmark-0-960.webp",
+    "srcSmall": "/photos/bali--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tanah Lot, Bali",
+      "fr": "Tanah Lot, Bali"
+    },
+    "title": "TanahLot 2014.JPG",
+    "author": "Grayswoodsurrey",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TanahLot_2014.JPG"
+  },
+  "bali--landmark-1": {
+    "src": "/photos/bali--landmark-1-960.webp",
+    "srcSmall": "/photos/bali--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Uluwatu Temple, Bali",
+      "fr": "Temple d'Uluwatu, Bali"
+    },
+    "title": "Luhur Uluwatu Temple, Bali, 20220826 0953 1016.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Luhur_Uluwatu_Temple,_Bali,_20220826_0953_1016.jpg"
+  },
+  "bali--landmark-2": {
+    "src": "/photos/bali--landmark-2-960.webp",
+    "srcSmall": "/photos/bali--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Tegallalang Rice Terraces, Bali",
+      "fr": "Rizières de Tegallalang, Bali"
+    },
+    "title": "Rice terraces, Bali.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg"
+  },
+  "hanoi--history": {
+    "src": "/photos/hanoi--history-960.webp",
+    "srcSmall": "/photos/hanoi--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Long Biên Bridge, Hanoi",
+      "fr": "Une image historique de l'histoire de Hanoï"
+    },
+    "title": "Long-bien-bridge-3371617.jpg",
+    "author": "Quangpraha",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Long-bien-bridge-3371617.jpg"
+  },
+  "hanoi--culture": {
+    "src": "/photos/hanoi--culture-960.webp",
+    "srcSmall": "/photos/hanoi--culture-480.webp",
+    "width": 1536,
+    "height": 1152,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Einsäulenpagode Hanoi",
+      "fr": "Scène de la culture locale à Hanoï"
+    },
+    "title": "Vn-hanoi-einsäulenpagode-02-08-07.jpg",
+    "author": "Bgabel",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vn-hanoi-eins%C3%A4ulenpagode-02-08-07.jpg"
+  },
+  "hanoi--landmark-0": {
+    "src": "/photos/hanoi--landmark-0-960.webp",
+    "srcSmall": "/photos/hanoi--landmark-0-480.webp",
+    "width": 1536,
+    "height": 1320,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Hoàn Kiếm Lake, Hanoi",
+      "fr": "Lac Hoàn Kiếm, Hanoï"
+    },
+    "title": "Thap Rua.jpg",
+    "author": "Cyril Doussin from London, United Kingdom",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thap_Rua.jpg"
+  },
+  "hanoi--landmark-1": {
+    "src": "/photos/hanoi--landmark-1-960.webp",
+    "srcSmall": "/photos/hanoi--landmark-1-480.webp",
+    "width": 1920,
+    "height": 896,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Temple of Literature, Hanoi",
+      "fr": "Temple de la Littérature, Hanoï"
+    },
+    "title": "Hanoi Temple of Literature (cropped).jpg",
+    "author": "The original uploader was Chuoibk at English Wikipedia.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanoi_Temple_of_Literature_(cropped).jpg"
+  },
+  "hanoi--landmark-2": {
+    "src": "/photos/hanoi--landmark-2-960.webp",
+    "srcSmall": "/photos/hanoi--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1347,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Ha Long Bay, Hanoi",
+      "fr": "Baie d'Ha Long, Hanoï"
+    },
+    "title": "Ha Long Bay in 2019.jpg",
+    "author": "Taewangkorea",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ha_Long_Bay_in_2019.jpg"
+  },
+  "seoul--history": {
+    "src": "/photos/seoul--history-960.webp",
+    "srcSmall": "/photos/seoul--history-480.webp",
+    "width": 1920,
+    "height": 1165,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sungnyemun Gate in Seoul, South Korea",
+      "fr": "Une image historique de l'histoire de Séoul"
+    },
+    "title": "Sungnyemun Gate in Seoul.jpg",
+    "author": "Bernard Gagnon",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate_in_Seoul.jpg"
+  },
+  "seoul--culture": {
+    "src": "/photos/seoul--culture-960.webp",
+    "srcSmall": "/photos/seoul--culture-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "w:Korea Queer Culture Festival 2014, before the parade. Here: several participants at a small booth",
+      "fr": "Scène de la culture locale à Séoul"
+    },
+    "title": "Korea Queer Culture Festival 2014 57.JPG",
+    "author": "User:Piotrus",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea_Queer_Culture_Festival_2014_57.JPG"
+  },
+  "seoul--landmark-0": {
+    "src": "/photos/seoul--landmark-0-960.webp",
+    "srcSmall": "/photos/seoul--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Gyeongbokgung Palace, Seoul",
+      "fr": "Palais Gyeongbokgung, Séoul"
+    },
+    "title": "Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+    "author": "Frank Schulenburg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
+  },
+  "seoul--landmark-1": {
+    "src": "/photos/seoul--landmark-1-960.webp",
+    "srcSmall": "/photos/seoul--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bukchon Hanok Village, Seoul",
+      "fr": "Village de hanok de Bukchon, Séoul"
+    },
+    "title": "Bukchon Hanok Village 01.jpg",
+    "author": "Bgag",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_01.jpg"
+  },
+  "seoul--landmark-2": {
+    "src": "/photos/seoul--landmark-2-960.webp",
+    "srcSmall": "/photos/seoul--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1447,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "N Seoul Tower, Seoul",
+      "fr": "N Seoul Tower, Séoul"
+    },
+    "title": "중화전의 낮.jpg",
+    "author": "Eunmi Park",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%EC%A4%91%ED%99%94%EC%A0%84%EC%9D%98_%EB%82%AE.jpg"
+  },
+  "singapore--history": {
+    "src": "/photos/singapore--history-960.webp",
+    "srcSmall": "/photos/singapore--history-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Raffles Hotel, Singapore",
+      "fr": "Une image historique de l'histoire de Singapour"
+    },
+    "title": "Hotel Raffles, Singapur, 2023-08-16, DD 153-155 HDR.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hotel_Raffles,_Singapur,_2023-08-16,_DD_153-155_HDR.jpg"
+  },
+  "singapore--culture": {
+    "src": "/photos/singapore--culture-960.webp",
+    "srcSmall": "/photos/singapore--culture-480.webp",
+    "width": 1000,
+    "height": 533,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Huayi Chinese Festival of the Arts, Esplanade, Singapore, 2009",
+      "fr": "Scène de la culture locale à Singapour"
+    },
+    "title": "Huayi Chinese Festival of the Arts, Esplanade, Singapore, 2009..jpg",
+    "author": "Dennis Hee",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Huayi_Chinese_Festival_of_the_Arts,_Esplanade,_Singapore,_2009..jpg"
+  },
+  "singapore--landmark-0": {
+    "src": "/photos/singapore--landmark-0-960.webp",
+    "srcSmall": "/photos/singapore--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Gardens by the Bay, Singapore",
+      "fr": "Gardens by the Bay, Singapour"
+    },
+    "title": "Supertree Grove, Gardens by the Bay, Singapore - 20120712-02.jpg",
+    "author": "Shiny Things.",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Supertree_Grove,_Gardens_by_the_Bay,_Singapore_-_20120712-02.jpg"
+  },
+  "singapore--landmark-1": {
+    "src": "/photos/singapore--landmark-1-960.webp",
+    "srcSmall": "/photos/singapore--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Marina Bay Sands, Singapore",
+      "fr": "Marina Bay Sands, Singapour"
+    },
+    "title": "Marina Bay Sands (I).jpg",
+    "author": "This Photo was taken by Supanut Arunoprayote.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands_(I).jpg"
+  },
+  "singapore--landmark-2": {
+    "src": "/photos/singapore--landmark-2-960.webp",
+    "srcSmall": "/photos/singapore--landmark-2-480.webp",
+    "width": 1296,
+    "height": 972,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Singapore Botanic Gardens, Singapore",
+      "fr": "Jardin botanique de Singapour, Singapour"
+    },
+    "title": "Symphony Lake, Singapore Botanic Gardens - 20041025.jpg",
+    "author": "Velela",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Symphony_Lake,_Singapore_Botanic_Gardens_-_20041025.jpg"
+  },
+  "sydney--history": {
+    "src": "/photos/sydney--history-960.webp",
+    "srcSmall": "/photos/sydney--history-480.webp",
+    "width": 1920,
+    "height": 1497,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "George Street, Sydney, 1883, by Alfred Tischbauer, oil painting, State Library of New South Wales DG 210",
+      "fr": "Une image historique de l'histoire de Sydney"
+    },
+    "title": "George Street Sydney 1883.jpg",
+    "author": "Alfred Tischbauer",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:George_Street_Sydney_1883.jpg"
+  },
+  "sydney--culture": {
+    "src": "/photos/sydney--culture-960.webp",
+    "srcSmall": "/photos/sydney--culture-480.webp",
+    "width": 1400,
+    "height": 1067,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Charles Farrell at Bondi carnival",
+      "fr": "Scène de la culture locale à Sydney"
+    },
+    "title": "SLNSW 16188 Charles Farrell at Bondi carnival.jpg",
+    "author": "Sam Hood",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:SLNSW_16188_Charles_Farrell_at_Bondi_carnival.jpg"
+  },
+  "sydney--landmark-0": {
+    "src": "/photos/sydney--landmark-0-960.webp",
+    "srcSmall": "/photos/sydney--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1179,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sydney Opera House, Sydney",
+      "fr": "Opéra de Sydney, Sydney"
+    },
+    "title": "Sydney Australia. (21339175489).jpg",
+    "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sydney_Australia._(21339175489).jpg"
+  },
+  "sydney--landmark-1": {
+    "src": "/photos/sydney--landmark-1-960.webp",
+    "srcSmall": "/photos/sydney--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sydney Harbour Bridge, Sydney",
+      "fr": "Sydney Harbour Bridge, Sydney"
+    },
+    "title": "Sydney Harbour Bridge-16 October 2025.jpg",
+    "author": "Servite et contribuere",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Sydney_Harbour_Bridge-16_October_2025.jpg"
+  },
+  "sydney--landmark-2": {
+    "src": "/photos/sydney--landmark-2-960.webp",
+    "srcSmall": "/photos/sydney--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1079,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Bondi Beach, Sydney",
+      "fr": "Plage de Bondi, Sydney"
+    },
+    "title": "Bondi from above.jpg",
+    "author": "Nick Ang",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bondi_from_above.jpg"
+  },
+  "auckland--history": {
+    "src": "/photos/auckland--history-960.webp",
+    "srcSmall": "/photos/auckland--history-480.webp",
+    "width": 1787,
+    "height": 977,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Queen Street, Auckland in the 1860s, from albumen print, State Library of New South Wales, DL PX 150",
+      "fr": "Une image historique de l'histoire de Auckland"
+    },
+    "title": "Queen Street, Auckland in the 1860s New Zealand Views.jpg",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "source": "https://commons.wikimedia.org/wiki/File:Queen_Street,_Auckland_in_the_1860s_New_Zealand_Views.jpg"
+  },
+  "auckland--culture": {
+    "src": "/photos/auckland--culture-960.webp",
+    "srcSmall": "/photos/auckland--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Kia Aroha College Tongan group performing Ma'ulu'ulu at ASB Polyfest",
+      "fr": "Scène de la culture locale à Auckland"
+    },
+    "title": "Kia Aroha College, ASB Polyfest. (POLY-D-2015-018).jpg",
+    "author": "Smita Biswas",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kia_Aroha_College,_ASB_Polyfest._(POLY-D-2015-018).jpg"
+  },
+  "auckland--landmark-0": {
+    "src": "/photos/auckland--landmark-0-960.webp",
+    "srcSmall": "/photos/auckland--landmark-0-480.webp",
+    "width": 1920,
+    "height": 4019,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sky Tower, Auckland",
+      "fr": "Sky Tower, Auckland"
+    },
+    "title": "Sky Tower Auckland 01.jpg",
+    "author": "Krzysztof Golik",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sky_Tower_Auckland_01.jpg"
+  },
+  "auckland--landmark-1": {
+    "src": "/photos/auckland--landmark-1-960.webp",
+    "srcSmall": "/photos/auckland--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Maungawhau / Mount Eden, Auckland",
+      "fr": "Maungawhau / mont Eden, Auckland"
+    },
+    "title": "Mount Eden.jpg",
+    "author": "Etherbug, Alan Collins",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Eden.jpg"
+  },
+  "auckland--landmark-2": {
+    "src": "/photos/auckland--landmark-2-960.webp",
+    "srcSmall": "/photos/auckland--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Waiheke Island, Auckland",
+      "fr": "Île de Waiheke, Auckland"
+    },
+    "title": "Waiheke Island Vineyard.jpg",
+    "author": "russellstreet",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Waiheke_Island_Vineyard.jpg"
+  },
+  "petra-amman--history": {
+    "src": "/photos/petra-amman--history-960.webp",
+    "srcSmall": "/photos/petra-amman--history-480.webp",
+    "width": 1920,
+    "height": 1229,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A historical image from the story of Jordan",
+      "fr": "Une image historique de l'histoire de Jordanie"
+    },
+    "title": "David Roberts - Petra, Lower End of the Valley, Viewing the Acropolis - 1927.79 - Cleveland Museum of Art.tif",
+    "author": "David Roberts",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Roberts_-_Petra,_Lower_End_of_the_Valley,_Viewing_the_Acropolis_-_1927.79_-_Cleveland_Museum_of_Art.tif"
+  },
+  "petra-amman--culture": {
+    "src": "/photos/petra-amman--culture-960.webp",
+    "srcSmall": "/photos/petra-amman--culture-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Jerash Festival, C.E.2018 Photo by: Ahmed Abdo",
+      "fr": "Scène de la culture locale à Jordanie"
+    },
+    "title": "Jerash Festival 2018 15.jpg",
+    "author": "Addustour, Jordan Press & Publication Co.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jerash_Festival_2018_15.jpg"
+  },
+  "petra-amman--landmark-0": {
+    "src": "/photos/petra-amman--landmark-0-960.webp",
+    "srcSmall": "/photos/petra-amman--landmark-0-480.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Petra, Jordan",
+      "fr": "Pétra, Jordanie"
+    },
+    "title": "Al Deir Petra.JPG",
+    "author": "Azurfrog",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al_Deir_Petra.JPG"
+  },
+  "petra-amman--landmark-1": {
+    "src": "/photos/petra-amman--landmark-1-960.webp",
+    "srcSmall": "/photos/petra-amman--landmark-1-480.webp",
+    "width": 1920,
+    "height": 1277,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Wadi Rum, Jordan",
+      "fr": "Wadi Rum, Jordanie"
+    },
+    "title": "Mountain in Wadi Rum, Jordan.jpg",
+    "author": "Daniel Case",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mountain_in_Wadi_Rum,_Jordan.jpg"
+  },
+  "petra-amman--landmark-2": {
+    "src": "/photos/petra-amman--landmark-2-960.webp",
+    "srcSmall": "/photos/petra-amman--landmark-2-480.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Dead Sea, Jordan",
+      "fr": "Mer Morte, Jordanie"
+    },
+    "title": "Dead Sea beach 00.JPG",
+    "author": "لا روسا",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dead_Sea_beach_00.JPG"
   }
 }
