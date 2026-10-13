@@ -18,7 +18,7 @@ export const WIDGET_CSP = {
   script: ["tpemd.com", "tpo.gg", "widgets.kiwi.com", "cdn.klook.com"],
   frame: ["widgets.kiwi.com", "affiliate.klook.com"],
   connect: ["tpo.gg", "brand.travelpayouts.com"],
-  img: ["tpemb.com"],
+  img: ["tpemd.com", "tpemb.com"],
 } as const;
 
 export interface WidgetIds {
