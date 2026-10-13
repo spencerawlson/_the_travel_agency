@@ -102,14 +102,15 @@ function languageList(codes: string[], locale: string): string {
 
 function Fact({ icon, label, children }: { icon: string; label: string; children: ReactNode }) {
   return (
-    <div className="flex gap-3 rounded-2xl bg-surface-1 p-4 shadow-sm ring-1 ring-line/60">
-      <span aria-hidden className="text-2xl leading-none">
-        {icon}
-      </span>
-      <div>
-        <dt className="text-xs font-semibold tracking-wide text-ink-muted uppercase">{label}</dt>
-        <dd className="mt-1 font-medium">{children}</dd>
-      </div>
+    // A <dl> group may contain only <dt>/<dd>, so the icon lives inside the <dt>.
+    <div className="relative rounded-2xl bg-surface-1 p-4 pl-14 shadow-sm ring-1 ring-line/60">
+      <dt className="text-xs font-semibold tracking-wide text-ink-muted uppercase">
+        <span aria-hidden className="absolute top-4 left-4 text-2xl leading-none normal-case">
+          {icon}
+        </span>
+        {label}
+      </dt>
+      <dd className="mt-1 font-medium">{children}</dd>
     </div>
   );
 }

@@ -33,7 +33,17 @@ const nextConfig: NextConfig = {
     return [{ source: "/api/:path*", destination: `${apiInternalUrl}/api/:path*` }];
   },
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      {
+        // Optimised photos (scripts/fetch_photos.py) rarely change: let browsers
+        // and Cloudflare keep them for 30 days, refreshing in the background after.
+        source: "/photos/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=604800" },
+        ],
+      },
+    ];
   },
 };
 

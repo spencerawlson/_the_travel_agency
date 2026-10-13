@@ -78,8 +78,8 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
         <Link
           href={`/destinations/${current.slug}`}
           className="rounded-full bg-black/45 px-3 py-1 text-xs font-medium text-white backdrop-blur hover:bg-black/60"
-          aria-label={t("slideLink", { name: current.name })}
         >
+          <span className="sr-only">{t("slideLink", { name: current.name })}: </span>
           {current.name} · {current.credit}
         </Link>
         {slides.length > 1 && !reduced && (
