@@ -15,16 +15,6 @@ export interface AffiliateScript {
   code: string;
 }
 
-/**
- * Extra hosts the Drive script reaches once running (observed on the live site):
- * its config/auth endpoints, its tooltip stylesheet and the Google Fonts it uses.
- */
-export const DRIVE_CSP = {
-  connect: ["emrld.cc", "mn-tz.com", "www.travelpayouts.com"],
-  style: ["fonts.googleapis.com"],
-  font: ["fonts.gstatic.com"],
-} as const;
-
 const ID_RE = /^\d{3,12}$/;
 const HOST_RE = /^(?=.{4,253}$)([a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}$/;
 

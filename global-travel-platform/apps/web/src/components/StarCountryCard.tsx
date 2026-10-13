@@ -21,9 +21,9 @@ export async function StarCountryCard({ locale }: { locale: string }) {
   return (
     <section aria-label={t("starTitle")} className="mx-auto max-w-6xl px-4 pt-16">
       <div
-        className={`star-card star-${country.theme} overflow-hidden rounded-3xl shadow-xl ring-1 ring-line/60`}
+        className={`theme-${country.theme} overflow-hidden rounded-3xl shadow-xl ring-1 ring-line/60`}
       >
-        <div className="px-6 py-10 sm:px-10 sm:py-12">
+        <div className="bg-black/25 px-6 py-10 backdrop-blur-[1px] sm:px-10 sm:py-12">
           <p className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30">
             <span aria-hidden>⭐</span> {t("starTitle")}
           </p>
@@ -34,11 +34,14 @@ export async function StarCountryCard({ locale }: { locale: string }) {
 
           <ul className="mt-8 grid gap-4 md:grid-cols-2">
             {blocks.map((b) => (
-              <li key={b.key} className="rounded-2xl bg-black/[0.18] p-5 ring-1 ring-white/15">
+              <li
+                key={b.key}
+                className="rounded-2xl bg-white/10 p-5 ring-1 ring-white/20 backdrop-blur-sm"
+              >
                 <h3 className="flex items-center gap-2 text-base font-semibold text-white">
                   <span aria-hidden>{b.emoji}</span> {t(b.key)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/[0.92]">{b.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/85">{b.body}</p>
               </li>
             ))}
           </ul>

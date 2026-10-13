@@ -1,0 +1,268 @@
+"use client";
+
+import createGlobe, { type Globe as CobeGlobe } from "cobe";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import {
+  arcPoint,
+  easeInOutCubic,
+  pickMarker,
+  projectPoint,
+  type PickTarget,
+} from "@/lib/globe-math";
+
+export interface FlyDestination extends PickTarget {
+  name: string;
+}
+
+interface Props {
+  locale: string;
+  destinations: FlyDestination[];
+  hub: { latitude: number; longitude: number };
+}
+
+const AUTO_SPEED = 0.0022;
+const FLIGHT_MS = 2100;
+const THETA = 0.28;
+const MARKER_ELEVATION = 0.02;
+const ARC_HEIGHT = 0.28;
+
+/**
+ * Interactive 3D globe for the destinations page. Drag to spin; clicking a
+ * destination marker launches a little airplane that flies the arc from the
+ * visitor's home airport to the destination, then opens its page.
+ */
+export function DestinationsGlobe({ locale, destinations, hub }: Props) {
+  const router = useRouter();
+  const t = useTranslations("destinations");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const planeRef = useRef<HTMLDivElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [flyingTo, setFlyingTo] = useState<string | null>(null);
+
+  const stateRef = useRef({
+    phi: 4.4,
+    velocity: 0,
+    flying: null as null | { dest: FlyDestination; start: number },
+    reduceMotion: false,
+  });
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const wrap = wrapRef.current;
+    if (!canvas || !wrap) return;
+    const st = stateRef.current;
+    st.reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    st.flying = null;
+    setFlyingTo(null);
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let size = canvas.offsetWidth;
+    let visible = true;
+    let frame = 0;
+    let dragStart: { x: number; y: number } | null = null;
+    let dragged = false;
+
+    const targets: PickTarget[] = destinations;
+    const hubLoc: [number, number] = [hub.latitude, hub.longitude];
+
+    let globe: CobeGlobe;
+    try {
+      globe = createGlobe(canvas, {
+        devicePixelRatio: dpr,
+        width: size * dpr,
+        height: size * dpr,
+        phi: st.phi,
+        theta: THETA,
+        dark: 0,
+        diffuse: 1.15,
+        mapSamples: 16000,
+        mapBrightness: 5.5,
+        mapBaseBrightness: 0.05,
+        baseColor: [0.93, 0.96, 1],
+        markerColor: [1, 0.45, 0.3],
+        glowColor: [0.86, 0.93, 1],
+        markers: [
+          { location: hubLoc, size: 0.09, color: [0.1, 0.45, 0.9] },
+          ...destinations.map((d) => ({
+            location: [d.latitude, d.longitude] as [number, number],
+            size: 0.075,
+            id: d.slug,
+          })),
+        ],
+        arcs: destinations.map((d) => ({
+          from: hubLoc,
+          to: [d.latitude, d.longitude] as [number, number],
+        })),
+        arcColor: [0.18, 0.5, 0.95],
+        arcWidth: 0.6,
+        arcHeight: ARC_HEIGHT,
+        markerElevation: MARKER_ELEVATION,
+      });
+    } catch {
+      return; // no WebGL: fallback link list below still works
+    }
+
+    const startFlight = (dest: FlyDestination) => {
+      if (st.reduceMotion) {
+        router.push(`/${locale}/destinations/${dest.slug}`);
+        return;
+      }
+      st.flying = { dest, start: performance.now() };
+      setFlyingTo(dest.name);
+      // Highlight only the active route during the flight.
+      globe.update({
+        arcs: [{ from: hubLoc, to: [dest.latitude, dest.longitude] as [number, number] }],
+        arcColor: [1, 0.45, 0.3],
+        arcWidth: 1.4,
+      });
+    };
+
+    const tryPick = (clientX: number, clientY: number) => {
+      const rect = canvas.getBoundingClientRect();
+      const hit = pickMarker(
+        clientX - rect.left,
+        clientY - rect.top,
+        targets,
+        st.phi,
+        THETA,
+        rect.width,
+        MARKER_ELEVATION,
+      );
+      if (hit) {
+        const dest = destinations.find((d) => d.slug === hit.slug);
+        if (dest) startFlight(dest);
+      }
+    };
+
+    const tick = (now: number) => {
+      if (visible) {
+        const fl = st.flying;
+        if (!fl) {
+          if (dragStart === null) {
+            st.velocity *= 0.95;
+            st.phi += (st.reduceMotion ? 0 : AUTO_SPEED) + st.velocity;
+          }
+        } else {
+          const rawT = Math.min((now - fl.start) / FLIGHT_MS, 1);
+          const e = easeInOutCubic(rawT);
+          const dest: [number, number] = [fl.dest.latitude, fl.dest.longitude];
+          const pos = arcPoint(hubLoc, dest, e, MARKER_ELEVATION, ARC_HEIGHT);
+          const proj = projectPoint(pos, st.phi, THETA);
+          const ahead = arcPoint(hubLoc, dest, Math.min(e + 0.03, 1), MARKER_ELEVATION, ARC_HEIGHT);
+          const projAhead = projectPoint(ahead, st.phi, THETA);
+          const plane = planeRef.current;
+          if (plane) {
+            const heading =
+              (Math.atan2(projAhead.y - proj.y, projAhead.x - proj.x) * 180) / Math.PI;
+            plane.style.opacity = "1";
+            plane.style.left = `${proj.x * 100}%`;
+            plane.style.top = `${proj.y * 100}%`;
+            plane.style.transform = `translate(-50%, -50%) rotate(${heading + 45}deg)`;
+          }
+          if (rawT >= 1) {
+            router.push(`/${locale}/destinations/${fl.dest.slug}`);
+            return; // page navigates away; stop the loop
+          }
+        }
+        globe.update({ phi: st.phi });
+      }
+      frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    canvas.style.opacity = "1";
+
+    const io = new IntersectionObserver(([entry]) => {
+      visible = Boolean(entry?.isIntersecting);
+    });
+    io.observe(canvas);
+
+    const ro = new ResizeObserver(() => {
+      size = canvas.offsetWidth;
+      globe.update({ width: size * dpr, height: size * dpr });
+    });
+    ro.observe(canvas);
+
+    const onDown = (e: PointerEvent) => {
+      if (st.flying) return;
+      dragStart = { x: e.clientX, y: e.clientY };
+      dragged = false;
+      canvas.setPointerCapture(e.pointerId);
+    };
+    const onMove = (e: PointerEvent) => {
+      if (dragStart === null || st.flying) return;
+      const dx = e.clientX - dragStart.x;
+      const dy = e.clientY - dragStart.y;
+      if (Math.hypot(dx, dy) > 6) dragged = true;
+      if (dragged) {
+        const delta = (e.clientX - dragStart.x) / 200;
+        st.phi += delta;
+        st.velocity = delta * 0.2;
+        dragStart = { x: e.clientX, y: e.clientY };
+        canvas.style.cursor = "grabbing";
+      } else {
+        // Hover: pointer cursor when over a destination marker.
+        const rect = canvas.getBoundingClientRect();
+        const hit = pickMarker(
+          e.clientX - rect.left,
+          e.clientY - rect.top,
+          targets,
+          st.phi,
+          THETA,
+          rect.width,
+          MARKER_ELEVATION,
+        );
+        canvas.style.cursor = hit ? "pointer" : "grab";
+      }
+    };
+    const onUp = (e: PointerEvent) => {
+      if (dragStart !== null && !dragged && !st.flying) tryPick(e.clientX, e.clientY);
+      dragStart = null;
+      dragged = false;
+      canvas.style.cursor = "grab";
+    };
+    canvas.addEventListener("pointerdown", onDown);
+    canvas.addEventListener("pointermove", onMove);
+    canvas.addEventListener("pointerup", onUp);
+    canvas.addEventListener("pointercancel", onUp);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      io.disconnect();
+      ro.disconnect();
+      canvas.removeEventListener("pointerdown", onDown);
+      canvas.removeEventListener("pointermove", onMove);
+      canvas.removeEventListener("pointerup", onUp);
+      canvas.removeEventListener("pointercancel", onUp);
+      globe.destroy();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [destinations, hub.latitude, hub.longitude, locale]);
+
+  return (
+    <div>
+      <div ref={wrapRef} className="relative mx-auto aspect-square w-full max-w-[560px]">
+        <div aria-hidden className="globe-fallback absolute inset-[6%] rounded-full" />
+        <canvas
+          ref={canvasRef}
+          role="img"
+          aria-label={t("globeLabel")}
+          className="relative size-full cursor-grab touch-pan-y opacity-0 transition-opacity duration-700"
+        />
+        {/* The little airplane — positioned every frame during the flight. */}
+        <div
+          ref={planeRef}
+          aria-hidden
+          className="pointer-events-none absolute top-0 left-0 text-3xl opacity-0 drop-shadow-lg"
+          style={{ transform: "translate(-50%, -50%)" }}
+        >
+          ✈️
+        </div>
+      </div>
+      <p aria-live="polite" className="mt-3 text-center text-sm font-medium text-ink-muted">
+        {flyingTo ? t("flyingTo", { city: flyingTo }) : t("globeHint")}
+      </p>
+    </div>
+  );
+}

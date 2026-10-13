@@ -32,6 +32,13 @@
     "destinationsTitle": "Des lieux dont on tombe amoureux",
     "destinationsSubtitle": "Des idées choisies avec soin, avec la durée de vol approximative depuis {city}.",
     "viewAll": "Voir toutes les destinations",
+    "starTitle": "⭐ Pays de la semaine",
+    "starFood": "Cuisine",
+    "starCulture": "Culture",
+    "starSights": "À voir",
+    "starKnownFor": "Célèbre pour",
+    "starCta": "Explorer les destinations",
+    "globeLabel": "Globe en rotation montrant les trajets au départ de {city} vers nos destinations vedettes",
     "howTitle": "Comment ça fonctionne",
     "how1Title": "Recherchez",
     "how1": "Indiquez où et quand. Nous interrogeons nos partenaires pour vous.",
@@ -39,7 +46,6 @@
     "how2": "Voyez les prix, les durées et les escales côte à côte.",
     "how3Title": "Réservez auprès du vendeur",
     "how3": "Vous finalisez votre réservation sur le site de la compagnie aérienne ou de l'agence.",
-    "globeLabel": "Globe en rotation montrant les trajets au départ de {city} vers nos destinations vedettes",
     "moodTitle": "Quel genre de voyage?",
     "moodSubtitle": "Choisissez une envie, nous vous suggérons les lieux.",
     "moods": {
@@ -64,13 +70,7 @@
     "destinationsSubtitleAny": "Des idées choisies avec soin, partout dans le monde.",
     "slideLink": "Découvrir {name}",
     "pauseSlides": "Mettre en pause les photos d'arrière-plan",
-    "playSlides": "Lire les photos d'arrière-plan",
-    "starTitle": "Pays de la semaine",
-    "starFood": "Cuisine",
-    "starCulture": "Culture",
-    "starSights": "À voir",
-    "starKnownFor": "Célèbre pour",
-    "starCta": "Explorer les destinations"
+    "playSlides": "Lire les photos d'arrière-plan"
   },
   "search": {
     "formLabel": "Recherche de vols",
@@ -188,6 +188,10 @@
     "flightChip": "{time} depuis {city}",
     "filterLabel": "Type de voyage",
     "allMoods": "Toutes les destinations",
+    "globeLabel": "Globe 3D interactif des destinations",
+    "globeHint": "Faites-le tourner · cliquez sur une destination et votre avion vous y emmènera ✈️",
+    "flyingTo": "✈️ En vol vers {city}…",
+    "allDestinations": "Toutes les destinations",
     "facts": {
       "title": "Bon à savoir",
       "bestTime": "Meilleure période",

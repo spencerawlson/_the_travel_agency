@@ -37,19 +37,15 @@ describe("buildCsp", () => {
     const csp = buildCsp({ dev: false });
     expect(csp).toContain("script-src 'self' 'unsafe-inline';");
     expect(csp).not.toContain("https://");
-    expect(csp).toContain("style-src 'self' 'unsafe-inline';");
     expect(csp).toContain("frame-ancestors 'none'");
   });
 
-  it("adds the partner host (and the Drive script extras) only when enabled", () => {
+  it("adds the partner host to script/img/connect only", () => {
     const csp = buildCsp({ dev: false, partnerHosts: ["emrldtp.cc"] });
     const directive = (name: string) => csp.split("; ").find((d) => d.startsWith(name)) ?? "";
     expect(directive("script-src")).toContain("https://emrldtp.cc");
     expect(directive("img-src")).toContain("https://emrldtp.cc");
     expect(directive("connect-src")).toContain("https://emrldtp.cc");
-    expect(directive("connect-src")).toContain("https://www.travelpayouts.com");
-    expect(directive("style-src")).toContain("https://emrldtp.cc https://fonts.googleapis.com");
-    expect(directive("font-src")).toContain("https://fonts.gstatic.com");
     expect(directive("default-src")).toBe("default-src 'self'");
     expect(directive("frame-ancestors")).toBe("frame-ancestors 'none'");
   });

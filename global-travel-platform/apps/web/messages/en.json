@@ -32,6 +32,13 @@
     "destinationsTitle": "Places to fall in love with",
     "destinationsSubtitle": "Hand-picked ideas, with approximate flight times from {city}.",
     "viewAll": "View all destinations",
+    "starTitle": "⭐ Country of the week",
+    "starFood": "Food",
+    "starCulture": "Culture",
+    "starSights": "Sights",
+    "starKnownFor": "Known for",
+    "starCta": "Explore destinations",
+    "globeLabel": "Rotating globe with flight routes from {city} to our featured destinations",
     "howTitle": "How it works",
     "how1Title": "Search",
     "how1": "Tell us where and when. We query our travel partners for you.",
@@ -39,7 +46,6 @@
     "how2": "See prices, durations and stops side by side.",
     "how3Title": "Book with the seller",
     "how3": "You complete your booking on the airline's or agency's website.",
-    "globeLabel": "Rotating globe with flight routes from {city} to our featured destinations",
     "moodTitle": "What kind of trip?",
     "moodSubtitle": "Pick a feeling, we'll suggest the places.",
     "moods": {
@@ -64,13 +70,7 @@
     "destinationsSubtitleAny": "Hand-picked ideas from around the world.",
     "slideLink": "Explore {name}",
     "pauseSlides": "Pause background photos",
-    "playSlides": "Play background photos",
-    "starTitle": "Country of the week",
-    "starFood": "Food",
-    "starCulture": "Culture",
-    "starSights": "Sights",
-    "starKnownFor": "Known for",
-    "starCta": "Explore destinations"
+    "playSlides": "Play background photos"
   },
   "search": {
     "formLabel": "Flight search",
@@ -188,6 +188,10 @@
     "flightChip": "{time} from {city}",
     "filterLabel": "Trip type",
     "allMoods": "All destinations",
+    "globeLabel": "Interactive 3D globe of destinations",
+    "globeHint": "Drag to spin · click a glowing destination and your plane will fly you there ✈️",
+    "flyingTo": "✈️ Flying to {city}…",
+    "allDestinations": "All destinations",
     "facts": {
       "title": "Good to know",
       "bestTime": "Best time to go",
