@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSiteConfig } from "@/lib/site";
+import { EmailLink } from "@/components/EmailLink";
 
 export async function generateMetadata({
   params,
@@ -29,23 +30,19 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <Card>
           <dt className="text-sm font-semibold text-ink-muted">{t("emailLabel")}</dt>
           <dd className="mt-1">
-            <a
-              href={`mailto:${site.contactEmail}`}
+            <EmailLink
+              email={site.contactEmail}
               className="font-semibold text-brand-600 hover:underline"
-            >
-              {site.contactEmail}
-            </a>
+            />
           </dd>
         </Card>
         <Card>
           <dt className="text-sm font-semibold text-ink-muted">{t("privacyLabel")}</dt>
           <dd className="mt-1">
-            <a
-              href={`mailto:${site.privacyEmail}`}
+            <EmailLink
+              email={site.privacyEmail}
               className="font-semibold text-brand-600 hover:underline"
-            >
-              {site.privacyEmail}
-            </a>
+            />
           </dd>
         </Card>
         {site.address && (

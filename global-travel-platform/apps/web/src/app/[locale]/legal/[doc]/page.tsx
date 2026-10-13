@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLegalDocument, isLegalDoc } from "@/content/legal";
 import { getSiteConfig } from "@/lib/site";
+import { TextWithEmails } from "@/components/EmailLink";
 
 type Params = Promise<{ locale: string; doc: string }>;
 
@@ -40,13 +41,15 @@ export default async function LegalPage({ params }: { params: Params }) {
           <h2 className="font-display text-2xl font-semibold">{section.heading}</h2>
           {section.paragraphs.map((p) => (
             <p key={p.slice(0, 40)} className="mt-3 leading-relaxed">
-              {p}
+              <TextWithEmails text={p} linkClassName="text-brand-600 underline" />
             </p>
           ))}
           {section.list && (
             <ul className="mt-3 list-disc space-y-2 pl-5">
               {section.list.map((item) => (
-                <li key={item.slice(0, 40)}>{item}</li>
+                <li key={item.slice(0, 40)}>
+                  <TextWithEmails text={item} linkClassName="text-brand-600 underline" />
+                </li>
               ))}
             </ul>
           )}
