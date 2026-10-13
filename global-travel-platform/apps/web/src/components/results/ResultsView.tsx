@@ -16,6 +16,7 @@ import { formatDate } from "@/lib/format";
 import { fromQuery, toApiRequest, validateSearch } from "@/lib/search";
 import { useRequest } from "@/lib/useRequest";
 import { Disclaimers } from "./Disclaimers";
+import { LiveSearchCard } from "./LiveSearchCard";
 import { OfferCard } from "./OfferCard";
 
 type Sort = "price" | "duration" | "departure";
@@ -85,7 +86,7 @@ export function ResultsView() {
     return list;
   }, [data, sort]);
 
-  async function selectOffer(offer: FlightOffer) {
+  async function selectOffer(offer: Pick<FlightOffer, "id">) {
     setBusyOffer(offer.id);
     setClickError(null);
     try {
@@ -119,6 +120,7 @@ export function ResultsView() {
     );
   }
 
+  const liveSearches = state.kind === "done" ? (state.data.live_searches ?? []) : [];
   const failedProviders =
     state.kind === "done" ? state.data.providers.filter((p) => p.status === "error") : [];
   const pax = form.adults + form.children + form.infants;
@@ -193,6 +195,15 @@ export function ResultsView() {
                 {t(errorKey(visibleClickError))}
               </p>
             )}
+            {liveSearches.map((ls) => (
+              <LiveSearchCard
+                key={ls.id}
+                link={ls}
+                empty={offers.length === 0}
+                busy={busyOffer === ls.id}
+                onSelect={() => void selectOffer(ls)}
+              />
+            ))}
             {offers.length === 0 ? (
               <p className="text-ink-muted">{t("empty")}</p>
             ) : (

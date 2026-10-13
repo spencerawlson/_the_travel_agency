@@ -223,6 +223,39 @@ async def test_falls_back_to_month_and_flags_dates(provider, api) -> None:  # ty
     assert "different_dates" in offer.notes
 
 
+async def test_widens_to_any_return_then_any_date(provider, api) -> None:  # type: ignore[no-untyped-def]
+    # exact, same month: empty; any return in that month: still empty; any date: hit.
+    api.prices += [httpx.Response(200, json={"success": True, "data": []})] * 3
+    api.prices.append(httpx.Response(200, json={"success": True, "data": [ticket()]}))
+    [offer] = await provider.search(req())
+    queries = [parse_qs(urlsplit(str(c.url)).query) for c in api.price_calls()]
+    assert len(queries) == 4
+    assert "return_at" not in queries[2] and queries[2]["departure_at"] == [f"{DEPART:%Y-%m}"]
+    assert "departure_at" not in queries[3] and "return_at" not in queries[3]
+    assert offer.price.amount == 812
+
+
+async def test_long_stay_skips_queries_the_api_rejects(provider, api) -> None:  # type: ignore[no-untyped-def]
+    long_return = DEPART + timedelta(days=60)
+    await provider.search(req(return_date=long_return))
+    for c in api.price_calls():
+        assert "return_at" not in parse_qs(urlsplit(str(c.url)).query)
+
+
+async def test_rejected_query_counts_as_no_data(provider, api) -> None:  # type: ignore[no-untyped-def]
+    api.prices.append(httpx.Response(400, json={"success": False, "error": "bad request"}))
+    api.prices.append(httpx.Response(200, json={"success": True, "data": [ticket()]}))
+    assert len(await provider.search(req())) == 1
+
+
+def test_live_search_url(provider) -> None:  # type: ignore[no-untyped-def]
+    url = provider.live_search_url(req(adults=2, children=1))
+    parts = urlsplit(url)
+    assert parts.hostname == "www.aviasales.com"
+    assert parts.path == f"/search/YUL{DEPART:%d%m}CDG{RETURN:%d%m}21"
+    assert parse_qs(parts.query) == {"marker": ["584743"]}
+
+
 async def test_responses_are_cached(provider, api) -> None:  # type: ignore[no-untyped-def]
     api.prices.append(httpx.Response(200, json={"success": True, "data": [ticket()]}))
     await provider.search(req())
@@ -320,8 +353,22 @@ async def test_api_real_fares_not_bookable_until_live(
         target = urlsplit(ok.json()["redirect_url"])
         assert target.hostname == "www.aviasales.com"
         assert parse_qs(target.query)["marker"] == ["584743"]
-        statuses = sorted(e.status for e in (await db.scalars(select(ReferralClickEvent))).all())
-        assert statuses == ["blocked_live_disabled", "redirected"]
+
+        # "Live prices for these dates" link: same validated, recorded path, no price.
+        [live] = body["live_searches"]
+        assert live["bookable"] is False  # computed before go-live in this test
+        lv = await client.post("/api/v1/referrals/click", json={"offer_id": live["id"]})
+        assert lv.status_code == 200, lv.text
+        assert urlsplit(lv.json()["redirect_url"]).path == (
+            f"/search/YUL{DEPART:%d%m}CDG{RETURN:%d%m}1"
+        )
+        events = (await db.scalars(select(ReferralClickEvent))).all()
+        assert sorted(e.status for e in events) == [
+            "blocked_live_disabled",
+            "redirected",
+            "redirected",
+        ]
+        assert any(e.offer_id == live["id"] and e.price_amount is None for e in events)
     finally:
         row.status, row.agreement_verified = "sandbox", False
         await db.commit()

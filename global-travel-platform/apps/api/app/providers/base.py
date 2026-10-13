@@ -150,5 +150,11 @@ class FlightProvider(abc.ABC):
         """Turn a cached offer into the partner redirect. URLs must come from
         the partner (or, for demo providers, an internal demo page)."""
 
+    def live_search_url(self, request: FlightSearchRequest) -> str | None:
+        """Partner page showing live fares for exactly these dates, if the
+        provider has one (no price is claimed). Must be on the provider's
+        redirect allowlist."""
+        return None
+
     async def close(self) -> None:  # pragma: no cover - default no-op
         return None

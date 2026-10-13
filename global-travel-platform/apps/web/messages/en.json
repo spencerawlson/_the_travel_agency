@@ -158,7 +158,11 @@
       "economy_only": "Economy price shown; your cabin is priced on the partner site.",
       "cached_fare": "Found by travellers recently. The live price may differ."
     },
-    "fareFrom": "Fare from {seller} · compare sellers on Aviasales"
+    "fareFrom": "Fare from {seller} · compare sellers on Aviasales",
+    "liveTitle": "Want other times or airlines? See every live fare on {partner}",
+    "liveTitleEmpty": "No saved fares for these dates. Check live prices on {partner}",
+    "liveBody": "Opens {partner} with your exact route, dates and travellers. Prices there are live and confirmed before you pay.",
+    "liveCta": "See live prices on {partner}"
   },
   "disclaimers": {
     "demo_data": "These are demo fares generated for testing. They are not real prices or availability, and cannot be booked.",

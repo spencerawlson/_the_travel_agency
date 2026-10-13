@@ -48,7 +48,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       {/* ---------- Hero: photo carousel backdrop + headline + globe ---------- */}
-      <section className="relative isolate overflow-hidden border-b border-line/60">
+      <section className="relative isolate z-10 overflow-x-clip border-b border-line/60">
         <HeroBackdrop slides={slides} />
         <div className="mx-auto grid max-w-6xl items-center gap-6 px-4 pt-10 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-14 md:pb-10">
           <div>

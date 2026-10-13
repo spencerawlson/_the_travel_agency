@@ -23,7 +23,7 @@ from app.core.config import get_settings
 from app.core.errors import AppError
 from app.core.metrics import referral_clicks
 from app.models import AffiliateProvider, ReferralClickEvent
-from app.providers.base import FlightOffer
+from app.providers.base import AffiliateRedirect, FlightOffer
 from app.providers.mock import DEMO_REDIRECT_PATH
 from app.providers.registry import get_registry
 from app.services.search import offer_cache_key
@@ -77,26 +77,37 @@ async def record_click(
             code="offer_expired",
             status_code=410,
         )
-    offer = FlightOffer.model_validate(cached["offer"])
+    is_live_search = cached.get("kind") == "live_search"
+    offer = None if is_live_search else FlightOffer.model_validate(cached["offer"])
+    provider_code = cached["provider_code"] if offer is None else offer.provider_code
     provider_row = (
         await session.scalars(
-            select(AffiliateProvider).where(AffiliateProvider.code == offer.provider_code)
+            select(AffiliateProvider).where(AffiliateProvider.code == provider_code)
         )
     ).first()
-    provider_impl = get_registry().get(offer.provider_code)
+    provider_impl = get_registry().get(provider_code)
     if provider_row is None or provider_impl is None:
         raise AppError("Provider unavailable", code="provider_unavailable", status_code=409)
 
-    redirect = provider_impl.build_redirect(offer)
+    if offer is None:
+        # Partner's own live search page for the traveller's dates; no price.
+        redirect = AffiliateRedirect(
+            url=cached["url"],
+            provider_code=provider_code,
+            is_demo=False,
+            seller_name=provider_impl.display_name,
+        )
+    else:
+        redirect = provider_impl.build_redirect(offer)
     event = ReferralClickEvent(
         id=uuid.uuid4(),
         search_event_id=uuid.UUID(cached["search_event_id"]),
         provider_id=provider_row.id,
-        offer_id=offer.id,
+        offer_id=offer_id,
         origin_iata=cached["origin"],
         destination_iata=cached["destination"],
-        price_amount=Decimal(offer.price.amount),
-        price_currency=offer.price.currency,
+        price_amount=Decimal(offer.price.amount) if offer else None,
+        price_currency=offer.price.currency if offer else None,
         is_demo=redirect.is_demo,
         locale=locale,
         client_hash=client_hash,

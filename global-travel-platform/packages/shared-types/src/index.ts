@@ -141,6 +141,14 @@ export interface ProviderStatus {
   result_count: number;
 }
 
+/** Partner page with live fares for the exact search; no price is claimed. */
+export interface LiveSearchLink {
+  id: string;
+  provider_code: string;
+  provider_name: string;
+  bookable: boolean;
+}
+
 export interface FlightSearchResponse {
   search_id: string;
   is_demo: boolean;
@@ -150,6 +158,7 @@ export interface FlightSearchResponse {
   offers: FlightOffer[];
   providers: ProviderStatus[];
   disclaimers: DisclaimerCode[];
+  live_searches?: LiveSearchLink[];
 }
 
 export interface ReferralClickResponse {

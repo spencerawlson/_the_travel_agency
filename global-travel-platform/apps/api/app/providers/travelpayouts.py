@@ -46,6 +46,8 @@ logger = logging.getLogger("app.providers.travelpayouts")
 PRICES_PATH = "/aviasales/v3/prices_for_dates"
 AIRLINES_PATH = "/data/en/airlines.json"
 RESULT_LIMIT = 30
+# The Data API rejects round trips whose dates are more than 30 days apart.
+MAX_STAY_DAYS = 30
 
 # Aviasales deep-link class letters (economy has none).
 CABIN_LETTER = {
@@ -68,6 +70,10 @@ NOTE_SELLER_ON_PARTNER = "seller_on_partner"
 
 class ProviderConfigError(ValueError):
     pass
+
+
+class QueryRejected(ProviderError):
+    """HTTP 400: the API refuses this particular query (e.g. dates too far apart)."""
 
 
 def passenger_block(adults: int, children: int, infants: int, cabin: CabinClass) -> str:
@@ -137,6 +143,8 @@ class TravelpayoutsProvider(FlightProvider):
             raise ProviderError(
                 self.code, ProviderErrorKind.unavailable, f"HTTP {resp.status_code}", retryable=True
             )
+        if resp.status_code == 400:
+            raise QueryRejected(self.code, ProviderErrorKind.bad_response, "HTTP 400")
         if resp.status_code != 200:
             raise ProviderError(
                 self.code, ProviderErrorKind.bad_response, f"HTTP {resp.status_code}"
@@ -183,12 +191,19 @@ class TravelpayoutsProvider(FlightProvider):
 
     # -- search ----------------------------------------------------------------
 
-    def _params(self, req: FlightSearchRequest, *, month: bool) -> dict[str, str]:
+    def _params(
+        self,
+        req: FlightSearchRequest,
+        *,
+        month: bool,
+        depart_only: bool = False,
+        undated: bool = False,
+    ) -> dict[str, str]:
+        """`depart_only`: any return date; `undated`: any upcoming dates."""
         fmt = "%Y-%m" if month else "%Y-%m-%d"
         params = {
             "origin": req.origin.iata,
             "destination": req.destination.iata,
-            "departure_at": req.depart_date.strftime(fmt),
             "one_way": "true" if req.trip_type == TripType.one_way else "false",
             "currency": req.currency.lower(),
             "sorting": "price",
@@ -196,18 +211,41 @@ class TravelpayoutsProvider(FlightProvider):
             "unique": "false",
             "direct": "false",
         }
-        if req.trip_type == TripType.round_trip and req.return_date:
-            params["return_at"] = req.return_date.strftime(fmt)
+        if not undated:
+            params["departure_at"] = req.depart_date.strftime(fmt)
+            if req.trip_type == TripType.round_trip and req.return_date and not depart_only:
+                params["return_at"] = req.return_date.strftime(fmt)
         if self._market:
             params["market"] = self._market
         return params
 
+    async def _prices_or_empty(self, params: dict[str, str]) -> list[dict[str, Any]]:
+        """Like _prices, but a query the API refuses (HTTP 400) just has no data."""
+        try:
+            return await self._prices(params)
+        except QueryRejected:
+            logger.info("price_query_rejected", extra={"params": sorted(params)})
+            return []
+
     async def search(self, request: FlightSearchRequest) -> list[FlightOffer]:
-        tickets = await self._prices(self._params(request, month=False))
-        if not tickets:
-            # The cache may simply have nothing for those exact days; show the
-            # same month instead, clearly marked as different dates.
-            tickets = await self._prices(self._params(request, month=True))
+        # The cache only holds fares other travellers searched recently, so widen
+        # step by step; anything off the requested dates is marked as such.
+        stay = (
+            (request.return_date - request.depart_date).days
+            if request.trip_type == TripType.round_trip and request.return_date
+            else 0
+        )
+        steps: list[dict[str, str]] = []
+        if stay <= MAX_STAY_DAYS:
+            steps += [self._params(request, month=False), self._params(request, month=True)]
+        if request.trip_type == TripType.round_trip:
+            steps.append(self._params(request, month=True, depart_only=True))
+        steps.append(self._params(request, month=False, undated=True))
+        tickets: list[dict[str, Any]] = []
+        for params in steps:
+            tickets = await self._prices_or_empty(params)
+            if tickets:
+                break
         airlines = await self._airline_names()
         offers: list[FlightOffer] = []
         for t in tickets:
@@ -331,6 +369,18 @@ class TravelpayoutsProvider(FlightProvider):
         params = [(k, v) for k, v in parse_qsl(query, keep_blank_values=True) if k != "marker"]
         params.append(("marker", self._marker))
         return f"{self._link_base}{path}?{urlencode(params)}"
+
+    def live_search_url(self, request: FlightSearchRequest) -> str | None:
+        back = (
+            request.return_date
+            if request.trip_type == TripType.round_trip and request.return_date
+            else None
+        )
+        path = f"/search/{request.origin.iata}{request.depart_date:%d%m}{request.destination.iata}"
+        if back is not None:
+            path += f"{back:%d%m}"
+        path += passenger_block(request.adults, request.children, request.infants, request.cabin)
+        return f"{self._link_base}{path}?{urlencode([('marker', self._marker)])}"
 
     def build_redirect(self, offer: FlightOffer) -> AffiliateRedirect:
         return AffiliateRedirect(

@@ -158,7 +158,11 @@
       "economy_only": "Prix en classe économique; votre classe est tarifée sur le site du partenaire.",
       "cached_fare": "Trouvé récemment par des voyageurs. Le prix en direct peut différer."
     },
-    "fareFrom": "Tarif de {seller} · comparez les vendeurs sur Aviasales"
+    "fareFrom": "Tarif de {seller} · comparez les vendeurs sur Aviasales",
+    "liveTitle": "D'autres horaires ou compagnies? Voyez tous les tarifs en direct sur {partner}",
+    "liveTitleEmpty": "Aucun tarif enregistré pour ces dates. Consultez les prix en direct sur {partner}",
+    "liveBody": "Ouvre {partner} avec votre trajet, vos dates et vos voyageurs. Les prix y sont en direct et confirmés avant le paiement.",
+    "liveCta": "Voir les prix en direct sur {partner}"
   },
   "disclaimers": {
     "demo_data": "Ces tarifs de démonstration sont générés à des fins de test. Il ne s'agit pas de prix ni de disponibilités réels, et ils ne peuvent pas être réservés.",

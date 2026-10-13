@@ -186,6 +186,15 @@ class ProviderStatusOut(BaseModel):
     result_count: int = 0
 
 
+class LiveSearchOut(BaseModel):
+    """Link to the partner's live fares for the exact search (no price shown)."""
+
+    id: str
+    provider_code: str
+    provider_name: str
+    bookable: bool
+
+
 class FlightSearchOut(BaseModel):
     search_id: uuid.UUID
     is_demo: bool
@@ -195,6 +204,7 @@ class FlightSearchOut(BaseModel):
     offers: list[OfferOut]
     providers: list[ProviderStatusOut]
     disclaimers: list[str]
+    live_searches: list[LiveSearchOut] = []
 
 
 # --- referrals ---------------------------------------------------------------

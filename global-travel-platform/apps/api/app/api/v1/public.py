@@ -25,6 +25,7 @@ from app.schemas.public import (
     FlightSearchIn,
     FlightSearchOut,
     HealthOut,
+    LiveSearchOut,
     Locale,
     MoneyOut,
     OfferOut,
@@ -200,7 +201,7 @@ async def deals(
     dependencies=[Depends(rate_limit("search", "rate_limit_search"))],
 )
 async def flights_search(payload: FlightSearchIn, request: Request, session: DB) -> FlightSearchOut:
-    event, _, _, offers, statuses = await search_flights(
+    event, _, _, offers, statuses, live = await search_flights(
         session, payload, client_hash=client_hash(client_ip(request))
     )
     origin = await airport_display(session, event.origin_iata)
@@ -264,6 +265,15 @@ async def flights_search(payload: FlightSearchIn, request: Request, session: DB)
             for s in statuses
         ],
         disclaimers=disclaimers,
+        live_searches=[
+            LiveSearchOut(
+                id=ls["id"],
+                provider_code=ls["provider"].code,
+                provider_name=ls["provider"].display_name,
+                bookable=bookable(ls["provider"].code),
+            )
+            for ls in live
+        ],
     )
 
 

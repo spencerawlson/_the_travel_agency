@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import logging
 import time
 from datetime import UTC, date, datetime, timedelta
@@ -96,9 +97,13 @@ async def _run_provider(
         ) from exc
 
 
+def live_search_id(provider_code: str, url: str) -> str:
+    return "live" + hashlib.sha256(f"{provider_code}|{url}".encode()).hexdigest()[:28]
+
+
 async def search_flights(
     session: AsyncSession, payload: FlightSearchIn, *, client_hash: str | None
-) -> tuple[FlightSearchEvent, AirportRef, AirportRef, list[FlightOffer], list[dict]]:
+) -> tuple[FlightSearchEvent, AirportRef, AirportRef, list[FlightOffer], list[dict], list[dict]]:
     validate_dates(payload)
     await ensure_currency(session, payload.currency)
     origin, destination = await resolve_airports(session, payload.origin, payload.destination)
@@ -201,7 +206,31 @@ async def search_flights(
             },
             settings.offer_ttl_seconds,
         )
-    return event, origin, destination, offers, statuses
+
+    # "See live prices for these exact dates" links (no price claimed). Cached
+    # like offers, so a click is still resolved and validated server-side.
+    live: list[dict] = []
+    for provider in providers:
+        if provider.is_demo:
+            continue
+        url = provider.live_search_url(request)
+        if not url:
+            continue
+        live_id = live_search_id(provider.code, url)
+        await cache.set_json(
+            offer_cache_key(live_id),
+            {
+                "kind": "live_search",
+                "provider_code": provider.code,
+                "url": url,
+                "search_event_id": str(event.id),
+                "origin": origin.iata,
+                "destination": destination.iata,
+            },
+            settings.offer_ttl_seconds,
+        )
+        live.append({"id": live_id, "provider": provider})
+    return event, origin, destination, offers, statuses, live
 
 
 async def airport_display(session: AsyncSession, iata: str) -> Airport | None:
