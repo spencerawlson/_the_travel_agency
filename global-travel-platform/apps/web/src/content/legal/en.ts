@@ -35,9 +35,9 @@ export const en: LegalContent = (s) => ({
         heading: "Sharing and transfers outside Quebec",
         paragraphs: [
           "When you click an offer, you leave our site and the partner receives your request directly from your browser. Partners may set their own cookies and apply their own privacy policies.",
-          ...(s.partnerScript
+          ...(s.partnerScript || s.partnerWidgets
             ? [
-                "Only if you consent, we load a script from our affiliate network, Travelpayouts, which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
+                "Only if you consent, we load content from our affiliate network, Travelpayouts, and its partners (Kiwi.com fare search, Klook activities), which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
               ]
             : []),
           "Our infrastructure providers (for example, hosting, content delivery and security services) may process data outside Quebec and Canada. Before such transfers, we assess privacy risks and put contractual safeguards in place, as required by Law 25.",
@@ -141,9 +141,9 @@ export const en: LegalContent = (s) => ({
           s.referralsLive
             ? "Partner links are active. When you click \u201cView deal\u201d, you go to Aviasales, a flight search site that compares offers from airlines and travel agencies. You choose your seller there and pay them directly. We may earn a commission from our affiliate network (Travelpayouts) if you book; it never changes the price you pay. Prices on our site are fares found recently and are confirmed on Aviasales before you pay."
             : "Partner booking links are not active yet. Prices shown are for comparison only. Partner links will be enabled once partner agreements and any licensing requirements have been confirmed.",
-          ...(s.partnerScript
+          ...(s.partnerScript || s.partnerWidgets
             ? [
-                "We are a member of the Travelpayouts affiliate network. With your consent, its script may add affiliate links or previews to our pages; we may earn a commission if you book through them.",
+                "We are a member of the Travelpayouts affiliate network. With your consent, our pages show partner content (for example live Kiwi.com fares and Klook activities) and may add affiliate links; we may earn a commission if you book through them, at no extra cost to you.",
               ]
             : []),
         ],
@@ -155,25 +155,28 @@ export const en: LegalContent = (s) => ({
     summary: "The cookies and local storage we use.",
     sections: [
       {
-        heading: s.partnerScript ? "Strictly necessary" : "Strictly necessary only",
+        heading:
+          s.partnerScript || s.partnerWidgets ? "Strictly necessary" : "Strictly necessary only",
         paragraphs: [
-          s.partnerScript
+          s.partnerScript || s.partnerWidgets
             ? "We do not use advertising or third-party analytics cookies. These cookies are needed for the site to work:"
             : "We do not use advertising or third-party analytics cookies. We use only what the site needs to work:",
         ],
         list: [
           "NEXT_LOCALE: remembers your language choice.",
-          ...(s.partnerScript ? ["fl_consent: remembers your cookie choice."] : []),
+          ...(s.partnerScript || s.partnerWidgets
+            ? ["fl_consent: remembers your cookie choice."]
+            : []),
           "gtp_admin_session and gtp_csrf: used only by administrators who sign in.",
         ],
       },
-      ...(s.partnerScript
+      ...(s.partnerScript || s.partnerWidgets
         ? [
             {
               heading: "Optional partner cookies (only with your consent)",
               paragraphs: [
-                "If you choose \u201cAccept partner cookies\u201d, we load a script from Travelpayouts, the travel affiliate network we work with. It can add travel links and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
-                "If you choose \u201cEssential only\u201d, the script is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Travelpayouts is governed by its own privacy policy.",
+                "If you choose \u201cAccept partner cookies\u201d, we load content from Travelpayouts, the travel affiliate network we work with, and its partners Kiwi.com (live flight search) and Klook (activities). It can add travel links, live offers and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
+                "If you choose \u201cEssential only\u201d, this partner content is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Travelpayouts is governed by its own privacy policy.",
               ],
             },
           ]

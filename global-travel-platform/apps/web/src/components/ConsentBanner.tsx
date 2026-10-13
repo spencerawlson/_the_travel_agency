@@ -52,14 +52,19 @@ function subscribe(cb: () => void) {
   return () => window.removeEventListener(CHANGE_EVENT, cb);
 }
 
-export function ConsentBanner() {
-  const t = useTranslations("consent");
-  // Server snapshot is "unknown" so nothing renders (and no mismatch) before hydration.
-  const consent = useSyncExternalStore(
+/** Current consent; undefined during SSR/hydration (render nothing third-party). */
+export function useConsent(): Consent | undefined {
+  return useSyncExternalStore(
     subscribe,
     () => readConsent(),
     () => undefined,
   );
+}
+
+export function ConsentBanner() {
+  const t = useTranslations("consent");
+  // Server snapshot is "unknown" so nothing renders (and no mismatch) before hydration.
+  const consent = useConsent();
   const [reopened, setReopened] = useState(false);
 
   useEffect(() => {

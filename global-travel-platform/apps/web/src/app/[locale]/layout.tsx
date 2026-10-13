@@ -98,7 +98,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer site={site} />
-          {partner && <ConsentBanner />}
+          {(partner || site.partnerWidgets) && <ConsentBanner />}
         </NextIntlClientProvider>
       </body>
     </html>

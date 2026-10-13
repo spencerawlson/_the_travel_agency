@@ -369,10 +369,16 @@
   },
   "consent": {
     "title": "Votre choix de témoins",
-    "body": "Nous aimerions charger un script de notre partenaire voyage Travelpayouts. Il peut ajouter des liens de voyage utiles et permet au partenaire d'installer des témoins pour nous attribuer les réservations. Il reste désactivé sauf si vous l'autorisez, et vous pouvez changer d'avis à tout moment dans « Paramètres des témoins ».",
+    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, liens de voyage utiles). Ces partenaires peuvent déposer des témoins afin que les réservations nous soient attribuées. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
     "accept": "Accepter les témoins partenaires",
     "reject": "Essentiels seulement",
     "settings": "Paramètres des témoins",
     "learnMore": "Lire notre avis sur les témoins"
+  },
+  "widgets": {
+    "klookTitle": "Quoi faire une fois sur place",
+    "kiwiTitle": "Plus de tarifs en direct de Kiwi.com",
+    "needsConsent": "Cette section affiche des offres en direct de {partner}, par l'entremise de notre réseau d'affiliation Travelpayouts. Elle ne se charge que si vous autorisez les témoins des partenaires.",
+    "allow": "Choisir mes témoins"
   }
 }

@@ -4,6 +4,7 @@
  * The default brand name is a PLACEHOLDER pending trademark clearance.
  */
 import { getAffiliateScript } from "./affiliate";
+import { getWidgetIds } from "./widgets";
 
 export interface SiteConfig {
   name: string;
@@ -15,6 +16,8 @@ export interface SiteConfig {
   legalLastUpdated: string;
   /** Optional partner script enabled (TRAVELPAYOUTS_SCRIPT_ID). */
   partnerScript: boolean;
+  /** Travelpayouts brand widgets (Klook, Kiwi.com) are enabled. */
+  partnerWidgets: boolean;
   /** Partner booking links are live (REFERRALS_LIVE_ENABLED). */
   referralsLive: boolean;
 }
@@ -32,6 +35,7 @@ export function getSiteConfig(): SiteConfig {
       env.PRIVACY_OFFICER_TITLE || "Person in charge of the protection of personal information",
     legalLastUpdated: env.LEGAL_LAST_UPDATED || "2026-10-12",
     partnerScript: getAffiliateScript(env) !== null,
+    partnerWidgets: getWidgetIds(env) !== null,
     referralsLive: (env.REFERRALS_LIVE_ENABLED || "").toLowerCase() === "true",
   };
 }

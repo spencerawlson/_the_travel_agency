@@ -35,9 +35,9 @@ export const fr: LegalContent = (s) => ({
         heading: "Communication et transferts hors Québec",
         paragraphs: [
           "Lorsque vous cliquez sur une offre, vous quittez notre site et le partenaire reçoit votre demande directement de votre navigateur. Les partenaires peuvent installer leurs propres témoins et appliquer leurs propres politiques de confidentialité.",
-          ...(s.partnerScript
+          ...(s.partnerScript || s.partnerWidgets
             ? [
-                "Seulement si vous y consentez, nous chargeons un script de notre réseau d'affiliation, Travelpayouts, qui peut installer des témoins et recueillir des renseignements techniques sur votre visite afin d'attribuer les réservations. Consultez notre avis sur les témoins; vous pouvez retirer votre consentement à tout moment.",
+                "Seulement si vous y consentez, nous chargeons du contenu de notre réseau d'affiliation, Travelpayouts, et de ses partenaires (recherche de vols Kiwi.com, activités Klook), qui peuvent installer des témoins et recueillir des renseignements techniques sur votre visite afin d'attribuer les réservations. Consultez notre avis sur les témoins; vous pouvez retirer votre consentement à tout moment.",
               ]
             : []),
           "Nos fournisseurs d'infrastructure (par exemple, hébergement, diffusion de contenu et services de sécurité) peuvent traiter des données à l'extérieur du Québec et du Canada. Avant de tels transferts, nous évaluons les facteurs relatifs à la vie privée et mettons en place des protections contractuelles, comme l'exige la Loi 25.",
@@ -142,9 +142,9 @@ export const fr: LegalContent = (s) => ({
           s.referralsLive
             ? "Les liens partenaires sont actifs. Lorsque vous cliquez sur « Voir l'offre », vous êtes dirigé vers Aviasales, un site de recherche de vols qui compare les offres de compagnies aériennes et d'agences de voyages. Vous y choisissez votre vendeur et le payez directement. Nous pouvons toucher une commission de notre réseau d'affiliation (Travelpayouts) si vous réservez; cela ne change jamais le prix que vous payez. Les prix affichés sur notre site sont des tarifs trouvés récemment et sont confirmés sur Aviasales avant le paiement."
             : "Les liens de réservation partenaires ne sont pas encore actifs. Les prix affichés servent uniquement à la comparaison. Les liens partenaires seront activés une fois les ententes de partenariat et toute exigence de permis applicable confirmées.",
-          ...(s.partnerScript
+          ...(s.partnerScript || s.partnerWidgets
             ? [
-                "Nous sommes membres du réseau d'affiliation Travelpayouts. Avec votre consentement, son script peut ajouter des liens d'affiliation ou des aperçus à nos pages; nous pouvons toucher une commission si vous réservez par leur intermédiaire.",
+                "Nous sommes membres du réseau d'affiliation Travelpayouts. Avec votre consentement, nos pages affichent du contenu partenaire (par exemple des tarifs Kiwi.com en direct et des activités Klook) et peuvent ajouter des liens d'affiliation; nous pouvons toucher une commission si vous réservez par leur intermédiaire, sans frais supplémentaires pour vous.",
               ]
             : []),
         ],
@@ -156,25 +156,30 @@ export const fr: LegalContent = (s) => ({
     summary: "Les témoins (cookies) et le stockage local que nous utilisons.",
     sections: [
       {
-        heading: s.partnerScript ? "Strictement nécessaires" : "Strictement nécessaires seulement",
+        heading:
+          s.partnerScript || s.partnerWidgets
+            ? "Strictement nécessaires"
+            : "Strictement nécessaires seulement",
         paragraphs: [
-          s.partnerScript
+          s.partnerScript || s.partnerWidgets
             ? "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Ces témoins sont nécessaires au fonctionnement du site :"
             : "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Nous n'utilisons que ce dont le site a besoin pour fonctionner :",
         ],
         list: [
           "NEXT_LOCALE : mémorise votre choix de langue.",
-          ...(s.partnerScript ? ["fl_consent : mémorise votre choix de témoins."] : []),
+          ...(s.partnerScript || s.partnerWidgets
+            ? ["fl_consent : mémorise votre choix de témoins."]
+            : []),
           "gtp_admin_session et gtp_csrf : utilisés uniquement par les administrateurs qui se connectent.",
         ],
       },
-      ...(s.partnerScript
+      ...(s.partnerScript || s.partnerWidgets
         ? [
             {
               heading: "Témoins partenaires facultatifs (seulement avec votre consentement)",
               paragraphs: [
-                "Si vous choisissez « Accepter les témoins partenaires », nous chargeons un script de Travelpayouts, le réseau d'affiliation voyage avec lequel nous travaillons. Il peut ajouter des liens de voyage et de courts aperçus à nos pages, et il permet à Travelpayouts et à ses partenaires d'installer des témoins et de recueillir des renseignements techniques (comme votre appareil, votre navigateur et les pages consultées) afin de nous attribuer les réservations.",
-                "Si vous choisissez « Essentiels seulement », le script n'est jamais chargé et le site fonctionne de la même façon. Vous pouvez modifier votre choix à tout moment grâce au lien « Paramètres des témoins » au bas de chaque page. Les données recueillies par Travelpayouts sont régies par sa propre politique de confidentialité.",
+                "Si vous choisissez « Accepter les témoins partenaires », nous chargeons du contenu de Travelpayouts, le réseau d'affiliation voyage avec lequel nous travaillons, et de ses partenaires Kiwi.com (recherche de vols en direct) et Klook (activités). Ce contenu peut ajouter des liens de voyage, des offres en direct et de courts aperçus à nos pages, et il permet à Travelpayouts et à ses partenaires d'installer des témoins et de recueillir des renseignements techniques (comme votre appareil, votre navigateur et les pages consultées) afin de nous attribuer les réservations.",
+                "Si vous choisissez « Essentiels seulement », ce contenu partenaire n'est jamais chargé et le site fonctionne de la même façon. Vous pouvez modifier votre choix à tout moment grâce au lien « Paramètres des témoins » au bas de chaque page. Les données recueillies par Travelpayouts sont régies par sa propre politique de confidentialité.",
               ],
             },
           ]

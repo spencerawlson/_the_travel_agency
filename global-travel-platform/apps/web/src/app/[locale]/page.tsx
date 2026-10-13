@@ -1,11 +1,13 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Globe } from "@/components/Globe";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
+import { PartnerWidget } from "@/components/PartnerWidget";
 import { Photo } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { Link } from "@/i18n/navigation";
 import { getPhoto, photoAlt, type Mood } from "@/lib/photos";
 import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
+import { getWidgetIds, klookWidgetUrl } from "@/lib/widgets";
 
 const MOOD_PHOTOS: Record<Mood, string> = {
   beach: "mood-beach",
@@ -18,6 +20,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const tw = await getTranslations("widgets");
+  const widgetIds = getWidgetIds();
   const destinations = await getDestinations(locale);
   const origin = await getOrigin();
   const city = originCity(origin, locale);
@@ -134,6 +138,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ))}
         </ul>
       </section>
+
+      {/* ---------- Things to do (Klook, consent-gated) ---------- */}
+      {widgetIds && (
+        <div className="mx-auto max-w-6xl px-4 pt-16">
+          <PartnerWidget
+            src={klookWidgetUrl(widgetIds, locale)}
+            title={tw("klookTitle")}
+            partner="Klook"
+            minHeight={340}
+          />
+        </div>
+      )}
 
       {/* ---------- How it works ---------- */}
       <section className="border-t border-line bg-surface-2">

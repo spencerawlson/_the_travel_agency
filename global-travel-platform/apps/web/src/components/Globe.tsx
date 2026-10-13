@@ -44,7 +44,9 @@ export function Globe({ points, hub, label }: Props) {
       });
     };
     const idle = "requestIdleCallback" in window;
-    const handle = idle ? window.requestIdleCallback(run, { timeout: 4000 }) : window.setTimeout(run, 1500);
+    const handle = idle
+      ? window.requestIdleCallback(run, { timeout: 4000 })
+      : window.setTimeout(run, 1500);
     return () => {
       cancelled = true;
       if (idle) window.cancelIdleCallback(handle);
