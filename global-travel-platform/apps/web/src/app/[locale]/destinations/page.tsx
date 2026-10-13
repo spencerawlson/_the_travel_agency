@@ -78,7 +78,7 @@ export default async function DestinationsPage({
       <p className="mt-3 max-w-2xl text-lg text-ink-muted">{t("subtitle")}</p>
 
       <nav aria-label={t("filterLabel")} className="mt-8">
-        <ul className="flex flex-wrap gap-2">
+        <ul className="flex flex-wrap justify-center gap-2">
           <li>
             <Link
               href="/destinations"
@@ -102,6 +102,9 @@ export default async function DestinationsPage({
         </ul>
       </nav>
 
+      {/* ---------- Type-to-find + "browse all" links (no globe needed) ---------- */}
+      <DestinationSearch items={searchable} />
+
       {/* ---------- Interactive 3D globe: click a destination, fly there ----------
           Keyed by mood so the globe rebuilds with only the matching markers. */}
       <div className="mt-10">
@@ -117,9 +120,6 @@ export default async function DestinationsPage({
           hub={hub}
         />
       </div>
-
-      {/* ---------- Type-to-find + "browse all" links (no globe needed) ---------- */}
-      <DestinationSearch items={searchable} />
     </div>
   );
 }

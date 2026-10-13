@@ -16,9 +16,8 @@ const MAX_RESULTS = 8;
 
 /**
  * Type a city or country to jump to its destination page. Results are plain
- * links (Tab to them; Enter in the box opens the first). The collapsed "browse
- * all" list keeps every destination reachable without the globe or a search,
- * for keyboards, screen readers, browsers without WebGL, and search engines.
+ * links (Tab to them; Enter in the box opens the first), so destinations stay
+ * reachable without the globe (keyboards, screen readers, no WebGL).
  */
 export function DestinationSearch({ items }: { items: SearchableDestination[] }) {
   const t = useTranslations("destinations");
@@ -55,7 +54,7 @@ export function DestinationSearch({ items }: { items: SearchableDestination[] })
           placeholder={t("searchPlaceholder")}
           autoComplete="off"
           aria-controls={resultsId}
-          className="focus:ring-brand-100 mt-2 w-full rounded-full border border-line bg-surface-1 px-5 py-3 text-base shadow-sm focus:border-brand-500 focus:ring-2 focus:outline-none"
+          className="mt-2 w-full rounded-full border border-line bg-surface-1 px-5 py-3 text-base shadow-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none"
         />
       </form>
 
@@ -88,24 +87,6 @@ export function DestinationSearch({ items }: { items: SearchableDestination[] })
             </p>
           ))}
       </div>
-
-      <details className="mt-6 text-center">
-        <summary className="cursor-pointer text-sm font-semibold text-brand-700 hover:underline">
-          {t("browseAll", { count: items.length })}
-        </summary>
-        <ul className="mt-4 flex flex-wrap justify-center gap-2 text-left">
-          {items.map((d) => (
-            <li key={d.slug}>
-              <Link
-                href={`/destinations/${d.slug}`}
-                className="inline-block rounded-full bg-surface-1 px-3 py-1.5 text-sm ring-1 ring-line hover:bg-surface-2"
-              >
-                {d.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </details>
     </div>
   );
 }

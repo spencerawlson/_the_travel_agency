@@ -1,11 +1,20 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 from httpx import AsyncClient
 from sqlalchemy import func, select
 
 from app.models import FlightSearchEvent
 
 from .conftest import future, search_payload
+
+SEED_DESTINATIONS = json.loads(
+    (Path(__file__).parents[1] / "app" / "seed" / "data" / "destinations.json").read_text(
+        encoding="utf-8"
+    )
+)
 
 
 async def test_health_reports_dependencies(client: AsyncClient) -> None:
@@ -71,7 +80,8 @@ async def test_currencies(client: AsyncClient) -> None:
 async def test_destinations_localised(client: AsyncClient) -> None:
     en = (await client.get("/api/v1/destinations")).json()
     fr = (await client.get("/api/v1/destinations", params={"locale": "fr"})).json()
-    assert len(en) == 12
+    assert len(en) == len(fr) == len(SEED_DESTINATIONS)
+    assert len({d["slug"] for d in en}) == len(en)
     london_en = next(d for d in en if d["slug"] == "london")
     london_fr = next(d for d in fr if d["slug"] == "london")
     assert london_en["name"] == "London" and london_fr["name"] == "Londres"

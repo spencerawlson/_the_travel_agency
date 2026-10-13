@@ -149,12 +149,29 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
       }
     };
 
+    // Labels that would overlap one already shown are hidden (the marker stays
+    // clickable); the destination being flown to always wins.
+    const LABEL_H = 22;
+    const labelWidth = (name: string) => name.length * 6.5 + 22;
     const updateLabels = () => {
-      for (const d of destinations) {
+      const target = st.turning?.dest.slug ?? st.flying?.dest.slug;
+      const ordered = target
+        ? [...destinations].sort((a, b) => Number(b.slug === target) - Number(a.slug === target))
+        : destinations;
+      const placed: { x: number; y: number; w: number }[] = [];
+      for (const d of ordered) {
         const el = labelRefs.current.get(d.slug);
         if (!el) continue;
         const p = projectMarker(d.latitude, d.longitude, st.phi, THETA, MARKER_ELEVATION);
-        el.style.opacity = p.visible ? "1" : "0";
+        const x = p.x * size;
+        const y = p.y * size;
+        const w = labelWidth(d.name);
+        const clash = placed.some(
+          (q) => Math.abs(q.x - x) < (q.w + w) / 2 && Math.abs(q.y - y) < LABEL_H,
+        );
+        const show = p.visible && !clash;
+        if (show) placed.push({ x, y, w });
+        el.style.opacity = show ? "1" : "0";
         el.style.left = `${p.x * 100}%`;
         el.style.top = `${p.y * 100}%`;
       }
