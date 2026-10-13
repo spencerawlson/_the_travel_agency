@@ -186,7 +186,7 @@
       "fr": "Le temple Wat Arun au bord du fleuve Chao Phraya, à Bangkok"
     },
     "title": "Phra Prang Wat Arun during day.jpg",
-    "author": "This Photo was taken by Supanut Arunoprayote.\n\nFeel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่",
+    "author": "Supanut Arunoprayote",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Phra_Prang_Wat_Arun_during_day.jpg"
@@ -206,5 +206,581 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "source": "https://commons.wikimedia.org/wiki/File:1000_Three_domes_of_Oia_in_Santorini_Photo_by_Giles_Laurent.jpg"
+  },
+  "cape-town": {
+    "src": "/photos/cape-town-1600.webp",
+    "srcSmall": "/photos/cape-town-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 45%",
+    "alt": {
+      "en": "Table Mountain draped in cloud above Cape Town",
+      "fr": "La montagne de la Table coiffée de nuages au-dessus du Cap"
+    },
+    "title": "Cape Town (ZA), Table Mountain -- 2024 -- 3437.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Table_Mountain_--_2024_--_3437.jpg"
+  },
+  "nairobi": {
+    "src": "/photos/nairobi-1600.webp",
+    "srcSmall": "/photos/nairobi-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "A buffalo grazing in Nairobi National Park with the city skyline behind",
+      "fr": "Un buffle broutant dans le parc national de Nairobi, avec les gratte-ciel de la ville en arrière-plan"
+    },
+    "title": "Buffalo Nairobi Skyline Savannah Kenya May19 R1600769.jpg",
+    "author": "Timothy A. Gonsalves",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Buffalo_Nairobi_Skyline_Savannah_Kenya_May19_R1600769.jpg"
+  },
+  "zanzibar": {
+    "src": "/photos/zanzibar-1600.webp",
+    "srcSmall": "/photos/zanzibar-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 60%",
+    "alt": {
+      "en": "A wooden dhow sailing off the coast of Zanzibar",
+      "fr": "Un boutre en bois naviguant au large de Zanzibar"
+    },
+    "title": "Dhow boat Zanzibar.jpg",
+    "author": "Anton Zelenov",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhow_boat_Zanzibar.jpg"
+  },
+  "dakar": {
+    "src": "/photos/dakar-1600.webp",
+    "srcSmall": "/photos/dakar-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "The sun setting over the Dakar skyline, seen from Gorée Island",
+      "fr": "Le soleil se couchant sur Dakar, vu depuis l'île de Gorée"
+    },
+    "title": "Gorée 2024 - coucher de soleil sur Dakar - 25.jpg",
+    "author": "Fawaz.tairou",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gor%C3%A9e_2024_-_coucher_de_soleil_sur_Dakar_-_25.jpg"
+  },
+  "cairo": {
+    "src": "/photos/cairo-1600.webp",
+    "srcSmall": "/photos/cairo-800.webp",
+    "width": 1920,
+    "height": 1276,
+    "focus": "50% 60%",
+    "alt": {
+      "en": "The Pyramids of Giza under a clear blue sky",
+      "fr": "Les pyramides de Gizeh sous un ciel bleu"
+    },
+    "title": "All Gizah Pyramids.jpg",
+    "author": "Ricardo Liberato",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+  },
+  "accra": {
+    "src": "/photos/accra-1600.webp",
+    "srcSmall": "/photos/accra-800.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The red-and-white Jamestown Lighthouse on the coast of Accra",
+      "fr": "Le phare rouge et blanc de Jamestown, sur la côte d'Accra"
+    },
+    "title": "Jamestown Lighthouse 20170122.jpg",
+    "author": "Gereon K.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jamestown_Lighthouse_20170122.jpg"
+  },
+  "mauritius": {
+    "src": "/photos/mauritius-1600.webp",
+    "srcSmall": "/photos/mauritius-800.webp",
+    "width": 1920,
+    "height": 1279,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Le Morne Brabant mountain rising behind a white beach and turquoise lagoon in Mauritius",
+      "fr": "Le Morne Brabant dominant une plage blanche et un lagon turquoise à Maurice"
+    },
+    "title": "Sunbathing at Le Morne Beach in Mauritius (53697787846).jpg",
+    "author": "\"dronepicr\"",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sunbathing_at_Le_Morne_Beach_in_Mauritius_(53697787846).jpg"
+  },
+  "athens": {
+    "src": "/photos/athens-1600.webp",
+    "srcSmall": "/photos/athens-800.webp",
+    "width": 1920,
+    "height": 1200,
+    "focus": "50% 40%",
+    "alt": {
+      "en": "The Acropolis and the Parthenon on their hill above Athens",
+      "fr": "L'Acropole et le Parthénon sur leur colline au-dessus d'Athènes"
+    },
+    "title": "Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+    "author": "A.Savin",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Attica_06-13_Athens_50_View_from_Philopappos_-_Acropolis_Hill.jpg"
+  },
+  "dubrovnik": {
+    "src": "/photos/dubrovnik-1600.webp",
+    "srcSmall": "/photos/dubrovnik-800.webp",
+    "width": 1920,
+    "height": 1235,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Dubrovnik's walled old town and terracotta roofs on the Adriatic Sea",
+      "fr": "La vieille ville fortifiée de Dubrovnik et ses toits de tuiles au bord de l'Adriatique"
+    },
+    "title": "Casco viejo de Dubrovnik, Croacia, 2014-04-14, DD 07.JPG",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casco_viejo_de_Dubrovnik,_Croacia,_2014-04-14,_DD_07.JPG"
+  },
+  "amsterdam": {
+    "src": "/photos/amsterdam-1600.webp",
+    "srcSmall": "/photos/amsterdam-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Colourful canal houses on the Damrak reflected in the water at blue hour",
+      "fr": "Les maisons colorées du Damrak se reflétant dans l'eau à l'heure bleue"
+    },
+    "title": "Colorful windows and canal houses at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colorful_windows_and_canal_houses_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg"
+  },
+  "prague": {
+    "src": "/photos/prague-1600.webp",
+    "srcSmall": "/photos/prague-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Prague Castle and the Charles Bridge across the Vltava river",
+      "fr": "Le château de Prague et le pont Charles au-dessus de la Vltava"
+    },
+    "title": "North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+    "author": "DXR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most,_Prague_20160808_1.jpg"
+  },
+  "istanbul": {
+    "src": "/photos/istanbul-1600.webp",
+    "srcSmall": "/photos/istanbul-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The New Mosque and its minarets on the Golden Horn waterfront in Istanbul",
+      "fr": "La Nouvelle Mosquée et ses minarets au bord de la Corne d'Or, à Istanbul"
+    },
+    "title": "New Mosque, Istanbul, from Bosphorus.jpg",
+    "author": "Till Niermann",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Mosque,_Istanbul,_from_Bosphorus.jpg"
+  },
+  "dublin": {
+    "src": "/photos/dublin-1600.webp",
+    "srcSmall": "/photos/dublin-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "The River Liffey in Dublin with the dome of the Custom House",
+      "fr": "La Liffey à Dublin, avec le dôme de la Custom House"
+    },
+    "title": "River Liffey, Butt Bridge and Loopline Bridge.jpg",
+    "author": "Christian David",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:River_Liffey,_Butt_Bridge_and_Loopline_Bridge.jpg"
+  },
+  "vienna": {
+    "src": "/photos/vienna-1600.webp",
+    "srcSmall": "/photos/vienna-800.webp",
+    "width": 1920,
+    "height": 860,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Schönbrunn Palace and its gardens with Vienna beyond",
+      "fr": "Le château de Schönbrunn et ses jardins, avec Vienne au loin"
+    },
+    "title": "Schloss Schönbrunn Wien 2014 (Zuschnitt 1).jpg",
+    "author": "Thomas Wolf, www.foto-tw.de",
+    "license": "CC BY-SA 3.0 de",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Schloss_Sch%C3%B6nbrunn_Wien_2014_(Zuschnitt_1).jpg"
+  },
+  "budapest": {
+    "src": "/photos/budapest-1600.webp",
+    "srcSmall": "/photos/budapest-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Hungarian Parliament reflected in the Danube at dusk",
+      "fr": "Le Parlement hongrois se reflétant dans le Danube au crépuscule"
+    },
+    "title": "HUN-2015-Budapest-Hungarian Parliament (Budapest) 2015-02.jpg",
+    "author": "Godot13",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:HUN-2015-Budapest-Hungarian_Parliament_(Budapest)_2015-02.jpg"
+  },
+  "mexico-city": {
+    "src": "/photos/mexico-city-1600.webp",
+    "srcSmall": "/photos/mexico-city-800.webp",
+    "width": 1920,
+    "height": 1238,
+    "focus": "50% 45%",
+    "alt": {
+      "en": "The Palacio de Bellas Artes with its golden domes in Mexico City",
+      "fr": "Le Palacio de Bellas Artes et ses coupoles dorées à Mexico"
+    },
+    "title": "Palaco de Bellas Artes, Mexico City, from across Eje Central Lazaro Cardenas in evening.jpg",
+    "author": "Daniel Case",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palaco_de_Bellas_Artes,_Mexico_City,_from_across_Eje_Central_Lazaro_Cardenas_in_evening.jpg"
+  },
+  "lima": {
+    "src": "/photos/lima-1600.webp",
+    "srcSmall": "/photos/lima-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Modern towers and palm-lined parks along the clifftops of Miraflores, Lima",
+      "fr": "Tours modernes et parcs bordés de palmiers sur les falaises de Miraflores, à Lima"
+    },
+    "title": "Miraflores 2023.jpg",
+    "author": "Mojnsen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Miraflores_2023.jpg"
+  },
+  "rio-de-janeiro": {
+    "src": "/photos/rio-de-janeiro-1600.webp",
+    "srcSmall": "/photos/rio-de-janeiro-800.webp",
+    "width": 1920,
+    "height": 1174,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Sugarloaf Mountain and the Rio de Janeiro skyline at sunset",
+      "fr": "Le Pain de Sucre et Rio de Janeiro au coucher du soleil"
+    },
+    "title": "Rio de Janeiro skyline and Sugarloaf Mountain at sunset, Brazil 3.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_skyline_and_Sugarloaf_Mountain_at_sunset,_Brazil_3.jpg"
+  },
+  "buenos-aires": {
+    "src": "/photos/buenos-aires-1600.webp",
+    "srcSmall": "/photos/buenos-aires-800.webp",
+    "width": 1920,
+    "height": 1303,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Brightly painted houses on Caminito street in La Boca, Buenos Aires",
+      "fr": "Maisons aux couleurs vives de la rue Caminito, à La Boca, Buenos Aires"
+    },
+    "title": "El caminito7 - Buenos Aires - Argentina.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_caminito7_-_Buenos_Aires_-_Argentina.jpg"
+  },
+  "cartagena": {
+    "src": "/photos/cartagena-1600.webp",
+    "srcSmall": "/photos/cartagena-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Colonial buildings with wooden balconies on Plaza de la Aduana in Cartagena",
+      "fr": "Édifices coloniaux à balcons de bois sur la Plaza de la Aduana, à Carthagène"
+    },
+    "title": "Colombia, Cartagena, Plaza de la Aduana.jpg",
+    "author": "Dr. Thomas Liptak",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colombia,_Cartagena,_Plaza_de_la_Aduana.jpg"
+  },
+  "san-jose-costa-rica": {
+    "src": "/photos/san-jose-costa-rica-1600.webp",
+    "srcSmall": "/photos/san-jose-costa-rica-800.webp",
+    "width": 1920,
+    "height": 805,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The cone of Arenal Volcano above green Costa Rican countryside",
+      "fr": "Le cône du volcan Arenal au-dessus de la campagne verdoyante du Costa Rica"
+    },
+    "title": "Arenal volcano (70785p).jpg",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arenal_volcano_(70785p).jpg"
+  },
+  "santiago": {
+    "src": "/photos/santiago-1600.webp",
+    "srcSmall": "/photos/santiago-800.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Santiago de Chile at sunset with the Andes on the horizon",
+      "fr": "Santiago du Chili au coucher du soleil, avec les Andes à l'horizon"
+    },
+    "title": "Santiago de Chile (20252037299).jpg",
+    "author": "Eduardo  Woo from Santiago, Chile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santiago_de_Chile_(20252037299).jpg"
+  },
+  "quito": {
+    "src": "/photos/quito-1600.webp",
+    "srcSmall": "/photos/quito-800.webp",
+    "width": 1920,
+    "height": 1189,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Quito's old town and the Basilica seen from El Panecillo hill",
+      "fr": "La vieille ville de Quito et la basilique vues depuis la colline du Panecillo"
+    },
+    "title": "Quito as from panecillo Basilica.jpg",
+    "author": "Cayambe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Quito_as_from_panecillo_Basilica.jpg"
+  },
+  "havana": {
+    "src": "/photos/havana-1600.webp",
+    "srcSmall": "/photos/havana-800.webp",
+    "width": 1920,
+    "height": 1247,
+    "focus": "50% 60%",
+    "alt": {
+      "en": "A turquoise vintage car driving along the Malecón in Havana",
+      "fr": "Une voiture d'époque turquoise roulant sur le Malecón, à La Havane"
+    },
+    "title": "AvMalecon-LaHabanaCuba-04735.jpg",
+    "author": "Ezarate",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:AvMalecon-LaHabanaCuba-04735.jpg"
+  },
+  "punta-cana": {
+    "src": "/photos/punta-cana-1600.webp",
+    "srcSmall": "/photos/punta-cana-800.webp",
+    "width": 1920,
+    "height": 1282,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Palm trees silhouetted against sunrise over Bávaro beach near Punta Cana",
+      "fr": "Silhouettes de palmiers au lever du soleil sur la plage de Bávaro, près de Punta Cana"
+    },
+    "title": "Bávaro Sunrise, Dominican Republic (54026094405).jpg",
+    "author": "Mustang Joe",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:B%C3%A1varo_Sunrise,_Dominican_Republic_(54026094405).jpg"
+  },
+  "montego-bay": {
+    "src": "/photos/montego-bay-1600.webp",
+    "srcSmall": "/photos/montego-bay-800.webp",
+    "width": 1920,
+    "height": 1275,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A view over Montego Bay's coastline and green hills in Jamaica",
+      "fr": "Vue sur la côte et les collines verdoyantes de Montego Bay, en Jamaïque"
+    },
+    "title": "Montego Bay East Photo Don Ramey Logan.jpg",
+    "author": "Don Ramey Logan",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Montego_Bay_East_Photo_Don_Ramey_Logan.jpg"
+  },
+  "san-juan": {
+    "src": "/photos/san-juan-1600.webp",
+    "srcSmall": "/photos/san-juan-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 45%",
+    "alt": {
+      "en": "The lighthouse of El Morro fortress in Old San Juan, Puerto Rico",
+      "fr": "Le phare de la forteresse d'El Morro, dans le Vieux San Juan, à Porto Rico"
+    },
+    "title": "USA-2016-Puerto Rico-San Juan-Castillo San Felipe del Morro Lighthouse 03.jpg",
+    "author": "Godot13",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:USA-2016-Puerto_Rico-San_Juan-Castillo_San_Felipe_del_Morro_Lighthouse_03.jpg"
+  },
+  "barbados": {
+    "src": "/photos/barbados-1600.webp",
+    "srcSmall": "/photos/barbados-800.webp",
+    "width": 1920,
+    "height": 1285,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "Waves rolling onto a white-sand beach with turquoise water in Barbados",
+      "fr": "Des vagues sur une plage de sable blanc à l'eau turquoise, à la Barbade"
+    },
+    "title": "Barbados beach (6735320631).jpg",
+    "author": "Berit from Redhill/Surrey, UK",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barbados_beach_(6735320631).jpg"
+  },
+  "dubai": {
+    "src": "/photos/dubai-1600.webp",
+    "srcSmall": "/photos/dubai-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 55%",
+    "alt": {
+      "en": "The Dubai skyline with the Burj Khalifa rising above the city",
+      "fr": "Les gratte-ciel de Dubaï dominés par la Burj Khalifa"
+    },
+    "title": "Dubai Skyline mit Burj Khalifa (18241030269).jpg",
+    "author": "Tim Reckmann from Hamm, Deutschland",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dubai_Skyline_mit_Burj_Khalifa_(18241030269).jpg"
+  },
+  "bali": {
+    "src": "/photos/bali-1600.webp",
+    "srcSmall": "/photos/bali-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Green rice terraces and palm trees in Bali",
+      "fr": "Rizières en terrasses et palmiers à Bali"
+    },
+    "title": "Rice terraces, Bali.jpg",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg"
+  },
+  "hanoi": {
+    "src": "/photos/hanoi-1600.webp",
+    "srcSmall": "/photos/hanoi-800.webp",
+    "width": 1920,
+    "height": 1440,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "A limestone island rising from the emerald water of Ha Long Bay",
+      "fr": "Une île calcaire surgissant de l'eau émeraude de la baie d'Ha Long"
+    },
+    "title": "Ha-Long-Bay3.jpg",
+    "author": "Steven C. Price",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ha-Long-Bay3.jpg"
+  },
+  "seoul": {
+    "src": "/photos/seoul-1600.webp",
+    "srcSmall": "/photos/seoul-800.webp",
+    "width": 1920,
+    "height": 1280,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Gyeonghoeru pavilion reflected in its pond at Gyeongbokgung Palace, Seoul",
+      "fr": "Le pavillon Gyeonghoeru se reflétant dans son bassin au palais Gyeongbokgung, à Séoul"
+    },
+    "title": "Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+    "author": "Frank Schulenburg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
+  },
+  "singapore": {
+    "src": "/photos/singapore-1600.webp",
+    "srcSmall": "/photos/singapore-800.webp",
+    "width": 1920,
+    "height": 1103,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "Marina Bay Sands and the waterfront at blue hour in Singapore",
+      "fr": "Marina Bay Sands et le front de mer à l'heure bleue, à Singapour"
+    },
+    "title": "Marina Bay Sands and illuminated polyhedral building Louis Vuitton over the water at blue hour with pink clouds in Singapore.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marina_Bay_Sands_and_illuminated_polyhedral_building_Louis_Vuitton_over_the_water_at_blue_hour_with_pink_clouds_in_Singapore.jpg"
+  },
+  "sydney": {
+    "src": "/photos/sydney-1600.webp",
+    "srcSmall": "/photos/sydney-800.webp",
+    "width": 1920,
+    "height": 1080,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Sydney Opera House and Harbour Bridge across the harbour",
+      "fr": "L'Opéra de Sydney et le Harbour Bridge de l'autre côté de la baie"
+    },
+    "title": "Sydney Opera House and Harbour Bridge, southeast view 20230224 1.jpg",
+    "author": "DXR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_and_Harbour_Bridge,_southeast_view_20230224_1.jpg"
+  },
+  "auckland": {
+    "src": "/photos/auckland-1600.webp",
+    "srcSmall": "/photos/auckland-800.webp",
+    "width": 1920,
+    "height": 1292,
+    "focus": "50% 45%",
+    "alt": {
+      "en": "Mount Eden's grassy crater with the Auckland skyline behind",
+      "fr": "Le cratère herbeux du mont Eden, avec les tours d'Auckland en arrière-plan"
+    },
+    "title": "Mount Eden crater with Auckland CBD and Rangitoto skyline.jpg",
+    "author": "Avenue",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Eden_crater_with_Auckland_CBD_and_Rangitoto_skyline.jpg"
+  },
+  "petra-amman": {
+    "src": "/photos/petra-amman-1600.webp",
+    "srcSmall": "/photos/petra-amman-800.webp",
+    "width": 1920,
+    "height": 1272,
+    "focus": "50% 50%",
+    "alt": {
+      "en": "The Monastery (Ad Deir) carved into rose-coloured rock at Petra, Jordan",
+      "fr": "Le Monastère (Ad Deir) taillé dans la roche rose de Pétra, en Jordanie"
+    },
+    "title": "The Monastery, Petra, Jordan7.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Monastery,_Petra,_Jordan7.jpg"
   }
 }

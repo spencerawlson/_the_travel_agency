@@ -76,5 +76,221 @@
     "alt_en": "Whitewashed churches with blue domes above the sea in Oia, Santorini",
     "alt_fr": "Églises blanches aux dômes bleus au-dessus de la mer à Oia, Santorin",
     "focus": "60% 45%"
+  },
+  "cape-town": {
+    "file": "File:Cape Town (ZA), Table Mountain -- 2024 -- 3437.jpg",
+    "alt_en": "Table Mountain draped in cloud above Cape Town",
+    "alt_fr": "La montagne de la Table coiffée de nuages au-dessus du Cap",
+    "focus": "50% 45%"
+  },
+  "nairobi": {
+    "file": "File:Buffalo Nairobi Skyline Savannah Kenya May19 R1600769.jpg",
+    "alt_en": "A buffalo grazing in Nairobi National Park with the city skyline behind",
+    "alt_fr": "Un buffle broutant dans le parc national de Nairobi, avec les gratte-ciel de la ville en arrière-plan",
+    "focus": "50% 55%"
+  },
+  "zanzibar": {
+    "file": "File:Dhow boat Zanzibar.jpg",
+    "alt_en": "A wooden dhow sailing off the coast of Zanzibar",
+    "alt_fr": "Un boutre en bois naviguant au large de Zanzibar",
+    "focus": "50% 60%"
+  },
+  "dakar": {
+    "file": "File:Gorée 2024 - coucher de soleil sur Dakar - 25.jpg",
+    "alt_en": "The sun setting over the Dakar skyline, seen from Gorée Island",
+    "alt_fr": "Le soleil se couchant sur Dakar, vu depuis l'île de Gorée",
+    "focus": "50% 55%"
+  },
+  "cairo": {
+    "file": "File:All Gizah Pyramids.jpg",
+    "alt_en": "The Pyramids of Giza under a clear blue sky",
+    "alt_fr": "Les pyramides de Gizeh sous un ciel bleu",
+    "focus": "50% 60%"
+  },
+  "accra": {
+    "file": "File:Jamestown Lighthouse 20170122.jpg",
+    "alt_en": "The red-and-white Jamestown Lighthouse on the coast of Accra",
+    "alt_fr": "Le phare rouge et blanc de Jamestown, sur la côte d'Accra",
+    "focus": "50% 50%"
+  },
+  "mauritius": {
+    "file": "File:Sunbathing at Le Morne Beach in Mauritius (53697787846).jpg",
+    "alt_en": "Le Morne Brabant mountain rising behind a white beach and turquoise lagoon in Mauritius",
+    "alt_fr": "Le Morne Brabant dominant une plage blanche et un lagon turquoise à Maurice",
+    "focus": "50% 50%"
+  },
+  "athens": {
+    "file": "File:Attica 06-13 Athens 50 View from Philopappos - Acropolis Hill.jpg",
+    "alt_en": "The Acropolis and the Parthenon on their hill above Athens",
+    "alt_fr": "L'Acropole et le Parthénon sur leur colline au-dessus d'Athènes",
+    "focus": "50% 40%"
+  },
+  "dubrovnik": {
+    "file": "File:Casco viejo de Dubrovnik, Croacia, 2014-04-14, DD 07.JPG",
+    "alt_en": "Dubrovnik's walled old town and terracotta roofs on the Adriatic Sea",
+    "alt_fr": "La vieille ville fortifiée de Dubrovnik et ses toits de tuiles au bord de l'Adriatique",
+    "focus": "50% 55%"
+  },
+  "amsterdam": {
+    "file": "File:Colorful windows and canal houses at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg",
+    "alt_en": "Colourful canal houses on the Damrak reflected in the water at blue hour",
+    "alt_fr": "Les maisons colorées du Damrak se reflétant dans l'eau à l'heure bleue",
+    "focus": "50% 55%"
+  },
+  "prague": {
+    "file": "File:North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+    "alt_en": "Prague Castle and the Charles Bridge across the Vltava river",
+    "alt_fr": "Le château de Prague et le pont Charles au-dessus de la Vltava",
+    "focus": "50% 55%"
+  },
+  "istanbul": {
+    "file": "File:New Mosque, Istanbul, from Bosphorus.jpg",
+    "alt_en": "The New Mosque and its minarets on the Golden Horn waterfront in Istanbul",
+    "alt_fr": "La Nouvelle Mosquée et ses minarets au bord de la Corne d'Or, à Istanbul",
+    "focus": "50% 50%"
+  },
+  "dublin": {
+    "file": "File:River Liffey, Butt Bridge and Loopline Bridge.jpg",
+    "alt_en": "The River Liffey in Dublin with the dome of the Custom House",
+    "alt_fr": "La Liffey à Dublin, avec le dôme de la Custom House",
+    "focus": "50% 55%"
+  },
+  "vienna": {
+    "file": "File:Schloss Schönbrunn Wien 2014 (Zuschnitt 1).jpg",
+    "alt_en": "Schönbrunn Palace and its gardens with Vienna beyond",
+    "alt_fr": "Le château de Schönbrunn et ses jardins, avec Vienne au loin",
+    "focus": "50% 55%"
+  },
+  "budapest": {
+    "file": "File:HUN-2015-Budapest-Hungarian Parliament (Budapest) 2015-02.jpg",
+    "alt_en": "The Hungarian Parliament reflected in the Danube at dusk",
+    "alt_fr": "Le Parlement hongrois se reflétant dans le Danube au crépuscule",
+    "focus": "50% 50%"
+  },
+  "mexico-city": {
+    "file": "File:Palaco de Bellas Artes, Mexico City, from across Eje Central Lazaro Cardenas in evening.jpg",
+    "alt_en": "The Palacio de Bellas Artes with its golden domes in Mexico City",
+    "alt_fr": "Le Palacio de Bellas Artes et ses coupoles dorées à Mexico",
+    "focus": "50% 45%"
+  },
+  "lima": {
+    "file": "File:Miraflores 2023.jpg",
+    "alt_en": "Modern towers and palm-lined parks along the clifftops of Miraflores, Lima",
+    "alt_fr": "Tours modernes et parcs bordés de palmiers sur les falaises de Miraflores, à Lima",
+    "focus": "50% 50%"
+  },
+  "rio-de-janeiro": {
+    "file": "File:Rio de Janeiro skyline and Sugarloaf Mountain at sunset, Brazil 3.jpg",
+    "alt_en": "Sugarloaf Mountain and the Rio de Janeiro skyline at sunset",
+    "alt_fr": "Le Pain de Sucre et Rio de Janeiro au coucher du soleil",
+    "focus": "50% 50%"
+  },
+  "buenos-aires": {
+    "file": "File:El caminito7 - Buenos Aires - Argentina.jpg",
+    "alt_en": "Brightly painted houses on Caminito street in La Boca, Buenos Aires",
+    "alt_fr": "Maisons aux couleurs vives de la rue Caminito, à La Boca, Buenos Aires",
+    "focus": "50% 50%"
+  },
+  "cartagena": {
+    "file": "File:Colombia, Cartagena, Plaza de la Aduana.jpg",
+    "alt_en": "Colonial buildings with wooden balconies on Plaza de la Aduana in Cartagena",
+    "alt_fr": "Édifices coloniaux à balcons de bois sur la Plaza de la Aduana, à Carthagène",
+    "focus": "50% 50%"
+  },
+  "san-jose-costa-rica": {
+    "file": "File:Arenal volcano (70785p).jpg",
+    "alt_en": "The cone of Arenal Volcano above green Costa Rican countryside",
+    "alt_fr": "Le cône du volcan Arenal au-dessus de la campagne verdoyante du Costa Rica",
+    "focus": "50% 50%"
+  },
+  "santiago": {
+    "file": "File:Santiago de Chile (20252037299).jpg",
+    "alt_en": "Santiago de Chile at sunset with the Andes on the horizon",
+    "alt_fr": "Santiago du Chili au coucher du soleil, avec les Andes à l'horizon",
+    "focus": "50% 50%"
+  },
+  "quito": {
+    "file": "File:Quito as from panecillo Basilica.jpg",
+    "alt_en": "Quito's old town and the Basilica seen from El Panecillo hill",
+    "alt_fr": "La vieille ville de Quito et la basilique vues depuis la colline du Panecillo",
+    "focus": "50% 50%"
+  },
+  "havana": {
+    "file": "File:AvMalecon-LaHabanaCuba-04735.jpg",
+    "alt_en": "A turquoise vintage car driving along the Malecón in Havana",
+    "alt_fr": "Une voiture d'époque turquoise roulant sur le Malecón, à La Havane",
+    "focus": "50% 60%"
+  },
+  "punta-cana": {
+    "file": "File:Bávaro Sunrise, Dominican Republic (54026094405).jpg",
+    "alt_en": "Palm trees silhouetted against sunrise over Bávaro beach near Punta Cana",
+    "alt_fr": "Silhouettes de palmiers au lever du soleil sur la plage de Bávaro, près de Punta Cana",
+    "focus": "50% 50%"
+  },
+  "montego-bay": {
+    "file": "File:Montego Bay East Photo Don Ramey Logan.jpg",
+    "alt_en": "A view over Montego Bay's coastline and green hills in Jamaica",
+    "alt_fr": "Vue sur la côte et les collines verdoyantes de Montego Bay, en Jamaïque",
+    "focus": "50% 50%"
+  },
+  "san-juan": {
+    "file": "File:USA-2016-Puerto Rico-San Juan-Castillo San Felipe del Morro Lighthouse 03.jpg",
+    "alt_en": "The lighthouse of El Morro fortress in Old San Juan, Puerto Rico",
+    "alt_fr": "Le phare de la forteresse d'El Morro, dans le Vieux San Juan, à Porto Rico",
+    "focus": "50% 45%"
+  },
+  "barbados": {
+    "file": "File:Barbados beach (6735320631).jpg",
+    "alt_en": "Waves rolling onto a white-sand beach with turquoise water in Barbados",
+    "alt_fr": "Des vagues sur une plage de sable blanc à l'eau turquoise, à la Barbade",
+    "focus": "50% 55%"
+  },
+  "dubai": {
+    "file": "File:Dubai Skyline mit Burj Khalifa (18241030269).jpg",
+    "alt_en": "The Dubai skyline with the Burj Khalifa rising above the city",
+    "alt_fr": "Les gratte-ciel de Dubaï dominés par la Burj Khalifa",
+    "focus": "50% 55%"
+  },
+  "bali": {
+    "file": "File:Rice terraces, Bali.jpg",
+    "alt_en": "Green rice terraces and palm trees in Bali",
+    "alt_fr": "Rizières en terrasses et palmiers à Bali",
+    "focus": "50% 50%"
+  },
+  "hanoi": {
+    "file": "File:Ha-Long-Bay3.jpg",
+    "alt_en": "A limestone island rising from the emerald water of Ha Long Bay",
+    "alt_fr": "Une île calcaire surgissant de l'eau émeraude de la baie d'Ha Long",
+    "focus": "50% 50%"
+  },
+  "seoul": {
+    "file": "File:Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+    "alt_en": "Gyeonghoeru pavilion reflected in its pond at Gyeongbokgung Palace, Seoul",
+    "alt_fr": "Le pavillon Gyeonghoeru se reflétant dans son bassin au palais Gyeongbokgung, à Séoul",
+    "focus": "50% 50%"
+  },
+  "singapore": {
+    "file": "File:Marina Bay Sands and illuminated polyhedral building Louis Vuitton over the water at blue hour with pink clouds in Singapore.jpg",
+    "alt_en": "Marina Bay Sands and the waterfront at blue hour in Singapore",
+    "alt_fr": "Marina Bay Sands et le front de mer à l'heure bleue, à Singapour",
+    "focus": "50% 50%"
+  },
+  "sydney": {
+    "file": "File:Sydney Opera House and Harbour Bridge, southeast view 20230224 1.jpg",
+    "alt_en": "The Sydney Opera House and Harbour Bridge across the harbour",
+    "alt_fr": "L'Opéra de Sydney et le Harbour Bridge de l'autre côté de la baie",
+    "focus": "50% 50%"
+  },
+  "auckland": {
+    "file": "File:Mount Eden crater with Auckland CBD and Rangitoto skyline.jpg",
+    "alt_en": "Mount Eden's grassy crater with the Auckland skyline behind",
+    "alt_fr": "Le cratère herbeux du mont Eden, avec les tours d'Auckland en arrière-plan",
+    "focus": "50% 45%"
+  },
+  "petra-amman": {
+    "file": "File:The Monastery, Petra, Jordan7.jpg",
+    "alt_en": "The Monastery (Ad Deir) carved into rose-coloured rock at Petra, Jordan",
+    "alt_fr": "Le Monastère (Ad Deir) taillé dans la roche rose de Pétra, en Jordanie",
+    "focus": "50% 50%"
   }
 }

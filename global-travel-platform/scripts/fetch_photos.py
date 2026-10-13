@@ -12,7 +12,8 @@ are used unmodified apart from resizing and re-encoding, with attribution.
 
 Usage (needs network + Pillow):
     python -m pip install pillow
-    python scripts/fetch_photos.py
+    python scripts/fetch_photos.py            # (re)build every photo
+    python scripts/fetch_photos.py --missing  # only keys not in photos.json yet
 """
 
 from __future__ import annotations
@@ -73,7 +74,11 @@ def file_info(title: str) -> dict:
     return {
         "thumb": info["thumburl"],
         "source": info["descriptionurl"],
-        "author": strip_tags(meta.get("Artist", {}).get("value", "")) or "Unknown",
+        # First line only: some pages append notes ("This is a retouched picture...").
+        "author": next(
+            (ln.strip() for ln in strip_tags(meta.get("Artist", {}).get("value", "")).splitlines() if ln.strip()),
+            "Unknown",
+        ),
         "license": license_name,
         "license_url": meta.get("LicenseUrl", {}).get("value"),
     }
@@ -82,8 +87,13 @@ def file_info(title: str) -> dict:
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    credits: dict[str, dict] = {}
+    missing_only = "--missing" in sys.argv[1:]
+    existing = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
+    # Keep existing credits (and files) untouched when only adding new photos.
+    credits: dict[str, dict] = {k: v for k, v in existing.items() if k in manifest} if missing_only else {}
     for key, entry in manifest.items():
+        if missing_only and key in credits:
+            continue
         info = file_info(entry["file"])
         image = Image.open(io.BytesIO(fetch(info["thumb"]))).convert("RGB")
         for width in SIZES:

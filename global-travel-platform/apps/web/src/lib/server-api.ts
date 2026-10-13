@@ -1,7 +1,7 @@
 import "server-only";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import type { Destination, Health } from "@gtp/shared-types";
-import { IATA_ORIGIN, type OriginAirport } from "@/content/origin-airports";
+import { COUNTRY_ORIGIN, IATA_ORIGIN, type OriginAirport } from "@/content/origin-airports";
 import { apiInternalUrl } from "./site";
 
 /** Cookie set by the middleware from the visitor's country (or their own choice). */
@@ -15,6 +15,10 @@ export async function getOrigin(): Promise<OriginAirport | null> {
   try {
     const iata = (await cookies()).get(ORIGIN_COOKIE)?.value?.toUpperCase();
     if (iata && IATA_ORIGIN[iata]) return IATA_ORIGIN[iata];
+    // First visit: the middleware only sets the cookie on this response, so read
+    // Cloudflare's country header directly (same mapping as src/proxy.ts).
+    const country = (await headers()).get("cf-ipcountry")?.toUpperCase();
+    if (country && COUNTRY_ORIGIN[country]) return COUNTRY_ORIGIN[country];
   } catch {
     // cookies() unavailable (e.g. sitemap prerender): treat as unknown.
   }
