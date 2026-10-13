@@ -8,6 +8,7 @@ import {
   arcPoint,
   easeInOutCubic,
   pickMarker,
+  projectMarker,
   projectPoint,
   type PickTarget,
 } from "@/lib/globe-math";
@@ -32,13 +33,16 @@ const ARC_HEIGHT = 0.28;
  * Interactive 3D globe for the destinations page. Drag to spin; clicking a
  * destination marker launches a little airplane that flies the arc from the
  * visitor's home airport to the destination, then opens its page.
+ *
+ * NOTE: next-intl's router prefixes the locale itself, so navigation targets
+ * must NOT include the locale ("/destinations/paris", never "/en/...").
  */
 export function DestinationsGlobe({ locale, destinations, hub }: Props) {
   const router = useRouter();
   const t = useTranslations("destinations");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const planeRef = useRef<HTMLDivElement>(null);
-  const wrapRef = useRef<HTMLDivElement>(null);
+  const labelRefs = useRef(new Map<string, HTMLDivElement>());
   const [flyingTo, setFlyingTo] = useState<string | null>(null);
 
   const stateRef = useRef({
@@ -50,8 +54,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const wrap = wrapRef.current;
-    if (!canvas || !wrap) return;
+    if (!canvas) return;
     const st = stateRef.current;
     st.reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     st.flying = null;
@@ -101,12 +104,15 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
         markerElevation: MARKER_ELEVATION,
       });
     } catch {
-      return; // no WebGL: fallback link list below still works
+      return; // no WebGL: country list below still works
     }
+
+    /** next-intl prefixes the locale — push the bare path. */
+    const goTo = (slug: string) => router.push(`/destinations/${slug}`);
 
     const startFlight = (dest: FlyDestination) => {
       if (st.reduceMotion) {
-        router.push(`/${locale}/destinations/${dest.slug}`);
+        goTo(dest.slug);
         return;
       }
       st.flying = { dest, start: performance.now() };
@@ -136,6 +142,17 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
       }
     };
 
+    const updateLabels = () => {
+      for (const d of destinations) {
+        const el = labelRefs.current.get(d.slug);
+        if (!el) continue;
+        const p = projectMarker(d.latitude, d.longitude, st.phi, THETA, MARKER_ELEVATION);
+        el.style.opacity = p.visible ? "1" : "0";
+        el.style.left = `${p.x * 100}%`;
+        el.style.top = `${p.y * 100}%`;
+      }
+    };
+
     const tick = (now: number) => {
       if (visible) {
         const fl = st.flying;
@@ -162,16 +179,18 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
             plane.style.transform = `translate(-50%, -50%) rotate(${heading + 45}deg)`;
           }
           if (rawT >= 1) {
-            router.push(`/${locale}/destinations/${fl.dest.slug}`);
+            goTo(fl.dest.slug);
             return; // page navigates away; stop the loop
           }
         }
         globe.update({ phi: st.phi });
+        updateLabels();
       }
       frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     canvas.style.opacity = "1";
+    updateLabels();
 
     const io = new IntersectionObserver(([entry]) => {
       visible = Boolean(entry?.isIntersecting);
@@ -242,7 +261,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
 
   return (
     <div>
-      <div ref={wrapRef} className="relative mx-auto aspect-square w-full max-w-[560px]">
+      <div className="relative mx-auto aspect-square w-full max-w-[560px]">
         <div aria-hidden className="globe-fallback absolute inset-[6%] rounded-full" />
         <canvas
           ref={canvasRef}
@@ -250,6 +269,20 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
           aria-label={t("globeLabel")}
           className="relative size-full cursor-grab touch-pan-y opacity-0 transition-opacity duration-700"
         />
+        {/* Country name labels — positioned every frame to track the globe. */}
+        {destinations.map((d) => (
+          <div
+            key={d.slug}
+            ref={(el) => {
+              if (el) labelRefs.current.set(d.slug, el);
+              else labelRefs.current.delete(d.slug);
+            }}
+            aria-hidden
+            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-ink/70 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 backdrop-blur-sm transition-opacity duration-200"
+          >
+            {d.name}
+          </div>
+        ))}
         {/* The little airplane — positioned every frame during the flight. */}
         <div
           ref={planeRef}

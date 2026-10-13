@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { DestinationCard } from "@/components/DestinationCard";
 import { DestinationsGlobe } from "@/components/DestinationsGlobe";
 import { Link } from "@/i18n/navigation";
 import { isMood, matchesMood, MOODS, type Mood } from "@/lib/photos";
-import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
+import { getDestinations, getOrigin } from "@/lib/server-api";
 
 export async function generateMetadata({
   params,
@@ -33,7 +32,6 @@ export default async function DestinationsPage({
   const all = await getDestinations(locale);
   const destinations = mood ? all.filter((d) => matchesMood(d.tags, mood)) : all;
   const origin = await getOrigin();
-  const city = originCity(origin, locale);
   // Fall back to Montréal when the visitor's origin is unknown.
   const hub = origin ?? { latitude: 45.5, longitude: -73.57 };
 
@@ -74,9 +72,11 @@ export default async function DestinationsPage({
         </ul>
       </nav>
 
-      {/* ---------- Interactive 3D globe: click a destination, fly there ---------- */}
+      {/* ---------- Interactive 3D globe: click a destination, fly there ----------
+          Keyed by mood so the globe rebuilds with only the matching markers. */}
       <div className="mt-10">
         <DestinationsGlobe
+          key={mood ?? "all"}
           locale={locale}
           destinations={destinations.map((d) => ({
             slug: d.slug,
@@ -87,14 +87,6 @@ export default async function DestinationsPage({
           hub={hub}
         />
       </div>
-
-      <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {destinations.map((d, i) => (
-          <li key={d.slug}>
-            <DestinationCard destination={d} originCity={city ?? ""} priority={i < 3} />
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
