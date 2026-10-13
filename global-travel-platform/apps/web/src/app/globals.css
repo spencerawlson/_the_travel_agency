@@ -183,8 +183,12 @@ body {
 }
 
 /* Hero carousel: slow zoom on the active slide (Ken Burns). */
-.hero-slide.is-active {
-  animation: hero-zoom 9s ease-out both;
+/* Hero slow zoom: larger screens only (on phones it is barely visible and
+   repainting a full-screen photo every frame is costly). */
+@media (min-width: 768px) {
+  .hero-slide.is-active {
+    animation: hero-zoom 9s ease-out both;
+  }
 }
 @keyframes hero-zoom {
   from {

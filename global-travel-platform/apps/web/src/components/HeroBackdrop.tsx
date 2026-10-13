@@ -77,7 +77,7 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
       <div className="absolute right-3 bottom-3 z-10 flex items-center gap-2 sm:right-6 sm:bottom-5">
         <Link
           href={`/destinations/${current.slug}`}
-          className="rounded-full bg-black/45 px-3 py-1 text-xs font-medium text-white backdrop-blur hover:bg-black/60"
+          className="rounded-full bg-black/55 px-3 py-1 text-xs font-medium text-white hover:bg-black/70"
         >
           <span className="sr-only">{t("slideLink", { name: current.name })}: </span>
           {current.name} · {current.credit}
@@ -88,7 +88,7 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
             onClick={() => setPaused((p) => !p)}
             aria-pressed={paused}
             aria-label={paused ? t("playSlides") : t("pauseSlides")}
-            className="flex size-7 items-center justify-center rounded-full bg-black/45 text-xs text-white backdrop-blur hover:bg-black/60"
+            className="flex size-7 items-center justify-center rounded-full bg-black/55 text-xs text-white hover:bg-black/70"
           >
             <span aria-hidden>{paused ? "▶" : "❚❚"}</span>
           </button>

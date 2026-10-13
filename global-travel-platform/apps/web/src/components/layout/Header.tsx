@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 export async function Header({ siteName }: { siteName: string }) {
   const t = await getTranslations("nav");
   return (
-    <header className="sticky top-0 z-40 border-b border-line/70 bg-canvas/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-line/70 bg-canvas/95 md:bg-canvas/80 md:backdrop-blur-md">
       <DemoBanner />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" aria-label={siteName} className="text-ink">

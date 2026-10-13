@@ -16,6 +16,7 @@ import {
   type PickTarget,
 } from "@/lib/globe-math";
 import { FLY_EVENT, type FlyRequest } from "@/lib/globe-events";
+import { globeQuality } from "@/lib/globe-quality";
 
 export interface FlyDestination extends PickTarget {
   name: string;
@@ -77,7 +78,8 @@ export function DestinationsGlobe({ locale, destinations, hub, hubName = null }:
     // block the first render (the CSS sphere shows until then). A search made
     // before it is ready simply opens the destination page.
     const mount = (createGlobe: CreateGlobe): (() => void) | undefined => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const { dpr, mapSamples, frameInterval } = globeQuality();
+      let frameNo = 0;
       let size = canvas.offsetWidth;
       let visible = true;
       let frame = 0;
@@ -97,7 +99,7 @@ export function DestinationsGlobe({ locale, destinations, hub, hubName = null }:
           theta: THETA,
           dark: 0,
           diffuse: 1.15,
-          mapSamples: 16000,
+          mapSamples,
           mapBrightness: 5.5,
           mapBaseBrightness: 0.05,
           baseColor: [0.93, 0.96, 1],
@@ -239,8 +241,13 @@ export function DestinationsGlobe({ locale, destinations, hub, hubName = null }:
               return; // page navigates away; stop the loop
             }
           }
-          globe.update({ phi: st.phi });
-          updateLabels();
+          // Phones redraw the idle spin every other frame; turns and flights
+          // (and dragging) are drawn every frame so the plane stays smooth.
+          const active = st.turning || st.flying || dragStart !== null;
+          if (active || ++frameNo % frameInterval === 0) {
+            globe.update({ phi: st.phi });
+            updateLabels();
+          }
         }
         frame = requestAnimationFrame(tick);
       };
@@ -374,7 +381,7 @@ export function DestinationsGlobe({ locale, destinations, hub, hubName = null }:
               else labelRefs.current.delete(d.slug);
             }}
             aria-hidden
-            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-ink/70 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 backdrop-blur-sm transition-opacity duration-200"
+            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-ink/80 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 transition-opacity duration-200"
           >
             {d.name}
           </div>
@@ -384,7 +391,7 @@ export function DestinationsGlobe({ locale, destinations, hub, hubName = null }:
           <div
             ref={hubLabelRef}
             aria-hidden
-            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-brand-600/90 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 backdrop-blur-sm transition-opacity duration-200"
+            className="pointer-events-none absolute top-0 left-0 -translate-x-1/2 -translate-y-[160%] rounded-full bg-brand-600 px-2.5 py-0.5 text-[11px] font-semibold whitespace-nowrap text-white opacity-0 transition-opacity duration-200"
           >
             {hubName}
           </div>

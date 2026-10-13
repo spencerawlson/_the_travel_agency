@@ -3,6 +3,7 @@
 import type CreateGlobeFn from "cobe";
 import type { Globe as CobeGlobe } from "cobe";
 import { useEffect, useRef } from "react";
+import { globeQuality } from "@/lib/globe-quality";
 
 export interface GlobePoint {
   slug: string;
@@ -77,7 +78,8 @@ function mountGlobe(
   hub: Props["hub"],
 ): (() => void) | undefined {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const { dpr, mapSamples, frameInterval } = globeQuality();
+  let frameNo = 0;
 
   // Start facing the Atlantic (Americas + Europe/Africa in view).
   let phi = 4.6;
@@ -97,7 +99,7 @@ function mountGlobe(
       theta: 0.28,
       dark: 0,
       diffuse: 1.15,
-      mapSamples: 16000,
+      mapSamples,
       mapBrightness: 5.5,
       mapBaseBrightness: 0.05,
       baseColor: [0.93, 0.96, 1],
@@ -138,7 +140,8 @@ function mountGlobe(
         velocity *= 0.95;
         phi += (reduceMotion ? 0 : AUTO_SPEED) + velocity;
       }
-      globe.update({ phi });
+      // Phones redraw every other frame while idle; dragging stays smooth.
+      if (dragX !== null || ++frameNo % frameInterval === 0) globe.update({ phi });
     }
     frame = requestAnimationFrame(tick);
   };

@@ -84,7 +84,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </div>
         <div className="mx-auto max-w-6xl px-4 pb-10">
-          <div className="rounded-3xl border border-white/70 bg-white/90 p-4 shadow-2xl shadow-brand-900/10 backdrop-blur sm:p-6">
+          <div className="rounded-3xl border border-white/70 bg-white/95 p-4 shadow-2xl shadow-brand-900/10 sm:p-6">
             <SearchForm
               defaultOrigin={
                 origin && city
