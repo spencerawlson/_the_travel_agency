@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildCsp } from "./csp";
-import { getWidgetIds, kiwiWidgetUrl, klookWidgetUrl } from "./widgets";
+import { airhelpWidgetUrl, getWidgetIds, kiwiWidgetUrl, klookWidgetUrl } from "./widgets";
 
 const ids = { trs: "584743", marker: "789134" };
 
@@ -23,6 +23,14 @@ describe("partner widgets", () => {
     expect(u.searchParams.get("trs")).toBe("584743");
     expect(u.searchParams.get("promo_id")).toBe("4497");
     expect(u.searchParams.get("locale")).toBe("fr");
+  });
+
+  it("builds the AirHelp loader in the visitor's language", () => {
+    const u = new URL(airhelpWidgetUrl(ids, "fr"));
+    expect(u.searchParams.get("shmarker")).toBe("789134");
+    expect(u.searchParams.get("promo_id")).toBe("8679");
+    expect(u.searchParams.get("lang")).toBe("fr");
+    expect(new URL(airhelpWidgetUrl(ids, "de")).searchParams.get("lang")).toBe("en");
   });
 
   it("pre-fills Kiwi.com with the search and rejects bad input", () => {
@@ -54,7 +62,7 @@ describe("partner widgets", () => {
     const directive = (name: string) => csp.split("; ").find((d) => d.startsWith(name)) ?? "";
     expect(directive("script-src")).toContain("https://tpemd.com");
     expect(directive("frame-src")).toBe(
-      "frame-src https://widgets.kiwi.com https://affiliate.klook.com",
+      "frame-src https://widgets.kiwi.com https://affiliate.klook.com https://static.airhelp.com",
     );
     expect(directive("frame-ancestors")).toBe("frame-ancestors 'none'");
   });

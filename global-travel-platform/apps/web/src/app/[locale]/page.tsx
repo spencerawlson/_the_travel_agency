@@ -8,7 +8,7 @@ import { StarCountryCard } from "@/components/StarCountryCard";
 import { Link } from "@/i18n/navigation";
 import { getPhoto, photoAlt, type Mood } from "@/lib/photos";
 import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
-import { getWidgetIds, klookWidgetUrl } from "@/lib/widgets";
+import { airhelpWidgetUrl, getWidgetIds, klookWidgetUrl } from "@/lib/widgets";
 
 const MOOD_PHOTOS: Record<Mood, string> = {
   beach: "mood-beach",
@@ -98,6 +98,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* ---------- Country of the week (auto-rotates every Monday) ---------- */}
       <StarCountryCard locale={locale} />
+
+      {/* ---------- Flight delayed? (AirHelp, consent-gated) ---------- */}
+      {widgetIds && (
+        <div className="mx-auto max-w-6xl px-4 pt-16">
+          <PartnerWidget
+            src={airhelpWidgetUrl(widgetIds, locale)}
+            title={tw("airhelpTitle")}
+            partner="AirHelp"
+            minHeight={280}
+          />
+        </div>
+      )}
 
       {/* ---------- What kind of trip? ---------- */}
       <section className="mx-auto max-w-6xl px-4 pt-16">

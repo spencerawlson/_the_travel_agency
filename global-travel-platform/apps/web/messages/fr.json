@@ -379,7 +379,7 @@
   },
   "consent": {
     "title": "Votre choix de témoins",
-    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, liens de voyage utiles). Ces partenaires peuvent déposer des témoins afin que les réservations nous soient attribuées. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
+    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, vérification d'indemnisation AirHelp, liens de voyage utiles). Ces partenaires peuvent déposer des témoins afin que les réservations nous soient attribuées. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
     "accept": "Accepter les témoins partenaires",
     "reject": "Essentiels seulement",
     "settings": "Paramètres des témoins",
@@ -389,6 +389,7 @@
     "klookTitle": "Quoi faire une fois sur place",
     "kiwiTitle": "Plus de tarifs en direct de Kiwi.com",
     "needsConsent": "Cette section affiche des offres en direct de {partner}, par l'entremise de notre réseau d'affiliation Travelpayouts. Elle ne se charge que si vous autorisez les témoins des partenaires.",
-    "allow": "Choisir mes témoins"
+    "allow": "Choisir mes témoins",
+    "airhelpTitle": "Vol retardé ou annulé? Vérifiez si vous avez droit à une indemnisation"
   }
 }

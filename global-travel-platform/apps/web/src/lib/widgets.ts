@@ -1,5 +1,6 @@
 /**
- * Travelpayouts brand widgets (Klook activities, Kiwi.com live flight search).
+ * Travelpayouts brand widgets (Klook activities, Kiwi.com live flight search,
+ * AirHelp flight-delay compensation check).
  * OFF unless TRAVELPAYOUTS_SCRIPT_ID (the project id, `trs`) and
  * TRAVELPAYOUTS_MARKER (the partner id, `shmarker`) are set. Like the Drive
  * script they only load after the visitor accepts partner cookies.
@@ -16,7 +17,7 @@ const CURRENCY_RE = /^[A-Z]{3}$/;
 /** Hosts the widgets need, by CSP directive. */
 export const WIDGET_CSP = {
   script: ["tpemd.com", "tpo.gg", "widgets.kiwi.com", "cdn.klook.com"],
-  frame: ["widgets.kiwi.com", "affiliate.klook.com"],
+  frame: ["widgets.kiwi.com", "affiliate.klook.com", "static.airhelp.com"],
   connect: ["tpo.gg", "brand.travelpayouts.com"],
   img: ["tpemd.com", "tpemb.com"],
 } as const;
@@ -82,4 +83,14 @@ export function kiwiWidgetUrl(ids: WidgetIds, locale: string, s: KiwiSearch): st
   };
   if (s.returnDate && DATE_RE.test(s.returnDate)) params.return = s.returnDate;
   return url(ids, params);
+}
+
+/** AirHelp delay/cancellation compensation checker (campaign 120). */
+export function airhelpWidgetUrl(ids: WidgetIds, locale: string): string {
+  return url(ids, {
+    lang: locale === "fr" ? "fr" : "en",
+    powered_by: "true",
+    campaign_id: "120",
+    promo_id: "8679",
+  });
 }

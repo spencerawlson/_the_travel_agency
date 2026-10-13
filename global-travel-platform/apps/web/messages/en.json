@@ -379,7 +379,7 @@
   },
   "consent": {
     "title": "Your choice of cookies",
-    "body": "We'd like to load content from our travel partners through Travelpayouts (live Kiwi.com fares, Klook activities, helpful travel links). These partners may set cookies so bookings can be credited to us. Nothing loads unless you allow it, and you can change your mind at any time under “Cookie settings”.",
+    "body": "We'd like to load content from our travel partners through Travelpayouts (live Kiwi.com fares, Klook activities, AirHelp compensation checks, helpful travel links). These partners may set cookies so bookings can be credited to us. Nothing loads unless you allow it, and you can change your mind at any time under “Cookie settings”.",
     "accept": "Accept partner cookies",
     "reject": "Essential only",
     "settings": "Cookie settings",
@@ -389,6 +389,7 @@
     "klookTitle": "Things to do when you get there",
     "kiwiTitle": "More live fares from Kiwi.com",
     "needsConsent": "This section shows live offers from {partner}, through our affiliate network Travelpayouts. It loads only if you allow partner cookies.",
-    "allow": "Choose cookie settings"
+    "allow": "Choose cookie settings",
+    "airhelpTitle": "Flight delayed or cancelled? Check if you're owed compensation"
   }
 }

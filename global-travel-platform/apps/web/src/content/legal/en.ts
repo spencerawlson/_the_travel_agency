@@ -37,7 +37,7 @@ export const en: LegalContent = (s) => ({
           "When you click an offer, you leave our site and the partner receives your request directly from your browser. Partners may set their own cookies and apply their own privacy policies.",
           ...(s.partnerScript || s.partnerWidgets
             ? [
-                "Only if you consent, we load content from our affiliate network, Travelpayouts, and its partners (Kiwi.com fare search, Klook activities), which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
+                "Only if you consent, we load content from our affiliate network, Travelpayouts, and its partners (Kiwi.com fare search, Klook activities, AirHelp compensation checks), which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
               ]
             : []),
           "Our infrastructure providers (for example, hosting, content delivery and security services) may process data outside Quebec and Canada. Before such transfers, we assess privacy risks and put contractual safeguards in place, as required by Law 25.",
@@ -143,7 +143,7 @@ export const en: LegalContent = (s) => ({
             : "Partner booking links are not active yet. Prices shown are for comparison only. Partner links will be enabled once partner agreements and any licensing requirements have been confirmed.",
           ...(s.partnerScript || s.partnerWidgets
             ? [
-                "We are a member of the Travelpayouts affiliate network. With your consent, our pages show partner content (for example live Kiwi.com fares and Klook activities) and may add affiliate links; we may earn a commission if you book through them, at no extra cost to you.",
+                "We are a member of the Travelpayouts affiliate network. With your consent, our pages show partner content (for example live Kiwi.com fares, Klook activities and AirHelp compensation checks) and may add affiliate links; we may earn a commission if you book through them, at no extra cost to you.",
               ]
             : []),
         ],
@@ -175,7 +175,7 @@ export const en: LegalContent = (s) => ({
             {
               heading: "Optional partner cookies (only with your consent)",
               paragraphs: [
-                "If you choose \u201cAccept partner cookies\u201d, we load content from Travelpayouts, the travel affiliate network we work with, and its partners Kiwi.com (live flight search) and Klook (activities). It can add travel links, live offers and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
+                "If you choose \u201cAccept partner cookies\u201d, we load content from Travelpayouts, the travel affiliate network we work with, and its partners Kiwi.com (live flight search), Klook (activities) and AirHelp (flight-delay compensation). It can add travel links, live offers and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
                 "If you choose \u201cEssential only\u201d, this partner content is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Travelpayouts is governed by its own privacy policy.",
               ],
             },
