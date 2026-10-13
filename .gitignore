@@ -88,3 +88,6 @@ desktop.ini
 
 # Server-only Docker Compose overrides
 docker-compose.local.yml
+
+# Temporary local test scripts (never commit)
+global-travel-platform/apps/web/.*.mjs
