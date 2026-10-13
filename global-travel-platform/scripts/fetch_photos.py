@@ -60,7 +60,7 @@ def strip_tags(value: str) -> str:
 def file_info(title: str) -> dict:
     params = {
         "action": "query", "format": "json", "titles": title, "prop": "imageinfo",
-        "iiprop": "url|extmetadata|size", "iiurlwidth": str(SIZES[0]),
+        "iiprop": "url|extmetadata|size", "iiurlwidth": str(max(SIZES)),
     }
     data = json.loads(fetch(f"{API}?{urllib.parse.urlencode(params)}"))
     page = next(iter(data["query"]["pages"].values()))
@@ -96,14 +96,16 @@ def main() -> int:
             continue
         info = file_info(entry["file"])
         image = Image.open(io.BytesIO(fetch(info["thumb"]))).convert("RGB")
-        for width in SIZES:
+        # Section images (history/culture/landmarks) use "sizes": [960, 480].
+        sizes = tuple(entry.get("sizes", SIZES))
+        for width in sizes:
             img = image.copy()
             img.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
-            img.save(OUT_DIR / f"{key}-{width}.webp", "WEBP", quality=78, method=6)
+            img.save(OUT_DIR / f"{key}-{width}.webp", "WEBP", quality=76, method=6)
         w, h = image.size
         credits[key] = {
-            "src": f"/photos/{key}-1600.webp",
-            "srcSmall": f"/photos/{key}-800.webp",
+            "src": f"/photos/{key}-{max(sizes)}.webp",
+            "srcSmall": f"/photos/{key}-{min(sizes)}.webp",
             "width": w,
             "height": h,
             "focus": entry.get("focus", "50% 50%"),
@@ -114,7 +116,10 @@ def main() -> int:
             "licenseUrl": info["license_url"],
             "source": info["source"],
         }
-        print(f"{key:12} {info['license']:14} {info['author'][:40]}")
+        print(f"{key:12} {info['license']:14} {info['author'][:40]}", flush=True)
+        if missing_only:  # save as we go, so an interrupted run resumes with --missing
+            CREDITS.write_text(json.dumps(credits, ensure_ascii=False, indent=2) + "
+", encoding="utf-8")
         time.sleep(2)  # be polite to Wikimedia
     CREDITS.write_text(json.dumps(credits, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {len(credits)} photos -> {OUT_DIR}")

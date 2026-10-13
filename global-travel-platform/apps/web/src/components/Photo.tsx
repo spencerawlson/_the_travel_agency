@@ -52,3 +52,45 @@ export function PhotoCaption({ photo }: { photo: PhotoCredit | null }) {
     </a>
   );
 }
+
+/**
+ * Smaller photo inside a page section (history, culture, landmarks), with its
+ * credit underneath. Section images are generated at 960 and 480 px.
+ */
+export function SectionPhoto({
+  photo,
+  locale,
+  aspect = "aspect-[16/9]",
+  sizes = "(min-width: 1024px) 640px, 100vw",
+  className,
+}: {
+  photo: PhotoCredit | null;
+  locale: string;
+  aspect?: string;
+  sizes?: string;
+  className?: string;
+}) {
+  if (!photo) return null;
+  return (
+    <figure className={className}>
+      <div className={`relative overflow-hidden rounded-2xl bg-surface-2 ${aspect}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element -- pre-optimised static WebP */}
+        <img
+          src={photo.src}
+          srcSet={`${photo.srcSmall} 480w, ${photo.src} 960w`}
+          sizes={sizes}
+          alt={photoAlt(photo, locale)}
+          width={photo.width}
+          height={photo.height}
+          loading="lazy"
+          decoding="async"
+          style={{ objectPosition: photo.focus }}
+          className="absolute inset-0 size-full object-cover"
+        />
+      </div>
+      <figcaption className="mt-1.5 text-xs text-ink-muted">
+        <PhotoCaption photo={photo} />
+      </figcaption>
+    </figure>
+  );
+}

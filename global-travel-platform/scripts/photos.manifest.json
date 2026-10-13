@@ -292,5 +292,2755 @@
     "alt_en": "The Monastery (Ad Deir) carved into rose-coloured rock at Petra, Jordan",
     "alt_fr": "Le Monastère (Ad Deir) taillé dans la roche rose de Pétra, en Jordanie",
     "focus": "50% 50%"
+  },
+  "paris--history": {
+    "file": "File:Palais de la Cite.jpg",
+    "alt_en": "A historical image from the story of Paris",
+    "alt_fr": "Une image historique de l'histoire de Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--culture": {
+    "file": "File:Patisserie Stohrer (Paris).jpg",
+    "alt_en": "Everyday culture in Paris",
+    "alt_fr": "Scène de la culture locale à Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--landmark-0": {
+    "file": "File:Tour Eiffel Wikimedia Commons (cropped).jpg",
+    "alt_en": "Eiffel Tower, Paris",
+    "alt_fr": "Tour Eiffel, Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--landmark-1": {
+    "file": "File:Notre Dame Paris front facade lower.jpg",
+    "alt_en": "Notre-Dame de Paris, Paris",
+    "alt_fr": "Notre-Dame de Paris, Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--landmark-2": {
+    "file": "File:Louvre Museum Wikimedia Commons.jpg",
+    "alt_en": "The Louvre, Paris",
+    "alt_fr": "Le Louvre, Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--landmark-3": {
+    "file": "File:Musee d'Orsay and Pont Royal, North-West view 140402 1.jpg",
+    "alt_en": "Musée d'Orsay, Paris",
+    "alt_fr": "Musée d'Orsay, Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "paris--landmark-4": {
+    "file": "File:Le sacre coeur.jpg",
+    "alt_en": "Sacré-Cœur & Montmartre, Paris",
+    "alt_fr": "Sacré-Cœur et Montmartre, Paris",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--history": {
+    "file": "File:Rajpoots 2.png",
+    "alt_en": "A historical image from the story of London",
+    "alt_fr": "Une image historique de l'histoire de Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--culture": {
+    "file": "File:Notting Hill Carnival 1 - August 2006.jpg",
+    "alt_en": "Notting Hill Carnival 2006 (London)",
+    "alt_fr": "Scène de la culture locale à Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-0": {
+    "file": "File:Tower of London from the Shard (8515883950).jpg",
+    "alt_en": "Tower of London, London",
+    "alt_fr": "Tour de Londres, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-1": {
+    "file": "File:Elizabeth Tower and the north front of the Palace of Westminster, London.jpg",
+    "alt_en": "Palace of Westminster & Big Ben, London",
+    "alt_fr": "Palais de Westminster et Big Ben, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-2": {
+    "file": "File:Westminster Abbey, Westminster.jpg",
+    "alt_en": "Westminster Abbey, London",
+    "alt_fr": "Abbaye de Westminster, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-3": {
+    "file": "File:St Pauls aerial (cropped).jpg",
+    "alt_en": "St Paul's Cathedral, London",
+    "alt_fr": "Cathédrale Saint-Paul, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-4": {
+    "file": "File:British Museum from NE 2.JPG",
+    "alt_en": "British Museum, London",
+    "alt_fr": "British Museum, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "london--landmark-5": {
+    "file": "File:Tower Bridge at Dawn.jpg",
+    "alt_en": "Tower Bridge, London",
+    "alt_fr": "Tower Bridge, Londres",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--history": {
+    "file": "File:Manatvs gelegen op de Noot Riuier.jpg",
+    "alt_en": "A historical image from the story of New York",
+    "alt_fr": "Une image historique de l'histoire de New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--culture": {
+    "file": "File:1 times square night 2013.jpg",
+    "alt_en": "times square night 2013 new york city manhattan",
+    "alt_fr": "Scène de la culture locale à New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-0": {
+    "file": "File:Front view of Statue of Liberty (cropped).jpg",
+    "alt_en": "Statue of Liberty, New York",
+    "alt_fr": "Statue de la Liberté, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-1": {
+    "file": "File:Empire State Building (aerial view).jpg",
+    "alt_en": "Empire State Building, New York",
+    "alt_fr": "Empire State Building, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-2": {
+    "file": "File:Brooklyn Bridge and the Lower Manhattan skyline from Pebble Beach, New York.jpg",
+    "alt_en": "Brooklyn Bridge, New York",
+    "alt_fr": "Pont de Brooklyn, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-3": {
+    "file": "File:Global Citizen Festival Central Park New York City from NYonAir (15351915006).jpg",
+    "alt_en": "Central Park, New York",
+    "alt_fr": "Central Park, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-4": {
+    "file": "File:Metropolitan Museum of Art (The Met) - Central Park, NYC.jpg",
+    "alt_en": "The Metropolitan Museum of Art, New York",
+    "alt_fr": "Metropolitan Museum of Art, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "new-york--landmark-5": {
+    "file": "File:9-11 Memorial and Museum (28815276064).jpg",
+    "alt_en": "9/11 Memorial, New York",
+    "alt_fr": "Mémorial du 11-Septembre, New York",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--history": {
+    "file": "File:Great Wave Hokusai BM 1906.1220.0.533 n02.jpg",
+    "alt_en": "Fishermen in their skiffs with a wave about to crash down on them, Mt Fuji in the background. From the series ‘Thirty-six Views of Mt Fuji’",
+    "alt_fr": "Une image historique de l'histoire de Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--culture": {
+    "file": "File:Rukujogosho hanami.jpg",
+    "alt_en": "六条御所花之夕宴 Evening Banquet for Cherry-blossom Viewing at the Rokujô Palace (Rokujô gosho hanami no yûen)",
+    "alt_fr": "Scène de la culture locale à Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-0": {
+    "file": "File:Sensoji 2023.jpg",
+    "alt_en": "Sensō-ji, Asakusa, Tokyo",
+    "alt_fr": "Sensō-ji, Asakusa, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-1": {
+    "file": "File:Meiji Jingu 2023-3.jpg",
+    "alt_en": "Meiji Jingū, Tokyo",
+    "alt_fr": "Meiji Jingū, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-2": {
+    "file": "File:Tokyo Skytree 2014 Ⅲ.jpg",
+    "alt_en": "Tokyo Skytree, Tokyo",
+    "alt_fr": "Tokyo Skytree, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-3": {
+    "file": "File:Seimon Ishibashi.JPG",
+    "alt_en": "Imperial Palace East Gardens, Tokyo",
+    "alt_fr": "Jardins Est du palais impérial, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-4": {
+    "file": "File:Shibuya Crossing, Aerial.jpg",
+    "alt_en": "Shibuya Crossing, Tokyo",
+    "alt_fr": "Carrefour de Shibuya, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "tokyo--landmark-5": {
+    "file": "File:2018 Tsukiji fish market.jpg",
+    "alt_en": "Tsukiji Outer Market, Tokyo",
+    "alt_fr": "Marché extérieur de Tsukiji, Tokyo",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--history": {
+    "file": "File:Relleu porta Sant Iu esquerra.jpg",
+    "alt_en": "Sant Iu door, cathedral of Barcelona",
+    "alt_fr": "Une image historique de l'histoire de Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--culture": {
+    "file": "File:Primera actuacio castellers de barcelona.jpg",
+    "alt_en": "First performance Castellers de Barcelona",
+    "alt_fr": "Scène de la culture locale à Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-0": {
+    "file": "File:SF maig 2 cropped.jpg",
+    "alt_en": "Sagrada Família, Barcelona",
+    "alt_fr": "Sagrada Família, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-1": {
+    "file": "File:Parc guell - panoramio.jpg",
+    "alt_en": "Park Güell, Barcelona",
+    "alt_fr": "Park Güell, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-2": {
+    "file": "File:Casa Batllo Overview Barcelona Spain cut.jpg",
+    "alt_en": "Casa Batlló, Barcelona",
+    "alt_fr": "Casa Batlló, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-3": {
+    "file": "File:Barcelona - Carrer del Bisbe.jpg",
+    "alt_en": "Barcelona Cathedral & Gothic Quarter, Barcelona",
+    "alt_fr": "Cathédrale de Barcelone et quartier gothique, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-4": {
+    "file": "File:Palau de la Musica May 2026-4.jpg",
+    "alt_en": "Palau de la Música Catalana, Barcelona",
+    "alt_fr": "Palau de la Música Catalana, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barcelona--landmark-5": {
+    "file": "File:Camp Nou aerial.jpg",
+    "alt_en": "Camp Nou, Barcelona",
+    "alt_fr": "Camp Nou, Barcelone",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--history": {
+    "file": "File:1755 Lisbon earthquake.jpg",
+    "alt_en": "A historical image from the story of Lisbon",
+    "alt_fr": "Une image historique de l'histoire de Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--culture": {
+    "file": "File:Um casal de Viana (Portugal).jpg",
+    "alt_en": "Everyday culture in Lisbon",
+    "alt_fr": "Scène de la culture locale à Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-0": {
+    "file": "File:Torre Belém April 2009-4a.jpg",
+    "alt_en": "Belém Tower, Lisbon",
+    "alt_fr": "Tour de Belém, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-1": {
+    "file": "File:1502 legte König Manuel I. den Grundstein für das Hieronymus Kloster in Lissabon. 06.jpg",
+    "alt_en": "Jerónimos Monastery, Lisbon",
+    "alt_fr": "Monastère des Hiéronymites, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-2": {
+    "file": "File:Lisbon Alfama Sao Vicente Pantheon from Sao Jorge Castle, 20250604 1715 9412.jpg",
+    "alt_en": "São Jorge Castle & Alfama, Lisbon",
+    "alt_fr": "Château São Jorge et Alfama, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-3": {
+    "file": "File:Lisbon-Day3-1 (34184431096).jpg",
+    "alt_en": "Tram 28, Lisbon",
+    "alt_fr": "Tramway 28, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-4": {
+    "file": "File:Lisboa - Portugal (52597836992).jpg",
+    "alt_en": "LX Factory, Lisbon",
+    "alt_fr": "LX Factory, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lisbon--landmark-5": {
+    "file": "File:Miradouro Nossa Senhora do Monte II.jpg",
+    "alt_en": "Miradouro da Senhora do Monte, Lisbon",
+    "alt_fr": "Miradouro da Senhora do Monte, Lisbonne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--history": {
+    "file": "File:Tulum - 01.jpg",
+    "alt_en": "This is a photo of a monument in Mexico, identified by ID",
+    "alt_fr": "Une image historique de l'histoire de Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--culture": {
+    "file": "File:Jarana Yucateca dancers.jpg",
+    "alt_en": "Everyday culture in Cancún",
+    "alt_fr": "Scène de la culture locale à Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-0": {
+    "file": "File:El Rey, Cancún (DerHexer) 2015-07-07 18.jpg",
+    "alt_en": "El Rey Archaeological Zone, Cancún",
+    "alt_fr": "Zone archéologique d'El Rey, Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-1": {
+    "file": "File:Cancun Strand Luftbild (22143397586).jpg",
+    "alt_en": "Museo Maya de Cancún & San Miguelito, Cancún",
+    "alt_fr": "Museo Maya de Cancún et San Miguelito, Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-2": {
+    "file": "File:Playa Delfines, Cancún - Panorama.jpg",
+    "alt_en": "Playa Delfines, Cancún",
+    "alt_fr": "Playa Delfines, Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-3": {
+    "file": "File:Church of the Immaculate Conception Isla Mujeres 2017.jpg",
+    "alt_en": "Isla Mujeres, Cancún",
+    "alt_fr": "Isla Mujeres, Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-4": {
+    "file": "File:Chichen Itza 3.jpg",
+    "alt_en": "Chichén Itzá (day trip), Cancún",
+    "alt_fr": "Chichén Itzá (excursion), Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cancun--landmark-5": {
+    "file": "File:Mercado 28, Cancún 2014.jpg",
+    "alt_en": "Parque de las Palapas, Cancún",
+    "alt_fr": "Parque de las Palapas, Cancún",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--history": {
+    "file": "File:Reykjavík, view from Hallgrímskirkja (2).jpg",
+    "alt_en": "Blick von der Hallgrímskirkja über Reykjavík",
+    "alt_fr": "Une image historique de l'histoire de Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--culture": {
+    "file": "File:Daughters of Reykjavík in Vilnius - 223804.jpg",
+    "alt_en": "Daughters of Reykjavík in Vilnius",
+    "alt_fr": "Scène de la culture locale à Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-0": {
+    "file": "File:Hallgrimskirkja mai 2026.jpg",
+    "alt_en": "Hallgrímskirkja, Reykjavík",
+    "alt_fr": "Hallgrímskirkja, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-1": {
+    "file": "File:*Das Opern- und Konzerthaus in Reykjavik. 01.jpg",
+    "alt_en": "Harpa, Reykjavík",
+    "alt_fr": "Harpa, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-2": {
+    "file": "File:Aurora over the Sun Voyager, Central Reykjavik (37291306216).jpg",
+    "alt_en": "Sun Voyager, Reykjavík",
+    "alt_fr": "Le Voyageur du Soleil, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-3": {
+    "file": "File:20190623 Perlan 8841 (48469867211).jpg",
+    "alt_en": "Perlan, Reykjavík",
+    "alt_fr": "Perlan, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-4": {
+    "file": "File:Þingvellir from the information centre.JPG",
+    "alt_en": "Þingvellir National Park, Reykjavík",
+    "alt_fr": "Parc national de Þingvellir, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "reykjavik--landmark-5": {
+    "file": "File:Blue-lagoon-spa-spring (Unsplash).jpg",
+    "alt_en": "Blue Lagoon, Reykjavík",
+    "alt_fr": "Lagon bleu, Reykjavik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--history": {
+    "file": "File:Marrakech-Koutoubia 1919.jpg",
+    "alt_en": "La nouvelle porte Koutoubia à Marrakech (Maroc)",
+    "alt_fr": "Une image historique de l'histoire de Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--culture": {
+    "file": "File:Saadian Tombs (5038325373).jpg",
+    "alt_en": "Saadian Tombs",
+    "alt_fr": "Scène de la culture locale à Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-0": {
+    "file": "File:Mosquée de la Koutoubia - marakesh.jpg",
+    "alt_en": "Koutoubia Mosque, Marrakech",
+    "alt_fr": "Mosquée de la Koutoubia, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-1": {
+    "file": "File:Djemaa el Fna.jpg",
+    "alt_en": "Jemaa el-Fnaa, Marrakech",
+    "alt_fr": "Jemaa el-Fna, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-2": {
+    "file": "File:Coranic School (106589859).jpeg",
+    "alt_en": "Ben Youssef Madrasa, Marrakech",
+    "alt_fr": "Médersa Ben Youssef, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-3": {
+    "file": "File:Le jardin des majorelle 40.JPG",
+    "alt_en": "Jardin Majorelle, Marrakech",
+    "alt_fr": "Jardin Majorelle, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-4": {
+    "file": "File:Bahia Palace large court.jpg",
+    "alt_en": "Bahia Palace, Marrakech",
+    "alt_fr": "Palais de la Bahia, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "marrakech--landmark-5": {
+    "file": "File:Saadian Tombs 1044-HDR.jpg",
+    "alt_en": "Saadian Tombs, Marrakech",
+    "alt_fr": "Tombeaux saadiens, Marrakech",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--history": {
+    "file": "File:Vancouver from Fairview, BC, 1904.jpg",
+    "alt_en": "Vancouver as seen from Fairview, British Columbia, Canada, 1904",
+    "alt_fr": "Une image historique de l'histoire de Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--culture": {
+    "file": "File:Granville Island view from Granville Bridge in 2010.jpg",
+    "alt_en": "Granville Island view from Granville Bridge in 2010",
+    "alt_fr": "Scène de la culture locale à Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-0": {
+    "file": "File:Vancouver (BC, Canada), Stanley Park, Totem poles, Chief Skedans mortuary totem pole -- 2022 -- 2030.jpg",
+    "alt_en": "Stanley Park, Vancouver",
+    "alt_fr": "Parc Stanley, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-1": {
+    "file": "File:Capilano Suspension Bridge, Vancouver, Canada (July 2016) 1.jpg",
+    "alt_en": "Capilano Suspension Bridge, Vancouver",
+    "alt_fr": "Pont suspendu de Capilano, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-2": {
+    "file": "File:Granville Island view from Granville Bridge in 2010.jpg",
+    "alt_en": "Granville Island, Vancouver",
+    "alt_fr": "Granville Island, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-3": {
+    "file": "File:Vancouver 2018-20180422-2108 (42138196834).jpg",
+    "alt_en": "Gastown Steam Clock, Vancouver",
+    "alt_fr": "Horloge à vapeur de Gastown, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-4": {
+    "file": "File:Museum of Anthropology UBC 01.jpg",
+    "alt_en": "Museum of Anthropology, Vancouver",
+    "alt_fr": "Musée d'anthropologie, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vancouver--landmark-5": {
+    "file": "File:Dr. Sun Yat-Sen Classical Chinese Garden 07.jpg",
+    "alt_en": "Dr. Sun Yat-Sen Classical Chinese Garden, Vancouver",
+    "alt_fr": "Jardin chinois classique Dr. Sun Yat-Sen, Vancouver",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--history": {
+    "file": "File:Rome- Ruins of the Forum, Looking towards the Capitol.jpg",
+    "alt_en": "A historical image from the story of Rome",
+    "alt_fr": "Une image historique de l'histoire de Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--culture": {
+    "file": "File:Saint Peter's Basilica facade, Rome, Italy.jpg",
+    "alt_en": "Facing Saint Peter's basilica, Rome, Italy, Vatican City",
+    "alt_fr": "Scène de la culture locale à Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-0": {
+    "file": "File:Colosseo 2020.jpg",
+    "alt_en": "Colosseum, Rome",
+    "alt_fr": "Colisée, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-1": {
+    "file": "File:Pantheon (Rome) - Right side and front.jpg",
+    "alt_en": "Pantheon, Rome",
+    "alt_fr": "Panthéon, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-2": {
+    "file": "File:Foro Romano Musei Capitolini Roma.jpg",
+    "alt_en": "Roman Forum & Palatine Hill, Rome",
+    "alt_fr": "Forum romain et mont Palatin, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-3": {
+    "file": "File:Basilica di San Pietro in Vaticano September 2015-1a.jpg",
+    "alt_en": "St Peter's Basilica, Rome",
+    "alt_fr": "Basilique Saint-Pierre, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-4": {
+    "file": "File:Trevi Fountain - Roma.jpg",
+    "alt_en": "Trevi Fountain, Rome",
+    "alt_fr": "Fontaine de Trevi, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rome--landmark-5": {
+    "file": "File:Piazza Navona (Rome) at night.jpg",
+    "alt_en": "Piazza Navona, Rome",
+    "alt_fr": "Piazza Navona, Rome",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--history": {
+    "file": "File:French consulate in Bangkok old photo.jpg",
+    "alt_en": "Old photograph of the French consulate-general in Bangkok",
+    "alt_fr": "Une image historique de l'histoire de Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--culture": {
+    "file": "File:Chiang Mai, Loy Krathong Lantern Festival, Thailand.jpg",
+    "alt_en": "Loy Krathong. Yee Peng. Siamese Lantern Festival. Full moon of the 12th month in the traditional Thai lunar calendar. Chiang Mai, Thailand",
+    "alt_fr": "Scène de la culture locale à Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-0": {
+    "file": "File:Wat Phra Kaew by Ninara TSP edit crop.jpg",
+    "alt_en": "Grand Palace & Wat Phra Kaew, Bangkok",
+    "alt_fr": "Grand Palais et Wat Phra Kaew, Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-1": {
+    "file": "File:พระพุทธไสยาสวัดพระเชตุพน.jpg",
+    "alt_en": "Wat Pho, Bangkok",
+    "alt_fr": "Wat Pho, Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-2": {
+    "file": "File:เจดีย์ประธานทรงปรางค์วัดอรุณ2.jpg",
+    "alt_en": "Wat Arun, Bangkok",
+    "alt_fr": "Wat Arun, Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-3": {
+    "file": "File:Yaowarat at night (32455695783).jpg",
+    "alt_en": "Yaowarat (Chinatown), Bangkok",
+    "alt_fr": "Yaowarat (Chinatown), Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-4": {
+    "file": "File:Bangkok - Jatujak Market 02.JPG",
+    "alt_en": "Chatuchak Weekend Market, Bangkok",
+    "alt_fr": "Marché de Chatuchak, Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bangkok--landmark-5": {
+    "file": "File:Main House of Jim Thompson photo Don Ramey Logan.jpg",
+    "alt_en": "Jim Thompson House, Bangkok",
+    "alt_fr": "Maison de Jim Thompson, Bangkok",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cape-town--history": {
+    "file": "File:Tobin Cape Town and the Table Mountain.png",
+    "alt_en": "Cape Town and the Table Mountain",
+    "alt_fr": "Une image historique de l'histoire de Le Cap",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cape-town--culture": {
+    "file": "File:Zoulous (Shakaland).jpg",
+    "alt_en": "Sujet : Zoulous (Shakaland),Lieu : Province du Natal, Afrique du Sud,Année : 1991",
+    "alt_fr": "Scène de la culture locale à Le Cap",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cape-town--landmark-0": {
+    "file": "File:Table Mountain DanieVDM.jpg",
+    "alt_en": "Table Mountain, Cape Town",
+    "alt_fr": "Montagne de la Table, Le Cap",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cape-town--landmark-1": {
+    "file": "File:Robben Island - Cape Town, South Africa (3883849594).jpg",
+    "alt_en": "Robben Island, Cape Town",
+    "alt_fr": "Robben Island, Le Cap",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cape-town--landmark-2": {
+    "file": "File:Playa Dias, Cape Point, Sudáfrica, 2018-07-23, DD 103.jpg",
+    "alt_en": "Cape of Good Hope, Cape Town",
+    "alt_fr": "Cap de Bonne-Espérance, Le Cap",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "nairobi--history": {
+    "file": "File:Train at the old Nairobi Railway stations.jpg",
+    "alt_en": "A historical image from the story of Nairobi",
+    "alt_fr": "Une image historique de l'histoire de Nairobi",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "nairobi--culture": {
+    "file": "File:The Maasai antiGravity Dance - 1.jpg",
+    "alt_en": "This is an image from",
+    "alt_fr": "Scène de la culture locale à Nairobi",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "nairobi--landmark-0": {
+    "file": "File:Standing zebra at Nairobi National Park.jpg",
+    "alt_en": "Nairobi National Park, Nairobi",
+    "alt_fr": "Parc national de Nairobi, Nairobi",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "nairobi--landmark-1": {
+    "file": "File:Baby elephants at the Sheldrick Wildlife Trust nursery in Nairobi, Kenya.jpg",
+    "alt_en": "Sheldrick Wildlife Trust, Nairobi",
+    "alt_fr": "Sheldrick Wildlife Trust, Nairobi",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "nairobi--landmark-2": {
+    "file": "File:Giraffe Manor, Nairobi, Kenya.jpg",
+    "alt_en": "Giraffe Centre, Nairobi",
+    "alt_fr": "Giraffe Centre, Nairobi",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "zanzibar--history": {
+    "file": "File:Rethymno Old Fort R01.jpg",
+    "alt_en": "Rethymno (Crete, Greece): the olf fort or Fortezza",
+    "alt_fr": "Une image historique de l'histoire de Zanzibar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "zanzibar--culture": {
+    "file": "File:Food Vendor in Forodhani Gardens at Night - Stone Town - Zanzibar - Tanzania (8868676141).jpg",
+    "alt_en": "Food Vendor in Forodhani Gardens at Night - Stone Town - Zanzibar - Tanzania",
+    "alt_fr": "Scène de la culture locale à Zanzibar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "zanzibar--landmark-0": {
+    "file": "File:Zanzibar sultan palace.jpg",
+    "alt_en": "Stone Town, Zanzibar",
+    "alt_fr": "Stone Town, Zanzibar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "zanzibar--landmark-1": {
+    "file": "File:Restaurant in Chunguu Island, Mjini DC.jpg",
+    "alt_en": "Prison Island, Zanzibar",
+    "alt_fr": "Prison Island, Zanzibar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "zanzibar--landmark-2": {
+    "file": "File:Zanzibar Red Colobus at Jozani Chwaka Bay National Park, Kusini DC, South Zanzibar, Tanzania.jpg",
+    "alt_en": "Jozani Forest, Zanzibar",
+    "alt_fr": "Forêt de Jozani, Zanzibar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dakar--history": {
+    "file": "File:Dakar-Indépendance.jpg",
+    "alt_en": "La place de l'Indépendance à Dakar (Sénégal). En arrière-plan le port et Gorée",
+    "alt_fr": "Une image historique de l'histoire de Dakar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dakar--culture": {
+    "file": "File:Lutte sénégalaise Bercy 2013 - Mame Balla-Pape Mor Lô - 32.jpg",
+    "alt_en": "World African Wrestling world tour, Paris Bercy. Mame Balla vs Pape Mor Lô",
+    "alt_fr": "Scène de la culture locale à Dakar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dakar--landmark-0": {
+    "file": "File:Ile-de-goree.jpg",
+    "alt_en": "Gorée Island, Dakar",
+    "alt_fr": "Île de Gorée, Dakar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dakar--landmark-1": {
+    "file": "File:Monument renaissance.jpg",
+    "alt_en": "African Renaissance Monument, Dakar",
+    "alt_fr": "Monument de la Renaissance africaine, Dakar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dakar--landmark-2": {
+    "file": "File:RetbaLakeShore.jpg",
+    "alt_en": "Pink Lake (Lac Retba), Dakar",
+    "alt_fr": "Lac Rose (lac Retba), Dakar",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cairo--history": {
+    "file": "File:Cairo Opera House, Al Hurriyah Park and the Nile river (14797782354).jpg",
+    "alt_en": "A historical image from the story of Cairo",
+    "alt_fr": "Une image historique de l'histoire de Le Caire",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cairo--culture": {
+    "file": "File:Muizz street, photo by Hatem Moushir 31.jpg",
+    "alt_en": "This is an image of \"African people at work\" from",
+    "alt_fr": "Scène de la culture locale à Le Caire",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cairo--landmark-0": {
+    "file": "File:Pyramids of the Giza Necropolis.jpg",
+    "alt_en": "Pyramids of Giza, Cairo",
+    "alt_fr": "Pyramides de Gizeh, Le Caire",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cairo--landmark-1": {
+    "file": "File:خان الخليلي 1.jpg",
+    "alt_en": "Khan el-Khalili, Cairo",
+    "alt_fr": "Khan el-Khalili, Le Caire",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cairo--landmark-2": {
+    "file": "File:1897 bis 1902 wurde das Ägyptische Museum in Kairo gebaut. 04.jpg",
+    "alt_en": "Grand Egyptian Museum, Cairo",
+    "alt_fr": "Grand Musée égyptien, Le Caire",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "accra--history": {
+    "file": "File:Acca.jpg",
+    "alt_en": "A historical image from the story of Accra",
+    "alt_fr": "Une image historique de l'histoire de Accra",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "accra--culture": {
+    "file": "File:Kente weave 02.jpg",
+    "alt_en": "Weaving of kente cloth",
+    "alt_fr": "Scène de la culture locale à Accra",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "accra--landmark-0": {
+    "file": "File:Jamestown Light House, Accra.jpg",
+    "alt_en": "Jamestown, Accra",
+    "alt_fr": "Jamestown, Accra",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "accra--landmark-1": {
+    "file": "File:Kwame Nkrumah Memorial Park.jpg",
+    "alt_en": "Kwame Nkrumah Memorial Park, Accra",
+    "alt_fr": "Parc commémoratif Kwame Nkrumah, Accra",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "accra--landmark-2": {
+    "file": "File:Castle, Cape Coast (P1100223).jpg",
+    "alt_en": "Cape Coast Castle, Accra",
+    "alt_fr": "Château de Cape Coast, Accra",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mauritius--history": {
+    "file": "File:First African slaves to Mauritius.jpg",
+    "alt_en": "Dutch Mauritius and Malagasy slaves",
+    "alt_fr": "Une image historique de l'histoire de Maurice",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mauritius--culture": {
+    "file": "File:Wonderer.jpg",
+    "alt_en": "A man playing flute during cavadee festival This media has been taken in the country: Mauritius",
+    "alt_fr": "Scène de la culture locale à Maurice",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mauritius--landmark-0": {
+    "file": "File:Le Morne Peninsula in Mauritius (53697779236).jpg",
+    "alt_en": "Le Morne Brabant, Mauritius",
+    "alt_fr": "Le Morne Brabant, Maurice",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mauritius--landmark-1": {
+    "file": "File:Black River Gorges National Park IMG 0912.jpg",
+    "alt_en": "Black River Gorges National Park, Mauritius",
+    "alt_fr": "Parc national des Gorges de la Rivière Noire, Maurice",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mauritius--landmark-2": {
+    "file": "File:Seven Coloured Earths Geopark in Chamarel, Mauritius (53697998768).jpg",
+    "alt_en": "Chamarel Seven Coloured Earth, Mauritius",
+    "alt_fr": "Terres des Sept Couleurs de Chamarel, Maurice",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "athens--history": {
+    "file": "File:Akropolis by Leo von Klenze.jpg",
+    "alt_en": "A historical image from the story of Athens",
+    "alt_fr": "Une image historique de l'histoire de Athènes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "athens--culture": {
+    "file": "File:The Parthenon in Athens.jpg",
+    "alt_en": "Parthenon, Athens Greece. Photo taken in 1978",
+    "alt_fr": "Scène de la culture locale à Athènes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "athens--landmark-0": {
+    "file": "File:1029 Acropolis of Athens in Greece at night Photo by Giles Laurent.jpg",
+    "alt_en": "Acropolis, Athens",
+    "alt_fr": "Acropole, Athènes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "athens--landmark-1": {
+    "file": "File:Athens Acropolis Museum Excavation-3.jpg",
+    "alt_en": "Acropolis Museum, Athens",
+    "alt_fr": "Musée de l'Acropole, Athènes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "athens--landmark-2": {
+    "file": "File:Agora - Athènes (GRA1) - 2022-03-26 - 97.jpg",
+    "alt_en": "Ancient Agora, Athens",
+    "alt_fr": "Agora antique, Athènes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubrovnik--history": {
+    "file": "File:The walls of the fortress and View of the old city. panorama.jpg",
+    "alt_en": "This is a photo of a cultural heritage in Croatia with ID: N-1",
+    "alt_fr": "Une image historique de l'histoire de Dubrovnik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubrovnik--culture": {
+    "file": "File:HKUD Široka Kula.jpg",
+    "alt_en": "HKUD Široka Kula - očuvanja zaboravljenih običaja Like: ličko kolo, ličko pjevanje, ličko ojkanje, nošnje, instrumente,",
+    "alt_fr": "Scène de la culture locale à Dubrovnik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubrovnik--landmark-0": {
+    "file": "File:Dubrovnik s 24.jpg",
+    "alt_en": "City Walls, Dubrovnik",
+    "alt_fr": "Remparts, Dubrovnik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubrovnik--landmark-1": {
+    "file": "File:Shopping street Stradun in the historical center of Dubrovnik, Croatia (48613019536).jpg",
+    "alt_en": "Stradun, Dubrovnik",
+    "alt_fr": "Stradun, Dubrovnik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubrovnik--landmark-2": {
+    "file": "File:Isla de Lokrum, Croacia, 2014-04-14, DD 01.JPG",
+    "alt_en": "Lokrum Island, Dubrovnik",
+    "alt_fr": "Île de Lokrum, Dubrovnik",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "amsterdam--history": {
+    "file": "File:Gezicht op Amsterdam in vogelvlucht 1538 Cornelis Anthonisz.jpg",
+    "alt_en": "A historical image from the story of Amsterdam",
+    "alt_fr": "Une image historique de l'histoire de Amsterdam",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "amsterdam--culture": {
+    "file": "File:Hollande04.jpg",
+    "alt_en": "photomontage",
+    "alt_fr": "Scène de la culture locale à Amsterdam",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "amsterdam--landmark-0": {
+    "file": "File:South facade of the Rijksmuseum Amsterdam (DSCF0528).jpg",
+    "alt_en": "Rijksmuseum, Amsterdam",
+    "alt_fr": "Rijksmuseum, Amsterdam",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "amsterdam--landmark-1": {
+    "file": "File:Amsterdam (NL), Anne-Frank-Huis -- 2015 -- 7185.jpg",
+    "alt_en": "Anne Frank House, Amsterdam",
+    "alt_fr": "Maison d'Anne Frank, Amsterdam",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "amsterdam--landmark-2": {
+    "file": "File:Imagen de los canales concéntricos en Ámsterdam.png",
+    "alt_en": "Canal Ring, Amsterdam",
+    "alt_fr": "Ceinture des canaux, Amsterdam",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "prague--history": {
+    "file": "File:Sadeler, Královský palác.jpg",
+    "alt_en": "Západní část Pražského hradu r. 1606",
+    "alt_fr": "Une image historique de l'histoire de Prague",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "prague--culture": {
+    "file": "File:Marionettes for Sale - Prague - Czech Republic.jpg",
+    "alt_en": "Marionettes for Sale - Prague - Czech Republic",
+    "alt_fr": "Scène de la culture locale à Prague",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "prague--landmark-0": {
+    "file": "File:North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+    "alt_en": "Charles Bridge, Prague",
+    "alt_fr": "Pont Charles, Prague",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "prague--landmark-1": {
+    "file": "File:Prague (6365119737).jpg",
+    "alt_en": "Prague Castle, Prague",
+    "alt_fr": "Château de Prague, Prague",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "prague--landmark-2": {
+    "file": "File:Jan Hus Statue, Old Town Square.jpg",
+    "alt_en": "Old Town Square, Prague",
+    "alt_fr": "Place de la Vieille-Ville, Prague",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "istanbul--history": {
+    "file": "File:Couvercle sarcophage saïda Sidon Liban Louvre AO5012.jpg",
+    "alt_en": "detail: head",
+    "alt_fr": "Une image historique de l'histoire de Istanbul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "istanbul--culture": {
+    "file": "File:Turkish Festival DC 2013 (10010022295).jpg",
+    "alt_en": "Turkish Festival DC 2013",
+    "alt_fr": "Scène de la culture locale à Istanbul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "istanbul--landmark-0": {
+    "file": "File:Hagia Sophia (228968325).jpeg",
+    "alt_en": "Hagia Sophia, Istanbul",
+    "alt_fr": "Sainte-Sophie, Istanbul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "istanbul--landmark-1": {
+    "file": "File:Topkapı - 01.jpg",
+    "alt_en": "Topkapı Palace, Istanbul",
+    "alt_fr": "Palais de Topkapı, Istanbul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "istanbul--landmark-2": {
+    "file": "File:Sample of Tee - Grand Bazaar.JPG",
+    "alt_en": "Grand Bazaar, Istanbul",
+    "alt_fr": "Grand Bazar, Istanbul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dublin--history": {
+    "file": "File:The General Post Office & Henry Street from Nelson's Pillar, May 18.jpg",
+    "alt_en": "The General Post Office &amp; Henry Street from Nelson's Pillar, May 18 [1916]",
+    "alt_fr": "Une image historique de l'histoire de Dublin",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dublin--culture": {
+    "file": "File:2008-05-23 The Temple Bar, Dublin, Ireland.jpg",
+    "alt_en": "The Temple Bar Pub on Temple Lane in Dublin, Ireland, on May 23, 2008. The Temple Bar, 48 Temple Bar, Temple Lane South, Dublin 2, Ireland",
+    "alt_fr": "Scène de la culture locale à Dublin",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dublin--landmark-0": {
+    "file": "File:Long Room Interior, Trinity College Dublin, Ireland - Diliff.jpg",
+    "alt_en": "Trinity College and the Book of Kells, Dublin",
+    "alt_fr": "Trinity College et le Livre de Kells, Dublin",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dublin--landmark-1": {
+    "file": "File:Guinness Storehouse exterior 3.jpg",
+    "alt_en": "Guinness Storehouse, Dublin",
+    "alt_fr": "Guinness Storehouse, Dublin",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dublin--landmark-2": {
+    "file": "File:Kilmainham Gaol Main Hall 2016-06-03.jpg",
+    "alt_en": "Kilmainham Gaol, Dublin",
+    "alt_fr": "Prison de Kilmainham, Dublin",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vienna--history": {
+    "file": "File:Anonym Entsatz Wien 1683.jpg",
+    "alt_en": "Belagerung und Entsatz der Stadt Wien im September 1683",
+    "alt_fr": "Une image historique de l'histoire de Vienne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vienna--culture": {
+    "file": "File:Cafe Central in Vienna interior near entrance.JPG",
+    "alt_en": "Cafe Central in Vienna interior near entrance with statue of Peter Altenberg",
+    "alt_fr": "Scène de la culture locale à Vienne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vienna--landmark-0": {
+    "file": "File:Wien - Schloss Schönbrunn.JPG",
+    "alt_en": "Schönbrunn Palace, Vienna",
+    "alt_fr": "Château de Schönbrunn, Vienne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vienna--landmark-1": {
+    "file": "File:Wien - Stephansdom (1).JPG",
+    "alt_en": "St Stephen's Cathedral, Vienna",
+    "alt_fr": "Cathédrale Saint-Étienne, Vienne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "vienna--landmark-2": {
+    "file": "File:Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg",
+    "alt_en": "Belvedere, Vienna",
+    "alt_fr": "Belvédère, Vienne",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "budapest--history": {
+    "file": "File:Buda Castle from the Danube River.jpg",
+    "alt_en": "Buda Castle as seen from the opposite side of the Danube river, Budapest, Hungary",
+    "alt_fr": "Une image historique de l'histoire de Budapest",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "budapest--culture": {
+    "file": "File:The ZORA Folkdancegroup of Mohács in Hungarian traditional ethnic costume, 2008 Wisła 01.JPG",
+    "alt_en": "The ZORA Folkdancegroup of Mohács",
+    "alt_fr": "Scène de la culture locale à Budapest",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "budapest--landmark-0": {
+    "file": "File:Hungarian Parliament Building from across the Danube, 2025-01-11.jpg",
+    "alt_en": "Hungarian Parliament Building, Budapest",
+    "alt_fr": "Parlement hongrois, Budapest",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "budapest--landmark-1": {
+    "file": "File:Halászbástya 2017.jpg",
+    "alt_en": "Buda Castle and Fisherman's Bastion, Budapest",
+    "alt_fr": "Château de Buda et bastion des Pêcheurs, Budapest",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "budapest--landmark-2": {
+    "file": "File:Budapest Széchenyi Baths R02.jpg",
+    "alt_en": "Széchenyi Thermal Bath, Budapest",
+    "alt_fr": "Bains Széchenyi, Budapest",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mexico-city--history": {
+    "file": "File:Model of Tenochtitlan - Templo Mayor Archeological Zone - Mexico 2024.jpg",
+    "alt_en": "Model of Tenochtitlan - Templo Mayor Archeological Zone - Mexico",
+    "alt_fr": "Une image historique de l'histoire de Mexico",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mexico-city--culture": {
+    "file": "File:Plaza Garibaldi- statue of mariachi player.jpg",
+    "alt_en": "Plaza Garibaldi- statue of mariachi player",
+    "alt_fr": "Scène de la culture locale à Mexico",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mexico-city--landmark-0": {
+    "file": "File:Musee National Anthropologie-Entree.jpg",
+    "alt_en": "National Museum of Anthropology, Mexico City",
+    "alt_fr": "Musée national d'Anthropologie, Mexico",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mexico-city--landmark-1": {
+    "file": "File:Model of Tenochtitlan Ceremonial Center Great Temple (9755406755).jpg",
+    "alt_en": "Zócalo and Templo Mayor, Mexico City",
+    "alt_fr": "Zócalo et Templo Mayor, Mexico",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "mexico-city--landmark-2": {
+    "file": "File:ZA77 Teotihuacán edo de mex Herberto de la rosa.jpg",
+    "alt_en": "Teotihuacan, Mexico City",
+    "alt_fr": "Teotihuacan, Mexico",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lima--history": {
+    "file": "File:Unionstreet-1930s.jpg",
+    "alt_en": "Jiron de la Unión in Lima, Peru",
+    "alt_fr": "Une image historique de l'histoire de Lima",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lima--culture": {
+    "file": "File:Cancillería rinde homenaje al Señor de los Milagros - 48920646318.jpg",
+    "alt_en": "Everyday culture in Lima",
+    "alt_fr": "Scène de la culture locale à Lima",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lima--landmark-0": {
+    "file": "File:Plaza de Armas, Lima.jpg",
+    "alt_en": "Historic Centre of Lima, Lima",
+    "alt_fr": "Centre historique de Lima, Lima",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lima--landmark-1": {
+    "file": "File:Huaca Pucllana Miraflores.jpg",
+    "alt_en": "Huaca Pucllana, Lima",
+    "alt_fr": "Huaca Pucllana, Lima",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "lima--landmark-2": {
+    "file": "File:Barranco District Lima Peru.jpg",
+    "alt_en": "Barranco, Lima",
+    "alt_fr": "Barranco, Lima",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rio-de-janeiro--history": {
+    "file": "File:Ile-de-villegagnon.jpg",
+    "alt_en": "A historical image from the story of Rio de Janeiro",
+    "alt_fr": "Une image historique de l'histoire de Rio de Janeiro",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rio-de-janeiro--culture": {
+    "file": "File:Roda de capoeira4.jpg",
+    "alt_en": "Roda de capoeira no Parque da Redenção, Porto Alegre, Brasil",
+    "alt_fr": "Scène de la culture locale à Rio de Janeiro",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rio-de-janeiro--landmark-0": {
+    "file": "File:Christ the Redeemer - Cristo Redentor.jpg",
+    "alt_en": "Christ the Redeemer, Rio de Janeiro",
+    "alt_fr": "Christ Rédempteur, Rio de Janeiro",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rio-de-janeiro--landmark-1": {
+    "file": "File:Pão de Açucar - Sugarloaf Mountain - Zuckerhut - 2022.jpg",
+    "alt_en": "Sugarloaf Mountain, Rio de Janeiro",
+    "alt_fr": "Pain de Sucre, Rio de Janeiro",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "rio-de-janeiro--landmark-2": {
+    "file": "File:Selaron Stairs, Rio de Janeiro, Brasil.jpg",
+    "alt_en": "Selarón Steps, Rio de Janeiro",
+    "alt_fr": "Escalier Selarón, Rio de Janeiro",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "buenos-aires--history": {
+    "file": "File:Buenos Aires - Avenida de Mayo 767 al 777.jpg",
+    "alt_en": "A historical image from the story of Buenos Aires",
+    "alt_fr": "Une image historique de l'histoire de Buenos Aires",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "buenos-aires--culture": {
+    "file": "File:Casa Rosada, Buenos Aires, Argentina.jpg",
+    "alt_en": "Casa Rosada, Buenos Aires, Argentina",
+    "alt_fr": "Scène de la culture locale à Buenos Aires",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "buenos-aires--landmark-0": {
+    "file": "File:Caminito in 2026.jpg",
+    "alt_en": "La Boca and Caminito, Buenos Aires",
+    "alt_fr": "La Boca et Caminito, Buenos Aires",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "buenos-aires--landmark-1": {
+    "file": "File:EstatuaentechoTumbaFliaAlzaga-jun2017.jpg",
+    "alt_en": "Recoleta Cemetery, Buenos Aires",
+    "alt_fr": "Cimetière de Recoleta, Buenos Aires",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "buenos-aires--landmark-2": {
+    "file": "File:Fachada del Teatro Colón en Buenos Aires, Argentina.jpg",
+    "alt_en": "Teatro Colón, Buenos Aires",
+    "alt_fr": "Teatro Colón, Buenos Aires",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cartagena--history": {
+    "file": "File:Cdral de Cartagena de Indias 1930.jpg",
+    "alt_en": "A historical image from the story of Cartagena",
+    "alt_fr": "Une image historique de l'histoire de Carthagène des Indes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cartagena--culture": {
+    "file": "File:04162012Bailes032.JPG",
+    "alt_en": "Demonstración de baile folclórico de Colombia durante el evento “Yo Amo Colombia” en ITESM Campus Ciudad de México [1]",
+    "alt_fr": "Scène de la culture locale à Carthagène des Indes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cartagena--landmark-0": {
+    "file": "File:Museo Naval del Caribe.JPG",
+    "alt_en": "Walled City, Cartagena",
+    "alt_fr": "Ville fortifiée, Carthagène des Indes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cartagena--landmark-1": {
+    "file": "File:62 - Carthagène - Décembre 2008.jpg",
+    "alt_en": "Castillo San Felipe de Barajas, Cartagena",
+    "alt_fr": "Château San Felipe de Barajas, Carthagène des Indes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "cartagena--landmark-2": {
+    "file": "File:Karibiska havet i Colombia.jpg",
+    "alt_en": "Rosario Islands, Cartagena",
+    "alt_fr": "Îles du Rosaire, Carthagène des Indes",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-jose-costa-rica--history": {
+    "file": "File:Stone spheres of Costa Rica. Museo Nacional.jpg",
+    "alt_en": "A historical image from the story of Costa Rica",
+    "alt_fr": "Une image historique de l'histoire de Costa Rica",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-jose-costa-rica--culture": {
+    "file": "File:Carreta tipica Sarchi (1).JPG",
+    "alt_en": "Carreta típica auténtica fabricada alrededor de 1950 por Talleres Chaverri para el trabajo cotidiano, Sarchí, Alajuela, Costa Rica",
+    "alt_fr": "Scène de la culture locale à Costa Rica",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-jose-costa-rica--landmark-0": {
+    "file": "File:Arenal volcano (70785p) (cropped).jpg",
+    "alt_en": "Arenal Volcano National Park, Costa Rica",
+    "alt_fr": "Parc national du Volcan Arenal, Costa Rica",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-jose-costa-rica--landmark-1": {
+    "file": "File:Monteverde bosque.jpg",
+    "alt_en": "Monteverde Cloud Forest Reserve, Costa Rica",
+    "alt_fr": "Réserve de la forêt de nuages de Monteverde, Costa Rica",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-jose-costa-rica--landmark-2": {
+    "file": "File:Manuel antonio 06 april 2005.jpeg",
+    "alt_en": "Manuel Antonio National Park, Costa Rica",
+    "alt_fr": "Parc national Manuel Antonio, Costa Rica",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "santiago--history": {
+    "file": "File:Palacio de La Moneda - miguelreflex.jpg",
+    "alt_en": "A historical image from the story of Santiago",
+    "alt_fr": "Une image historique de l'histoire de Santiago du Chili",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "santiago--culture": {
+    "file": "File:Traditional dress of the Chilean cueca, a national dance.jpg",
+    "alt_en": "After they finished dancing I asked for a picture, on my last day visiting my family in Chile",
+    "alt_fr": "Scène de la culture locale à Santiago du Chili",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "santiago--landmark-0": {
+    "file": "File:San Cristóbal altura.jpg",
+    "alt_en": "San Cristóbal Hill, Santiago",
+    "alt_fr": "Colline San Cristóbal, Santiago du Chili",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "santiago--landmark-1": {
+    "file": "File:Plaza de Armas.JPG",
+    "alt_en": "Plaza de Armas, Santiago",
+    "alt_fr": "Plaza de Armas, Santiago du Chili",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "santiago--landmark-2": {
+    "file": "File:Casa Celeste Hostal, Cerro Alegre, Valparaíso 20201102 119.jpg",
+    "alt_en": "Valparaíso, Santiago",
+    "alt_fr": "Valparaíso, Santiago du Chili",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "quito--history": {
+    "file": "File:Quito as from panecillo Basilica.jpg",
+    "alt_en": "A historical image from the story of Quito",
+    "alt_fr": "Une image historique de l'histoire de Quito",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "quito--culture": {
+    "file": "File:Otavalo Artisan Market - Andes Mountains - South America - photograph 018.JPG",
+    "alt_en": "Hand Made Alpaca Sweaters for sale at the Otavalo Artisan Market in the Andes Mountains, South America",
+    "alt_fr": "Scène de la culture locale à Quito",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "quito--landmark-0": {
+    "file": "File:Iglesia de La Compañía, Quito, Ecuador, 2015-07-22, DD 149-151 HDR.JPG",
+    "alt_en": "Historic Centre of Quito, Quito",
+    "alt_fr": "Centre historique de Quito, Quito",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "quito--landmark-1": {
+    "file": "File:Mitad del Mundo, Quito, Ecuador, 2015-07-22, DD 15.JPG",
+    "alt_en": "Mitad del Mundo, Quito",
+    "alt_fr": "Mitad del Mundo, Quito",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "quito--landmark-2": {
+    "file": "File:Gondolas of the TeleferiQo in Quito, Ecuador.jpg",
+    "alt_en": "TelefériQo, Quito",
+    "alt_fr": "TelefériQo, Quito",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "havana--history": {
+    "file": "File:1740 Plan of the city and harbour of the Havanna situated on the island of Cuba BPL m8628.png",
+    "alt_en": "A plan of the city and harbour of the Havanna situated on the island of Cuba Date: 1740 Dimensions: 49.0 x 74.0 cm. Scale: Scale not given",
+    "alt_fr": "Une image historique de l'histoire de La Havane",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "havana--culture": {
+    "file": "File:Casino Español, Matanzas Cuba.jpg",
+    "alt_en": "antiguo casino español en la plaza de la libertada cuidad de matanzas hoy en dia convertida en la biblioteca gener y del monte",
+    "alt_fr": "Scène de la culture locale à La Havane",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "havana--landmark-0": {
+    "file": "File:La havane plaza vieja.JPG",
+    "alt_en": "Old Havana, Havana",
+    "alt_fr": "Vieille Havane, La Havane",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "havana--landmark-1": {
+    "file": "File:Havana malecon (cropped).jpg",
+    "alt_en": "Malecón, Havana",
+    "alt_fr": "Malecón, La Havane",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "havana--landmark-2": {
+    "file": "File:FaroCastillodelMoro-Cuba-ene2017.jpg",
+    "alt_en": "Castillo del Morro, Havana",
+    "alt_fr": "Castillo del Morro, La Havane",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "punta-cana--history": {
+    "file": "File:Santo Domingo - Alcazar de Colon 02.JPG",
+    "alt_en": "Santo Domingo - Alcázar de Colón, March 2016, part of UNESCO World Heritage Site Ref. Number 526",
+    "alt_fr": "Une image historique de l'histoire de Punta Cana",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "punta-cana--culture": {
+    "file": "File:Carnival-3490.jpg",
+    "alt_en": "Carnival in Concepción de La Vega, Dominican Republic",
+    "alt_fr": "Scène de la culture locale à Punta Cana",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "punta-cana--landmark-0": {
+    "file": "File:Cap Cana Marina Dominican Republic.jpg",
+    "alt_en": "Bávaro Beach, Punta Cana",
+    "alt_fr": "Plage de Bávaro, Punta Cana",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "punta-cana--landmark-1": {
+    "file": "File:Saona Island December 2020.jpg",
+    "alt_en": "Saona Island, Punta Cana",
+    "alt_fr": "Île Saona, Punta Cana",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "punta-cana--landmark-2": {
+    "file": "File:Santo Domingo Cathedral (1899).jpg",
+    "alt_en": "Colonial Zone of Santo Domingo, Punta Cana",
+    "alt_fr": "Zone coloniale de Saint-Domingue, Punta Cana",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "montego-bay--history": {
+    "file": "File:Jamaica Kingston Harbor.png",
+    "alt_en": "West Indies - Jamaica - Kingston Harbour, ca.1870, size 13*21cm",
+    "alt_fr": "Une image historique de l'histoire de Jamaïque",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "montego-bay--culture": {
+    "file": "File:50th anniversary of Jamaican independence, Norland Scarecrow Festival, Norland, West Yorkshire (Taken by Flickr user 1st September 2012).jpg",
+    "alt_en": "Everyday culture in Jamaica",
+    "alt_fr": "Scène de la culture locale à Jamaïque",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "montego-bay--landmark-0": {
+    "file": "File:Dunns River Falls climb.JPG",
+    "alt_en": "Dunn's River Falls, Jamaica",
+    "alt_fr": "Chutes de Dunn's River, Jamaïque",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "montego-bay--landmark-1": {
+    "file": "File:Rose Hall Jamaica Photo Don Ramey Logan.jpg",
+    "alt_en": "Rose Hall Great House, Jamaica",
+    "alt_fr": "Rose Hall Great House, Jamaïque",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "montego-bay--landmark-2": {
+    "file": "File:Negril Jamaica 2007-09.jpg",
+    "alt_en": "Seven Mile Beach, Negril, Jamaica",
+    "alt_fr": "Seven Mile Beach, Negril, Jamaïque",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-juan--history": {
+    "file": "File:Museo de San Juan (2025).jpg",
+    "alt_en": "Museo de San Juan, former Old San Juan marketplace hall 1",
+    "alt_fr": "Une image historique de l'histoire de San Juan",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-juan--culture": {
+    "file": "File:La escuela del Maestro Cordero by Francisco Oller.jpg",
+    "alt_en": "\"La escuela del Maestro Cordero\" - 'The school of Master Cordero' - by Puerto Rican impressionist painter Francisco Oller",
+    "alt_fr": "Scène de la culture locale à San Juan",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-juan--landmark-0": {
+    "file": "File:Castillo San Felipe Del Morro (16869927311).jpg",
+    "alt_en": "Castillo San Felipe del Morro, San Juan",
+    "alt_fr": "Castillo San Felipe del Morro, San Juan",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-juan--landmark-1": {
+    "file": "File:Top of El Yunque, from the Yokahú Tower, an observation tower built in 1963 (cropped).jpg",
+    "alt_en": "El Yunque National Forest, San Juan",
+    "alt_fr": "Forêt nationale d'El Yunque, San Juan",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "san-juan--landmark-2": {
+    "file": "File:Las Cabezas de San Juan PR Fajardo IMG 2385 Laguna Grande.JPG",
+    "alt_en": "Bioluminescent bays, San Juan",
+    "alt_fr": "Baies bioluminescentes, San Juan",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barbados--history": {
+    "file": "File:Barbados - Island scenes.jpg",
+    "alt_en": "Barbados, B.W.I. — Photomechanical print (postcard) Undivided back No. 2035",
+    "alt_fr": "Une image historique de l'histoire de Barbade",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barbados--culture": {
+    "file": "File:Miami Beach, Barbados.jpg",
+    "alt_en": "Miami Beach by Oistins, Barbados - viewed from Enterprise Coast Road",
+    "alt_fr": "Scène de la culture locale à Barbade",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barbados--landmark-0": {
+    "file": "File:Harrisoncave1.JPG",
+    "alt_en": "Harrison's Cave, Barbados",
+    "alt_fr": "Harrison's Cave, Barbade",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barbados--landmark-1": {
+    "file": "File:Bathsheba, Barbados 08.jpg",
+    "alt_en": "Bathsheba, Barbados",
+    "alt_fr": "Bathsheba, Barbade",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "barbados--landmark-2": {
+    "file": "File:Mount Gay Rum Visitors Centre, Spring Garden HWY, Barbados-002.jpg",
+    "alt_en": "Mount Gay Rum Visitor Centre, Barbados",
+    "alt_fr": "Centre des visiteurs de Mount Gay, Barbade",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubai--history": {
+    "file": "File:Old Houses on the Creek.jpg",
+    "alt_en": "One of the old houses on Deira Grand Souk overlooking Dubai Creek; a saltwater creek that holds a great portion of Dubai's history",
+    "alt_fr": "Une image historique de l'histoire de Dubaï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubai--culture": {
+    "file": "File:A dallah a traditional Arabic coffee pot with cups and coffee beans.jpg",
+    "alt_en": "A dallah a traditional Arab coffee pot with cups and coffee beans",
+    "alt_fr": "Scène de la culture locale à Dubaï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubai--landmark-0": {
+    "file": "File:Burj Khalifa (worlds tallest building) and the Dubai skyline (25781049892).jpg",
+    "alt_en": "Burj Khalifa, Dubai",
+    "alt_fr": "Burj Khalifa, Dubaï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubai--landmark-1": {
+    "file": "File:Al Bastakiya of Dubai.jpg",
+    "alt_en": "Al Fahidi Historical Neighbourhood, Dubai",
+    "alt_fr": "Quartier historique d'Al Fahidi, Dubaï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "dubai--landmark-2": {
+    "file": "File:Museum of the Future 9.jpg",
+    "alt_en": "Museum of the Future, Dubai",
+    "alt_fr": "Musée du Futur, Dubaï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bali--history": {
+    "file": "File:Besakih Bali Indonesia Pura-Besakih-02.jpg",
+    "alt_en": "A historical image from the story of Bali",
+    "alt_fr": "Une image historique de l'histoire de Bali",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bali--culture": {
+    "file": "File:Statue of God Vishnu.jpg",
+    "alt_en": "Garuda wisnu kencana Statue in cultural park, Bali, Indonesia",
+    "alt_fr": "Scène de la culture locale à Bali",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bali--landmark-0": {
+    "file": "File:TanahLot 2014.JPG",
+    "alt_en": "Tanah Lot, Bali",
+    "alt_fr": "Tanah Lot, Bali",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bali--landmark-1": {
+    "file": "File:Luhur Uluwatu Temple, Bali, 20220826 0953 1016.jpg",
+    "alt_en": "Uluwatu Temple, Bali",
+    "alt_fr": "Temple d'Uluwatu, Bali",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "bali--landmark-2": {
+    "file": "File:Rice terraces, Bali.jpg",
+    "alt_en": "Tegallalang Rice Terraces, Bali",
+    "alt_fr": "Rizières de Tegallalang, Bali",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "hanoi--history": {
+    "file": "File:Long-bien-bridge-3371617.jpg",
+    "alt_en": "Long Biên Bridge, Hanoi",
+    "alt_fr": "Une image historique de l'histoire de Hanoï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "hanoi--culture": {
+    "file": "File:Vn-hanoi-einsäulenpagode-02-08-07.jpg",
+    "alt_en": "Einsäulenpagode Hanoi",
+    "alt_fr": "Scène de la culture locale à Hanoï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "hanoi--landmark-0": {
+    "file": "File:Thap Rua.jpg",
+    "alt_en": "Hoàn Kiếm Lake, Hanoi",
+    "alt_fr": "Lac Hoàn Kiếm, Hanoï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "hanoi--landmark-1": {
+    "file": "File:Hanoi Temple of Literature (cropped).jpg",
+    "alt_en": "Temple of Literature, Hanoi",
+    "alt_fr": "Temple de la Littérature, Hanoï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "hanoi--landmark-2": {
+    "file": "File:Ha Long Bay in 2019.jpg",
+    "alt_en": "Ha Long Bay, Hanoi",
+    "alt_fr": "Baie d'Ha Long, Hanoï",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "seoul--history": {
+    "file": "File:Sungnyemun Gate in Seoul.jpg",
+    "alt_en": "Sungnyemun Gate in Seoul, South Korea",
+    "alt_fr": "Une image historique de l'histoire de Séoul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "seoul--culture": {
+    "file": "File:Korea Queer Culture Festival 2014 57.JPG",
+    "alt_en": "w:Korea Queer Culture Festival 2014, before the parade. Here: several participants at a small booth",
+    "alt_fr": "Scène de la culture locale à Séoul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "seoul--landmark-0": {
+    "file": "File:Gyeonghoeru (Royal Banquet Hall) at Gyeongbokgung Palace, Seoul.jpg",
+    "alt_en": "Gyeongbokgung Palace, Seoul",
+    "alt_fr": "Palais Gyeongbokgung, Séoul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "seoul--landmark-1": {
+    "file": "File:Bukchon Hanok Village 01.jpg",
+    "alt_en": "Bukchon Hanok Village, Seoul",
+    "alt_fr": "Village de hanok de Bukchon, Séoul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "seoul--landmark-2": {
+    "file": "File:중화전의 낮.jpg",
+    "alt_en": "N Seoul Tower, Seoul",
+    "alt_fr": "N Seoul Tower, Séoul",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "singapore--history": {
+    "file": "File:Hotel Raffles, Singapur, 2023-08-16, DD 153-155 HDR.jpg",
+    "alt_en": "Raffles Hotel, Singapore",
+    "alt_fr": "Une image historique de l'histoire de Singapour",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "singapore--culture": {
+    "file": "File:Huayi Chinese Festival of the Arts, Esplanade, Singapore, 2009..jpg",
+    "alt_en": "Huayi Chinese Festival of the Arts, Esplanade, Singapore, 2009",
+    "alt_fr": "Scène de la culture locale à Singapour",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "singapore--landmark-0": {
+    "file": "File:Supertree Grove, Gardens by the Bay, Singapore - 20120712-02.jpg",
+    "alt_en": "Gardens by the Bay, Singapore",
+    "alt_fr": "Gardens by the Bay, Singapour",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "singapore--landmark-1": {
+    "file": "File:Marina Bay Sands (I).jpg",
+    "alt_en": "Marina Bay Sands, Singapore",
+    "alt_fr": "Marina Bay Sands, Singapour",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "singapore--landmark-2": {
+    "file": "File:Symphony Lake, Singapore Botanic Gardens - 20041025.jpg",
+    "alt_en": "Singapore Botanic Gardens, Singapore",
+    "alt_fr": "Jardin botanique de Singapour, Singapour",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "sydney--history": {
+    "file": "File:George Street Sydney 1883.jpg",
+    "alt_en": "George Street, Sydney, 1883, by Alfred Tischbauer, oil painting, State Library of New South Wales DG 210",
+    "alt_fr": "Une image historique de l'histoire de Sydney",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "sydney--culture": {
+    "file": "File:SLNSW 16188 Charles Farrell at Bondi carnival.jpg",
+    "alt_en": "Charles Farrell at Bondi carnival",
+    "alt_fr": "Scène de la culture locale à Sydney",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "sydney--landmark-0": {
+    "file": "File:Sydney Australia. (21339175489).jpg",
+    "alt_en": "Sydney Opera House, Sydney",
+    "alt_fr": "Opéra de Sydney, Sydney",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "sydney--landmark-1": {
+    "file": "File:Sydney Harbour Bridge-16 October 2025.jpg",
+    "alt_en": "Sydney Harbour Bridge, Sydney",
+    "alt_fr": "Sydney Harbour Bridge, Sydney",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "sydney--landmark-2": {
+    "file": "File:Bondi from above.jpg",
+    "alt_en": "Bondi Beach, Sydney",
+    "alt_fr": "Plage de Bondi, Sydney",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "auckland--history": {
+    "file": "File:Queen Street, Auckland in the 1860s New Zealand Views.jpg",
+    "alt_en": "Queen Street, Auckland in the 1860s, from albumen print, State Library of New South Wales, DL PX 150",
+    "alt_fr": "Une image historique de l'histoire de Auckland",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "auckland--culture": {
+    "file": "File:Kia Aroha College, ASB Polyfest. (POLY-D-2015-018).jpg",
+    "alt_en": "Kia Aroha College Tongan group performing Ma'ulu'ulu at ASB Polyfest",
+    "alt_fr": "Scène de la culture locale à Auckland",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "auckland--landmark-0": {
+    "file": "File:Sky Tower Auckland 01.jpg",
+    "alt_en": "Sky Tower, Auckland",
+    "alt_fr": "Sky Tower, Auckland",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "auckland--landmark-1": {
+    "file": "File:Mount Eden.jpg",
+    "alt_en": "Maungawhau / Mount Eden, Auckland",
+    "alt_fr": "Maungawhau / mont Eden, Auckland",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "auckland--landmark-2": {
+    "file": "File:Waiheke Island Vineyard.jpg",
+    "alt_en": "Waiheke Island, Auckland",
+    "alt_fr": "Île de Waiheke, Auckland",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "petra-amman--history": {
+    "file": "File:David Roberts - Petra, Lower End of the Valley, Viewing the Acropolis - 1927.79 - Cleveland Museum of Art.tif",
+    "alt_en": "A historical image from the story of Jordan",
+    "alt_fr": "Une image historique de l'histoire de Jordanie",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "petra-amman--culture": {
+    "file": "File:Jerash Festival 2018 15.jpg",
+    "alt_en": "Jerash Festival, C.E.2018 Photo by: Ahmed Abdo",
+    "alt_fr": "Scène de la culture locale à Jordanie",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "petra-amman--landmark-0": {
+    "file": "File:Al Deir Petra.JPG",
+    "alt_en": "Petra, Jordan",
+    "alt_fr": "Pétra, Jordanie",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "petra-amman--landmark-1": {
+    "file": "File:Mountain in Wadi Rum, Jordan.jpg",
+    "alt_en": "Wadi Rum, Jordan",
+    "alt_fr": "Wadi Rum, Jordanie",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
+  },
+  "petra-amman--landmark-2": {
+    "file": "File:Dead Sea beach 00.JPG",
+    "alt_en": "Dead Sea, Jordan",
+    "alt_fr": "Mer Morte, Jordanie",
+    "focus": "50% 50%",
+    "sizes": [
+      960,
+      480
+    ]
   }
 }

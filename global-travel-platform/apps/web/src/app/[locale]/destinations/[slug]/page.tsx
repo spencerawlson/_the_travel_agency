@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { LocalTime } from "@/components/LocalTime";
-import { Photo, PhotoCaption } from "@/components/Photo";
+import { Photo, PhotoCaption, SectionPhoto } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -246,6 +246,11 @@ export default async function DestinationPage({ params }: { params: Params }) {
           {d.history && (
             <section>
               <h2 className="font-display text-3xl font-semibold">{t("history")}</h2>
+              <SectionPhoto
+                photo={getPhoto(`${d.slug}--history`)}
+                locale={locale}
+                className="mt-4"
+              />
               <div className="text-ink-2 mt-4 space-y-4 text-lg leading-relaxed">
                 {d.history.split(/\n\n+/).map((p, i) => (
                   <p key={i}>{p}</p>
@@ -256,6 +261,11 @@ export default async function DestinationPage({ params }: { params: Params }) {
           {d.culture && (
             <section>
               <h2 className="font-display text-3xl font-semibold">{t("culture")}</h2>
+              <SectionPhoto
+                photo={getPhoto(`${d.slug}--culture`)}
+                locale={locale}
+                className="mt-4"
+              />
               <div className="text-ink-2 mt-4 space-y-4 text-lg leading-relaxed">
                 {d.culture.split(/\n\n+/).map((p, i) => (
                   <p key={i}>{p}</p>
@@ -267,11 +277,18 @@ export default async function DestinationPage({ params }: { params: Params }) {
             <section>
               <h2 className="font-display text-3xl font-semibold">{t("landmarks")}</h2>
               <ul className="mt-4 grid gap-4 sm:grid-cols-2">
-                {d.landmarks.map((lm) => (
+                {d.landmarks.map((lm, i) => (
                   <li
                     key={lm.name}
                     className="rounded-2xl bg-surface-1 p-5 shadow-sm ring-1 ring-line/60"
                   >
+                    <SectionPhoto
+                      photo={getPhoto(`${d.slug}--landmark-${i}`)}
+                      locale={locale}
+                      aspect="aspect-[4/3]"
+                      sizes="(min-width: 640px) 320px, 100vw"
+                      className="mb-4"
+                    />
                     <h3 className="font-display text-xl font-semibold">{lm.name}</h3>
                     <p className="text-ink-2 mt-2 leading-relaxed">{lm.description}</p>
                   </li>
