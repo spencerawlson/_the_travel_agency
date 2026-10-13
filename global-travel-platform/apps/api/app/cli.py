@@ -104,6 +104,37 @@ async def _set_admin_active(email: str, active: bool) -> str:
         return "enabled" if active else "disabled"
 
 
+async def _reset_two_factor(email: str) -> str:
+    """Lost authenticator: turn 2FA off (the admin sets it up again) and sign them out."""
+    from datetime import UTC, datetime
+
+    from sqlalchemy import update
+
+    from app.models import AdminSession
+    from app.services.auth import reset_two_factor
+
+    email = email.strip().lower()
+    async with get_sessionmaker()() as session:
+        user = (await session.scalars(select(AdminUser).where(AdminUser.email == email))).first()
+        if user is None:
+            return "not found"
+        reset_two_factor(user)
+        await session.execute(
+            update(AdminSession)
+            .where(AdminSession.user_id == user.id, AdminSession.revoked_at.is_(None))
+            .values(revoked_at=datetime.now(UTC))
+        )
+        audit(
+            session,
+            "admin.2fa.reset",
+            actor_label="cli",
+            target_type="admin_user",
+            target_id=user.id,
+        )
+        await session.commit()
+        return "2fa reset"
+
+
 async def _import_commissions(days: int) -> None:
     async with get_sessionmaker()() as session:
         result = await import_travelpayouts_commissions(session, days=days, actor_label="cli")
@@ -126,6 +157,8 @@ def main(argv: list[str] | None = None) -> int:
     for name in ("disable-admin", "enable-admin"):
         cmd = sub.add_parser(name)
         cmd.add_argument("--email", required=True)
+    r2 = sub.add_parser("reset-2fa", help="turn off two-step sign-in for a locked-out admin")
+    r2.add_argument("--email", required=True)
     sub.add_parser("ensure-dev-admin")
     sub.add_parser("purge-expired")
     ic = sub.add_parser("import-commissions")
@@ -158,6 +191,10 @@ def main(argv: list[str] | None = None) -> int:
                 )
             elif args.cmd in ("disable-admin", "enable-admin"):
                 result = await _set_admin_active(args.email, args.cmd == "enable-admin")
+                print(result)
+                return 1 if result == "not found" else 0
+            elif args.cmd == "reset-2fa":
+                result = await _reset_two_factor(args.email)
                 print(result)
                 return 1 if result == "not found" else 0
             elif args.cmd == "import-commissions":

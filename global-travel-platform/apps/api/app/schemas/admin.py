@@ -14,6 +14,8 @@ class LoginIn(BaseModel):
     model_config = ConfigDict(extra="forbid")
     email: str = Field(min_length=3, max_length=254)
     password: str = Field(min_length=1, max_length=256)
+    # Second step: 6-digit authenticator code or a recovery code (XXXX-XXXX).
+    otp: str | None = Field(default=None, max_length=16)
 
 
 class AdminUserOut(BaseModel):
@@ -21,12 +23,36 @@ class AdminUserOut(BaseModel):
     email: str
     role: str
     last_login_at: datetime | None
+    two_factor_enabled: bool = False
 
 
 class SessionOut(BaseModel):
     user: AdminUserOut
     expires_at: datetime
     csrf_token: str | None = None
+    # ADMIN_REQUIRE_2FA is on: the dashboard stays locked until 2FA is set up.
+    two_factor_required: bool = False
+
+
+class TwoFactorSetupOut(BaseModel):
+    secret: str
+    otpauth_uri: str
+    qr_svg: str  # data: URI
+
+
+class TwoFactorCodeIn(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    code: str = Field(min_length=6, max_length=16)
+
+
+class TwoFactorDisableIn(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    password: str = Field(min_length=1, max_length=256)
+    code: str = Field(min_length=6, max_length=16)
+
+
+class RecoveryCodesOut(BaseModel):
+    recovery_codes: list[str]
 
 
 class Page(BaseModel, Generic[T]):

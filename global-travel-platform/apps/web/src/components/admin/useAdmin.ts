@@ -10,6 +10,7 @@ import { useRequest } from "@/lib/useRequest";
 export function useAdminSession() {
   const router = useRouter();
   const [session, setSession] = useState<AdminSession | null>(null);
+  const [version, setVersion] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
@@ -19,7 +20,9 @@ export function useAdminSession() {
     return () => {
       cancelled = true;
     };
-  }, [router]);
+  }, [router, version]);
+
+  const refresh = useCallback(() => setVersion((v) => v + 1), []);
 
   const signOut = useCallback(async () => {
     try {
@@ -29,7 +32,7 @@ export function useAdminSession() {
     }
   }, [router]);
 
-  return { session, signOut };
+  return { session, signOut, refresh };
 }
 
 export type LoadState<T> =

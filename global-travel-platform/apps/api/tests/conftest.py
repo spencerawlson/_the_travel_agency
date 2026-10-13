@@ -97,7 +97,11 @@ async def clean_state() -> AsyncIterator[None]:
         ):
             await session.execute(delete(model))
         await session.execute(
-            text("UPDATE admin_users SET failed_login_count = 0, locked_until = NULL")
+            text(
+                "UPDATE admin_users SET failed_login_count = 0, locked_until = NULL,"
+                " totp_secret = NULL, totp_pending_secret = NULL, totp_enabled_at = NULL,"
+                " totp_last_step = NULL, recovery_code_hashes = NULL"
+            )
         )
         await session.commit()
 

@@ -302,7 +302,8 @@
       "overview": "Vue d'ensemble",
       "searches": "Recherches",
       "referrals": "Recommandations",
-      "commissions": "Commissions"
+      "commissions": "Commissions",
+      "security": "Sécurité"
     },
     "kpi": {
       "searches": "Recherches totales",
@@ -373,7 +374,39 @@
     "importing": "Importation…",
     "importHint": "Récupère les gains des 90 derniers jours. S'exécute aussi automatiquement chaque nuit.",
     "importDone": "Terminé : {fetched} actions vérifiées, {earning} gains, {created} nouveaux, {updated} mis à jour.",
-    "importFailed": "Échec de l'importation"
+    "importFailed": "Échec de l'importation",
+    "invalidCode": "Ce code ne fonctionne pas. Essayez le code le plus récent de votre application, ou un code de récupération.",
+    "codeLabel": "Code de votre application d'authentification",
+    "codeHint": "Téléphone perdu? Entrez plutôt un de vos codes de récupération (comme K7QF-2MXP).",
+    "verify": "Vérifier",
+    "startOver": "Recommencer",
+    "twoFactor": {
+      "title": "Connexion en deux étapes",
+      "intro": "Après votre mot de passe, vous entrerez aussi un code à 6 chiffres d'une application d'authentification sur votre téléphone (Google Authenticator, Microsoft Authenticator, 1Password…). Un mot de passe volé ne suffit alors plus.",
+      "statusOn": "Activée pour votre compte",
+      "statusOff": "Désactivée pour votre compte",
+      "turnOn": "Activer la connexion en deux étapes",
+      "turnOff": "Désactiver la connexion en deux étapes",
+      "step1": "Ouvrez votre application d'authentification et ajoutez un compte.",
+      "step2": "Balayez ce code QR (ou tapez la clé ci-dessous).",
+      "step3": "Entrez le code à 6 chiffres affiché par l'application.",
+      "qrAlt": "Code QR pour ajouter l'administration Farelune à votre application d'authentification",
+      "manual": "Impossible de balayer? Entrez cette clé dans l'application :",
+      "codeLabel": "Code à 6 chiffres",
+      "confirm": "Confirmer et activer",
+      "cancel": "Annuler",
+      "enabledNow": "La connexion en deux étapes est activée.",
+      "codesIntro": "Conservez ces codes de récupération en lieu sûr (idéalement dans un gestionnaire de mots de passe). Chacun fonctionne une seule fois si vous perdez votre téléphone. Ils ne seront plus affichés.",
+      "download": "Télécharger les codes",
+      "savedThem": "Je les ai conservés",
+      "disableIntro": "Pour la désactiver, confirmez votre mot de passe et un code actuel (ou un code de récupération).",
+      "password": "Mot de passe",
+      "codeOrRecovery": "Code ou code de récupération",
+      "invalidCode": "Ce code ne fonctionne pas. Utilisez le code le plus récent de votre application.",
+      "rateLimited": "Trop de tentatives. Veuillez patienter puis réessayer.",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "requiredNotice": "La connexion en deux étapes est obligatoire pour le tableau de bord. Activez-la ci-dessous pour continuer."
+    }
   },
   "credits": {
     "title": "Crédits photo",

@@ -37,6 +37,10 @@ def require_role(role: str) -> Callable[..., Awaitable[AdminSession]]:
         admin_session: AdminSession = Depends(current_session),
         session: AsyncSession = Depends(get_db),
     ) -> AdminSession:
+        if get_settings().admin_require_2fa and not admin_session.user.two_factor_enabled:
+            raise PermissionDeniedError(
+                "Turn on two-step sign-in to use the dashboard", code="two_factor_required"
+            )
         if not has_role(admin_session.user.role, role):
             audit(
                 session,

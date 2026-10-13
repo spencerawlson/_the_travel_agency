@@ -35,6 +35,16 @@ class AdminUser(TimestampMixin, Base):
     password_changed_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, nullable=False
     )
+    # Two-step sign-in (app/core/totp.py). Secrets are Fernet-encrypted.
+    totp_secret: Mapped[str | None] = mapped_column(String(255))
+    totp_pending_secret: Mapped[str | None] = mapped_column(String(255))
+    totp_enabled_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    totp_last_step: Mapped[int | None] = mapped_column(Integer)
+    recovery_code_hashes: Mapped[list[str] | None] = mapped_column(JSON)
+
+    @property
+    def two_factor_enabled(self) -> bool:
+        return self.totp_enabled_at is not None and self.totp_secret is not None
 
     __table_args__ = (
         CheckConstraint(f"role IN ({', '.join(repr(r) for r in ROLES)})", name="role_enum"),

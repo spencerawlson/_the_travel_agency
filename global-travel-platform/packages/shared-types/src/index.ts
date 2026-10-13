@@ -203,9 +203,23 @@ export interface Health {
 export type AdminRole = "viewer" | "analyst" | "admin";
 
 export interface AdminSession {
-  user: { id: number; email: string; role: AdminRole; last_login_at: string | null };
+  user: {
+    id: number;
+    email: string;
+    role: AdminRole;
+    last_login_at: string | null;
+    two_factor_enabled: boolean;
+  };
   expires_at: string;
   csrf_token: string | null;
+  /** ADMIN_REQUIRE_2FA: the dashboard stays locked until two-step sign-in is on. */
+  two_factor_required: boolean;
+}
+
+export interface TwoFactorSetup {
+  secret: string;
+  otpauth_uri: string;
+  qr_svg: string;
 }
 
 export interface Page<T> {

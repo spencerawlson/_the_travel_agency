@@ -302,7 +302,8 @@
       "overview": "Overview",
       "searches": "Searches",
       "referrals": "Referrals",
-      "commissions": "Commissions"
+      "commissions": "Commissions",
+      "security": "Security"
     },
     "kpi": {
       "searches": "Total searches",
@@ -373,7 +374,39 @@
     "importing": "Importing…",
     "importHint": "Pulls the last 90 days of earnings. Also runs automatically every night.",
     "importDone": "Done: {fetched} actions checked, {earning} earnings, {created} new, {updated} updated.",
-    "importFailed": "Import failed"
+    "importFailed": "Import failed",
+    "invalidCode": "That code didn't work. Try the newest code from your app, or a recovery code.",
+    "codeLabel": "Code from your authenticator app",
+    "codeHint": "Lost your phone? Enter one of your recovery codes instead (like K7QF-2MXP).",
+    "verify": "Verify",
+    "startOver": "Start over",
+    "twoFactor": {
+      "title": "Two-step sign-in",
+      "intro": "After your password, you'll also enter a 6-digit code from an authenticator app on your phone (Google Authenticator, Microsoft Authenticator, 1Password…). A stolen password alone is then not enough.",
+      "statusOn": "On for your account",
+      "statusOff": "Off for your account",
+      "turnOn": "Turn on two-step sign-in",
+      "turnOff": "Turn off two-step sign-in",
+      "step1": "Open your authenticator app and add an account.",
+      "step2": "Scan this QR code (or type the key below).",
+      "step3": "Enter the 6-digit code the app shows.",
+      "qrAlt": "QR code to add Farelune admin to your authenticator app",
+      "manual": "Can't scan? Enter this key in the app:",
+      "codeLabel": "6-digit code",
+      "confirm": "Confirm and turn on",
+      "cancel": "Cancel",
+      "enabledNow": "Two-step sign-in is now on.",
+      "codesIntro": "Save these recovery codes somewhere safe (a password manager is ideal). Each one works once if you lose your phone. They won't be shown again.",
+      "download": "Download codes",
+      "savedThem": "I've saved them",
+      "disableIntro": "To turn it off, confirm your password and a current code (or a recovery code).",
+      "password": "Password",
+      "codeOrRecovery": "Code or recovery code",
+      "invalidCode": "That code didn't work. Use the newest code from your app.",
+      "rateLimited": "Too many attempts. Please wait and try again.",
+      "error": "Something went wrong. Please try again.",
+      "requiredNotice": "Two-step sign-in is required for the admin dashboard. Turn it on below to continue."
+    }
   },
   "credits": {
     "title": "Photo credits",

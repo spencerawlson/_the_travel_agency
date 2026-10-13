@@ -42,6 +42,8 @@ class Settings(BaseSettings):
     session_idle_minutes: int = 60
     login_max_attempts: int = 5
     login_lockout_minutes: int = 15
+    # When true, admins must turn on two-step sign-in before using the dashboard.
+    admin_require_2fa: bool = False
 
     # Rate limits: "<requests>/<seconds>"
     rate_limit_default: str = "120/60"

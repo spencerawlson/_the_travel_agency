@@ -13,18 +13,21 @@ import { useState, type ReactNode } from "react";
 import { ApiError, apiFetch } from "@/lib/api";
 import { formatMoney, formatPercent, intlLocale } from "@/lib/format";
 import { BarTrend } from "./BarTrend";
+import { TwoFactorPanel } from "./TwoFactorPanel";
 import { type LoadState, useAdminResource, useAdminSession } from "./useAdmin";
 
-type Tab = "overview" | "searches" | "referrals" | "commissions";
-const TABS: Tab[] = ["overview", "searches", "referrals", "commissions"];
+type Tab = "overview" | "searches" | "referrals" | "commissions" | "security";
+const TABS: Tab[] = ["overview", "searches", "referrals", "commissions", "security"];
 const PAGE_SIZE = 25;
 
 export function Dashboard() {
   const t = useTranslations("admin");
-  const { session, signOut } = useAdminSession();
+  const { session, signOut, refresh } = useAdminSession();
   const [tab, setTab] = useState<Tab>("overview");
 
   if (!session) return <p className="text-ink-muted">{t("loading")}</p>;
+  // ADMIN_REQUIRE_2FA: nothing else is reachable until two-step sign-in is on.
+  const locked = session.two_factor_required && !session.user.two_factor_enabled;
 
   return (
     <div className="space-y-6">
@@ -39,31 +42,48 @@ export function Dashboard() {
           {t("signOut")}
         </Button>
       </header>
-      <div
-        role="tablist"
-        aria-label={t("title")}
-        className="flex gap-1 overflow-x-auto border-b border-line"
-      >
-        {TABS.map((key) => (
-          <button
-            key={key}
-            role="tab"
-            id={`tab-${key}`}
-            aria-selected={tab === key}
-            aria-controls={`panel-${key}`}
-            onClick={() => setTab(key)}
-            className="border-b-2 border-transparent px-4 py-2 text-sm font-semibold text-ink-muted aria-selected:border-brand-600 aria-selected:text-ink"
+      {locked ? (
+        <div className="space-y-4">
+          <p
+            role="alert"
+            className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-amber-900"
           >
-            {t(`tabs.${key}`)}
-          </button>
-        ))}
-      </div>
-      <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
-        {tab === "overview" && <Overview />}
-        {tab === "searches" && <SearchesTable />}
-        {tab === "referrals" && <ReferralsTable />}
-        {tab === "commissions" && <CommissionsTable canImport={session.user.role === "admin"} />}
-      </div>
+            {t("twoFactor.requiredNotice")}
+          </p>
+          <TwoFactorPanel session={session} onChanged={refresh} />
+        </div>
+      ) : (
+        <>
+          <div
+            role="tablist"
+            aria-label={t("title")}
+            className="flex gap-1 overflow-x-auto border-b border-line"
+          >
+            {TABS.map((key) => (
+              <button
+                key={key}
+                role="tab"
+                id={`tab-${key}`}
+                aria-selected={tab === key}
+                aria-controls={`panel-${key}`}
+                onClick={() => setTab(key)}
+                className="border-b-2 border-transparent px-4 py-2 text-sm font-semibold text-ink-muted aria-selected:border-brand-600 aria-selected:text-ink"
+              >
+                {t(`tabs.${key}`)}
+              </button>
+            ))}
+          </div>
+          <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
+            {tab === "overview" && <Overview />}
+            {tab === "searches" && <SearchesTable />}
+            {tab === "referrals" && <ReferralsTable />}
+            {tab === "commissions" && (
+              <CommissionsTable canImport={session.user.role === "admin"} />
+            )}
+            {tab === "security" && <TwoFactorPanel session={session} onChanged={refresh} />}
+          </div>
+        </>
+      )}
     </div>
   );
 }

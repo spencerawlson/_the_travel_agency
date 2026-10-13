@@ -21,6 +21,16 @@
   `LOGIN_MAX_ATTEMPTS` (5) failures lock the account for `LOGIN_LOCKOUT_MINUTES` (15).
   Logins are rate-limited per client (10 per 15 min), and the request `Origin` must be
   an allowed origin.
+- **Two-step sign-in** (TOTP, RFC 6238: 6 digits, 30 s, SHA-1, works with Google/Microsoft
+  Authenticator, 1Password, etc.). Admins turn it on under Dashboard -> Security: scan a QR
+  code, confirm a code, then save 10 single-use recovery codes (shown once). The secret is
+  stored Fernet-encrypted with a key derived from `SECRET_KEY` (HKDF), recovery codes only as
+  keyed hashes. Each code works once (replay refused) within +-1 step of drift. The second
+  step is asked only after a correct password; wrong codes count toward the lockout. Turning
+  it off needs the password and a current code. `ADMIN_REQUIRE_2FA=true` locks the
+  dashboard for any admin without it (only the setup screen works). Lost phone with no
+  recovery codes: `python -m app.cli reset-2fa --email ...` (audited; signs them out).
+  Rotating `SECRET_KEY` invalidates every 2FA secret: reset and re-enrol each admin.
 - **Sessions** use opaque 256-bit random tokens; the database stores only their SHA-256.
   The cookie is `HttpOnly; SameSite=Strict; Path=/api`, plus `Secure` in production.
   Sessions expire after 8 h absolute or 60 min idle. Logout revokes server-side. Sessions

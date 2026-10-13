@@ -33,12 +33,23 @@ from app.schemas.admin import (
     CommissionTotal,
     LoginIn,
     Page,
+    RecoveryCodesOut,
     ReferralEventOut,
     SearchEventOut,
     SessionOut,
+    TwoFactorCodeIn,
+    TwoFactorDisableIn,
+    TwoFactorSetupOut,
 )
 from app.services import admin_stats
-from app.services.auth import authenticate, revoke_session
+from app.services.audit import audit
+from app.services.auth import (
+    authenticate,
+    disable_two_factor,
+    enable_two_factor,
+    revoke_session,
+    start_two_factor_setup,
+)
 from app.services.commissions import import_travelpayouts_commissions
 
 router = APIRouter(prefix="/admin", tags=["admin"])
@@ -50,10 +61,15 @@ PageSize = Annotated[int, Query(ge=1, le=200)]
 def _session_out(s: AdminSession, csrf: str | None = None) -> SessionOut:
     return SessionOut(
         user=AdminUserOut(
-            id=s.user.id, email=s.user.email, role=s.user.role, last_login_at=s.user.last_login_at
+            id=s.user.id,
+            email=s.user.email,
+            role=s.user.role,
+            last_login_at=s.user.last_login_at,
+            two_factor_enabled=s.user.two_factor_enabled,
         ),
         expires_at=s.expires_at,
         csrf_token=csrf,
+        two_factor_required=get_settings().admin_require_2fa,
     )
 
 
@@ -76,6 +92,7 @@ async def login(payload: LoginIn, request: Request, response: Response, session:
         payload.password,
         ip_hash=client_hash(client_ip(request)),
         user_agent=request.headers.get("user-agent"),
+        otp=payload.otp,
     )
     max_age = settings.session_ttl_minutes * 60
     response.set_cookie(
@@ -116,6 +133,45 @@ async def logout(
 @router.get("/auth/me", response_model=SessionOut)
 async def me(admin_session: Annotated[AdminSession, Depends(current_session)]) -> SessionOut:
     return _session_out(admin_session)
+
+
+Session = Annotated[AdminSession, Depends(current_session)]
+LoginLimit = Depends(rate_limit("login", "rate_limit_login"))
+
+
+@router.post("/auth/2fa/setup", response_model=TwoFactorSetupOut, dependencies=[LoginLimit])
+async def two_factor_setup(admin_session: Session, session: DB) -> TwoFactorSetupOut:
+    setup = start_two_factor_setup(admin_session.user)
+    audit(
+        session, "admin.2fa.setup_started", actor_user_id=admin_session.user_id, outcome="success"
+    )
+    await session.commit()
+    return TwoFactorSetupOut(secret=setup.secret, otpauth_uri=setup.uri, qr_svg=setup.qr_svg)
+
+
+@router.post("/auth/2fa/enable", response_model=RecoveryCodesOut, dependencies=[LoginLimit])
+async def two_factor_enable(
+    payload: TwoFactorCodeIn, admin_session: Session, session: DB
+) -> RecoveryCodesOut:
+    codes = enable_two_factor(admin_session.user, payload.code)
+    audit(session, "admin.2fa.enabled", actor_user_id=admin_session.user_id, outcome="success")
+    await session.commit()
+    return RecoveryCodesOut(recovery_codes=codes)
+
+
+@router.post("/auth/2fa/disable", status_code=204, dependencies=[LoginLimit])
+async def two_factor_disable(
+    payload: TwoFactorDisableIn, admin_session: Session, session: DB
+) -> Response:
+    try:
+        disable_two_factor(admin_session.user, payload.password, payload.code)
+    except Exception:
+        audit(session, "admin.2fa.disable", actor_user_id=admin_session.user_id, outcome="failure")
+        await session.commit()
+        raise
+    audit(session, "admin.2fa.disabled", actor_user_id=admin_session.user_id, outcome="success")
+    await session.commit()
+    return Response(status_code=204)
 
 
 # --- dashboard ---------------------------------------------------------------
