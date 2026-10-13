@@ -20,7 +20,7 @@
 - Travelpayouts provider (sandbox → live), commission import job, reconciliation view
 - Admin UI for provider settings and commission entry, with audited changes and a 2-person rule for enabling live referrals
 - Exchange-rate ingestion from a named source (e.g. Bank of Canada Valet API) for optional approximate conversion
-- Nonce-based CSP (remove `'unsafe-inline'` from `script-src`)
+- ~~Nonce-based CSP (remove `'unsafe-inline'` from `script-src`)~~ Done (2026-10-13)
 - Inline affiliate notice on results; baggage and fare-condition display where partners provide it
 - Admin MFA (TOTP / WebAuthn)
 

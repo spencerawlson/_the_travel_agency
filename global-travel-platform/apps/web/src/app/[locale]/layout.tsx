@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -71,6 +72,10 @@ export default async function LocaleLayout({
   const t = await getTranslations("nav");
   const site = getSiteConfig();
   const partner = getAffiliateScript();
+  // Reading the request makes every page render per request, which the per-request
+  // CSP nonce needs (a prerendered page would carry no nonce and its scripts would
+  // be blocked). The nonce itself is applied by Next.js (see src/proxy.ts).
+  await headers();
 
   return (
     <html lang={locale} className={`${heading.variable} ${body.variable}`}>
@@ -81,6 +86,7 @@ export default async function LocaleLayout({
             id={LOADER_ID}
             type="text/plain"
             data-consent="partners"
+            data-src={partner.src}
             dangerouslySetInnerHTML={{ __html: partner.code }}
           />
         </head>

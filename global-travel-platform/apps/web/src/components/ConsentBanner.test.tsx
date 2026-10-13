@@ -24,14 +24,19 @@ function addLoader() {
   const tpl = document.createElement("script");
   tpl.id = LOADER_ID;
   tpl.type = "text/plain";
-  tpl.textContent = "window.__partnerRan = (window.__partnerRan || 0) + 1;";
+  tpl.dataset.src = PARTNER_SRC;
+  tpl.textContent = "/* dashboard snippet, kept for partner verification */";
   document.head.appendChild(tpl);
 }
 
+const PARTNER_SRC = "https://emrldtp.cc/NTg0NzQz.js?t=584743";
+
+/** Partner scripts added by URL (allowed by the nonce + 'strict-dynamic' CSP). */
 function executedScripts() {
-  return [...document.head.querySelectorAll("script:not([type])")].filter((s) =>
-    s.textContent?.includes("__partnerRan"),
-  ).length;
+  const loaded = [...document.head.querySelectorAll("script:not([type])")];
+  // No inline partner code is ever injected: it would be blocked by the CSP.
+  expect(loaded.every((s) => !s.textContent)).toBe(true);
+  return loaded.filter((s) => s.getAttribute("src") === PARTNER_SRC).length;
 }
 
 describe("ConsentBanner", () => {

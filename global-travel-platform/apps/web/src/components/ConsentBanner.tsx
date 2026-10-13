@@ -31,12 +31,19 @@ function writeConsent(accepted: boolean) {
   window.dispatchEvent(new Event(CHANGE_EVENT));
 }
 
-/** Turn the inert loader (type="text/plain") into a running script, once. */
+/**
+ * Run the partner loader once. The inert template (type="text/plain") keeps the
+ * dashboard snippet on the page for partner verification; we load its script by
+ * URL, which the nonce + 'strict-dynamic' CSP allows (inline text would not run).
+ */
 export function activatePartnerScript(): boolean {
   const template = document.getElementById(LOADER_ID);
-  if (!template || template.dataset.activated) return false;
+  const src = template?.dataset.src;
+  if (!template || !src || template.dataset.activated) return false;
   const script = document.createElement("script");
-  script.text = template.textContent ?? "";
+  script.async = true;
+  script.setAttribute("data-cmp-ab", "2");
+  script.src = src;
   document.head.appendChild(script);
   template.dataset.activated = "1";
   return true;

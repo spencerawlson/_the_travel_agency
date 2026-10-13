@@ -5,8 +5,11 @@ import { WIDGET_CSP } from "./widgets";
  * Content-Security-Policy, built per request in src/proxy.ts so runtime settings
  * (e.g. an enabled partner script) apply without rebuilding.
  *
- * Next.js injects small inline bootstrap scripts, so script-src needs
- * 'unsafe-inline'; a nonce-based CSP is tracked in docs/ROADMAP.md.
+ * Scripts: a fresh nonce per request plus 'strict-dynamic'. Next.js puts the
+ * nonce on its own scripts (it reads it from the request's CSP header); scripts
+ * those load (partner loaders, widgets) inherit trust. Injected inline script
+ * without the nonce never runs. Host entries stay as a fallback for browsers
+ * without 'strict-dynamic' (CSP3 browsers ignore them).
  * No `upgrade-insecure-requests`: it breaks plain-HTTP deployments (LAN, CI);
  * HTTPS is enforced by HSTS + Cloudflare/Nginx redirects in production.
  */
@@ -14,8 +17,11 @@ export function buildCsp({
   dev,
   partnerHosts = [],
   widgets = false,
+  nonce,
 }: {
   dev: boolean;
+  /** Per-request nonce (src/proxy.ts). Without it, falls back to 'unsafe-inline'. */
+  nonce?: string;
   partnerHosts?: string[];
   /** Allow the Travelpayouts brand widgets (lib/widgets.ts). */
   widgets?: boolean;
@@ -33,7 +39,12 @@ export function buildCsp({
     [base, ...hosts(drive ? driveExtra : [])].join(" ");
   return [
     "default-src 'self'",
-    add(`script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`, WIDGET_CSP.script),
+    add(
+      `script-src 'self' ${nonce ? `'nonce-${nonce}' 'strict-dynamic'` : "'unsafe-inline'"}${
+        dev ? " 'unsafe-eval'" : ""
+      }`,
+      WIDGET_CSP.script,
+    ),
     // Partner hosts here too: the Drive script loads its own tooltip stylesheet.
     drive
       ? add("style-src 'self' 'unsafe-inline'", [], DRIVE_CSP.style)

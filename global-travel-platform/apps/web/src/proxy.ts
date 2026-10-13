@@ -28,6 +28,19 @@ function detectOrigin(request: NextRequest): string | null {
 }
 
 export default function proxy(request: NextRequest) {
+  // Fresh nonce per request. Next.js reads it from the request's CSP header and
+  // adds it to its own scripts; next-intl forwards these request headers.
+  const nonce = btoa(crypto.randomUUID());
+  const partner = getAffiliateScript();
+  const csp = buildCsp({
+    dev: process.env.NODE_ENV !== "production",
+    partnerHosts: partner ? [partner.host] : [],
+    widgets: getWidgetIds() !== null,
+    nonce,
+  });
+  request.headers.set("x-nonce", nonce);
+  request.headers.set("content-security-policy", csp);
+
   const response = intl(request);
   const detected = detectOrigin(request);
   if (detected) {
@@ -37,15 +50,7 @@ export default function proxy(request: NextRequest) {
       sameSite: "lax",
     });
   }
-  const partner = getAffiliateScript();
-  response.headers.set(
-    "Content-Security-Policy",
-    buildCsp({
-      dev: process.env.NODE_ENV !== "production",
-      partnerHosts: partner ? [partner.host] : [],
-      widgets: getWidgetIds() !== null,
-    }),
-  );
+  response.headers.set("Content-Security-Policy", csp);
   return response;
 }
 

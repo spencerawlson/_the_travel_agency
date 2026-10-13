@@ -53,4 +53,14 @@ describe("buildCsp", () => {
     expect(directive("default-src")).toBe("default-src 'self'");
     expect(directive("frame-ancestors")).toBe("frame-ancestors 'none'");
   });
+
+  it("uses the per-request nonce instead of 'unsafe-inline' for scripts", () => {
+    const csp = buildCsp({ dev: false, nonce: "abc123==", partnerHosts: ["emrldtp.cc"] });
+    const script = csp.split("; ").find((d) => d.startsWith("script-src")) ?? "";
+    expect(script).toContain("'nonce-abc123==' 'strict-dynamic'");
+    expect(script).not.toContain("unsafe-inline");
+    expect(script).not.toContain("unsafe-eval");
+    expect(csp).toContain("object-src 'none'");
+    expect(csp).toContain("base-uri 'self'");
+  });
 });

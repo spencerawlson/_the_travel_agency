@@ -76,15 +76,22 @@ backslash confusion, credentials, ports, CRLF injection, cache tampering and the
   `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy`,
   `Permissions-Policy`, COOP/CORP, and HSTS when `COOKIE_SECURE=true`.
 - **Web headers:** a CSP with `default-src 'self'`, `frame-ancestors 'none'`,
-  `object-src 'none'` and `form-action 'self'`.
-  - **Known gap:** `script-src` includes `'unsafe-inline'` for the Next.js bootstrap
-    scripts. A nonce-based CSP is on the roadmap.
+  `object-src 'none'`, `base-uri 'self'` and `form-action 'self'`.
+- **Nonce-based scripts (no `'unsafe-inline'`):** `script-src 'self' 'nonce-<random>'
+  'strict-dynamic'`. `apps/web/src/proxy.ts` makes a fresh nonce per request and puts the policy
+  on the request too, so Next.js adds the nonce to its own scripts; scripts those load (Next
+  chunks, the consented partner loader and widgets) inherit trust through `'strict-dynamic'`.
+  Injected inline `<script>` or inline event handlers (`onclick=...`) never run. Because the
+  nonce is per request, every page renders dynamically (the locale layout reads `headers()`).
+  Partner hosts remain listed only as a fallback for pre-CSP3 browsers. Known, accepted
+  side effect: the Travelpayouts Drive script tries to set inline click handlers on some links;
+  those are blocked (bookings are still attributed via our own referral redirect).
+  `style-src` still allows `'unsafe-inline'` (inline styles; far lower risk than scripts).
 - **Runtime CSP:** the policy is built per request in `apps/web/src/proxy.ts` (`src/lib/csp.ts`).
-  When the optional partner script is enabled (`TRAVELPAYOUTS_SCRIPT_ID`), its single host is added
-  to `script-src`, `img-src` and `connect-src`. Nothing else is opened.
-- **Optional partner script (Travelpayouts):** off by default. When enabled, the loader is
-  rendered with `type="text/plain"`, so it doesn't execute, and runs only after the visitor clicks
-  "Accept partner cookies". The script patches browser APIs (`window.open`, `setAttribute`) and
+  Partner and widget hosts are added only when those features are enabled. Nothing else is opened.
+- **Optional partner script (Travelpayouts):** off by default. When enabled, the dashboard
+  snippet is rendered with `type="text/plain"` (kept for partner verification, never executed);
+  after the visitor clicks "Accept partner cookies", its script is loaded by URL. The script patches browser APIs (`window.open`, `setAttribute`) and
   hides those patches from `Function.prototype.toString`. That is third-party code with full page
   access, so enable it only on the public site, after reviewing it in COMPLIANCE.md.
 - **CORS:** an explicit origin allowlist (`CORS_ORIGINS`), with wildcards refused in
