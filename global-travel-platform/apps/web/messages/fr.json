@@ -32,6 +32,12 @@
     "destinationsTitle": "Des lieux dont on tombe amoureux",
     "destinationsSubtitle": "Des idées choisies avec soin, avec la durée de vol approximative depuis {city}.",
     "viewAll": "Voir toutes les destinations",
+    "starTitle": "⭐ Pays de la semaine",
+    "starFood": "Cuisine",
+    "starCulture": "Culture",
+    "starSights": "À voir",
+    "starKnownFor": "Célèbre pour",
+    "starCta": "Explorer les destinations",
     "howTitle": "Comment ça fonctionne",
     "how1Title": "Recherchez",
     "how1": "Indiquez où et quand. Nous interrogeons nos partenaires pour vous.",
@@ -40,6 +46,7 @@
     "how3Title": "Réservez auprès du vendeur",
     "how3": "Vous finalisez votre réservation sur le site de la compagnie aérienne ou de l'agence.",
     "globeLabel": "Globe en rotation montrant les trajets au départ de {city} vers nos destinations vedettes",
+    "globeCaption": "Trajets au départ de {city} · faites glisser pour tourner",
     "moodTitle": "Quel genre de voyage?",
     "moodSubtitle": "Choisissez une envie, nous vous suggérons les lieux.",
     "moods": {
@@ -59,12 +66,7 @@
         "title": "Saveurs et culture",
         "blurb": "Histoire, gastronomie et vieilles rues."
       }
-    },
-    "globeLabelAny": "Globe en rotation montrant nos destinations vedettes dans le monde",
-    "destinationsSubtitleAny": "Des idées choisies avec soin, partout dans le monde.",
-    "slideLink": "Découvrir {name}",
-    "pauseSlides": "Mettre en pause les photos d'arrière-plan",
-    "playSlides": "Lire les photos d'arrière-plan"
+    }
   },
   "search": {
     "formLabel": "Recherche de vols",
@@ -146,30 +148,13 @@
       "offer_expired": "Cette offre a expiré. Veuillez relancer la recherche pour obtenir des résultats à jour.",
       "referrals_disabled": "Les réservations auprès des partenaires ne sont pas encore offertes.",
       "redirect_rejected": "Nous n'avons pas pu ouvrir ce lien partenaire en toute sécurité."
-    },
-    "from": "à partir de",
-    "perAdultEconomy": "par adulte, classe économique",
-    "comparedOn": "Comparez les vendeurs sur {provider}",
-    "bookingSoon": "Réservation partenaire bientôt offerte",
-    "bookingSoonHint": "Les liens de réservation seront activés une fois notre entente de partenariat finalisée. Les prix affichés sont de vrais tarifs trouvés récemment.",
-    "notes": {
-      "demo_fare": "Tarif de démonstration, pas un prix réel.",
-      "different_dates": "Tarif en cache le plus proche : les dates diffèrent de votre recherche.",
-      "economy_only": "Prix en classe économique; votre classe est tarifée sur le site du partenaire.",
-      "cached_fare": "Trouvé récemment par des voyageurs. Le prix en direct peut différer."
-    },
-    "fareFrom": "Tarif de {seller} · comparez les vendeurs sur Aviasales",
-    "liveTitle": "D'autres horaires ou compagnies? Voyez tous les tarifs en direct sur {partner}",
-    "liveTitleEmpty": "Aucun tarif enregistré pour ces dates. Consultez les prix en direct sur {partner}",
-    "liveBody": "Ouvre {partner} avec votre trajet, vos dates et vos voyageurs. Les prix y sont en direct et confirmés avant le paiement.",
-    "liveCta": "Voir les prix en direct sur {partner}"
+    }
   },
   "disclaimers": {
     "demo_data": "Ces tarifs de démonstration sont générés à des fins de test. Il ne s'agit pas de prix ni de disponibilités réels, et ils ne peuvent pas être réservés.",
     "prices_may_change": "Les prix et les disponibilités sont fixés par le vendeur, peuvent changer à tout moment et ne sont confirmés que sur le site du vendeur.",
     "seller_responsible": "La compagnie aérienne ou l'agence de voyages indiquée est le vendeur. Elle est responsable de votre réservation, du paiement, du billet, des modifications et du service à la clientèle.",
-    "demo_fare": "Tarif de démonstration, pas un prix réel.",
-    "cached_prices": "Les prix sont de vrais tarifs trouvés récemment par des voyageurs sur Aviasales (par adulte, classe économique). Ils ne sont pas en direct : le prix et la disponibilité actuels sont confirmés sur le site du partenaire."
+    "demo_fare": "Tarif de démonstration, pas un prix réel."
   },
   "destinations": {
     "title": "Destinations",
@@ -207,10 +192,7 @@
     "dates": "{depart} – {return}",
     "search": "Voir les vols",
     "empty": "Aucune aubaine pour le moment.",
-    "loading": "Recherche d'aubaines…",
-    "roundTripPerAdult": "Aller-retour, à partir de, par adulte",
-    "subtitleAny": "Choisissez votre aéroport de départ pour voir les tarifs les plus bas trouvés pour un aller-retour d'une semaine, dans environ six semaines.",
-    "chooseOrigin": "Choisir un aéroport"
+    "loading": "Recherche d'aubaines…"
   },
   "partner": {
     "title": "Page partenaire de démonstration",
@@ -353,12 +335,7 @@
       "approved": "Approuvée",
       "rejected": "Rejetée",
       "paid": "Payée"
-    },
-    "importNow": "Importer depuis Travelpayouts",
-    "importing": "Importation…",
-    "importHint": "Récupère les gains des 90 derniers jours. S'exécute aussi automatiquement chaque nuit.",
-    "importDone": "Terminé : {fetched} actions vérifiées, {earning} gains, {created} nouveaux, {updated} mis à jour.",
-    "importFailed": "Échec de l'importation"
+    }
   },
   "credits": {
     "title": "Crédits photo",
@@ -369,16 +346,10 @@
   },
   "consent": {
     "title": "Votre choix de témoins",
-    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, liens de voyage utiles). Ces partenaires peuvent déposer des témoins afin que les réservations nous soient attribuées. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
+    "body": "Nous aimerions charger un script de notre partenaire voyage Travelpayouts. Il peut ajouter des liens de voyage utiles et permet au partenaire d'installer des témoins pour nous attribuer les réservations. Il reste désactivé sauf si vous l'autorisez, et vous pouvez changer d'avis à tout moment dans « Paramètres des témoins ».",
     "accept": "Accepter les témoins partenaires",
     "reject": "Essentiels seulement",
     "settings": "Paramètres des témoins",
     "learnMore": "Lire notre avis sur les témoins"
-  },
-  "widgets": {
-    "klookTitle": "Quoi faire une fois sur place",
-    "kiwiTitle": "Plus de tarifs en direct de Kiwi.com",
-    "needsConsent": "Cette section affiche des offres en direct de {partner}, par l'entremise de notre réseau d'affiliation Travelpayouts. Elle ne se charge que si vous autorisez les témoins des partenaires.",
-    "allow": "Choisir mes témoins"
   }
 }

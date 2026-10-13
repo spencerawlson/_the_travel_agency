@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { allPhotos, photoAlt } from "@/lib/photos";
 
@@ -10,7 +9,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "credits" });
-  return pageMetadata(locale, "/credits", { title: t("title"), description: t("intro") });
+  return { title: t("title") };
 }
 
 /** Attribution for every photo used on the site (required by CC BY / CC BY-SA). */

@@ -10,9 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { routing } from "@/i18n/routing";
 import { getAffiliateScript } from "@/lib/affiliate";
-import { getPhoto, photoAlt } from "@/lib/photos";
-import { localeAlternates } from "@/lib/seo";
-import { getSiteConfig, siteUrl } from "@/lib/site";
+import { getSiteConfig } from "@/lib/site";
 
 // Self-hosted at build time by next/font (no runtime requests to Google).
 const heading = Fraunces({
@@ -34,27 +32,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   const site = getSiteConfig();
-  const title = t("title", { site: site.name });
-  const description = t("description");
-  const ogImage = getPhoto("mood-beach");
   return {
-    metadataBase: new URL(siteUrl()),
-    title: { default: title, template: `%s | ${site.name}` },
-    description,
-    // Defaults; each page sets its own canonical + hreflang (see lib/seo.ts).
-    alternates: localeAlternates(locale, ""),
-    openGraph: {
-      type: "website",
-      siteName: site.name,
-      locale: locale === "fr" ? "fr_CA" : "en_CA",
-      title,
-      description,
-      url: `${siteUrl()}/${locale}`,
-      ...(ogImage
-        ? { images: [{ url: ogImage.src, width: 1600, alt: photoAlt(ogImage, locale) }] }
-        : {}),
-    },
-    twitter: { card: "summary_large_image", title, description },
+    title: { default: t("title", { site: site.name }), template: `%s | ${site.name}` },
+    description: t("description"),
+    alternates: { languages: { en: "/en", fr: "/fr" } },
   };
 }
 
@@ -98,7 +79,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer site={site} />
-          {(partner || site.partnerWidgets) && <ConsentBanner />}
+          {partner && <ConsentBanner />}
         </NextIntlClientProvider>
       </body>
     </html>

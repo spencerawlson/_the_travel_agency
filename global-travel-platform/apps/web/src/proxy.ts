@@ -3,7 +3,6 @@ import type { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
 import { getAffiliateScript } from "./lib/affiliate";
 import { buildCsp } from "./lib/csp";
-import { getWidgetIds } from "./lib/widgets";
 import { COUNTRY_ORIGIN } from "./content/origin-airports";
 
 // Locale negotiation (Accept-Language + NEXT_LOCALE cookie) and prefix redirects.
@@ -43,7 +42,6 @@ export default function proxy(request: NextRequest) {
     buildCsp({
       dev: process.env.NODE_ENV !== "production",
       partnerHosts: partner ? [partner.host] : [],
-      widgets: getWidgetIds() !== null,
     }),
   );
   return response;

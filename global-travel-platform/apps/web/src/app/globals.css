@@ -22,7 +22,7 @@
   --color-brand-900: oklch(0.3 0.08 250);
   --color-accent-400: oklch(0.76 0.15 45);
   --color-accent-500: oklch(0.7 0.17 38);
-  --color-accent-600: oklch(0.56 0.17 35);
+  --color-accent-600: oklch(0.6 0.17 35);
   --color-sun-300: oklch(0.9 0.12 90);
 
   --color-canvas: var(--canvas);
@@ -179,19 +179,6 @@ body {
   }
   to {
     transform: scaleX(1);
-  }
-}
-
-/* Hero carousel: slow zoom on the active slide (Ken Burns). */
-.hero-slide.is-active {
-  animation: hero-zoom 9s ease-out both;
-}
-@keyframes hero-zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
   }
 }
 

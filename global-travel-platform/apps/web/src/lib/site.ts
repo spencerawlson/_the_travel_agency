@@ -4,7 +4,6 @@
  * The default brand name is a PLACEHOLDER pending trademark clearance.
  */
 import { getAffiliateScript } from "./affiliate";
-import { getWidgetIds } from "./widgets";
 
 export interface SiteConfig {
   name: string;
@@ -16,10 +15,6 @@ export interface SiteConfig {
   legalLastUpdated: string;
   /** Optional partner script enabled (TRAVELPAYOUTS_SCRIPT_ID). */
   partnerScript: boolean;
-  /** Travelpayouts brand widgets (Klook, Kiwi.com) are enabled. */
-  partnerWidgets: boolean;
-  /** Partner booking links are live (REFERRALS_LIVE_ENABLED). */
-  referralsLive: boolean;
 }
 
 export function getSiteConfig(): SiteConfig {
@@ -27,16 +22,13 @@ export function getSiteConfig(): SiteConfig {
   return {
     name: env.SITE_NAME || "Farelune",
     legalEntity: env.LEGAL_ENTITY_NAME || "[Legal entity name, to be confirmed]",
-    contactEmail: env.CONTACT_EMAIL || "hello@farelune.com",
-    privacyEmail: env.PRIVACY_EMAIL || "privacy@farelune.com",
-    // Optional: when empty, public pages give the email address instead.
-    address: env.LEGAL_ADDRESS || "",
+    contactEmail: env.CONTACT_EMAIL || "hello@example.com",
+    privacyEmail: env.PRIVACY_EMAIL || "privacy@example.com",
+    address: env.LEGAL_ADDRESS || "[Mailing address], Québec, Canada",
     privacyOfficer:
       env.PRIVACY_OFFICER_TITLE || "Person in charge of the protection of personal information",
     legalLastUpdated: env.LEGAL_LAST_UPDATED || "2026-10-12",
     partnerScript: getAffiliateScript(env) !== null,
-    partnerWidgets: getWidgetIds(env) !== null,
-    referralsLive: (env.REFERRALS_LIVE_ENABLED || "").toLowerCase() === "true",
   };
 }
 

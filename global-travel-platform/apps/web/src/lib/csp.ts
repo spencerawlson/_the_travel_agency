@@ -1,5 +1,3 @@
-import { WIDGET_CSP } from "./widgets";
-
 /**
  * Content-Security-Policy, built per request in src/proxy.ts so runtime settings
  * (e.g. an enabled partner script) apply without rebuilding.
@@ -9,27 +7,16 @@ import { WIDGET_CSP } from "./widgets";
  * No `upgrade-insecure-requests`: it breaks plain-HTTP deployments (LAN, CI);
  * HTTPS is enforced by HSTS + Cloudflare/Nginx redirects in production.
  */
-export function buildCsp({
-  dev,
-  partnerHosts = [],
-  widgets = false,
-}: {
-  dev: boolean;
-  partnerHosts?: string[];
-  /** Allow the Travelpayouts brand widgets (lib/widgets.ts). */
-  widgets?: boolean;
-}) {
-  const hosts = (list: readonly string[]) => list.map((h) => `https://${h}`);
-  const add = (base: string, extra: readonly string[] = []) =>
-    [base, ...hosts(partnerHosts), ...hosts(widgets ? extra : [])].join(" ");
+export function buildCsp({ dev, partnerHosts = [] }: { dev: boolean; partnerHosts?: string[] }) {
+  const partners = partnerHosts.map((h) => `https://${h}`).join(" ");
+  const withPartners = (base: string) => (partners ? `${base} ${partners}` : base);
   return [
     "default-src 'self'",
-    add(`script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`, WIDGET_CSP.script),
+    withPartners(`script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`),
     "style-src 'self' 'unsafe-inline'",
-    add("img-src 'self' data:", WIDGET_CSP.img),
+    withPartners("img-src 'self' data:"),
     "font-src 'self' data:",
-    add(`connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`, WIDGET_CSP.connect),
-    ...(widgets ? [`frame-src ${hosts(WIDGET_CSP.frame).join(" ")}`] : []),
+    withPartners(`connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`),
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

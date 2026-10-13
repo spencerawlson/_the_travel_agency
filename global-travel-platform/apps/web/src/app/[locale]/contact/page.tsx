@@ -1,6 +1,5 @@
 import { Card } from "@gtp/ui";
 import type { Metadata } from "next";
-import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getSiteConfig } from "@/lib/site";
 
@@ -11,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return pageMetadata(locale, "/contact", { title: t("title"), description: t("intro") });
+  return { title: t("title") };
 }
 
 /** No contact form in Phase 1: email avoids storing messages (data minimisation). */
@@ -48,16 +47,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </a>
           </dd>
         </Card>
-        {site.address && (
-          <Card className="sm:col-span-2">
-            <dt className="text-sm font-semibold text-ink-muted">{t("addressLabel")}</dt>
-            <dd className="mt-1">
-              {site.legalEntity}
-              <br />
-              {site.address}
-            </dd>
-          </Card>
-        )}
+        <Card className="sm:col-span-2">
+          <dt className="text-sm font-semibold text-ink-muted">{t("addressLabel")}</dt>
+          <dd className="mt-1">
+            {site.legalEntity}
+            <br />
+            {site.address}
+          </dd>
+        </Card>
       </dl>
       <p className="mt-4 text-sm text-ink-muted">{t("responseTime")}</p>
       <section className="mt-10 rounded-2xl border border-line bg-surface-2 p-6">

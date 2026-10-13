@@ -24,7 +24,6 @@ from app.models import AdminUser
 from app.models.admin import ROLES
 from app.seed.seed import seed_reference_data
 from app.services.audit import audit
-from app.services.commissions import import_travelpayouts_commissions
 from app.services.retention import purge_expired
 
 
@@ -104,12 +103,6 @@ async def _set_admin_active(email: str, active: bool) -> str:
         return "enabled" if active else "disabled"
 
 
-async def _import_commissions(days: int) -> None:
-    async with get_sessionmaker()() as session:
-        result = await import_travelpayouts_commissions(session, days=days, actor_label="cli")
-    print("commissions:", result.as_dict())
-
-
 async def _purge() -> None:
     async with get_sessionmaker()() as session:
         print("purged:", await purge_expired(session))
@@ -128,8 +121,6 @@ def main(argv: list[str] | None = None) -> int:
         cmd.add_argument("--email", required=True)
     sub.add_parser("ensure-dev-admin")
     sub.add_parser("purge-expired")
-    ic = sub.add_parser("import-commissions")
-    ic.add_argument("--days", type=int, default=90, help="look-back window (default 90)")
     args = parser.parse_args(argv)
 
     async def run() -> int:
@@ -160,8 +151,6 @@ def main(argv: list[str] | None = None) -> int:
                 result = await _set_admin_active(args.email, args.cmd == "enable-admin")
                 print(result)
                 return 1 if result == "not found" else 0
-            elif args.cmd == "import-commissions":
-                await _import_commissions(max(1, min(args.days, 730)))
             elif args.cmd == "purge-expired":
                 await _purge()
             return 0

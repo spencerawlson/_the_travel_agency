@@ -22,19 +22,6 @@
 - [ ] Legal pages approved and the draft banner removed.
 - [ ] Only then set `REFERRALS_LIVE_ENABLED=true` (an audited configuration change).
 
-### Go-live record
-
-- **2026-10-12:** the owner (S. R. Spady) enabled live partner referrals for **Aviasales via
-  Travelpayouts** (marker 584743) and accepted the risk while the items marked ⚖️ above remain
-  open. The decision is audited as `provider.go_live`. Provider row: `status=live`,
-  `agreement_verified=true`, with a reference to the Travelpayouts/Aviasales program terms.
-- **Aviasales program:** joined in Travelpayouts (confirmed by the owner, 2026-10-12), so
-  commissions are attributed to marker 584743.
-- **Still open:** the ⚖️ OPC travel-agent licensing opinion; lawyer approval of the legal pages
-  (the DRAFT banner stays until then); REQ registration for operating as "Farelune".
-- **Turning referrals off immediately:** set `REFERRALS_LIVE_ENABLED=false` in the server `.env`,
-  then run `docker compose up -d`. Offers then show "Partner booking coming soon".
-
 ## 1. Québec Law 25 (_Act respecting the protection of personal information in the private sector_)
 
 | #    | Requirement                                                                                                                                                               | Implementation / status                                                                                                                                                                |
@@ -69,15 +56,6 @@
 | 3.6 | **Demo data never presented as real**                                                                                           | Site-wide demo banner (fails closed if the API is unreachable), "Demo data" badges, `demo_fare` notes, fictional "Demo …" carriers with non-IATA codes, internal demo partner page |
 | 3.7 | Ranking transparency                                                                                                            | Results sorted by price by default; commission does not affect order (stated in the disclosure)                                                                                    |
 | 3.8 | ⚖️ Terms of use enforceability (Québec CPA rules on consumer contracts, prohibited clauses)                                     | Draft terms preserve non-waivable consumer rights                                                                                                                                  |
-
-### Contact details without a postal address
-
-The public pages show email contacts only (`CONTACT_EMAIL`, `PRIVACY_EMAIL`), and `LEGAL_ADDRESS` is
-empty. Law 25 accepts an email contact for the person in charge of personal information.
-
-- [ ] ⚖️ Confirm that no postal address is required for this referral-only service (e.g. the
-      Québec CPA disclosure rules for merchants in distance contracts, and Canadian e-commerce
-      disclosure norms). Add one via `LEGAL_ADDRESS` (a business mailbox is fine) if counsel advises it.
 
 ## 4. Cookies and tracking
 

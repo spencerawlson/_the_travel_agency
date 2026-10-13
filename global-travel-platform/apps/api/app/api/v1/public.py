@@ -13,7 +13,7 @@ from app.core.metrics import render
 from app.core.ratelimit import client_ip, rate_limit
 from app.core.security import client_hash, constant_time_equals
 from app.db.session import get_db
-from app.models import AffiliateProvider, Airport, Currency
+from app.models import Airport, Currency
 from app.providers.base import FlightSlice
 from app.providers.registry import get_registry
 from app.schemas.public import (
@@ -25,7 +25,6 @@ from app.schemas.public import (
     FlightSearchIn,
     FlightSearchOut,
     HealthOut,
-    LiveSearchOut,
     Locale,
     MoneyOut,
     OfferOut,
@@ -37,9 +36,8 @@ from app.schemas.public import (
 )
 from app.services import catalog
 from app.services.airports import search_airports
-from app.services.referrals import record_click, referral_allowed
+from app.services.referrals import record_click
 from app.services.search import (
-    DISCLAIMER_CACHED,
     DISCLAIMER_DEMO,
     DISCLAIMER_PRICES,
     DISCLAIMER_SELLER,
@@ -175,11 +173,9 @@ async def deals(
     currency: Annotated[str, Query(pattern=r"^[A-Za-z]{3}$")] = "CAD",
     locale: Locale = "en",
 ) -> DealsOut:
-    items = await catalog.find_deals(session, origin.upper(), currency.upper(), locale)
+    items = await catalog.demo_deals(session, origin.upper(), currency.upper(), locale)
     is_demo = all(p.is_demo for p in get_registry().all())
     disclaimers = [DISCLAIMER_PRICES, DISCLAIMER_SELLER]
-    if any(not p.is_demo for p in get_registry().all()):
-        disclaimers.insert(0, DISCLAIMER_CACHED)
     if is_demo:
         disclaimers.insert(0, DISCLAIMER_DEMO)
     return DealsOut(
@@ -201,23 +197,15 @@ async def deals(
     dependencies=[Depends(rate_limit("search", "rate_limit_search"))],
 )
 async def flights_search(payload: FlightSearchIn, request: Request, session: DB) -> FlightSearchOut:
-    event, _, _, offers, statuses, live = await search_flights(
+    event, _, _, offers, statuses = await search_flights(
         session, payload, client_hash=client_hash(client_ip(request))
     )
     origin = await airport_display(session, event.origin_iata)
     destination = await airport_display(session, event.destination_iata)
     assert origin is not None and destination is not None
     names = {p.code: p.display_name for p in get_registry().all()}
-    provider_rows = {p.code: p for p in (await session.scalars(select(AffiliateProvider))).all()}
-
-    def bookable(code: str) -> bool:
-        row = provider_rows.get(code)
-        return row is not None and referral_allowed(row)
-
     is_demo = event.is_demo
     disclaimers = [DISCLAIMER_PRICES, DISCLAIMER_SELLER]
-    if any(o.price_basis == "per_adult" or "cached_fare" in o.notes for o in offers):
-        disclaimers.insert(0, DISCLAIMER_CACHED)
     if is_demo:
         disclaimers.insert(0, DISCLAIMER_DEMO)
 
@@ -248,8 +236,6 @@ async def flights_search(payload: FlightSearchIn, request: Request, session: DB)
                 seller_type=o.seller_type,
                 expires_at=o.expires_at,
                 notes=o.notes,
-                price_basis=o.price_basis,
-                bookable=bookable(o.provider_code),
             )
             for o in offers
         ],
@@ -265,15 +251,6 @@ async def flights_search(payload: FlightSearchIn, request: Request, session: DB)
             for s in statuses
         ],
         disclaimers=disclaimers,
-        live_searches=[
-            LiveSearchOut(
-                id=ls["id"],
-                provider_code=ls["provider"].code,
-                provider_name=ls["provider"].display_name,
-                bookable=bookable(ls["provider"].code),
-            )
-            for ls in live
-        ],
     )
 
 

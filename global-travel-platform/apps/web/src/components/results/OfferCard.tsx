@@ -3,7 +3,7 @@
 import type { FlightOffer, FlightSlice } from "@gtp/shared-types";
 import { Badge, Button, Card } from "@gtp/ui";
 import { useLocale, useTranslations } from "next-intl";
-import { dayOffset, formatDate, formatDuration, formatLocalTime, formatMoney } from "@/lib/format";
+import { dayOffset, formatDuration, formatLocalTime, formatMoney } from "@/lib/format";
 
 function SliceRow({ label, slice }: { label: string; slice: FlightSlice }) {
   const t = useTranslations("results");
@@ -15,7 +15,6 @@ function SliceRow({ label, slice }: { label: string; slice: FlightSlice }) {
   return (
     <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3 sm:gap-6">
       <div className="text-right">
-        <p className="text-xs text-ink-muted">{formatDate(first.depart_at.slice(0, 10), locale)}</p>
         <p className="text-lg font-semibold tabular-nums">
           {formatLocalTime(first.depart_at, locale)}
         </p>
@@ -56,15 +55,12 @@ interface Props {
   busy: boolean;
 }
 
-/** Offer notes worth showing on the card, in display order. */
-const NOTE_CODES = ["demo_fare", "different_dates", "economy_only", "cached_fare"] as const;
-
 export function OfferCard({ offer, onSelect, busy }: Props) {
   const t = useTranslations("results");
   const demo = useTranslations("demo");
+  const disclaimers = useTranslations("disclaimers");
   const locale = useLocale();
   const carrier = offer.outbound.segments[0]?.carrier_name ?? offer.seller_name;
-  const perAdult = offer.price_basis === "per_adult";
 
   return (
     <Card className="flex flex-col gap-4 md:flex-row md:items-center">
@@ -77,42 +73,20 @@ export function OfferCard({ offer, onSelect, busy }: Props) {
         {offer.inbound && <SliceRow label={t("inbound")} slice={offer.inbound} />}
       </div>
       <div className="flex flex-col gap-2 border-t border-line pt-4 md:w-56 md:border-t-0 md:border-l md:pt-0 md:pl-6">
-        {perAdult && <p className="text-xs font-medium text-ink-muted">{t("from")}</p>}
         <p className="text-2xl font-bold tabular-nums">
           {formatMoney(offer.price.amount, offer.price.currency, locale)}
         </p>
+        <p className="text-xs text-ink-muted">{t("totalPrice")}</p>
         <p className="text-xs text-ink-muted">
-          {perAdult ? t("perAdultEconomy") : t("totalPrice")}
+          {t("soldBy", { seller: offer.seller_name })} ·{" "}
+          {t("via", { provider: offer.provider_name })}
         </p>
-        <p className="text-xs text-ink-muted">
-          {offer.notes.includes("seller_on_partner")
-            ? offer.seller_name === "Aviasales"
-              ? t("comparedOn", { provider: "Aviasales" })
-              : t("fareFrom", { seller: offer.seller_name })
-            : `${t("soldBy", { seller: offer.seller_name })} · ${t("via", { provider: offer.provider_name })}`}
-        </p>
-        {NOTE_CODES.filter((code) => offer.notes.includes(code)).map((code) => (
-          <p
-            key={code}
-            className={`text-xs ${code === "demo_fare" ? "text-amber-800" : "text-ink-muted"}`}
-          >
-            {t(`notes.${code}`)}
-          </p>
-        ))}
-        {offer.bookable ? (
-          <Button onClick={() => onSelect(offer)} disabled={busy} className="mt-1">
-            {busy ? t("redirecting") : t("viewDeal")}
-          </Button>
-        ) : (
-          <div className="mt-1 space-y-1">
-            <Button disabled className="w-full" aria-describedby={`soon-${offer.id}`}>
-              {t("bookingSoon")}
-            </Button>
-            <p id={`soon-${offer.id}`} className="text-xs text-ink-muted">
-              {t("bookingSoonHint")}
-            </p>
-          </div>
+        {offer.notes.includes("demo_fare") && (
+          <p className="text-xs text-amber-800">{disclaimers("demo_fare")}</p>
         )}
+        <Button onClick={() => onSelect(offer)} disabled={busy} className="mt-1">
+          {busy ? t("redirecting") : t("viewDeal")}
+        </Button>
       </div>
     </Card>
   );

@@ -51,7 +51,9 @@ def destination_out(d: Destination, locale: str, origin: Airport | None = None) 
         history=t.get("history"),
         culture=t.get("culture"),
         landmarks=[DestinationLandmarkOut(**lm) for lm in t.get("landmarks", [])],
-        official_links=[DestinationOfficialLinkOut(**ol) for ol in t.get("official_links", [])],
+        official_links=[
+            DestinationOfficialLinkOut(**ol) for ol in t.get("official_links", [])
+        ],
     )
 
 
@@ -84,12 +86,11 @@ async def get_origin_airport(session: AsyncSession, iata: str | None) -> Airport
     return (await session.scalars(stmt)).first()
 
 
-async def find_deals(
+async def demo_deals(
     session: AsyncSession, origin_iata: str, currency: str, locale: str
 ) -> list[dict]:
-    """Cheapest offer per published destination, from enabled providers
-    (real cached fares with Travelpayouts; demo data with the mock provider).
-    Provider responses are cached, so this stays within partner rate limits."""
+    """Cheapest offer per published destination, from enabled providers.
+    With only the mock provider enabled every deal is demo data."""
     await ensure_currency(session, currency)
     today = datetime.now(UTC).date()
     depart, ret = today + timedelta(days=45), today + timedelta(days=52)

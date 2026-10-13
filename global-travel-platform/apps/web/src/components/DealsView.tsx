@@ -11,38 +11,17 @@ import { CURRENCIES } from "@/lib/search";
 import { useRequest } from "@/lib/useRequest";
 import { Disclaimers } from "./results/Disclaimers";
 
-/** Major departure hubs on every continent; the visitor's own airport is added first. */
-const HUBS = [
-  "YUL",
-  "YYZ",
-  "YVR",
-  "JFK",
-  "LAX",
-  "MEX",
-  "GRU",
-  "LHR",
-  "CDG",
-  "FRA",
-  "MAD",
-  "IST",
-  "DXB",
-  "DEL",
-  "SIN",
-  "HND",
-  "SYD",
-  "JNB",
-];
+const ORIGINS = ["YUL", "YQB", "YYZ", "YVR", "JFK", "LHR", "CDG"];
 
-export function DealsView({ defaultOrigin }: { defaultOrigin?: string }) {
+export function DealsView() {
   const t = useTranslations("deals");
   const results = useTranslations("results");
   const demo = useTranslations("demo");
   const locale = useLocale();
-  const [origin, setOrigin] = useState(defaultOrigin ?? "");
-  const origins = defaultOrigin && !HUBS.includes(defaultOrigin) ? [defaultOrigin, ...HUBS] : HUBS;
+  const [origin, setOrigin] = useState("YUL");
   const [currency, setCurrency] = useState("CAD");
   const path = `/api/v1/deals?origin=${origin}&currency=${currency}&locale=${locale}`;
-  const request = useRequest<DealsResponse>(origin ? path : null, (signal) =>
+  const request = useRequest<DealsResponse>(path, (signal) =>
     apiFetch<DealsResponse>(path, { signal }),
   );
   const data = request.status === "success" ? request.data : null;
@@ -50,9 +29,7 @@ export function DealsView({ defaultOrigin }: { defaultOrigin?: string }) {
 
   return (
     <div className="mt-2 space-y-6">
-      <p className="max-w-2xl text-ink-muted">
-        {origin ? t("subtitle", { origin }) : t("subtitleAny")}
-      </p>
+      <p className="max-w-2xl text-ink-muted">{t("subtitle", { origin })}</p>
       <div className="flex flex-wrap gap-4">
         <label className="flex items-center gap-2 text-sm font-medium">
           {t("from")}
@@ -61,8 +38,7 @@ export function DealsView({ defaultOrigin }: { defaultOrigin?: string }) {
             onChange={(e) => setOrigin(e.target.value)}
             className="rounded-lg border border-line bg-surface-1 px-2 py-1.5"
           >
-            {!origin && <option value="">{t("chooseOrigin")}</option>}
-            {origins.map((o) => (
+            {ORIGINS.map((o) => (
               <option key={o}>{o}</option>
             ))}
           </select>
@@ -82,7 +58,7 @@ export function DealsView({ defaultOrigin }: { defaultOrigin?: string }) {
       </div>
       {data && <Disclaimers codes={data.disclaimers} />}
       <div aria-live="polite">
-        {origin && !data && !error && <p className="text-ink-muted">{t("loading")}</p>}
+        {!data && !error && <p className="text-ink-muted">{t("loading")}</p>}
         {error && (
           <p role="alert" className="text-red-700">
             {results(error === "rate_limited" ? "errors.rate_limited" : "errors.generic")}
@@ -110,9 +86,7 @@ export function DealsView({ defaultOrigin }: { defaultOrigin?: string }) {
                   <p className="mt-auto text-2xl font-bold tabular-nums">
                     {formatMoney(d.price.amount, d.price.currency, locale)}
                   </p>
-                  <p className="text-xs text-ink-muted">
-                    {d.is_demo ? t("roundTrip") : t("roundTripPerAdult")}
-                  </p>
+                  <p className="text-xs text-ink-muted">{t("roundTrip")}</p>
                   <Link
                     className="inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
                     href={{

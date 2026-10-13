@@ -10,7 +10,6 @@ import type {
 import { Badge, Button, Card } from "@gtp/ui";
 import { useLocale, useTranslations } from "next-intl";
 import { useState, type ReactNode } from "react";
-import { ApiError, apiFetch } from "@/lib/api";
 import { formatMoney, formatPercent, intlLocale } from "@/lib/format";
 import { BarTrend } from "./BarTrend";
 import { type LoadState, useAdminResource, useAdminSession } from "./useAdmin";
@@ -62,7 +61,7 @@ export function Dashboard() {
         {tab === "overview" && <Overview />}
         {tab === "searches" && <SearchesTable />}
         {tab === "referrals" && <ReferralsTable />}
-        {tab === "commissions" && <CommissionsTable canImport={session.user.role === "admin"} />}
+        {tab === "commissions" && <CommissionsTable />}
       </div>
     </div>
   );
@@ -435,57 +434,18 @@ function ReferralsTable() {
   );
 }
 
-interface ImportSummary {
-  fetched: number;
-  earning: number;
-  created: number;
-  updated: number;
-}
-
-function CommissionsTable({ canImport }: { canImport: boolean }) {
+function CommissionsTable() {
   const t = useTranslations("admin");
   const locale = useLocale();
   const time = useTime();
   const [page, setPage] = useState(1);
-  const [refresh, setRefresh] = useState(0);
-  const [importing, setImporting] = useState(false);
-  const [importMsg, setImportMsg] = useState<string | null>(null);
   const state = useAdminResource<CommissionPage>(
-    `/api/v1/admin/commissions?page=${page}&page_size=${PAGE_SIZE}&r=${refresh}`,
+    `/api/v1/admin/commissions?page=${page}&page_size=${PAGE_SIZE}`,
   );
-
-  async function runImport() {
-    setImporting(true);
-    setImportMsg(null);
-    try {
-      const r = await apiFetch<ImportSummary>("/api/v1/admin/commissions/import?days=90", {
-        method: "POST",
-      });
-      setImportMsg(t("importDone", { ...r }));
-      setRefresh((n) => n + 1);
-    } catch (err) {
-      setImportMsg(
-        err instanceof ApiError ? `${t("importFailed")} (${err.message})` : t("importFailed"),
-      );
-    } finally {
-      setImporting(false);
-    }
-  }
-
   return (
     <StateGuard state={state}>
       {(data) => (
         <div className="space-y-4">
-          {canImport && (
-            <div className="flex flex-wrap items-center gap-3">
-              <Button onClick={runImport} disabled={importing}>
-                {importing ? t("importing") : t("importNow")}
-              </Button>
-              <p role="status" className="text-sm text-ink-muted">
-                {importMsg ?? t("importHint")}
-              </p>
-            </div>
-          )}
           {data.totals.length > 0 && (
             <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-5">
               {data.totals.map((tot) => (

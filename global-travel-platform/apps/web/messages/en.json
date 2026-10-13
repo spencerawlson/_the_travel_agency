@@ -32,6 +32,12 @@
     "destinationsTitle": "Places to fall in love with",
     "destinationsSubtitle": "Hand-picked ideas, with approximate flight times from {city}.",
     "viewAll": "View all destinations",
+    "starTitle": "⭐ Country of the week",
+    "starFood": "Food",
+    "starCulture": "Culture",
+    "starSights": "Sights",
+    "starKnownFor": "Known for",
+    "starCta": "Explore destinations",
     "howTitle": "How it works",
     "how1Title": "Search",
     "how1": "Tell us where and when. We query our travel partners for you.",
@@ -40,6 +46,7 @@
     "how3Title": "Book with the seller",
     "how3": "You complete your booking on the airline's or agency's website.",
     "globeLabel": "Rotating globe with flight routes from {city} to our featured destinations",
+    "globeCaption": "Routes from {city} · drag to spin",
     "moodTitle": "What kind of trip?",
     "moodSubtitle": "Pick a feeling, we'll suggest the places.",
     "moods": {
@@ -59,12 +66,7 @@
         "title": "Food & culture",
         "blurb": "History, flavours and old streets."
       }
-    },
-    "globeLabelAny": "Rotating globe showing our featured destinations around the world",
-    "destinationsSubtitleAny": "Hand-picked ideas from around the world.",
-    "slideLink": "Explore {name}",
-    "pauseSlides": "Pause background photos",
-    "playSlides": "Play background photos"
+    }
   },
   "search": {
     "formLabel": "Flight search",
@@ -146,30 +148,13 @@
       "offer_expired": "This offer has expired. Please search again for current results.",
       "referrals_disabled": "Partner bookings are not available yet.",
       "redirect_rejected": "We couldn't open this partner link safely."
-    },
-    "from": "from",
-    "perAdultEconomy": "per adult, economy",
-    "comparedOn": "Compare sellers on {provider}",
-    "bookingSoon": "Partner booking coming soon",
-    "bookingSoonHint": "Booking links open once our partner agreement is finalised. Prices shown are real fares found recently.",
-    "notes": {
-      "demo_fare": "Demo fare, not a real price.",
-      "different_dates": "Nearest cached fare: dates differ from your search.",
-      "economy_only": "Economy price shown; your cabin is priced on the partner site.",
-      "cached_fare": "Found by travellers recently. The live price may differ."
-    },
-    "fareFrom": "Fare from {seller} · compare sellers on Aviasales",
-    "liveTitle": "Want other times or airlines? See every live fare on {partner}",
-    "liveTitleEmpty": "No saved fares for these dates. Check live prices on {partner}",
-    "liveBody": "Opens {partner} with your exact route, dates and travellers. Prices there are live and confirmed before you pay.",
-    "liveCta": "See live prices on {partner}"
+    }
   },
   "disclaimers": {
     "demo_data": "These are demo fares generated for testing. They are not real prices or availability, and cannot be booked.",
     "prices_may_change": "Prices and availability are set by the seller, can change at any time, and are confirmed only on the seller's website.",
     "seller_responsible": "The airline or travel agency shown is the seller. They are responsible for your booking, payment, ticket, changes and customer service.",
-    "demo_fare": "Demo fare, not a real price.",
-    "cached_prices": "Prices are real fares that travellers found on Aviasales recently (per adult, economy). They are not live: the current price and availability are confirmed on the partner site."
+    "demo_fare": "Demo fare, not a real price."
   },
   "destinations": {
     "title": "Destinations",
@@ -207,10 +192,7 @@
     "dates": "{depart} – {return}",
     "search": "See flights",
     "empty": "No deals available right now.",
-    "loading": "Finding deals…",
-    "roundTripPerAdult": "Round trip, from, per adult",
-    "subtitleAny": "Choose your departure airport to see the lowest fares we found for a one-week round trip, about six weeks from now.",
-    "chooseOrigin": "Choose an airport"
+    "loading": "Finding deals…"
   },
   "partner": {
     "title": "Demo partner page",
@@ -353,12 +335,7 @@
       "approved": "Approved",
       "rejected": "Rejected",
       "paid": "Paid"
-    },
-    "importNow": "Import from Travelpayouts",
-    "importing": "Importing…",
-    "importHint": "Pulls the last 90 days of earnings. Also runs automatically every night.",
-    "importDone": "Done: {fetched} actions checked, {earning} earnings, {created} new, {updated} updated.",
-    "importFailed": "Import failed"
+    }
   },
   "credits": {
     "title": "Photo credits",
@@ -369,16 +346,10 @@
   },
   "consent": {
     "title": "Your choice of cookies",
-    "body": "We'd like to load content from our travel partners through Travelpayouts (live Kiwi.com fares, Klook activities, helpful travel links). These partners may set cookies so bookings can be credited to us. Nothing loads unless you allow it, and you can change your mind at any time under “Cookie settings”.",
+    "body": "We'd like to load a script from our travel partner Travelpayouts. It can add helpful travel links and lets the partner set cookies so bookings can be credited to us. It stays off unless you allow it, and you can change your mind at any time under “Cookie settings”.",
     "accept": "Accept partner cookies",
     "reject": "Essential only",
     "settings": "Cookie settings",
     "learnMore": "Read our cookie notice"
-  },
-  "widgets": {
-    "klookTitle": "Things to do when you get there",
-    "kiwiTitle": "More live fares from Kiwi.com",
-    "needsConsent": "This section shows live offers from {partner}, through our affiliate network Travelpayouts. It loads only if you allow partner cookies.",
-    "allow": "Choose cookie settings"
   }
 }

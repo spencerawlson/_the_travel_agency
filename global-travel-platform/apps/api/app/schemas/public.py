@@ -171,10 +171,6 @@ class OfferOut(BaseModel):
     seller_type: str
     expires_at: datetime
     notes: list[str]
-    # "total" (whole party) or "per_adult" (cached fares).
-    price_basis: str = "total"
-    # False while partner referrals are switched off (kill switch / not live yet).
-    bookable: bool = True
 
 
 class ProviderStatusOut(BaseModel):
@@ -186,15 +182,6 @@ class ProviderStatusOut(BaseModel):
     result_count: int = 0
 
 
-class LiveSearchOut(BaseModel):
-    """Link to the partner's live fares for the exact search (no price shown)."""
-
-    id: str
-    provider_code: str
-    provider_name: str
-    bookable: bool
-
-
 class FlightSearchOut(BaseModel):
     search_id: uuid.UUID
     is_demo: bool
@@ -204,7 +191,6 @@ class FlightSearchOut(BaseModel):
     offers: list[OfferOut]
     providers: list[ProviderStatusOut]
     disclaimers: list[str]
-    live_searches: list[LiveSearchOut] = []
 
 
 # --- referrals ---------------------------------------------------------------

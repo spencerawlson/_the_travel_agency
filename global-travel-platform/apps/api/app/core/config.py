@@ -59,15 +59,6 @@ class Settings(BaseSettings):
     referrals_live_enabled: bool = False
     default_currency: str = "CAD"
 
-    # Travelpayouts (Aviasales flight data). Token is a secret: .env only.
-    travelpayouts_api_token: str | None = None
-    travelpayouts_marker: str | None = None
-    travelpayouts_api_base: str = "https://api.travelpayouts.com"
-    travelpayouts_link_base: str = "https://www.aviasales.com"
-    # Optional 2-letter market whose price cache to query (e.g. "ca"); empty = API default.
-    travelpayouts_market: str | None = None
-    travelpayouts_cache_seconds: int = 30 * 60
-
     # Observability
     sentry_dsn: str | None = None
     metrics_token: str | None = None
