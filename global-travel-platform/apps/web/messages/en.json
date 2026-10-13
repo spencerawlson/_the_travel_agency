@@ -206,7 +206,12 @@
     "culture": "Culture",
     "landmarks": "Landmarks",
     "officialLinks": "Official visitor resources",
-    "officialLinksNote": "Official tourism boards and visitor bureaus."
+    "officialLinksNote": "Official tourism boards and visitor bureaus.",
+    "searchLabel": "Looking for a particular place?",
+    "searchPlaceholder": "Type a country or city, e.g. Portugal, Tokyo…",
+    "searchCount": "{count, plural, =0 {No destinations found} one {# destination found} other {# destinations found}}",
+    "searchNone": "No destination matches “{query}” yet.",
+    "browseAll": "Browse all {count} destinations"
   },
   "deals": {
     "title": "Travel deals",

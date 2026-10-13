@@ -138,3 +138,24 @@ export function pickMarker(
 export function easeInOutCubic(t: number): number {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
+
+/**
+ * The globe rotation (phi) that turns `v` to face the viewer, i.e. the inverse
+ * of projectPoint's rotation about the vertical axis (latitude is ignored).
+ */
+export function phiFacing(v: Vec3): number {
+  return Math.atan2(-v[0], v[2]);
+}
+
+/** Phi that centres the route between two [lat, lng] points. */
+export function phiFacingRoute(from: [number, number], to: [number, number]): number {
+  const a = latLngToVec(from[0], from[1]);
+  const b = latLngToVec(to[0], to[1]);
+  return phiFacing([a[0] + b[0], a[1] + b[1], a[2] + b[2]]);
+}
+
+/** Shortest signed angle from `from` to `to`, in (-PI, PI]. */
+export function shortestTurn(from: number, to: number): number {
+  const d = (((to - from) % (2 * Math.PI)) + 3 * Math.PI) % (2 * Math.PI);
+  return d - Math.PI;
+}

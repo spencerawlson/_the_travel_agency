@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { DestinationSearch } from "@/components/DestinationSearch";
 import { DestinationsGlobe } from "@/components/DestinationsGlobe";
 import { Link } from "@/i18n/navigation";
 import { isMood, matchesMood, MOODS, type Mood } from "@/lib/photos";
 import { getDestinations, getOrigin } from "@/lib/server-api";
+import { fold } from "@/lib/text-search";
 
 export async function generateMetadata({
   params,
@@ -34,6 +36,34 @@ export default async function DestinationsPage({
   const origin = await getOrigin();
   // Fall back to Montréal when the visitor's origin is unknown.
   const hub = origin ?? { latitude: 45.5, longitude: -73.57 };
+
+  // Search every destination (not only the selected mood) by name, city, airport
+  // and country in both languages: "Japon" and "Japan" both find Tokyo.
+  const regions = ["en", "fr"].map((l) => new Intl.DisplayNames([l], { type: "region" }));
+  const countryName = (code: string, i: number) => {
+    try {
+      return regions[i]!.of(code.toUpperCase()) ?? code;
+    } catch {
+      return code;
+    }
+  };
+  const lang = locale === "fr" ? 1 : 0;
+  const searchable = [...all]
+    .sort((a, b) => a.name.localeCompare(b.name, locale))
+    .map((d) => ({
+      slug: d.slug,
+      name: d.name,
+      country: countryName(d.country_code, lang),
+      keywords: fold(
+        [
+          d.name,
+          d.city,
+          d.airport_iata,
+          countryName(d.country_code, 0),
+          countryName(d.country_code, 1),
+        ].join(" "),
+      ),
+    }));
 
   const chip = (active: boolean) =>
     `rounded-full px-4 py-2 text-sm font-semibold transition ${
@@ -87,6 +117,9 @@ export default async function DestinationsPage({
           hub={hub}
         />
       </div>
+
+      {/* ---------- Type-to-find + "browse all" links (no globe needed) ---------- */}
+      <DestinationSearch items={searchable} />
     </div>
   );
 }

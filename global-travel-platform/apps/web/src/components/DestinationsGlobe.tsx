@@ -7,11 +7,14 @@ import { useTranslations } from "next-intl";
 import {
   arcPoint,
   easeInOutCubic,
+  phiFacingRoute,
   pickMarker,
   projectMarker,
   projectPoint,
+  shortestTurn,
   type PickTarget,
 } from "@/lib/globe-math";
+import { FLY_EVENT, type FlyRequest } from "@/lib/globe-events";
 
 export interface FlyDestination extends PickTarget {
   name: string;
@@ -25,6 +28,8 @@ interface Props {
 
 const AUTO_SPEED = 0.0022;
 const FLIGHT_MS = 2100;
+/** Turning the globe to face a route requested from the search box. */
+const TURN_MS = 900;
 const THETA = 0.28;
 const MARKER_ELEVATION = 0.02;
 const ARC_HEIGHT = 0.28;
@@ -49,6 +54,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
     phi: 4.4,
     velocity: 0,
     flying: null as null | { dest: FlyDestination; start: number },
+    turning: null as null | { dest: FlyDestination; from: number; delta: number; start: number },
     reduceMotion: false,
   });
 
@@ -58,6 +64,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
     const st = stateRef.current;
     st.reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     st.flying = null;
+    st.turning = null;
     setFlyingTo(null);
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -155,8 +162,19 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
 
     const tick = (now: number) => {
       if (visible) {
+        const turn = st.turning;
+        if (turn) {
+          const k = easeInOutCubic(Math.min((now - turn.start) / TURN_MS, 1));
+          st.phi = turn.from + turn.delta * k;
+          if (k >= 1) {
+            st.turning = null;
+            startFlight(turn.dest);
+          }
+        }
         const fl = st.flying;
-        if (!fl) {
+        if (turn) {
+          // turning: phi already set above
+        } else if (!fl) {
           if (dragStart === null) {
             st.velocity *= 0.95;
             st.phi += (st.reduceMotion ? 0 : AUTO_SPEED) + st.velocity;
@@ -236,11 +254,32 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
       }
     };
     const onUp = (e: PointerEvent) => {
-      if (dragStart !== null && !dragged && !st.flying) tryPick(e.clientX, e.clientY);
+      if (dragStart !== null && !dragged && !st.flying && !st.turning)
+        tryPick(e.clientX, e.clientY);
       dragStart = null;
       dragged = false;
       canvas.style.cursor = "grab";
     };
+    // Search box: "fly me to <slug>". Turn the globe to face the route first so
+    // the plane is never on the far side, then fly as if the marker was clicked.
+    const onFlyRequest = (e: Event) => {
+      const req = (e as CustomEvent<FlyRequest>).detail;
+      const dest = destinations.find((d) => d.slug === req.slug);
+      if (!dest || st.reduceMotion || st.flying || st.turning) return;
+      req.handled = true;
+      canvas.scrollIntoView({ behavior: "smooth", block: "center" });
+      visible = true;
+      st.velocity = 0;
+      const target = phiFacingRoute(hubLoc, [dest.latitude, dest.longitude]);
+      st.turning = {
+        dest,
+        from: st.phi,
+        delta: shortestTurn(st.phi, target),
+        start: performance.now(),
+      };
+      setFlyingTo(dest.name);
+    };
+    window.addEventListener(FLY_EVENT, onFlyRequest);
     canvas.addEventListener("pointerdown", onDown);
     canvas.addEventListener("pointermove", onMove);
     canvas.addEventListener("pointerup", onUp);
@@ -250,6 +289,7 @@ export function DestinationsGlobe({ locale, destinations, hub }: Props) {
       cancelAnimationFrame(frame);
       io.disconnect();
       ro.disconnect();
+      window.removeEventListener(FLY_EVENT, onFlyRequest);
       canvas.removeEventListener("pointerdown", onDown);
       canvas.removeEventListener("pointermove", onMove);
       canvas.removeEventListener("pointerup", onUp);

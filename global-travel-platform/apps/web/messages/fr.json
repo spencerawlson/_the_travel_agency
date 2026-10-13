@@ -206,7 +206,12 @@
     "culture": "Culture",
     "landmarks": "Lieux emblématiques",
     "officialLinks": "Ressources officielles",
-    "officialLinksNote": "Offices de tourisme et organismes officiels."
+    "officialLinksNote": "Offices de tourisme et organismes officiels.",
+    "searchLabel": "Vous cherchez un endroit en particulier?",
+    "searchPlaceholder": "Tapez un pays ou une ville, p. ex. Portugal, Tokyo…",
+    "searchCount": "{count, plural, =0 {Aucune destination trouvée} one {# destination trouvée} other {# destinations trouvées}}",
+    "searchNone": "Aucune destination ne correspond à « {query} » pour le moment.",
+    "browseAll": "Parcourir les {count} destinations"
   },
   "deals": {
     "title": "Aubaines voyage",

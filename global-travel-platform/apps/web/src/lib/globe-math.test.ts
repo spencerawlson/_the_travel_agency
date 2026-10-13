@@ -3,14 +3,22 @@ import {
   arcPoint,
   easeInOutCubic,
   latLngToVec,
+  phiFacing,
+  phiFacingRoute,
   pickMarker,
   projectMarker,
   projectPoint,
+  shortestTurn,
 } from "./globe-math";
 
 describe("latLngToVec", () => {
   it("produces unit vectors", () => {
-    for (const [lat, lng] of [[0, 0], [48.85, 2.35], [-33.86, 151.2], [90, 0]] as const) {
+    for (const [lat, lng] of [
+      [0, 0],
+      [48.85, 2.35],
+      [-33.86, 151.2],
+      [90, 0],
+    ] as const) {
       const [x, y, z] = latLngToVec(lat, lng);
       expect(Math.hypot(x, y, z)).toBeCloseTo(1, 10);
     }
@@ -70,12 +78,7 @@ describe("pickMarker", () => {
     const hit = pickMarker(size / 2, size / 2, targets, phi, theta, size, 0.02, 5);
     // With a 5px threshold this must not grab a far-away marker.
     if (hit) {
-      const p = projectMarker(
-        hit.latitude,
-        hit.longitude,
-        phi,
-        theta,
-      );
+      const p = projectMarker(hit.latitude, hit.longitude, phi, theta);
       expect(Math.hypot(p.x * size - size / 2, p.y * size - size / 2)).toBeLessThan(5);
     }
   });
@@ -97,5 +100,36 @@ describe("easeInOutCubic", () => {
       expect(easeInOutCubic(t)).toBeGreaterThanOrEqual(prev);
       prev = easeInOutCubic(t);
     }
+  });
+});
+
+describe("phiFacing / phiFacingRoute", () => {
+  it("turns a destination to the centre of the globe", () => {
+    for (const [lat, lng] of [
+      [38.7, -9.1],
+      [35.7, 139.7],
+      [-33.9, 151.2],
+    ] as const) {
+      const phi = phiFacing(latLngToVec(lat, lng));
+      const p = projectMarker(lat, lng, phi, 0);
+      expect(p.x).toBeCloseTo(0.5, 5);
+      expect(p.visible).toBe(true);
+    }
+  });
+
+  it("keeps both ends of a route on the visible side", () => {
+    const yul: [number, number] = [45.5, -73.6];
+    const lis: [number, number] = [38.7, -9.1];
+    const phi = phiFacingRoute(yul, lis);
+    expect(projectMarker(...yul, phi, 0.28).visible).toBe(true);
+    expect(projectMarker(...lis, phi, 0.28).visible).toBe(true);
+  });
+});
+
+describe("shortestTurn", () => {
+  it("never turns more than half a revolution", () => {
+    expect(shortestTurn(0, 0.5)).toBeCloseTo(0.5);
+    expect(shortestTurn(0.1, 2 * Math.PI)).toBeCloseTo(-0.1);
+    expect(Math.abs(shortestTurn(1, 1 + 7 * Math.PI))).toBeCloseTo(Math.PI);
   });
 });
