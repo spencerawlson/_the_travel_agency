@@ -19,6 +19,8 @@ const site: SiteConfig = {
   privacyOfficer: "Officer",
   legalLastUpdated: "2030-01-01",
   partnerScript: false,
+  partnerWidgets: false,
+  referralsLive: false,
 };
 
 describe("translations", () => {

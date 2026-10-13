@@ -7,7 +7,8 @@
 export type Locale = "en" | "fr";
 export type TripType = "one_way" | "round_trip";
 export type CabinClass = "economy" | "premium_economy" | "business" | "first";
-export type DisclaimerCode = "demo_data" | "prices_may_change" | "seller_responsible";
+export type DisclaimerCode =
+  "demo_data" | "cached_prices" | "prices_may_change" | "seller_responsible";
 
 export interface ApiErrorBody {
   error: {
@@ -123,7 +124,12 @@ export interface FlightOffer {
   seller_name: string;
   seller_type: "airline" | "agency" | "demo";
   expires_at: string;
+  /** Codes: demo_fare, cached_fare, different_dates, economy_only, seller_on_partner. */
   notes: string[];
+  /** "total" = whole party; "per_adult" = one adult (cached fares). */
+  price_basis: "total" | "per_adult";
+  /** False while partner referrals are switched off. */
+  bookable: boolean;
 }
 
 export interface ProviderStatus {
@@ -135,6 +141,14 @@ export interface ProviderStatus {
   result_count: number;
 }
 
+/** Partner page with live fares for the exact search; no price is claimed. */
+export interface LiveSearchLink {
+  id: string;
+  provider_code: string;
+  provider_name: string;
+  bookable: boolean;
+}
+
 export interface FlightSearchResponse {
   search_id: string;
   is_demo: boolean;
@@ -144,6 +158,7 @@ export interface FlightSearchResponse {
   offers: FlightOffer[];
   providers: ProviderStatus[];
   disclaimers: DisclaimerCode[];
+  live_searches?: LiveSearchLink[];
 }
 
 export interface ReferralClickResponse {

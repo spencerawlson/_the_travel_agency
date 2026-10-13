@@ -1,6 +1,7 @@
 # Provider integration strategy
 
-Phase 1 ships one provider, `mock`. Phase 2 adds real affiliate partners, with
+Two providers ship today: `mock` (demo data) and **`travelpayouts`** (real cached
+Aviasales fares, `app/providers/travelpayouts.py`). Phase 2 adds real affiliate partners, with
 Travelpayouts (Aviasales flight data and partner programmes) as the first candidate.
 The provider layer was built so that a new integration touches only
 `app/providers/` plus a database row.
@@ -19,6 +20,27 @@ Orchestration (`app/services/search.py`) calls all enabled providers concurrentl
 `PROVIDER_TIMEOUT_SECONDS`, converts any unexpected exception into
 `ProviderError(bad_response)`, records failures in `system_error_events`, and returns
 partial results when at least one provider succeeds.
+
+## Implemented: `travelpayouts` (Aviasales Data API)
+
+- Endpoint: `GET /aviasales/v3/prices_for_dates` with the token in the `X-Access-Token` header
+  (never in the URL). Exact dates are queried first; if the cache has nothing, the same month is
+  queried and offers are flagged `different_dates`.
+- Fares are **cached** (found by Aviasales users recently), **per adult, economy**. Offers carry
+  `price_basis: "per_adult"` and notes `cached_fare`, `seller_on_partner` (plus `economy_only` for
+  other cabins). The web app labels them "from $X per adult, economy".
+- Responses are cached in Redis for `TRAVELPAYOUTS_CACHE_SECONDS` (30 min), and airline names
+  (`/data/en/airlines.json`) for 24 h.
+- Arrival times are estimated from durations (`duration`, `duration_to`, `duration_back`), with
+  layovers split by stop count per direction, and shown in the destination's time zone. Exact
+  schedules are confirmed on Aviasales.
+- Booking links: `https://www.aviasales.com/search/<route><party>?…&marker=<TRAVELPAYOUTS_MARKER>`.
+  The party block encodes adults/children/infants plus the class letter (`w` premium, `c` business,
+  `f` first). Links are followed only via `/referrals/click` (host allowlist `www.aviasales.com`,
+  `aviasales.com`) and only when the provider is `live`, the agreement is verified and
+  `REFERRALS_LIVE_ENABLED=true`. Until then offers show **"Partner booking coming soon"**.
+- Enable: `ENABLED_PROVIDERS=travelpayouts`, `TRAVELPAYOUTS_API_TOKEN`, `TRAVELPAYOUTS_MARKER`.
+  Startup fails if the token or marker is missing.
 
 ## Adding a provider: checklist
 

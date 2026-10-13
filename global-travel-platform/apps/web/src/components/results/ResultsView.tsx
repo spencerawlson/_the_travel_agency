@@ -9,13 +9,16 @@ import type {
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
+import { PartnerWidget } from "@/components/PartnerWidget";
 import { SearchForm } from "@/components/search/SearchForm";
 import { useRouter } from "@/i18n/navigation";
 import { ApiError, apiFetch } from "@/lib/api";
 import { formatDate } from "@/lib/format";
 import { fromQuery, toApiRequest, validateSearch } from "@/lib/search";
 import { useRequest } from "@/lib/useRequest";
+import { kiwiWidgetUrl, type WidgetIds } from "@/lib/widgets";
 import { Disclaimers } from "./Disclaimers";
+import { LiveSearchCard } from "./LiveSearchCard";
 import { OfferCard } from "./OfferCard";
 
 type Sort = "price" | "duration" | "departure";
@@ -42,9 +45,10 @@ function errorKey(code: string): string {
   return KNOWN_ERRORS.has(code) ? `errors.${code}` : "errors.generic";
 }
 
-export function ResultsView() {
+export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null }) {
   const t = useTranslations("results");
   const search = useTranslations("search");
+  const tw = useTranslations("widgets");
   const locale = useLocale() as Locale;
   const router = useRouter();
   const params = useSearchParams();
@@ -85,7 +89,7 @@ export function ResultsView() {
     return list;
   }, [data, sort]);
 
-  async function selectOffer(offer: FlightOffer) {
+  async function selectOffer(offer: Pick<FlightOffer, "id">) {
     setBusyOffer(offer.id);
     setClickError(null);
     try {
@@ -119,6 +123,17 @@ export function ResultsView() {
     );
   }
 
+  const liveSearches = state.kind === "done" ? (state.data.live_searches ?? []) : [];
+  const kiwiSrc =
+    widgetIds && form.origin && form.destination
+      ? kiwiWidgetUrl(widgetIds, locale, {
+          origin: form.origin.iata,
+          destination: form.destination.iata,
+          departDate: form.departDate,
+          returnDate: form.tripType === "round_trip" ? form.returnDate : null,
+          currency: form.currency,
+        })
+      : null;
   const failedProviders =
     state.kind === "done" ? state.data.providers.filter((p) => p.status === "error") : [];
   const pax = form.adults + form.children + form.infants;
@@ -193,6 +208,15 @@ export function ResultsView() {
                 {t(errorKey(visibleClickError))}
               </p>
             )}
+            {liveSearches.map((ls) => (
+              <LiveSearchCard
+                key={ls.id}
+                link={ls}
+                empty={offers.length === 0}
+                busy={busyOffer === ls.id}
+                onSelect={() => void selectOffer(ls)}
+              />
+            ))}
             {offers.length === 0 ? (
               <p className="text-ink-muted">{t("empty")}</p>
             ) : (
@@ -203,6 +227,15 @@ export function ResultsView() {
                   </li>
                 ))}
               </ul>
+            )}
+            {kiwiSrc && (
+              <PartnerWidget
+                key={kiwiSrc}
+                src={kiwiSrc}
+                title={tw("kiwiTitle")}
+                partner="Kiwi.com"
+                minHeight={520}
+              />
             )}
           </div>
         )}

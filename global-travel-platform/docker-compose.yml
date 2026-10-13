@@ -1,6 +1,8 @@
 # Full local stack: Nginx -> (Next.js web, FastAPI api) -> PostgreSQL + Redis.
 #   cp .env.example .env && docker compose up --build -d
 #   open http://localhost:${HTTP_PORT:-8080}
+# IMAGE_TAG (default "local") must differ per stack on one host, e.g. a preview, so
+# builds never retag another stack's images.
 # Only Nginx publishes a port; databases are reachable only on the internal network.
 name: gtp
 
@@ -12,8 +14,13 @@ x-api-env: &api-env
   CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
   COOKIE_SECURE: ${COOKIE_SECURE:-false}
   ENABLE_DOCS: ${ENABLE_DOCS:-true}
-  ENABLED_PROVIDERS: mock
-  REFERRALS_LIVE_ENABLED: "false"
+  # mock = demo fares; travelpayouts = real cached Aviasales fares (needs token + marker).
+  ENABLED_PROVIDERS: ${ENABLED_PROVIDERS:-mock}
+  TRAVELPAYOUTS_API_TOKEN: ${TRAVELPAYOUTS_API_TOKEN:-}
+  TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
+  TRAVELPAYOUTS_MARKET: ${TRAVELPAYOUTS_MARKET:-}
+  # Partner booking links. Keep false until partner agreement + licensing are confirmed.
+  REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
   METRICS_TOKEN: ${METRICS_TOKEN:-}
   SENTRY_DSN: ${SENTRY_DSN:-}
   LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -58,7 +65,7 @@ services:
   # One-shot: apply migrations, seed reference data, create dev admin (dev only).
   migrate:
     build: { context: ., dockerfile: infrastructure/docker/api.Dockerfile }
-    image: gtp-api:local
+    image: gtp-api:${IMAGE_TAG:-local}
     environment:
       <<: *api-env
       DEV_ADMIN_EMAIL: ${DEV_ADMIN_EMAIL:-}
@@ -72,7 +79,7 @@ services:
     restart: "no"
 
   api:
-    image: gtp-api:local
+    image: gtp-api:${IMAGE_TAG:-local}
     restart: unless-stopped
     environment:
       <<: *api-env
@@ -84,7 +91,7 @@ services:
 
   web:
     build: { context: ., dockerfile: infrastructure/docker/web.Dockerfile }
-    image: gtp-web:local
+    image: gtp-web:${IMAGE_TAG:-local}
     restart: unless-stopped
     environment:
       API_INTERNAL_URL: http://api:8000
@@ -95,6 +102,9 @@ services:
       LEGAL_ADDRESS: ${LEGAL_ADDRESS:-}
       # Optional partner script (off when empty); loaded only after visitor consent.
       TRAVELPAYOUTS_SCRIPT_ID: ${TRAVELPAYOUTS_SCRIPT_ID:-}
+      # Partner id; with SCRIPT_ID it enables the Klook / Kiwi.com widgets.
+      TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
+      REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
       TRAVELPAYOUTS_SCRIPT_HOST: ${TRAVELPAYOUTS_SCRIPT_HOST:-}
     depends_on:
       api: { condition: service_healthy }

@@ -1,3 +1,6 @@
+import { DRIVE_CSP } from "./affiliate";
+import { WIDGET_CSP } from "./widgets";
+
 /**
  * Content-Security-Policy, built per request in src/proxy.ts so runtime settings
  * (e.g. an enabled partner script) apply without rebuilding.
@@ -7,16 +10,42 @@
  * No `upgrade-insecure-requests`: it breaks plain-HTTP deployments (LAN, CI);
  * HTTPS is enforced by HSTS + Cloudflare/Nginx redirects in production.
  */
-export function buildCsp({ dev, partnerHosts = [] }: { dev: boolean; partnerHosts?: string[] }) {
-  const partners = partnerHosts.map((h) => `https://${h}`).join(" ");
-  const withPartners = (base: string) => (partners ? `${base} ${partners}` : base);
+export function buildCsp({
+  dev,
+  partnerHosts = [],
+  widgets = false,
+}: {
+  dev: boolean;
+  partnerHosts?: string[];
+  /** Allow the Travelpayouts brand widgets (lib/widgets.ts). */
+  widgets?: boolean;
+}) {
+  const drive = partnerHosts.length > 0;
+  const hosts = (list: readonly string[]) => list.map((h) => `https://${h}`);
+  const add = (base: string, extra: readonly string[] = [], driveExtra: readonly string[] = []) =>
+    [
+      base,
+      ...hosts(partnerHosts),
+      ...hosts(widgets ? extra : []),
+      ...hosts(drive ? driveExtra : []),
+    ].join(" ");
+  const only = (base: string, driveExtra: readonly string[]) =>
+    [base, ...hosts(drive ? driveExtra : [])].join(" ");
   return [
     "default-src 'self'",
-    withPartners(`script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`),
-    "style-src 'self' 'unsafe-inline'",
-    withPartners("img-src 'self' data:"),
-    "font-src 'self' data:",
-    withPartners(`connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`),
+    add(`script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""}`, WIDGET_CSP.script),
+    // Partner hosts here too: the Drive script loads its own tooltip stylesheet.
+    drive
+      ? add("style-src 'self' 'unsafe-inline'", [], DRIVE_CSP.style)
+      : "style-src 'self' 'unsafe-inline'",
+    add("img-src 'self' data:", WIDGET_CSP.img),
+    only("font-src 'self' data:", DRIVE_CSP.font),
+    add(
+      `connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`,
+      WIDGET_CSP.connect,
+      DRIVE_CSP.connect,
+    ),
+    ...(widgets ? [`frame-src ${hosts(WIDGET_CSP.frame).join(" ")}`] : []),
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

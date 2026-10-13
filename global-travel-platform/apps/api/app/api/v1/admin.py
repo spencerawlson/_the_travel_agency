@@ -39,6 +39,7 @@ from app.schemas.admin import (
 )
 from app.services import admin_stats
 from app.services.auth import authenticate, revoke_session
+from app.services.commissions import import_travelpayouts_commissions
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 DB = Annotated[AsyncSession, Depends(get_db)]
@@ -292,6 +293,22 @@ async def commissions(
             for s, c, n, a in totals_rows
         ],
     )
+
+
+@router.post(
+    "/commissions/import",
+    dependencies=[Depends(rate_limit("commission_import", "rate_limit_login"))],
+)
+async def import_commissions(
+    session: DB,
+    admin_session: Annotated[AdminSession, Depends(require_role("admin"))],
+    days: Annotated[int, Query(ge=1, le=730)] = 90,
+) -> dict:
+    """Pull earnings from Travelpayouts now (admin only; CSRF-protected POST)."""
+    result = await import_travelpayouts_commissions(
+        session, days=days, actor_user_id=admin_session.user_id
+    )
+    return result.as_dict()
 
 
 @router.get(

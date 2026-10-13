@@ -6,32 +6,24 @@ import { apiInternalUrl } from "./site";
 
 /** Cookie set by the middleware from the visitor's country (or their own choice). */
 const ORIGIN_COOKIE = "gtp_origin";
-const FALLBACK_IATA = "YUL";
-
 /**
- * The visitor's origin airport for flight-distance estimates. Reads the
- * `gtp_origin` cookie (set from Cloudflare's country header, overridable by
- * the search form). Falls back to YUL when unknown.
+ * The visitor's origin airport for flight-distance estimates, from the
+ * `gtp_origin` cookie (set from Cloudflare's country header, or chosen in the
+ * search form). Null when unknown: no city is assumed for a worldwide audience.
  */
-export async function getOrigin(): Promise<OriginAirport> {
-  const fallback = {
-    iata: FALLBACK_IATA,
-    city: "Montreal",
-    cityFr: "Montréal",
-    latitude: 45.4678,
-    longitude: -73.7423,
-  };
+export async function getOrigin(): Promise<OriginAirport | null> {
   try {
     const iata = (await cookies()).get(ORIGIN_COOKIE)?.value?.toUpperCase();
     if (iata && IATA_ORIGIN[iata]) return IATA_ORIGIN[iata];
   } catch {
-    // cookies() unavailable (e.g. sitemap prerender) — fall through
+    // cookies() unavailable (e.g. sitemap prerender): treat as unknown.
   }
-  return fallback;
+  return null;
 }
 
 /** City name of the visitor's origin in the page locale. */
-export function originCity(origin: OriginAirport, locale: string): string {
+export function originCity(origin: OriginAirport | null, locale: string): string | null {
+  if (!origin) return null;
   return locale === "fr" ? origin.cityFr : origin.city;
 }
 
@@ -66,7 +58,7 @@ export async function getDestinations(locale: string): Promise<Destination[]> {
   const origin = await getOrigin();
   return (
     (await apiGet<Destination[]>(
-      `/api/v1/destinations?locale=${locale}&origin=${origin.iata}`,
+      `/api/v1/destinations?locale=${locale}${origin ? `&origin=${origin.iata}` : ""}`,
       300,
     )) ?? []
   );
@@ -76,7 +68,7 @@ export async function getDestination(slug: string, locale: string): Promise<Dest
   if (!/^[a-z0-9-]{1,80}$/.test(slug)) return null;
   const origin = await getOrigin();
   return apiGet<Destination>(
-    `/api/v1/destinations/${slug}?locale=${locale}&origin=${origin.iata}`,
+    `/api/v1/destinations/${slug}?locale=${locale}${origin ? `&origin=${origin.iata}` : ""}`,
     300,
   );
 }

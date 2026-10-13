@@ -22,7 +22,7 @@
   --color-brand-900: oklch(0.3 0.08 250);
   --color-accent-400: oklch(0.76 0.15 45);
   --color-accent-500: oklch(0.7 0.17 38);
-  --color-accent-600: oklch(0.6 0.17 35);
+  --color-accent-600: oklch(0.56 0.17 35);
   --color-sun-300: oklch(0.9 0.12 90);
 
   --color-canvas: var(--canvas);
@@ -180,6 +180,62 @@ body {
   to {
     transform: scaleX(1);
   }
+}
+
+/* Hero carousel: slow zoom on the active slide (Ken Burns). */
+.hero-slide.is-active {
+  animation: hero-zoom 9s ease-out both;
+}
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* Country of the week: deep per-country gradients so white text stays readable
+   (>= 4.5:1 everywhere; the pale .theme-* washes above are photo fallbacks). */
+.star-card {
+  background-color: #0b335c;
+  background-image: linear-gradient(135deg, var(--star-from, #0b335c), var(--star-to, #1b62bf));
+}
+.star-dusk {
+  --star-from: #5b2150;
+  --star-to: #b0472e;
+}
+.star-slate {
+  --star-from: #1e2f4d;
+  --star-to: #3f5f8a;
+}
+.star-night {
+  --star-from: #0f1b3d;
+  --star-to: #33408c;
+}
+.star-sakura {
+  --star-from: #6d1f47;
+  --star-to: #a83b68;
+}
+.star-sunset {
+  --star-from: #7c2d12;
+  --star-to: #c2410c;
+}
+.star-lagoon {
+  --star-from: #08414d;
+  --star-to: #0f7676;
+}
+.star-aurora {
+  --star-from: #0d3f3a;
+  --star-to: #1f6b8a;
+}
+.star-desert {
+  --star-from: #6b3410;
+  --star-to: #a35a1f;
+}
+.star-ocean {
+  --star-from: #0b335c;
+  --star-to: #1b62bf;
 }
 
 /* Photo cards: gentle zoom on hover. */
