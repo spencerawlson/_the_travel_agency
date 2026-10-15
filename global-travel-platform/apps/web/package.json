@@ -13,6 +13,10 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/ios": "^8.5.3",
     "@gtp/shared-types": "*",
     "@gtp/ui": "*",
     "clsx": "2.1.1",

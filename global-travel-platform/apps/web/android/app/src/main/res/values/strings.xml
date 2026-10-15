@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Farelune</string>
+    <string name="title_activity_main">Farelune</string>
+    <string name="package_name">com.farelune.app</string>
+    <string name="custom_url_scheme">com.farelune.app</string>
+</resources>
