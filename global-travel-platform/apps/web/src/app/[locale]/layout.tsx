@@ -9,8 +9,10 @@ import "../globals.css";
 import { ConsentBanner, LOADER_ID } from "@/components/ConsentBanner";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { MetaPixel } from "@/components/MetaPixel";
 import { routing } from "@/i18n/routing";
 import { getAffiliateScript } from "@/lib/affiliate";
+import { getMetaPixelId } from "@/lib/meta";
 import { getPhoto, photoAlt } from "@/lib/photos";
 import { localeAlternates } from "@/lib/seo";
 import { getSiteConfig, siteUrl } from "@/lib/site";
@@ -72,6 +74,7 @@ export default async function LocaleLayout({
   const t = await getTranslations("nav");
   const site = getSiteConfig();
   const partner = getAffiliateScript();
+  const metaPixelId = getMetaPixelId();
   // Reading the request makes every page render per request, which the per-request
   // CSP nonce needs (a prerendered page would carry no nonce and its scripts would
   // be blocked). The nonce itself is applied by Next.js (see src/proxy.ts).
@@ -104,7 +107,8 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer site={site} />
-          {(partner || site.partnerWidgets) && <ConsentBanner />}
+          {(partner || site.partnerWidgets || site.metaPixel) && <ConsentBanner />}
+          {metaPixelId && <MetaPixel pixelId={metaPixelId} />}
         </NextIntlClientProvider>
       </body>
     </html>

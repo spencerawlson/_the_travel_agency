@@ -417,8 +417,8 @@
   },
   "consent": {
     "title": "Your choice of cookies",
-    "body": "We'd like to load content from our travel partners through Travelpayouts (live Kiwi.com fares, Klook activities, AirHelp compensation checks, helpful travel links). These partners may set cookies so bookings can be credited to us. Nothing loads unless you allow it, and you can change your mind at any time under “Cookie settings”.",
-    "accept": "Accept partner cookies",
+    "body": "We'd like to load content from our travel partners through Travelpayouts (live Kiwi.com fares, Klook activities, AirHelp compensation checks, helpful travel links) and run the Meta (Facebook) pixel, which measures visits and actions on our site so we can improve our advertising and reach people who might like Farelune. These partners may set cookies — Travelpayouts so bookings can be credited to us, Meta so it can tell which ads brought people here. Nothing loads unless you allow it, and you can change your mind at any time under “Cookie settings”.",
+    "accept": "Accept partner & Meta cookies",
     "reject": "Essential only",
     "settings": "Cookie settings",
     "learnMore": "Read our cookie notice"

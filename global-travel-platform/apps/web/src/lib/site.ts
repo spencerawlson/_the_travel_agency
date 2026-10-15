@@ -4,6 +4,7 @@
  * The default brand name is a PLACEHOLDER pending trademark clearance.
  */
 import { getAffiliateScript } from "./affiliate";
+import { getMetaPixelId } from "./meta";
 import { getWidgetIds } from "./widgets";
 
 export interface SiteConfig {
@@ -20,6 +21,8 @@ export interface SiteConfig {
   partnerWidgets: boolean;
   /** Partner booking links are live (REFERRALS_LIVE_ENABLED). */
   referralsLive: boolean;
+  /** Meta (Facebook) Pixel enabled (META_PIXEL_ID); consent-gated like partners. */
+  metaPixel: boolean;
 }
 
 export function getSiteConfig(): SiteConfig {
@@ -37,6 +40,7 @@ export function getSiteConfig(): SiteConfig {
     partnerScript: getAffiliateScript(env) !== null,
     partnerWidgets: getWidgetIds(env) !== null,
     referralsLive: (env.REFERRALS_LIVE_ENABLED || "").toLowerCase() === "true",
+    metaPixel: getMetaPixelId(env) !== null,
   };
 }
 

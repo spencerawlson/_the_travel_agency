@@ -1,4 +1,5 @@
 import { DRIVE_CSP } from "./affiliate";
+import { META_CSP } from "./meta";
 import { WIDGET_CSP } from "./widgets";
 
 /**
@@ -17,6 +18,7 @@ export function buildCsp({
   dev,
   partnerHosts = [],
   widgets = false,
+  meta = false,
   nonce,
 }: {
   dev: boolean;
@@ -25,15 +27,23 @@ export function buildCsp({
   partnerHosts?: string[];
   /** Allow the Travelpayouts brand widgets (lib/widgets.ts). */
   widgets?: boolean;
+  /** Allow the Meta Pixel hosts (lib/meta.ts). */
+  meta?: boolean;
 }) {
   const drive = partnerHosts.length > 0;
   const hosts = (list: readonly string[]) => list.map((h) => `https://${h}`);
-  const add = (base: string, extra: readonly string[] = [], driveExtra: readonly string[] = []) =>
+  const add = (
+    base: string,
+    extra: readonly string[] = [],
+    driveExtra: readonly string[] = [],
+    metaExtra: readonly string[] = [],
+  ) =>
     [
       base,
       ...hosts(partnerHosts),
       ...hosts(widgets ? extra : []),
       ...hosts(drive ? driveExtra : []),
+      ...(meta ? hosts(metaExtra) : []),
     ].join(" ");
   const only = (base: string, driveExtra: readonly string[]) =>
     [base, ...hosts(drive ? driveExtra : [])].join(" ");
@@ -44,17 +54,20 @@ export function buildCsp({
         dev ? " 'unsafe-eval'" : ""
       }`,
       WIDGET_CSP.script,
+      [],
+      META_CSP.script,
     ),
     // Partner hosts here too: the Drive script loads its own tooltip stylesheet.
     drive
       ? add("style-src 'self' 'unsafe-inline'", [], DRIVE_CSP.style)
       : "style-src 'self' 'unsafe-inline'",
-    add("img-src 'self' data:", WIDGET_CSP.img),
+    add("img-src 'self' data:", WIDGET_CSP.img, [], META_CSP.img),
     only("font-src 'self' data:", DRIVE_CSP.font),
     add(
       `connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`,
       WIDGET_CSP.connect,
       DRIVE_CSP.connect,
+      META_CSP.connect,
     ),
     ...(widgets ? [`frame-src ${hosts(WIDGET_CSP.frame).join(" ")}`] : []),
     "frame-ancestors 'none'",

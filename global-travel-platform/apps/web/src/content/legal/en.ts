@@ -28,7 +28,9 @@ export const en: LegalContent = (s) => ({
       {
         heading: "Why we use it",
         paragraphs: [
-          "To provide search results, to send you to the partner you choose, to measure and improve the service, to reconcile commissions with partners, to keep the service secure, and to meet legal obligations. We do not sell personal information and we do not use it for targeted advertising.",
+          s.metaPixel
+            ? "To provide search results, to send you to the partner you choose, to measure and improve the service, to reconcile commissions with partners, to keep the service secure, and to meet legal obligations. We do not sell personal information. With your consent, the Meta pixel also measures our advertising and lets us show Farelune ads to people who have visited our site, as described in our cookie notice."
+            : "To provide search results, to send you to the partner you choose, to measure and improve the service, to reconcile commissions with partners, to keep the service secure, and to meet legal obligations. We do not sell personal information and we do not use it for targeted advertising.",
         ],
       },
       {
@@ -38,6 +40,11 @@ export const en: LegalContent = (s) => ({
           ...(s.partnerScript || s.partnerWidgets
             ? [
                 "Only if you consent, we load content from our affiliate network, Travelpayouts, and its partners (Kiwi.com fare search, Klook activities, AirHelp compensation checks), which may set cookies and collect technical information about your visit to attribute bookings. See our cookie notice; you can withdraw consent at any time.",
+              ]
+            : []),
+          ...(s.metaPixel
+            ? [
+                "With the same consent, we also run the Meta (Facebook) pixel, which shares technical information about your visit and the actions you take on our site with Meta, so Meta can measure our advertising and show our ads to people who have visited us. See our cookie notice; you can withdraw consent at any time.",
               ]
             : []),
           "Our infrastructure providers (for example, hosting, content delivery and security services) may process data outside Quebec and Canada. Before such transfers, we assess privacy risks and put contractual safeguards in place, as required by Law 25.",
@@ -156,15 +163,19 @@ export const en: LegalContent = (s) => ({
     sections: [
       {
         heading:
-          s.partnerScript || s.partnerWidgets ? "Strictly necessary" : "Strictly necessary only",
+          s.partnerScript || s.partnerWidgets || s.metaPixel
+            ? "Strictly necessary"
+            : "Strictly necessary only",
         paragraphs: [
-          s.partnerScript || s.partnerWidgets
-            ? "We do not use advertising or third-party analytics cookies. These cookies are needed for the site to work:"
-            : "We do not use advertising or third-party analytics cookies. We use only what the site needs to work:",
+          s.metaPixel
+            ? "Apart from the optional Meta pixel described below — which only runs with your consent — we do not use advertising or third-party analytics cookies. These cookies are needed for the site to work:"
+            : s.partnerScript || s.partnerWidgets
+              ? "We do not use advertising or third-party analytics cookies. These cookies are needed for the site to work:"
+              : "We do not use advertising or third-party analytics cookies. We use only what the site needs to work:",
         ],
         list: [
           "NEXT_LOCALE: remembers your language choice.",
-          ...(s.partnerScript || s.partnerWidgets
+          ...(s.partnerScript || s.partnerWidgets || s.metaPixel
             ? ["fl_consent: remembers your cookie choice."]
             : []),
           "gtp_admin_session and gtp_csrf: used only by administrators who sign in.",
@@ -175,8 +186,19 @@ export const en: LegalContent = (s) => ({
             {
               heading: "Optional partner cookies (only with your consent)",
               paragraphs: [
-                "If you choose \u201cAccept partner cookies\u201d, we load content from Travelpayouts, the travel affiliate network we work with, and its partners Kiwi.com (live flight search), Klook (activities) and AirHelp (flight-delay compensation). It can add travel links, live offers and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
+                "If you choose \u201cAccept partner & Meta cookies\u201d, we load content from Travelpayouts, the travel affiliate network we work with, and its partners Kiwi.com (live flight search), Klook (activities) and AirHelp (flight-delay compensation). It can add travel links, live offers and short previews to our pages, and it lets Travelpayouts and its partners set cookies and collect technical information (such as your device, browser and the pages you view) so that bookings can be credited to us.",
                 "If you choose \u201cEssential only\u201d, this partner content is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Travelpayouts is governed by its own privacy policy.",
+              ],
+            },
+          ]
+        : []),
+      ...(s.metaPixel
+        ? [
+            {
+              heading: "Optional advertising measurement (only with your consent)",
+              paragraphs: [
+                "If you choose \u201cAccept partner & Meta cookies\u201d, we also load the Meta (Facebook) pixel. It records the pages you view and the actions you take here \u2014 viewing a destination, running a flight search, clicking through to a booking partner \u2014 together with technical information about your device and browser. Meta uses this to measure our advertising on Facebook and Instagram, and it lets us show Farelune ads to people who have visited our site, and to people similar to them.",
+                "If you choose \u201cEssential only\u201d, the pixel is never loaded and the site works the same. You can change your choice at any time with the \u201cCookie settings\u201d link at the bottom of every page. Data collected by Meta is governed by Meta's own privacy policy.",
               ],
             },
           ]

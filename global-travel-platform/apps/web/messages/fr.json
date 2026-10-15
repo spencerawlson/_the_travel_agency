@@ -417,8 +417,8 @@
   },
   "consent": {
     "title": "Votre choix de témoins",
-    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, vérification d'indemnisation AirHelp, liens de voyage utiles). Ces partenaires peuvent déposer des témoins afin que les réservations nous soient attribuées. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
-    "accept": "Accepter les témoins partenaires",
+    "body": "Nous aimerions charger du contenu de nos partenaires voyage par l'entremise de Travelpayouts (tarifs Kiwi.com en direct, activités Klook, vérification d'indemnisation AirHelp, liens de voyage utiles) et activer le pixel Meta (Facebook), qui mesure les visites et les actions sur notre site afin d'améliorer nos publicités et de joindre les personnes susceptibles d'aimer Farelune. Ces partenaires peuvent déposer des témoins — Travelpayouts afin que les réservations nous soient attribuées, Meta pour savoir quelles publicités amènent des visiteurs. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous « Paramètres des témoins ».",
+    "accept": "Accepter les témoins partenaires et Meta",
     "reject": "Essentiels seulement",
     "settings": "Paramètres des témoins",
     "learnMore": "Lire notre avis sur les témoins"

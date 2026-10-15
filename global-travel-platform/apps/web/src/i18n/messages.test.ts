@@ -21,6 +21,7 @@ const site: SiteConfig = {
   partnerScript: false,
   partnerWidgets: false,
   referralsLive: false,
+  metaPixel: false,
 };
 
 describe("translations", () => {

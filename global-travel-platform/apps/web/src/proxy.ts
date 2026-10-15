@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
 import { getAffiliateScript } from "./lib/affiliate";
 import { buildCsp } from "./lib/csp";
+import { getMetaPixelId } from "./lib/meta";
 import { getWidgetIds } from "./lib/widgets";
 import { COUNTRY_ORIGIN } from "./content/origin-airports";
 
@@ -36,6 +37,7 @@ export default function proxy(request: NextRequest) {
     dev: process.env.NODE_ENV !== "production",
     partnerHosts: partner ? [partner.host] : [],
     widgets: getWidgetIds() !== null,
+    meta: getMetaPixelId() !== null,
     nonce,
   });
   request.headers.set("x-nonce", nonce);

@@ -57,7 +57,7 @@ describe("ConsentBanner", () => {
 
   it("offers both choices with equal weight", () => {
     renderWithIntl(<ConsentBanner />);
-    const accept = screen.getByRole("button", { name: "Accept partner cookies" });
+    const accept = screen.getByRole("button", { name: "Accept partner & Meta cookies" });
     const reject = screen.getByRole("button", { name: "Essential only" });
     expect(accept.className).toBe(reject.className);
   });
@@ -65,7 +65,7 @@ describe("ConsentBanner", () => {
   it("activates the partner script only after Accept, and remembers it", async () => {
     const user = userEvent.setup();
     renderWithIntl(<ConsentBanner />);
-    await user.click(screen.getByRole("button", { name: "Accept partner cookies" }));
+    await user.click(screen.getByRole("button", { name: "Accept partner & Meta cookies" }));
     expect(readConsent()).toBe("accepted");
     expect(executedScripts()).toBe(1);
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();

@@ -28,7 +28,9 @@ export const fr: LegalContent = (s) => ({
       {
         heading: "Pourquoi nous les utilisons",
         paragraphs: [
-          "Pour fournir des résultats de recherche, vous diriger vers le partenaire que vous choisissez, mesurer et améliorer le service, rapprocher les commissions avec nos partenaires, assurer la sécurité du service et respecter nos obligations légales. Nous ne vendons pas de renseignements personnels et ne les utilisons pas à des fins de publicité ciblée.",
+          s.metaPixel
+            ? "Pour fournir des résultats de recherche, vous diriger vers le partenaire que vous choisissez, mesurer et améliorer le service, rapprocher les commissions avec nos partenaires, assurer la sécurité du service et respecter nos obligations légales. Nous ne vendons pas de renseignements personnels. Avec votre consentement, le pixel Meta mesure aussi nos publicités et nous permet de présenter des annonces Farelune aux personnes qui ont visité notre site, comme l'explique notre avis sur les témoins."
+            : "Pour fournir des résultats de recherche, vous diriger vers le partenaire que vous choisissez, mesurer et améliorer le service, rapprocher les commissions avec nos partenaires, assurer la sécurité du service et respecter nos obligations légales. Nous ne vendons pas de renseignements personnels et ne les utilisons pas à des fins de publicité ciblée.",
         ],
       },
       {
@@ -38,6 +40,11 @@ export const fr: LegalContent = (s) => ({
           ...(s.partnerScript || s.partnerWidgets
             ? [
                 "Seulement si vous y consentez, nous chargeons du contenu de notre réseau d'affiliation, Travelpayouts, et de ses partenaires (recherche de vols Kiwi.com, activités Klook, vérification d'indemnisation AirHelp), qui peuvent installer des témoins et recueillir des renseignements techniques sur votre visite afin d'attribuer les réservations. Consultez notre avis sur les témoins; vous pouvez retirer votre consentement à tout moment.",
+              ]
+            : []),
+          ...(s.metaPixel
+            ? [
+                "Avec le même consentement, nous activons aussi le pixel Meta (Facebook), qui communique à Meta des renseignements techniques sur votre visite et les actions que vous posez sur notre site, afin que Meta mesure nos publicités et présente nos annonces aux personnes qui nous ont visités. Consultez notre avis sur les témoins; vous pouvez retirer votre consentement à tout moment.",
               ]
             : []),
           "Nos fournisseurs d'infrastructure (par exemple, hébergement, diffusion de contenu et services de sécurité) peuvent traiter des données à l'extérieur du Québec et du Canada. Avant de tels transferts, nous évaluons les facteurs relatifs à la vie privée et mettons en place des protections contractuelles, comme l'exige la Loi 25.",
@@ -157,17 +164,19 @@ export const fr: LegalContent = (s) => ({
     sections: [
       {
         heading:
-          s.partnerScript || s.partnerWidgets
+          s.partnerScript || s.partnerWidgets || s.metaPixel
             ? "Strictement nécessaires"
             : "Strictement nécessaires seulement",
         paragraphs: [
-          s.partnerScript || s.partnerWidgets
-            ? "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Ces témoins sont nécessaires au fonctionnement du site :"
-            : "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Nous n'utilisons que ce dont le site a besoin pour fonctionner :",
+          s.metaPixel
+            ? "À l'exception du pixel Meta facultatif décrit ci-dessous — qui ne s'active qu'avec votre consentement — nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Ces témoins sont nécessaires au fonctionnement du site :"
+            : s.partnerScript || s.partnerWidgets
+              ? "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Ces témoins sont nécessaires au fonctionnement du site :"
+              : "Nous n'utilisons aucun témoin publicitaire ni d'analytique tiers. Nous n'utilisons que ce dont le site a besoin pour fonctionner :",
         ],
         list: [
           "NEXT_LOCALE : mémorise votre choix de langue.",
-          ...(s.partnerScript || s.partnerWidgets
+          ...(s.partnerScript || s.partnerWidgets || s.metaPixel
             ? ["fl_consent : mémorise votre choix de témoins."]
             : []),
           "gtp_admin_session et gtp_csrf : utilisés uniquement par les administrateurs qui se connectent.",
@@ -178,8 +187,19 @@ export const fr: LegalContent = (s) => ({
             {
               heading: "Témoins partenaires facultatifs (seulement avec votre consentement)",
               paragraphs: [
-                "Si vous choisissez « Accepter les témoins partenaires », nous chargeons du contenu de Travelpayouts, le réseau d'affiliation voyage avec lequel nous travaillons, et de ses partenaires Kiwi.com (recherche de vols en direct), Klook (activités) et AirHelp (indemnisation pour vols retardés). Ce contenu peut ajouter des liens de voyage, des offres en direct et de courts aperçus à nos pages, et il permet à Travelpayouts et à ses partenaires d'installer des témoins et de recueillir des renseignements techniques (comme votre appareil, votre navigateur et les pages consultées) afin de nous attribuer les réservations.",
+                "Si vous choisissez « Accepter les témoins partenaires et Meta », nous chargeons du contenu de Travelpayouts, le réseau d'affiliation voyage avec lequel nous travaillons, et de ses partenaires Kiwi.com (recherche de vols en direct), Klook (activités) et AirHelp (indemnisation pour vols retardés). Ce contenu peut ajouter des liens de voyage, des offres en direct et de courts aperçus à nos pages, et il permet à Travelpayouts et à ses partenaires d'installer des témoins et de recueillir des renseignements techniques (comme votre appareil, votre navigateur et les pages consultées) afin de nous attribuer les réservations.",
                 "Si vous choisissez « Essentiels seulement », ce contenu partenaire n'est jamais chargé et le site fonctionne de la même façon. Vous pouvez modifier votre choix à tout moment grâce au lien « Paramètres des témoins » au bas de chaque page. Les données recueillies par Travelpayouts sont régies par sa propre politique de confidentialité.",
+              ],
+            },
+          ]
+        : []),
+      ...(s.metaPixel
+        ? [
+            {
+              heading: "Mesure publicitaire facultative (seulement avec votre consentement)",
+              paragraphs: [
+                "Si vous choisissez « Accepter les témoins partenaires et Meta », nous chargeons aussi le pixel Meta (Facebook). Il enregistre les pages que vous consultez et les actions que vous posez ici — consulter une destination, lancer une recherche de vols, cliquer vers un partenaire de réservation — ainsi que des renseignements techniques sur votre appareil et votre navigateur. Meta s'en sert pour mesurer nos publicités sur Facebook et Instagram, et cela nous permet de présenter des annonces Farelune aux personnes qui ont visité notre site, et à des personnes qui leur ressemblent.",
+                "Si vous choisissez « Essentiels seulement », le pixel n'est jamais chargé et le site fonctionne de la même façon. Vous pouvez modifier votre choix à tout moment grâce au lien « Paramètres des témoins » au bas de chaque page. Les données recueillies par Meta sont régies par sa propre politique de confidentialité.",
               ],
             },
           ]

@@ -104,6 +104,8 @@ services:
       LEGAL_ADDRESS: ${LEGAL_ADDRESS:-}
       # Optional partner script (off when empty); loaded only after visitor consent.
       TRAVELPAYOUTS_SCRIPT_ID: ${TRAVELPAYOUTS_SCRIPT_ID:-}
+      # Optional Meta (Facebook) Pixel id (public identifier); consent-gated like the partner script.
+      META_PIXEL_ID: ${META_PIXEL_ID:-1126443800341261}
       # Partner id; with SCRIPT_ID it enables the Klook / Kiwi.com widgets.
       TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
       REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
