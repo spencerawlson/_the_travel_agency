@@ -17,7 +17,7 @@ x-api-env: &api-env
   # mock = demo fares; travelpayouts = real cached Aviasales fares (needs token + marker).
   ENABLED_PROVIDERS: ${ENABLED_PROVIDERS:-mock}
   TRAVELPAYOUTS_API_TOKEN: ${TRAVELPAYOUTS_API_TOKEN:-}
-  TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
+  TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-789134}
   TRAVELPAYOUTS_MARKET: ${TRAVELPAYOUTS_MARKET:-}
   # Partner booking links. Keep false until partner agreement + licensing are confirmed.
   REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
@@ -107,7 +107,7 @@ services:
       # Optional Meta (Facebook) Pixel id (public identifier); consent-gated like the partner script.
       META_PIXEL_ID: ${META_PIXEL_ID:-1126443800341261}
       # Partner id; with SCRIPT_ID it enables the Klook / Kiwi.com widgets.
-      TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-}
+      TRAVELPAYOUTS_MARKER: ${TRAVELPAYOUTS_MARKER:-789134}
       REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
       TRAVELPAYOUTS_SCRIPT_HOST: ${TRAVELPAYOUTS_SCRIPT_HOST:-}
     depends_on:
