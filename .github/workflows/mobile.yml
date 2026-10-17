@@ -1,10 +1,12 @@
 name: Mobile apps
 
-# Builds the Capacitor shells in apps/web/{android,ios}. The apps load
-# https://farelune.com at runtime, so only native/config changes need a rebuild.
-# Outputs are UNSIGNED test builds, downloadable from the run's Artifacts:
+# Builds the Farelune Capacitor shells in global-travel-platform/apps/web/{android,ios}.
+# (GitHub only runs workflows from the repository root, hence this file lives
+# here and every path points into global-travel-platform/.)
+# The apps load https://farelune.com at runtime, so only native/config changes
+# need a rebuild. Outputs are UNSIGNED test builds, downloadable from the run:
 #  - farelune-android-debug: app-debug.apk (sideload on any Android phone)
-#  - farelune-ios-simulator: Farelune.app (drag onto a running iOS Simulator)
+#  - farelune-ios-simulator: Farelune-simulator.zip (App.app for the iOS Simulator)
 # Store builds (.aab / signed .ipa) need signing keys added as repo secrets.
 
 on:
@@ -12,12 +14,12 @@ on:
   push:
     branches: [main]
     paths:
-      - apps/web/android/**
-      - apps/web/ios/**
-      - apps/web/capacitor-www/**
-      - apps/web/capacitor.config.ts
-      - apps/web/package.json
-      - package-lock.json
+      - global-travel-platform/apps/web/android/**
+      - global-travel-platform/apps/web/ios/**
+      - global-travel-platform/apps/web/capacitor-www/**
+      - global-travel-platform/apps/web/capacitor.config.ts
+      - global-travel-platform/apps/web/package.json
+      - global-travel-platform/package-lock.json
       - .github/workflows/mobile.yml
 
 permissions:
@@ -26,6 +28,10 @@ permissions:
 concurrency:
   group: mobile-${{ github.ref }}
   cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: global-travel-platform
 
 jobs:
   android:
@@ -37,22 +43,22 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: global-travel-platform/package-lock.json
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "21"
-          cache: gradle
       - run: npm ci
       - name: Sync Capacitor
-        working-directory: apps/web
+        working-directory: global-travel-platform/apps/web
         run: npx cap sync android
       - name: Build debug APK
-        working-directory: apps/web/android
+        working-directory: global-travel-platform/apps/web/android
         run: ./gradlew assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: farelune-android-debug
-          path: apps/web/android/app/build/outputs/apk/debug/app-debug.apk
+          path: global-travel-platform/apps/web/android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
 
   ios:
@@ -64,19 +70,20 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: global-travel-platform/package-lock.json
       - run: npm ci
       - name: Sync Capacitor
-        working-directory: apps/web
+        working-directory: global-travel-platform/apps/web
         run: npx cap sync ios
       - name: Build for iOS Simulator (unsigned)
-        working-directory: apps/web/ios/App
+        working-directory: global-travel-platform/apps/web/ios/App
         run: |
           xcodebuild -project App.xcodeproj -scheme App \
             -configuration Debug -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
       - name: Package .app
-        working-directory: apps/web/ios/App/build/Build/Products/Debug-iphonesimulator
+        working-directory: global-travel-platform/apps/web/ios/App/build/Build/Products/Debug-iphonesimulator
         run: ditto -c -k --keepParent App.app "$GITHUB_WORKSPACE/Farelune-simulator.zip"
       - uses: actions/upload-artifact@v4
         with:
