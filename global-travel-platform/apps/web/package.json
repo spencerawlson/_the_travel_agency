@@ -17,6 +17,7 @@
     "@capacitor/cli": "^8.5.3",
     "@capacitor/core": "^8.5.3",
     "@capacitor/ios": "^8.5.3",
+    "@capacitor/splash-screen": "^8.0.2",
     "@gtp/shared-types": "*",
     "@gtp/ui": "*",
     "clsx": "2.1.1",

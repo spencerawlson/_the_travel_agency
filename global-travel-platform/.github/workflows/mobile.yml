@@ -1,0 +1,85 @@
+name: Mobile apps
+
+# Builds the Capacitor shells in apps/web/{android,ios}. The apps load
+# https://farelune.com at runtime, so only native/config changes need a rebuild.
+# Outputs are UNSIGNED test builds, downloadable from the run's Artifacts:
+#  - farelune-android-debug: app-debug.apk (sideload on any Android phone)
+#  - farelune-ios-simulator: Farelune.app (drag onto a running iOS Simulator)
+# Store builds (.aab / signed .ipa) need signing keys added as repo secrets.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - apps/web/android/**
+      - apps/web/ios/**
+      - apps/web/capacitor-www/**
+      - apps/web/capacitor.config.ts
+      - apps/web/package.json
+      - package-lock.json
+      - .github/workflows/mobile.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mobile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android:
+    name: Android (debug APK)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+      - run: npm ci
+      - name: Sync Capacitor
+        working-directory: apps/web
+        run: npx cap sync android
+      - name: Build debug APK
+        working-directory: apps/web/android
+        run: ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: farelune-android-debug
+          path: apps/web/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+  ios:
+    name: iOS (simulator build)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Sync Capacitor
+        working-directory: apps/web
+        run: npx cap sync ios
+      - name: Build for iOS Simulator (unsigned)
+        working-directory: apps/web/ios/App
+        run: |
+          xcodebuild -project App.xcodeproj -scheme App \
+            -configuration Debug -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+      - name: Package .app
+        working-directory: apps/web/ios/App/build/Build/Products/Debug-iphonesimulator
+        run: ditto -c -k --keepParent App.app "$GITHUB_WORKSPACE/Farelune-simulator.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: farelune-ios-simulator
+          path: Farelune-simulator.zip
+          if-no-files-found: error

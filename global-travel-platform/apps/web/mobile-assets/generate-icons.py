@@ -58,7 +58,37 @@ for d, (w, h) in SPLASH.items():
     splash.alpha_composite(mark, ((w - mark_px) // 2, (h - mark_px) // 2))
     save(splash, os.path.join(RES, d, "splash.png"))
 
-save(icon, IOS_ICON)
+
+def ios_icon():
+    # App Store icons must be opaque (iOS paints alpha black) and full-bleed:
+    # iOS applies its own rounded mask. Coral gradient square + white plane
+    # lifted from the source disc (blue channel: coral <= ~92, plane = 255).
+    n = 1024
+    a, b = (245, 138, 92), (226, 85, 58)  # #F58A5C -> #E2553A, top-left to bottom-right
+    grad = Image.new("RGB", (n, n))
+    px = grad.load()
+    for y in range(n):
+        for x in range(n):
+            t = (x + y) / (2 * (n - 1))
+            px[x, y] = tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
+    blue = icon.getchannel("B").point(lambda v: max(0, min(255, (v - 92) * 255 // 163)))
+    plane = Image.composite(blue, Image.new("L", (n, n), 0), icon.getchannel("A"))
+    grad.paste((255, 255, 255), (0, 0), plane)
+    return grad
+
+
+save(ios_icon(), IOS_ICON)
+
+# iOS splash (Splash.imageset): same layout as Android's, one square 2732px
+# canvas reused at 1x/2x/3x; iOS scales it aspect-fill.
+IOS_SPLASH = os.path.join(HERE, "ios", "App", "App", "Assets.xcassets", "Splash.imageset")
+n = 2732
+ios_splash = Image.new("RGB", (n, n), SPLASH_BG[:3])
+mark_px = int(n * 0.16)
+ios_splash.paste(icon.resize((mark_px, mark_px), Image.LANCZOS),
+                 ((n - mark_px) // 2, (n - mark_px) // 2), icon.resize((mark_px, mark_px), Image.LANCZOS))
+for name in ("splash-2732x2732.png", "splash-2732x2732-1.png", "splash-2732x2732-2.png"):
+    save(ios_splash, os.path.join(IOS_SPLASH, name))
 
 # adaptive-icon background color -> brand coral
 bg_path = os.path.join(RES, "values", "ic_launcher_background.xml")

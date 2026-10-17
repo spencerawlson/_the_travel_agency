@@ -15,7 +15,8 @@
     "close": "Fermer le menu",
     "language": "Langue",
     "switchTo": "English",
-    "primary": "Principale"
+    "primary": "Principale",
+    "more": "Plus"
   },
   "demo": {
     "label": "Données de démonstration",
@@ -421,7 +422,9 @@
     "accept": "Accepter les témoins partenaires et Meta",
     "reject": "Essentiels seulement",
     "settings": "Paramètres des témoins",
-    "learnMore": "Lire notre avis sur les témoins"
+    "learnMore": "Lire notre avis sur les témoins",
+    "bodyShort": "Nous aimerions charger des offres en direct de nos partenaires voyage (Kiwi.com, Klook, AirHelp, par l'entremise de Travelpayouts) et activer le pixel Meta (Facebook) pour mesurer nos publicités. Les deux peuvent déposer des témoins. Rien ne se charge sans votre permission, et vous pouvez changer d'avis en tout temps sous Plus → Paramètres des témoins.",
+    "acceptShort": "Tout accepter"
   },
   "widgets": {
     "klookTitle": "Quoi faire une fois sur place",
@@ -429,5 +432,10 @@
     "needsConsent": "Cette section affiche des offres en direct de {partner}, par l'entremise de notre réseau d'affiliation Travelpayouts. Elle ne se charge que si vous autorisez les témoins des partenaires.",
     "allow": "Choisir mes témoins",
     "airhelpTitle": "Vol retardé ou annulé? Vérifiez si vous avez droit à une indemnisation"
+  },
+  "app": {
+    "pullToRefresh": "Tirer pour actualiser",
+    "releaseToRefresh": "Relâcher pour actualiser",
+    "refreshing": "Actualisation…"
   }
 }

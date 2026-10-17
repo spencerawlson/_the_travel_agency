@@ -54,6 +54,8 @@
     <button id="retry" type="button">Try again</button>
   </main>
   <script>
+    // Shown in place of the site, so the splash would otherwise wait out its timeout.
+    try { window.Capacitor.Plugins.SplashScreen.hide(); } catch (e) {}
     document.getElementById('retry').addEventListener('click', function () {
       window.location.href = 'https://farelune.com/';
     });

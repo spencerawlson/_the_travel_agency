@@ -1,4 +1,4 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from "@capacitor/cli";
 
 // Farelune native shell (Capacitor 8). The app runs in REMOTE-URL mode:
 // the WebView loads the live production site (https://farelune.com), which
@@ -19,21 +19,41 @@ import type { CapacitorConfig } from '@capacitor/cli';
 // Flow after any webDir/config change: `npx cap sync`.
 
 const config: CapacitorConfig = {
-  appId: 'com.farelune.app',
-  appName: 'Farelune',
-  webDir: 'capacitor-www',
+  appId: "com.farelune.app",
+  appName: "Farelune",
+  webDir: "capacitor-www",
   server: {
     // The production site is the app's content. HTTPS only.
-    url: 'https://farelune.com',
+    url: "https://farelune.com",
     cleartext: false,
+    // Show the branded capacitor-www/index.html when the site can't load.
+    errorPath: "index.html",
   },
+  // The site detects this token (src/lib/app-shell.ts) and switches to its app
+  // layout: bottom tab bar, compact cookie prompt, pull-to-refresh.
+  appendUserAgent: "FareluneApp/1.0",
+  // The site's canvas colour, so nothing flashes between splash and first paint.
+  backgroundColor: "#fdfbf7",
   ios: {
-    // Prefer the WKWebView content inset behavior the responsive layout expects.
-    contentInset: 'automatic',
+    // Edge-to-edge: the site declares viewport-fit=cover and pads itself with
+    // env(safe-area-inset-*), the same as on Android.
+    contentInset: "never",
   },
-  android: {
-    // Brand coral behind the WebView so launch never flashes white or black.
-    backgroundColor: '#f58a5c',
+  plugins: {
+    SplashScreen: {
+      // The site hides the splash once it has rendered; this is only the
+      // upper bound if it never does (e.g. a very slow network).
+      launchShowDuration: 8000,
+      launchAutoHide: true,
+      launchFadeOutDuration: 250,
+      backgroundColor: "#fff7f1",
+      showSpinner: false,
+    },
+    SystemBars: {
+      // Dark status/navigation icons: the site is light-only.
+      style: "LIGHT",
+      initialViewportFitValueHint: "cover",
+    },
   },
 };
 

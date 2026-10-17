@@ -15,6 +15,7 @@ import { isPartnerHost } from "@/lib/meta";
  * the visitor clicks out to a booking partner (Aviasales, Kiwi.com, ...).
  * Bookings complete on partner sites, so PartnerClick is the closest
  * on-site signal to a conversion and backs retargeting audiences.
+ * Visits from the native apps carry `source: "app"` so they can be told apart.
  */
 
 type Fbq = ((...args: unknown[]) => void) & {
@@ -61,7 +62,7 @@ export function trackMetaCustom(event: string, params?: Record<string, unknown>)
   else window.fbq("trackCustom", event);
 }
 
-export function MetaPixel({ pixelId }: { pixelId: string }) {
+export function MetaPixel({ pixelId, inApp = false }: { pixelId: string; inApp?: boolean }) {
   const consent = useConsent();
   const pathname = usePathname();
 
@@ -74,7 +75,8 @@ export function MetaPixel({ pixelId }: { pixelId: string }) {
   useEffect(() => {
     if (consent !== "accepted") return;
     ensureFbq(pixelId);
-    trackMeta("PageView");
+    if (inApp) trackMeta("PageView", { source: "app" });
+    else trackMeta("PageView");
     const destination = pathname.match(/\/destinations\/([^/]+)$/);
     if (destination) {
       trackMeta("ViewContent", {
@@ -93,7 +95,7 @@ export function MetaPixel({ pixelId }: { pixelId: string }) {
         });
       }
     }
-  }, [consent, pathname, pixelId]);
+  }, [consent, pathname, pixelId, inApp]);
 
   // Outbound clicks to booking partners (delegated: covers cards and links
   // rendered anywhere in our own DOM).

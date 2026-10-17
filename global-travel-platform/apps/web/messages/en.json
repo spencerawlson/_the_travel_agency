@@ -15,7 +15,8 @@
     "close": "Close menu",
     "language": "Language",
     "switchTo": "Français",
-    "primary": "Primary"
+    "primary": "Primary",
+    "more": "More"
   },
   "demo": {
     "label": "Demo data",
@@ -421,7 +422,9 @@
     "accept": "Accept partner & Meta cookies",
     "reject": "Essential only",
     "settings": "Cookie settings",
-    "learnMore": "Read our cookie notice"
+    "learnMore": "Read our cookie notice",
+    "bodyShort": "We'd like to load live offers from our travel partners (Kiwi.com, Klook, AirHelp, through Travelpayouts) and run the Meta (Facebook) pixel to measure our ads. Both may set cookies. Nothing loads unless you allow it, and you can change your mind any time under More → Cookie settings.",
+    "acceptShort": "Accept all"
   },
   "widgets": {
     "klookTitle": "Things to do when you get there",
@@ -429,5 +432,10 @@
     "needsConsent": "This section shows live offers from {partner}, through our affiliate network Travelpayouts. It loads only if you allow partner cookies.",
     "allow": "Choose cookie settings",
     "airhelpTitle": "Flight delayed or cancelled? Check if you're owed compensation"
+  },
+  "app": {
+    "pullToRefresh": "Pull to refresh",
+    "releaseToRefresh": "Release to refresh",
+    "refreshing": "Refreshing…"
   }
 }

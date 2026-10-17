@@ -68,7 +68,8 @@ export function useConsent(): Consent | undefined {
   );
 }
 
-export function ConsentBanner() {
+/** `compact`: the native apps' shorter prompt, above the tab bar (same choices). */
+export function ConsentBanner({ compact = false }: { compact?: boolean }) {
   const t = useTranslations("consent");
   // Server snapshot is "unknown" so nothing renders (and no mismatch) before hydration.
   const consent = useConsent();
@@ -99,24 +100,31 @@ export function ConsentBanner() {
       role="dialog"
       aria-modal="false"
       aria-labelledby="consent-title"
-      className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-3xl bg-surface-1 p-5 shadow-2xl ring-1 ring-line sm:inset-x-6 sm:bottom-6"
+      className={`consent-banner fixed inset-x-3 z-50 mx-auto max-w-2xl rounded-3xl bg-surface-1 shadow-2xl ring-1 ring-line sm:inset-x-6 ${
+        compact ? "p-4" : "p-5"
+      }`}
     >
-      <h2 id="consent-title" className="font-display text-xl font-semibold">
+      <h2
+        id="consent-title"
+        className={`font-display font-semibold ${compact ? "text-lg" : "text-xl"}`}
+      >
         {t("title")}
       </h2>
-      <p className="mt-2 text-sm text-ink-muted">{t("body")}</p>
+      <p className={`mt-2 text-ink-muted ${compact ? "text-[13px] leading-snug" : "text-sm"}`}>
+        {compact ? t("bodyShort") : t("body")}
+      </p>
       <p className="mt-2 text-sm">
         <Link href="/legal/cookies" className="font-semibold text-brand-600 underline">
           {t("learnMore")}
         </Link>
       </p>
       {/* Equal prominence for both choices. */}
-      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+      <div className={`grid gap-2 ${compact ? "mt-3 grid-cols-2" : "mt-4 sm:grid-cols-2"}`}>
         <Button variant="secondary" onClick={() => choose(false)}>
           {t("reject")}
         </Button>
         <Button variant="secondary" onClick={() => choose(true)}>
-          {t("accept")}
+          {compact ? t("acceptShort") : t("accept")}
         </Button>
       </div>
     </section>

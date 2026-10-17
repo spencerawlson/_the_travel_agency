@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
@@ -6,12 +6,15 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import "../globals.css";
+import { AppRuntime } from "@/components/app/AppRuntime";
+import { AppTabBar } from "@/components/app/AppTabBar";
 import { ConsentBanner, LOADER_ID } from "@/components/ConsentBanner";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MetaPixel } from "@/components/MetaPixel";
 import { routing } from "@/i18n/routing";
 import { getAffiliateScript } from "@/lib/affiliate";
+import { isAppUserAgent } from "@/lib/app-shell";
 import { getMetaPixelId } from "@/lib/meta";
 import { getPhoto, photoAlt } from "@/lib/photos";
 import { localeAlternates } from "@/lib/seo";
@@ -28,6 +31,14 @@ const body = Plus_Jakarta_Sans({
   variable: "--font-body",
   display: "swap",
 });
+
+// viewport-fit=cover lets the native apps (and landscape iPhones) draw edge to
+// edge; globals.css pads the header, body and tab bar with the safe-area insets.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export async function generateMetadata({
   params,
@@ -78,10 +89,16 @@ export default async function LocaleLayout({
   // Reading the request makes every page render per request, which the per-request
   // CSP nonce needs (a prerendered page would carry no nonce and its scripts would
   // be blocked). The nonce itself is applied by Next.js (see src/proxy.ts).
-  await headers();
+  // The user agent tells the native apps apart (see lib/app-shell.ts).
+  const inApp = isAppUserAgent((await headers()).get("user-agent"));
+  const consentBanner = Boolean(partner || site.partnerWidgets || site.metaPixel);
 
   return (
-    <html lang={locale} className={`${heading.variable} ${body.variable}`}>
+    <html
+      lang={locale}
+      className={`${heading.variable} ${body.variable}`}
+      data-app={inApp ? "" : undefined}
+    >
       {partner && (
         <head>
           {/* Inert until the visitor consents (type=text/plain); see ConsentBanner. */}
@@ -102,13 +119,24 @@ export default async function LocaleLayout({
           >
             {t("skip")}
           </a>
-          <Header siteName={site.name} />
+          <Header siteName={site.name} inApp={inApp} />
           <main id="main" className="flex-1">
             {children}
           </main>
-          <Footer site={site} />
-          {(partner || site.partnerWidgets || site.metaPixel) && <ConsentBanner />}
-          {metaPixelId && <MetaPixel pixelId={metaPixelId} />}
+          {inApp ? (
+            <>
+              <AppTabBar
+                siteName={site.name}
+                legalEntity={site.legalEntity}
+                cookieSettings={consentBanner}
+              />
+              <AppRuntime />
+            </>
+          ) : (
+            <Footer site={site} />
+          )}
+          {consentBanner && <ConsentBanner compact={inApp} />}
+          {metaPixelId && <MetaPixel pixelId={metaPixelId} inApp={inApp} />}
         </NextIntlClientProvider>
       </body>
     </html>

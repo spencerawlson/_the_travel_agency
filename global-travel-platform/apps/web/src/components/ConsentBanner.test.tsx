@@ -62,6 +62,18 @@ describe("ConsentBanner", () => {
     expect(accept.className).toBe(reject.className);
   });
 
+  it("app variant: shorter text, same two equal choices, same effect", async () => {
+    const user = userEvent.setup();
+    renderWithIntl(<ConsentBanner compact />);
+    expect(screen.getByText(/Meta \(Facebook\) pixel to measure our ads/)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Read our cookie notice" })).toBeInTheDocument();
+    const accept = screen.getByRole("button", { name: "Accept all" });
+    expect(accept.className).toBe(screen.getByRole("button", { name: "Essential only" }).className);
+    await user.click(accept);
+    expect(readConsent()).toBe("accepted");
+    expect(executedScripts()).toBe(1);
+  });
+
   it("activates the partner script only after Accept, and remembers it", async () => {
     const user = userEvent.setup();
     renderWithIntl(<ConsentBanner />);
