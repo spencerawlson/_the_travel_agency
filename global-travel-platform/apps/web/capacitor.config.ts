@@ -34,6 +34,12 @@ const config: CapacitorConfig = {
   appendUserAgent: "FareluneApp/1.0",
   // The site's canvas colour, so nothing flashes between splash and first paint.
   backgroundColor: "#fdfbf7",
+  android: {
+    // The site's CSS (Tailwind v4) needs Chrome 111+; older WebViews render it
+    // unstyled. Below this Capacitor shows capacitor-www/index.html, which asks
+    // the user to update Android System WebView.
+    minWebViewVersion: 111,
+  },
   ios: {
     // Edge-to-edge: the site declares viewport-fit=cover and pads itself with
     // env(safe-area-inset-*), the same as on Android.
@@ -48,6 +54,9 @@ const config: CapacitorConfig = {
       launchFadeOutDuration: 250,
       backgroundColor: "#fff7f1",
       showSpinner: false,
+      // Android 11 and older draw the splash image full-screen; crop instead of
+      // stretching it to the screen's aspect ratio.
+      androidScaleType: "CENTER_CROP",
     },
     SystemBars: {
       // Dark status/navigation icons: the site is light-only.
