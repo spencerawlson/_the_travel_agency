@@ -8,13 +8,14 @@ import type {
 } from "@gtp/shared-types";
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PartnerWidget } from "@/components/PartnerWidget";
 import { AppActions } from "@/components/app/AppActions";
 import { SearchForm } from "@/components/search/SearchForm";
 import { useRouter } from "@/i18n/navigation";
-import { ApiError, apiFetch } from "@/lib/api";import { formatDate } from "@/lib/format";
-import { fromQuery, toApiRequest, validateSearch } from "@/lib/search";
+import { ApiError, apiFetch } from "@/lib/api";
+import { isAppUserAgent } from "@/lib/app-shell";import { formatDate } from "@/lib/format";
+import { fromQuery, toApiRequest, toQuery, validateSearch } from "@/lib/search";
 import { useRequest } from "@/lib/useRequest";
 import { kiwiWidgetUrl, type WidgetIds } from "@/lib/widgets";
 import { Disclaimers } from "./Disclaimers";
@@ -58,6 +59,14 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
 
   const [sort, setSort] = useState<Sort>("price");
   const [busyOffer, setBusyOffer] = useState<string | null>(null);
+  // App-only presentation (same mounted-flag pattern as AppActions, so the
+  // server render and the first client render agree).
+  const [inApp, setInApp] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+
+  useEffect(() => {
+    setInApp(isAppUserAgent(navigator.userAgent));
+  }, []);
   // Scoped to the search that produced it, so a new search clears it implicitly.
   const [clickError, setClickError] = useState<{ key: string; code: string } | null>(null);
 
@@ -158,7 +167,11 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
         </p>
       </header>
 
-      <details className="rounded-2xl border border-line bg-surface-1 p-4">
+      <details
+        className="rounded-2xl border border-line bg-surface-1 p-4"
+        open={editOpen}
+        onToggle={(e) => setEditOpen(e.currentTarget.open)}
+      >
         <summary className="cursor-pointer font-semibold">{t("editSearch")}</summary>
         <div className="mt-4">
           <SearchForm key={queryKey} initial={form} compact />
@@ -166,6 +179,39 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
       </details>
 
       <AppActions form={form} locale={locale} />
+
+      {inApp && (
+        <div className="flex flex-wrap items-center gap-2">
+          {(["economy", "business", "first"] as const).map((cabin) => {
+            const selected = form.cabin === cabin;
+            return (
+              <button
+                key={cabin}
+                type="button"
+                aria-pressed={selected}
+                disabled={selected}
+                onClick={() =>
+                  router.push({ pathname: "/flights", query: toQuery({ ...form, cabin }) })
+                }
+                className={`rounded-full px-4 py-2 text-sm font-semibold ${
+                  selected
+                    ? "bg-brand-600 text-white"
+                    : "border border-line bg-surface-1 text-ink"
+                }`}
+              >
+                {search(`cabins.${cabin}`)}
+              </button>
+            );
+          })}
+          <button
+            type="button"
+            onClick={() => setEditOpen(true)}
+            className="rounded-full border border-line bg-surface-1 px-4 py-2 text-sm font-semibold text-ink"
+          >
+            {t("editSearch")}
+          </button>
+        </div>
+      )}
 
       {state.kind === "done" && <Disclaimers codes={state.data.disclaimers} />}
 
@@ -191,7 +237,13 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
               </p>
             )}
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="font-semibold">{t("count", { count: offers.length })}</p>
+              <p
+                className={
+                  inApp ? "font-display text-2xl font-semibold" : "font-semibold"
+                }
+              >
+                {t("count", { count: offers.length })}
+              </p>
               <label className="flex items-center gap-2 text-sm">
                 {t("sortBy")}
                 <select
@@ -225,7 +277,12 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
               <ul className="space-y-3">
                 {offers.map((offer) => (
                   <li key={offer.id}>
-                    <OfferCard offer={offer} onSelect={selectOffer} busy={busyOffer === offer.id} />
+                    <OfferCard
+                      offer={offer}
+                      onSelect={selectOffer}
+                      busy={busyOffer === offer.id}
+                      ticket={inApp}
+                    />
                   </li>
                 ))}
               </ul>

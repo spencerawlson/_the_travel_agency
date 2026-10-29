@@ -106,4 +106,16 @@ describe("OfferCard", () => {
       screen.getByRole("button", { name: "Réservation partenaire bientôt offerte" }),
     ).toBeDisabled();
   });
+
+  it("uses the ticket treatment only when asked", () => {
+    const { container, unmount } = renderWithIntl(
+      <OfferCard offer={offer()} onSelect={vi.fn()} busy={false} ticket />,
+    );
+    expect(container.querySelector(".border-dashed")).not.toBeNull();
+    unmount();
+    const plain = renderWithIntl(
+      <OfferCard offer={offer()} onSelect={vi.fn()} busy={false} />,
+    );
+    expect(plain.container.querySelector(".border-dashed")).toBeNull();
+  });
 });

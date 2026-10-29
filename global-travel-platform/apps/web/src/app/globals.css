@@ -68,7 +68,7 @@ body {
 }
 html[data-app] {
   --app-tabbar-h: 3.5rem;
-  --app-bottom: calc(var(--app-tabbar-h) + env(safe-area-inset-bottom, 0px));
+  --app-bottom: calc(var(--app-tabbar-h) + 0.75rem + env(safe-area-inset-bottom, 0px));
   /* Our pull-to-refresh replaces the rubber-band bounce / overscroll glow. */
   overscroll-behavior-y: none;
   /* No grey flash on tap, no long-press callout on links: feels native. */
@@ -79,11 +79,6 @@ html[data-app] a {
 }
 html[data-app] body {
   padding-bottom: var(--app-bottom);
-}
-.app-tabbar {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  padding-left: env(safe-area-inset-left, 0px);
-  padding-right: env(safe-area-inset-right, 0px);
 }
 .app-sheet {
   bottom: var(--app-bottom);

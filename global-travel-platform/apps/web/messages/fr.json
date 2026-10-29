@@ -16,7 +16,9 @@
     "language": "Langue",
     "switchTo": "English",
     "primary": "Principale",
-    "more": "Plus"
+    "explore": "Explorer",
+    "saved": "Enregistrés",
+    "profile": "Profil"
   },
   "demo": {
     "label": "Données de démonstration",
@@ -453,6 +455,8 @@
     "alertCancel": "Annuler l'alerte",
     "alertInvalidPrice": "Entrez un prix cible valide, supérieur à zéro.",
     "alertUnavailable": "Impossible de créer l'alerte pour le moment. Réessayez dans l'application sur un iPhone réel.",
-    "alertNeedsApp": "Les alertes push nécessitent l'application installée sur un iPhone réel."
+    "alertNeedsApp": "Les alertes push nécessitent l'application installée sur un iPhone réel.",
+    "profileTitle": "Profil",
+    "profileNote": "Réglages et infos de l'app. Aucun compte requis : vos voyages sauvegardés et vos alertes de prix restent sur cet appareil."
   }
 }

@@ -54,12 +54,14 @@ interface Props {
   offer: FlightOffer;
   onSelect: (offer: FlightOffer) => void;
   busy: boolean;
+  /** App-only ticket treatment: vertical card, dashed divider, plane badge. */
+  ticket?: boolean;
 }
 
 /** Offer notes worth showing on the card, in display order. */
 const NOTE_CODES = ["demo_fare", "different_dates", "economy_only", "cached_fare"] as const;
 
-export function OfferCard({ offer, onSelect, busy }: Props) {
+export function OfferCard({ offer, onSelect, busy, ticket = false }: Props) {
   const t = useTranslations("results");
   const demo = useTranslations("demo");
   const locale = useLocale();
@@ -67,7 +69,7 @@ export function OfferCard({ offer, onSelect, busy }: Props) {
   const perAdult = offer.price_basis === "per_adult";
 
   return (
-    <Card className="flex flex-col gap-4 md:flex-row md:items-center">
+    <Card className={ticket ? "flex flex-col gap-4" : "flex flex-col gap-4 md:flex-row md:items-center"}>
       <div className="flex-1 space-y-4">
         <div className="flex flex-wrap items-center gap-2">
           <p className="font-semibold">{carrier}</p>
@@ -76,7 +78,23 @@ export function OfferCard({ offer, onSelect, busy }: Props) {
         <SliceRow label={t("outbound")} slice={offer.outbound} />
         {offer.inbound && <SliceRow label={t("inbound")} slice={offer.inbound} />}
       </div>
-      <div className="flex flex-col gap-2 border-t border-line pt-4 md:w-56 md:border-t-0 md:border-l md:pt-0 md:pl-6">
+      <div
+        className={
+          ticket
+            ? "relative flex flex-col gap-2 border-t border-dashed border-line pt-4"
+            : "flex flex-col gap-2 border-t border-line pt-4 md:w-56 md:border-t-0 md:border-l md:pt-0 md:pl-6"
+        }
+      >
+        {ticket && (
+          <span
+            aria-hidden="true"
+            className="absolute -top-3.5 left-1/2 flex size-7 -translate-x-1/2 items-center justify-center rounded-full bg-surface-1 text-brand-600 ring-1 ring-line"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" />
+            </svg>
+          </span>
+        )}
         {perAdult && <p className="text-xs font-medium text-ink-muted">{t("from")}</p>}
         <p className="text-2xl font-bold tabular-nums">
           {formatMoney(offer.price.amount, offer.price.currency, locale)}

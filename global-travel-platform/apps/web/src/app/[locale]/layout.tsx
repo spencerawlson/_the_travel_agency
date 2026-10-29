@@ -125,11 +125,7 @@ export default async function LocaleLayout({
           </main>
           {inApp ? (
             <>
-              <AppTabBar
-                siteName={site.name}
-                legalEntity={site.legalEntity}
-                cookieSettings={consentBanner}
-              />
+              <AppTabBar />
               <AppRuntime />
             </>
           ) : (

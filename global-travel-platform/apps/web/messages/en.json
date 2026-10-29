@@ -16,7 +16,9 @@
     "language": "Language",
     "switchTo": "Français",
     "primary": "Primary",
-    "more": "More"
+    "explore": "Explore",
+    "saved": "Saved",
+    "profile": "Profile"
   },
   "demo": {
     "label": "Demo data",
@@ -453,6 +455,8 @@
     "alertCancel": "Cancel alert",
     "alertInvalidPrice": "Enter a valid target price above zero.",
     "alertUnavailable": "Couldn't create the alert right now. Try again in the app on a real iPhone.",
-    "alertNeedsApp": "Push alerts need the installed app on a real iPhone."
+    "alertNeedsApp": "Push alerts need the installed app on a real iPhone.",
+    "profileTitle": "Profile",
+    "profileNote": "Settings and info for this app. No account needed — saved trips and fare alerts live on this device."
   }
 }
