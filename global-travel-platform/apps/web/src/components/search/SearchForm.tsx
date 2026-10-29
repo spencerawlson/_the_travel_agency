@@ -2,9 +2,10 @@
 
 import type { Airport } from "@gtp/shared-types";
 import { Button } from "@gtp/ui";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { useRouter } from "@/i18n/navigation";
+import { formatDate } from "@/lib/format";
 import {
   type AirportChoice,
   addDays,
@@ -19,6 +20,7 @@ import {
   validateSearch,
 } from "@/lib/search";
 import { AirportCombobox } from "./AirportCombobox";
+import { DateRangeCalendar } from "./DateRangeCalendar";
 import { PassengerPicker } from "./PassengerPicker";
 
 interface Props {
@@ -49,6 +51,7 @@ export function SearchForm({
   fetchAirports,
 }: Props) {
   const t = useTranslations("search");
+  const locale = useLocale();
   const router = useRouter();
   // Server-provided origin (visitor location) keeps server and client renders identical.
   const [form, setForm] = useState<SearchFormState>(
@@ -56,6 +59,7 @@ export function SearchForm({
   );
   const [errors, setErrors] = useState<SearchErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [calendarOpen, setCalendarOpen] = useState(false);
   const today = todayIso();
 
   function update<K extends keyof SearchFormState>(key: K, value: SearchFormState[K]) {
@@ -63,6 +67,13 @@ export function SearchForm({
     setForm(next);
     // Remember a manually chosen origin so destination distances follow it.
     if (key === "origin" && value) rememberOrigin((value as AirportChoice).iata);
+    if (submitted) setErrors(validateSearch(next, today));
+  }
+
+  /** One shared-calendar pick updates both dates in a single state change. */
+  function updateDates(departDate: string, returnDate: string) {
+    const next = { ...form, departDate, returnDate };
+    setForm(next);
     if (submitted) setErrors(validateSearch(next, today));
   }
 
@@ -164,47 +175,67 @@ export function SearchForm({
             : "grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto]"
         }
       >
-        <div>
-          <label htmlFor="depart-date" className={labelClass}>
-            {t("depart")}
-          </label>
-          <input
-            id="depart-date"
-            type="date"
-            min={today}
-            max={addDays(today, MAX_DAYS_AHEAD)}
-            value={form.departDate}
-            onChange={(e) => update("departDate", e.target.value)}
-            aria-invalid={Boolean(errors.departDate)}
-            aria-describedby={errors.departDate ? "depart-error" : undefined}
-            className={fieldClass}
-          />
-          {errors.departDate && (
-            <p id="depart-error" className="mt-1 text-sm text-red-600">
-              {err("departDate")}
-            </p>
-          )}
-        </div>
-        <div>
-          <label htmlFor="return-date" className={labelClass}>
-            {t("return")}
-          </label>
-          <input
-            id="return-date"
-            type="date"
-            disabled={!roundTrip}
-            min={form.departDate || today}
-            max={addDays(today, MAX_DAYS_AHEAD)}
-            value={roundTrip ? form.returnDate : ""}
-            onChange={(e) => update("returnDate", e.target.value)}
-            aria-invalid={Boolean(errors.returnDate)}
-            aria-describedby={errors.returnDate ? "return-error" : undefined}
-            className={`${fieldClass} disabled:opacity-50`}
-          />
-          {errors.returnDate && (
-            <p id="return-error" className="mt-1 text-sm text-red-600">
-              {err("returnDate")}
-            </p>
+        <div className="sm:col-span-2">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div>
+              <span className={labelClass}>{t("depart")}</span>
+              <button
+                type="button"
+                aria-label={t("depart")}
+                aria-expanded={calendarOpen}
+                aria-invalid={Boolean(errors.departDate)}
+                aria-describedby={errors.departDate ? "depart-error" : undefined}
+                onClick={() => setCalendarOpen(true)}
+                className={`${fieldClass} text-left aria-[invalid=true]:border-red-500`}
+              >
+                {form.departDate ? (
+                  formatDate(form.departDate, locale)
+                ) : (
+                  <span className="text-ink-muted">{t("selectDate")}</span>
+                )}
+              </button>
+              {errors.departDate && (
+                <p id="depart-error" className="mt-1 text-sm text-red-600">
+                  {err("departDate")}
+                </p>
+              )}
+            </div>
+            <div>
+              <span className={labelClass}>{t("return")}</span>
+              <button
+                type="button"
+                aria-label={t("return")}
+                aria-expanded={calendarOpen}
+                aria-invalid={Boolean(errors.returnDate)}
+                aria-describedby={errors.returnDate ? "return-error" : undefined}
+                disabled={!roundTrip}
+                onClick={() => setCalendarOpen(true)}
+                className={`${fieldClass} text-left disabled:opacity-50 aria-[invalid=true]:border-red-500`}
+              >
+                {roundTrip && form.returnDate ? (
+                  formatDate(form.returnDate, locale)
+                ) : (
+                  <span className="text-ink-muted">{t("selectDate")}</span>
+                )}
+              </button>
+              {errors.returnDate && (
+                <p id="return-error" className="mt-1 text-sm text-red-600">
+                  {err("returnDate")}
+                </p>
+              )}
+            </div>
+          </div>
+          {calendarOpen && (
+            <DateRangeCalendar
+              departDate={form.departDate}
+              returnDate={roundTrip ? form.returnDate : ""}
+              roundTrip={roundTrip}
+              today={today}
+              maxDate={addDays(today, MAX_DAYS_AHEAD)}
+              locale={locale}
+              onChange={updateDates}
+              onDone={() => setCalendarOpen(false)}
+            />
           )}
         </div>
         <PassengerPicker

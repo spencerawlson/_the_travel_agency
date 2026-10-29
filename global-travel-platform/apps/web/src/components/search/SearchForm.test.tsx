@@ -3,6 +3,7 @@ import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultForm, todayIso } from "@/lib/search";
+import { formatDate } from "@/lib/format";
 import { renderWithIntl } from "@/test/utils";
 import { SearchForm } from "./SearchForm";
 
@@ -139,7 +140,7 @@ describe("SearchForm", () => {
       <SearchForm initial={base} onSubmitValid={onSubmitValid} fetchAirports={fetchAirports} />,
     );
     await user.click(screen.getByRole("radio", { name: "One way" }));
-    expect(screen.getByLabelText("Return")).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Return" })).toBeDisabled();
     await user.click(screen.getByRole("button", { name: "Search flights" }));
     expect(onSubmitValid).toHaveBeenCalledTimes(1);
   });
@@ -189,5 +190,90 @@ describe("SearchForm", () => {
     await user.keyboard("{Enter}");
     await waitFor(() => expect(input).toHaveValue("Paris (CDG)"));
     expect(input).toHaveAttribute("aria-expanded", "false");
+  });
+
+  /** Day N of next month as an ISO date (always inside one calendar view). */
+  function nextMonthDay(day: number): string {
+    const now = new Date();
+    return new Date(Date.UTC(now.getFullYear(), now.getMonth() + 1, day))
+      .toISOString()
+      .slice(0, 10);
+  }
+
+  async function openNextMonthCalendar(user: ReturnType<typeof userEvent.setup>) {
+    await user.click(screen.getByRole("button", { name: "Departure" }));
+    expect(screen.getByRole("group", { name: "Travel dates calendar" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Next month" }));
+  }
+
+  it("picks departure and return in the same calendar, each on its own card", async () => {
+    const user = userEvent.setup();
+    const onSubmitValid = vi.fn();
+    const base = {
+      ...defaultForm(),
+      origin: { iata: "YUL", label: "YUL" },
+      destination: { iata: "CDG", label: "CDG" },
+      departDate: "",
+      returnDate: "",
+    };
+    renderWithIntl(
+      <SearchForm initial={base} onSubmitValid={onSubmitValid} fetchAirports={fetchAirports} />,
+    );
+    await openNextMonthCalendar(user);
+    const depart = nextMonthDay(10);
+    const ret = nextMonthDay(17);
+    await user.click(screen.getByRole("button", { name: formatDate(depart, "en") }));
+    await user.click(screen.getByRole("button", { name: formatDate(ret, "en") }));
+    expect(screen.queryByRole("group", { name: "Travel dates calendar" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Departure" })).toHaveTextContent(
+      formatDate(depart, "en"),
+    );
+    expect(screen.getByRole("button", { name: "Return" })).toHaveTextContent(
+      formatDate(ret, "en"),
+    );
+    await user.click(screen.getByRole("button", { name: "Search flights" }));
+    expect(onSubmitValid).toHaveBeenCalledWith(
+      expect.objectContaining({ departDate: depart, returnDate: ret }),
+    );
+  });
+
+  it("tapping an earlier day restarts the departure instead of setting a return", async () => {
+    const user = userEvent.setup();
+    const base = {
+      ...defaultForm(),
+      origin: { iata: "YUL", label: "YUL" },
+      destination: { iata: "CDG", label: "CDG" },
+      departDate: "",
+      returnDate: "",
+    };
+    renderWithIntl(<SearchForm initial={base} fetchAirports={fetchAirports} />);
+    await openNextMonthCalendar(user);
+    await user.click(screen.getByRole("button", { name: formatDate(nextMonthDay(17), "en") }));
+    await user.click(screen.getByRole("button", { name: formatDate(nextMonthDay(10), "en") }));
+    expect(screen.getByRole("button", { name: "Departure" })).toHaveTextContent(
+      formatDate(nextMonthDay(10), "en"),
+    );
+    expect(screen.getByRole("button", { name: "Return" })).toHaveTextContent("Select date");
+  });
+
+  it("one-way trips pick only a departure date and close the calendar", async () => {
+    const user = userEvent.setup();
+    const base = {
+      ...defaultForm(),
+      origin: { iata: "YUL", label: "YUL" },
+      destination: { iata: "CDG", label: "CDG" },
+      departDate: "",
+      returnDate: "",
+    };
+    renderWithIntl(<SearchForm initial={base} fetchAirports={fetchAirports} />);
+    await user.click(screen.getByRole("radio", { name: "One way" }));
+    await openNextMonthCalendar(user);
+    const depart = nextMonthDay(10);
+    await user.click(screen.getByRole("button", { name: formatDate(depart, "en") }));
+    expect(screen.queryByRole("group", { name: "Travel dates calendar" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Departure" })).toHaveTextContent(
+      formatDate(depart, "en"),
+    );
+    expect(screen.getByRole("button", { name: "Return" })).toBeDisabled();
   });
 });
