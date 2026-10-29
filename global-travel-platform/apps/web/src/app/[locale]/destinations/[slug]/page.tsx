@@ -216,7 +216,18 @@ export default async function DestinationPage({ params }: { params: Params }) {
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-[1.2fr_1fr]">
+      <div className="mx-auto max-w-6xl px-4 pt-12">
+        <section
+          aria-labelledby="dest-search"
+          className="rounded-3xl bg-surface-1 p-6 shadow-xl ring-1 shadow-brand-900/5 ring-line/60"
+        >
+          <h2 id="dest-search" className="mb-4 font-display text-2xl font-semibold">
+            {t("searchFlights", { name: d.name })}
+          </h2>
+          <SearchForm initial={initial} compact />
+        </section>
+      </div>
+      <div className="mx-auto max-w-3xl px-4 py-12">
         <div className="space-y-10">
           <p className="text-xl leading-relaxed">{d.description}</p>
           <section>
@@ -324,15 +335,6 @@ export default async function DestinationPage({ params }: { params: Params }) {
             </section>
           )}
         </div>
-        <section
-          aria-labelledby="dest-search"
-          className="h-fit rounded-3xl bg-surface-1 p-6 shadow-xl ring-1 shadow-brand-900/5 ring-line/60 lg:sticky lg:top-28"
-        >
-          <h2 id="dest-search" className="mb-4 font-display text-2xl font-semibold">
-            {t("searchFlights", { name: d.name })}
-          </h2>
-          <SearchForm initial={initial} compact />
-        </section>
       </div>
     </article>
   );
