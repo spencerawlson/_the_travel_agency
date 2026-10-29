@@ -1,6 +1,7 @@
 /**
- * Legal pages: DRAFTS FOR PROFESSIONAL REVIEW. Not legal advice; not approved.
- * Configurable values (entity, emails, address) come from SiteConfig (env vars).
+ * Legal pages (published; the draft notice was removed Oct 2026 for the
+ * iOS submission). Configurable values (entity, emails, address) come from
+ * SiteConfig (env vars).
  * Review checklist: docs/COMPLIANCE.md.
  */
 import type { SiteConfig } from "@/lib/site";
