@@ -17,6 +17,10 @@ interface Props {
   error?: string;
   /** Injectable for tests. */
   fetchAirports?: (q: string, signal: AbortSignal) => Promise<Airport[]>;
+  /** When set, a selected value renders as a coloured chip instead of text.
+   *  The chip colour comes from the caller's theme class; the × clears it. */
+  chipClassName?: string;
+  clearLabel?: string;
 }
 
 const defaultFetch = (q: string, signal: AbortSignal) =>
@@ -29,6 +33,8 @@ export function AirportCombobox({
   onChange,
   error,
   fetchAirports = defaultFetch,
+  chipClassName,
+  clearLabel,
 }: Props) {
   const t = useTranslations("search");
   const id = useId();
@@ -97,6 +103,36 @@ export function AirportCombobox({
 
   const showList = open && shouldSearch;
   const describedBy = error ? errorId : undefined;
+
+  // App card layout: a picked airport is a chip with a clear button; tapping
+  // × drops back to the text input so the traveller can type a new search.
+  if (chipClassName && value) {
+    return (
+      <div className="relative">
+        <span className="mb-1 block text-xs font-semibold tracking-wide text-ink-muted uppercase">
+          {label}
+        </span>
+        <div className="flex items-center gap-2 rounded-xl border border-line bg-surface-1 px-3 py-2.5">
+          <span
+            className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-base font-semibold ${chipClassName}`}
+          >
+            {value.label}
+            <button
+              type="button"
+              aria-label={clearLabel}
+              onClick={() => onChange(null)}
+              className="flex size-5 items-center justify-center rounded-full bg-white/25 text-sm leading-none"
+            >
+              ×
+            </button>
+          </span>
+        </div>
+        {error && (
+          <p className="mt-1 text-sm text-red-600">{error}</p>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="relative">

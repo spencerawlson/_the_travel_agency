@@ -1,7 +1,7 @@
 import type { Airport } from "@gtp/shared-types";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultForm, todayIso } from "@/lib/search";
 import { formatDate } from "@/lib/format";
 import { renderWithIntl } from "@/test/utils";
@@ -275,5 +275,58 @@ describe("SearchForm", () => {
       formatDate(depart, "en"),
     );
     expect(screen.getByRole("button", { name: "Return" })).toBeDisabled();
+  });
+});
+
+describe("SearchForm app card layout", () => {
+  const originalUA = window.navigator.userAgent;
+  const appInitial = {
+    ...defaultForm(),
+    origin: { iata: "YUL", label: "Montréal (YUL)" },
+    destination: { iata: "CDG", label: "Paris (CDG)" },
+  };
+
+  beforeEach(() => {
+    Object.defineProperty(window.navigator, "userAgent", {
+      value: "Mozilla/5.0 FareluneApp/1.0",
+      configurable: true,
+    });
+  });
+
+  afterEach(() => {
+    Object.defineProperty(window.navigator, "userAgent", {
+      value: originalUA,
+      configurable: true,
+    });
+  });
+
+  it("shows airport chips with clear buttons and date trash buttons", async () => {
+    const user = userEvent.setup();
+    renderWithIntl(<SearchForm initial={appInitial} fetchAirports={fetchAirports} />);
+    expect(await screen.findByText("Montréal (YUL)")).toBeInTheDocument();
+    expect(screen.getByText("Paris (CDG)")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Clear origin" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Clear destination" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Clear departure date" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Clear return date" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Clear origin" }));
+    expect(screen.getByRole("combobox", { name: "From" })).toBeInTheDocument();
+  });
+
+  it("trash clears the return date", async () => {
+    const user = userEvent.setup();
+    renderWithIntl(<SearchForm initial={appInitial} fetchAirports={fetchAirports} />);
+    await user.click(await screen.findByRole("button", { name: "Clear return date" }));
+    expect(screen.getByRole("button", { name: "Return" })).toHaveTextContent("Select date");
+  });
+
+  it("keeps the website layout for non-app browsers", () => {
+    Object.defineProperty(window.navigator, "userAgent", {
+      value: originalUA,
+      configurable: true,
+    });
+    renderWithIntl(<SearchForm initial={appInitial} fetchAirports={fetchAirports} />);
+    expect(screen.queryByRole("button", { name: "Clear origin" })).not.toBeInTheDocument();
+    expect(screen.getByRole("radio", { name: "Round trip" })).toBeInTheDocument();
   });
 });
