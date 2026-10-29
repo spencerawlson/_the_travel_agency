@@ -66,6 +66,8 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Farelune shows partner offers from services such as Meta and Travelpayouts, which measure visits to attribute bookings. Allowing tracking lets those partners measure your visits and show relevant offers. You can change this later in Settings.</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 </dict>

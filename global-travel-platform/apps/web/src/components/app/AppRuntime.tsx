@@ -1,13 +1,20 @@
 "use client";
 
+import { Capacitor } from "@capacitor/core";
+import { Preferences } from "@capacitor/preferences";
+import { AppTrackingTransparency } from "@capgo/capacitor-app-tracking-transparency";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+
+import { ATT_ASKED_KEY } from "@/lib/saved-trips";
 
 /**
  * App-only behaviour (see lib/app-shell.ts):
  * - hides the native splash screen once the page has rendered (Capacitor
  *   injects window.Capacitor into the WebView; the splash otherwise waits out
  *   launchShowDuration in capacitor.config.ts);
+ * - asks once for App Tracking Transparency (iOS), because the site's Meta
+ *   pixel and Travelpayouts content count as tracking inside the WebView;
  * - pull-to-refresh when the page is scrolled to the top.
  */
 
@@ -37,6 +44,30 @@ export function AppRuntime() {
     } catch {
       // Not in the native shell, or the plugin is missing: nothing to hide.
     }
+  }, []);
+
+  // App Tracking Transparency: the site's Meta pixel and Travelpayouts
+  // content share visit data with third parties, which Apple counts as
+  // tracking when it fires inside the app's WebView. Ask once, natively,
+  // on first launch; the system dialog itself only ever appears once, and
+  // a denied answer is respected (the user can change it in iOS Settings).
+  // Nothing here gates app behaviour on the answer.
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform() || Capacitor.getPlatform() !== "ios") return;
+    void (async () => {
+      try {
+        const asked = await Preferences.get({ key: ATT_ASKED_KEY });
+        if (asked.value) return;
+        const status = await AppTrackingTransparency.getStatus();
+        if (status.status === "notDetermined") {
+          await AppTrackingTransparency.requestPermission();
+        }
+        await Preferences.set({ key: ATT_ASKED_KEY, value: "1" });
+      } catch {
+        // ATT unavailable (older iOS, Simulator): tracking stays off by
+        // default and the app keeps working.
+      }
+    })();
   }, []);
 
   useEffect(() => {

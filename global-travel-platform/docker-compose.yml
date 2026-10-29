@@ -23,6 +23,14 @@ x-api-env: &api-env
   REFERRALS_LIVE_ENABLED: ${REFERRALS_LIVE_ENABLED:-false}
   # true = admins must turn on two-step sign-in before using the dashboard.
   ADMIN_REQUIRE_2FA: ${ADMIN_REQUIRE_2FA:-false}
+  # Fare-alert pushes (APNs). The .p8 key file itself is mounted read-only
+  # into the api container (see the api service volumes); these vars are
+  # identifiers plus the in-container key path, never key material.
+  APNS_KEY_ID: ${APNS_KEY_ID:-}
+  APNS_TEAM_ID: ${APNS_TEAM_ID:-}
+  APNS_BUNDLE_ID: ${APNS_BUNDLE_ID:-com.farelune.app}
+  APNS_KEY_PATH: /app/secrets/AuthKey_YAKP52TL23.p8
+  APNS_USE_SANDBOX: ${APNS_USE_SANDBOX:-false}
   METRICS_TOKEN: ${METRICS_TOKEN:-}
   SENTRY_DSN: ${SENTRY_DSN:-}
   LOG_LEVEL: ${LOG_LEVEL:-INFO}
@@ -87,6 +95,11 @@ services:
       <<: *api-env
       # Only reachable from inside the compose network (no published port).
       FORWARDED_ALLOW_IPS: "*"
+    volumes:
+      # APNs .p8 key, read-only. Host dir ./secrets must hold the key file
+      # (AuthKey_YAKP52TL23.p8); ",z" relabels for SELinux hosts, ignored
+      # elsewhere. Without the file, run-fare-alerts refuses to evaluate.
+      - ./secrets:/app/secrets:ro,z
     depends_on:
       migrate: { condition: service_completed_successfully }
       redis: { condition: service_healthy }

@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.v1 import admin, public
+from app.api.v1 import admin, public, push
 from app.core.cache import get_cache, init_cache
 from app.core.config import get_settings
 from app.core.errors import install_error_handlers
@@ -85,6 +85,7 @@ def create_app() -> FastAPI:
     v1 = APIRouter(prefix="/api/v1")
     v1.include_router(public.router)
     v1.include_router(admin.router)
+    v1.include_router(push.router)
     app.include_router(v1)
     return app
 

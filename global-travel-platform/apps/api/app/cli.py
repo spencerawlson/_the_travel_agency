@@ -5,6 +5,8 @@ python -m app.cli create-admin --email a@b.c --role admin   (password prompted
                                              or ADMIN_PASSWORD env var)
 python -m app.cli ensure-dev-admin           # development only, from env
 python -m app.cli purge-expired              # data retention job
+python -m app.cli run-fare-alerts            # evaluate + dispatch fare alerts
+                                             (refuses to run if APNs unset)
 """
 
 from __future__ import annotations
@@ -146,6 +148,41 @@ async def _purge() -> None:
         print("purged:", await purge_expired(session))
 
 
+async def _run_fare_alerts() -> int:
+    """Evaluate fare alerts, then dispatch what is due via APNs.
+
+    Refuses to evaluate at all when APNs is not configured: evaluating
+    would stamp last_notified_price and silently consume the once-per-drop
+    notification without sending anything.
+    """
+    from app.core.config import get_settings
+    from app.services.apns_dispatch import ApnsConfigError, apns_configured, dispatch_pending
+    from app.services.fare_alerts import evaluate_alerts
+
+    settings = get_settings()
+    if not apns_configured(settings):
+        print(
+            "error: APNs not configured (APNS_KEY_ID, APNS_TEAM_ID, "
+            "APNS_BUNDLE_ID, APNS_KEY_PATH with an existing key file); "
+            "not evaluating, so no alert is consumed",
+            file=sys.stderr,
+        )
+        return 2
+    async with get_sessionmaker()() as session:
+        pending = await evaluate_alerts(session)
+        try:
+            result = await dispatch_pending(session, settings, pending)
+        except ApnsConfigError as exc:
+            print(f"error: {exc}", file=sys.stderr)
+            return 2
+    print(
+        f"fare-alerts: evaluated {len(pending)} due, "
+        f"sent {result.sent}, failed {result.failed}, "
+        f"skipped {result.skipped}, devices removed {result.devices_removed}"
+    )
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="app.cli")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -161,6 +198,10 @@ def main(argv: list[str] | None = None) -> int:
     r2.add_argument("--email", required=True)
     sub.add_parser("ensure-dev-admin")
     sub.add_parser("purge-expired")
+    sub.add_parser(
+        "run-fare-alerts",
+        help="evaluate fare alerts and dispatch due pushes via APNs",
+    )
     ic = sub.add_parser("import-commissions")
     ic.add_argument("--days", type=int, default=90, help="look-back window (default 90)")
     args = parser.parse_args(argv)
@@ -201,6 +242,8 @@ def main(argv: list[str] | None = None) -> int:
                 await _import_commissions(max(1, min(args.days, 730)))
             elif args.cmd == "purge-expired":
                 await _purge()
+            elif args.cmd == "run-fare-alerts":
+                return await _run_fare_alerts()
             return 0
         except PasswordPolicyError as exc:
             print(f"error: {exc}", file=sys.stderr)

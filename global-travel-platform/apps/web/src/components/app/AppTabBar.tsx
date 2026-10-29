@@ -118,7 +118,9 @@ function MoreSheet({
   const nav = useTranslations("nav");
   const footer = useTranslations("footer");
   const legal = useTranslations("legal");
+  const app = useTranslations("app");
   const links: [string, string][] = [
+    ["/saved-trips", app("savedTrips")],
     ["/about", nav("about")],
     ["/contact", nav("contact")],
     ["/credits", footer("credits")],

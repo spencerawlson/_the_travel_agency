@@ -10,10 +10,10 @@ import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { PartnerWidget } from "@/components/PartnerWidget";
+import { AppActions } from "@/components/app/AppActions";
 import { SearchForm } from "@/components/search/SearchForm";
 import { useRouter } from "@/i18n/navigation";
-import { ApiError, apiFetch } from "@/lib/api";
-import { formatDate } from "@/lib/format";
+import { ApiError, apiFetch } from "@/lib/api";import { formatDate } from "@/lib/format";
 import { fromQuery, toApiRequest, validateSearch } from "@/lib/search";
 import { useRequest } from "@/lib/useRequest";
 import { kiwiWidgetUrl, type WidgetIds } from "@/lib/widgets";
@@ -164,6 +164,8 @@ export function ResultsView({ widgetIds = null }: { widgetIds?: WidgetIds | null
           <SearchForm key={queryKey} initial={form} compact />
         </div>
       </details>
+
+      <AppActions form={form} locale={locale} />
 
       {state.kind === "done" && <Disclaimers codes={state.data.disclaimers} />}
 

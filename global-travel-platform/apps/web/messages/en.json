@@ -436,6 +436,24 @@
   "app": {
     "pullToRefresh": "Pull to refresh",
     "releaseToRefresh": "Release to refresh",
-    "refreshing": "Refreshing…"
+    "refreshing": "Refreshing…",
+    "savedTrips": "Saved trips",
+    "saveTrip": "Save this search",
+    "tripSaved": "Search saved",
+    "shared": "Shared",
+    "shareTrip": "Share",
+    "loading": "Loading…",
+    "noSavedTrips": "No saved trips yet. Save a search from the results page.",
+    "searchFlights": "Search flights",
+    "savedTripsNote": "These trips live on this device. Prices shown after you re-run a search are live at that moment, never a stored price.",
+    "revisitTrip": "Search again",
+    "deleteTrip": "Delete",
+    "alertUnder": "Alert me under",
+    "alertCreate": "Create alert",
+    "alertActive": "Alert active: under {price} {currency}",
+    "alertCancel": "Cancel alert",
+    "alertInvalidPrice": "Enter a valid target price above zero.",
+    "alertUnavailable": "Couldn't create the alert right now. Try again in the app on a real iPhone.",
+    "alertNeedsApp": "Push alerts need the installed app on a real iPhone."
   }
 }

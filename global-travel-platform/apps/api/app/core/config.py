@@ -51,6 +51,18 @@ class Settings(BaseSettings):
     rate_limit_autocomplete: str = "120/60"
     rate_limit_referral: str = "30/60"
     rate_limit_login: str = "10/900"
+    rate_limit_push: str = "30/60"
+
+    # APNs (fare-alert pushes). The .p8 key itself is a FILE, never an env
+    # value: APNS_KEY_PATH points at it (e.g. /app/secrets/AuthKey_<id>.p8
+    # inside the api container, mounted read-only from ./secrets). The ids
+    # below are identifiers, not secrets. All four must be set before any
+    # push is attempted; the dispatcher refuses to run without them.
+    apns_key_id: str | None = None
+    apns_team_id: str | None = None
+    apns_bundle_id: str | None = None
+    apns_key_path: str | None = None
+    apns_use_sandbox: bool = False
 
     # Providers & referrals
     enabled_providers: Annotated[list[str], NoDecode] = Field(default_factory=lambda: ["mock"])

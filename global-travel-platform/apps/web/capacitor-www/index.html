@@ -15,7 +15,7 @@
       background: linear-gradient(160deg, #fff7f1 0%, #ffe8d9 100%);
       color: #23272f; padding: 24px; text-align: center;
     }
-    .card { max-width: 340px; }
+    .card { max-width: 340px; width: 100%; }
     .mark {
       width: 96px; height: 96px; margin: 0 auto 20px;
       border-radius: 28px; overflow: hidden;
@@ -23,7 +23,9 @@
     }
     .mark svg { display: block; width: 100%; height: 100%; }
     h1 { font-size: 26px; letter-spacing: -0.02em; margin-bottom: 8px; }
+    h2 { font-size: 16px; margin: 24px 0 8px; text-align: left; }
     p { font-size: 15px; line-height: 1.55; color: #5a6270; margin-bottom: 20px; }
+    p.note { font-size: 13px; }
     button {
       font-size: 16px; font-weight: 600; color: #fff; border: 0; cursor: pointer;
       padding: 13px 28px; border-radius: 999px;
@@ -32,6 +34,11 @@
       min-height: 48px;
     }
     button:active { transform: scale(.97); }
+    ul { list-style: none; padding: 0; text-align: left; }
+    ul li { margin-bottom: 10px; }
+    ul a { color: #e2553a; font-weight: 600; text-decoration: none; }
+    ul a:active { text-decoration: underline; }
+    .muted { color: #5a6270; font-size: 14px; text-align: left; }
   </style>
 </head>
 <body>
@@ -51,8 +58,19 @@
       </svg>
     </div>
     <h1>Farelune</h1>
-    <p>We couldn&rsquo;t reach farelune.com. Check your connection and try again.</p>
+    <p id="offline-msg">We couldn&rsquo;t reach farelune.com. Check your connection and try again.</p>
     <button id="retry" type="button">Try again</button>
+
+    <section id="saved" hidden>
+      <h2 id="saved-title">Saved trips on this device</h2>
+      <ul id="saved-list"></ul>
+      <p class="note" id="saved-note">These are searches you saved. Reconnect to see live prices — no price is shown here, because a stored price would be out of date.</p>
+    </section>
+
+    <section id="last" hidden>
+      <h2 id="last-title">Last search</h2>
+      <ul id="last-list"></ul>
+    </section>
   </main>
   <script>
     // Shown in place of the site, so the splash would otherwise wait out its timeout.
@@ -64,7 +82,7 @@
     var chrome = /Chrome\/(\d+)/.exec(navigator.userAgent);
     if (chrome && Number(chrome[1]) < 111) {
       var fr = /^fr\b/i.test(navigator.language);
-      document.querySelector('p').textContent = fr
+      document.getElementById('offline-msg').textContent = fr
         ? 'Farelune a besoin d’une version plus récente d’Android System WebView. Mettez-la à jour dans le Play Store, puis rouvrez l’application.'
         : 'Farelune needs a newer version of Android System WebView. Update it in the Play Store, then reopen the app.';
       retry.textContent = fr ? 'Mettre à jour' : 'Update WebView';
@@ -76,6 +94,78 @@
         window.location.href = 'https://farelune.com/';
       });
     }
+
+    // Offline resilience: trips saved on this device (same Preferences keys
+    // the site uses, see src/lib/saved-trips.ts) are viewable here without a
+    // connection. Only validated fields are rendered; nothing here claims a
+    // price, because stored prices would be stale the moment they are shown.
+    // This runs only when the Capacitor bridge is present in this page; if
+    // it is not, the sections stay hidden and the honest offline message
+    // above is all the user sees. Needs a real-device check to confirm the
+    // bridge is injected into the error page on iOS.
+    (function () {
+      var IATA = /^[A-Za-z]{3}$/;
+      var ISO = /^\d{4}-\d{2}-\d{2}$/;
+      function validTrip(t) {
+        if (!t || typeof t !== 'object') return false;
+        if (!IATA.test(String(t.from || '')) || !IATA.test(String(t.to || ''))) return false;
+        if (String(t.from).toUpperCase() === String(t.to).toUpperCase()) return false;
+        if (!ISO.test(String(t.depart || ''))) return false;
+        if (t.trip === 'round_trip' && !ISO.test(String(t.returnDate || ''))) return false;
+        return t.trip === 'round_trip' || t.trip === 'one_way';
+      }
+      function label(t) {
+        var dates = t.trip === 'round_trip' ? t.depart + ' · return ' + t.returnDate : t.depart;
+        return String(t.from).toUpperCase() + ' → ' + String(t.to).toUpperCase() + ' · ' + dates;
+      }
+      function href(t) {
+        var q = new URLSearchParams({
+          from: String(t.from).toUpperCase(),
+          to: String(t.to).toUpperCase(),
+          trip: t.trip,
+          depart: t.depart,
+          cabin: t.cabin || 'economy',
+          currency: t.currency || 'CAD',
+          adults: String(t.adults || 1),
+          children: String(t.children || 0),
+          infants: String(t.infants || 0),
+        });
+        if (t.trip === 'round_trip') q.set('return', t.returnDate);
+        if (t.fromLabel) q.set('fromLabel', t.fromLabel);
+        if (t.toLabel) q.set('toLabel', t.toLabel);
+        return 'https://farelune.com/en/flights?' + q.toString();
+      }
+      function render(listEl, trips) {
+        trips.forEach(function (t) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.href = href(t);
+          a.textContent = label(t);
+          li.appendChild(a);
+          listEl.appendChild(li);
+        });
+      }
+      try {
+        var prefs = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.Preferences;
+        if (!prefs || typeof prefs.get !== 'function') return;
+        prefs.get({ key: 'farelune.savedTrips.v1' }).then(function (res) {
+          var trips = [];
+          try { trips = JSON.parse(res.value || '[]').filter(validTrip); } catch (e) {}
+          if (trips.length > 0) {
+            render(document.getElementById('saved-list'), trips);
+            document.getElementById('saved').hidden = false;
+          }
+        }).catch(function () {});
+        prefs.get({ key: 'farelune.lastSearch.v1' }).then(function (res) {
+          var trip = null;
+          try { trip = JSON.parse(res.value || 'null'); } catch (e) {}
+          if (validTrip(trip)) {
+            render(document.getElementById('last-list'), [trip]);
+            document.getElementById('last').hidden = false;
+          }
+        }).catch(function () {});
+      } catch (e) {}
+    })();
   </script>
 </body>
 </html>

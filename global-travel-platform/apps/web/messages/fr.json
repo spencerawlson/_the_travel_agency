@@ -436,6 +436,24 @@
   "app": {
     "pullToRefresh": "Tirer pour actualiser",
     "releaseToRefresh": "Relâcher pour actualiser",
-    "refreshing": "Actualisation…"
+    "refreshing": "Actualisation…",
+    "savedTrips": "Voyages sauvegardés",
+    "saveTrip": "Sauvegarder cette recherche",
+    "tripSaved": "Recherche sauvegardée",
+    "shared": "Partagé",
+    "shareTrip": "Partager",
+    "loading": "Chargement…",
+    "noSavedTrips": "Aucun voyage sauvegardé pour le moment. Sauvegardez une recherche depuis la page des résultats.",
+    "searchFlights": "Rechercher des vols",
+    "savedTripsNote": "Ces voyages sont conservés sur cet appareil. Les prix affichés après une nouvelle recherche sont les prix en direct du moment, jamais un prix enregistré.",
+    "revisitTrip": "Relancer la recherche",
+    "deleteTrip": "Supprimer",
+    "alertUnder": "M'alerter sous",
+    "alertCreate": "Créer l'alerte",
+    "alertActive": "Alerte active : sous {price} {currency}",
+    "alertCancel": "Annuler l'alerte",
+    "alertInvalidPrice": "Entrez un prix cible valide, supérieur à zéro.",
+    "alertUnavailable": "Impossible de créer l'alerte pour le moment. Réessayez dans l'application sur un iPhone réel.",
+    "alertNeedsApp": "Les alertes push nécessitent l'application installée sur un iPhone réel."
   }
 }
