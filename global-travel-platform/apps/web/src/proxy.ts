@@ -4,6 +4,7 @@ import { routing } from "./i18n/routing";
 import { getAffiliateScript } from "./lib/affiliate";
 import { buildCsp } from "./lib/csp";
 import { getMetaPixelId } from "./lib/meta";
+import { getVentorynSiteId } from "./lib/ventoryn";
 import { getWidgetIds } from "./lib/widgets";
 import { COUNTRY_ORIGIN } from "./content/origin-airports";
 
@@ -38,6 +39,7 @@ export default function proxy(request: NextRequest) {
     partnerHosts: partner ? [partner.host] : [],
     widgets: getWidgetIds() !== null,
     meta: getMetaPixelId() !== null,
+    ventoryn: getVentorynSiteId() !== null,
     nonce,
   });
   request.headers.set("x-nonce", nonce);

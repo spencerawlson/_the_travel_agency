@@ -19,6 +19,7 @@ export function buildCsp({
   partnerHosts = [],
   widgets = false,
   meta = false,
+  ventoryn = false,
   nonce,
 }: {
   dev: boolean;
@@ -29,7 +30,10 @@ export function buildCsp({
   widgets?: boolean;
   /** Allow the Meta Pixel hosts (lib/meta.ts). */
   meta?: boolean;
+  /** Allow Ventoryn Analytics: its script + its page-view beacon (lib/ventoryn.ts). */
+  ventoryn?: boolean;
 }) {
+  const vtn = ventoryn ? " https://ventoryn.app" : "";
   const drive = partnerHosts.length > 0;
   const hosts = (list: readonly string[]) => list.map((h) => `https://${h}`);
   const add = (
@@ -52,7 +56,7 @@ export function buildCsp({
     add(
       `script-src 'self' ${nonce ? `'nonce-${nonce}' 'strict-dynamic'` : "'unsafe-inline'"}${
         dev ? " 'unsafe-eval'" : ""
-      }`,
+      }${vtn}`,
       WIDGET_CSP.script,
       [],
       META_CSP.script,
@@ -64,7 +68,7 @@ export function buildCsp({
     add("img-src 'self' data:", WIDGET_CSP.img, [], META_CSP.img),
     only("font-src 'self' data:", DRIVE_CSP.font),
     add(
-      `connect-src 'self'${dev ? " ws: http://localhost:*" : ""}`,
+      `connect-src 'self'${dev ? " ws: http://localhost:*" : ""}${vtn}`,
       WIDGET_CSP.connect,
       DRIVE_CSP.connect,
       META_CSP.connect,
