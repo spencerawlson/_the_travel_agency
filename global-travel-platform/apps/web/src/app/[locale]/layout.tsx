@@ -14,6 +14,7 @@ import { Header } from "@/components/layout/Header";
 import { MetaPixel } from "@/components/MetaPixel";
 import { routing } from "@/i18n/routing";
 import { getAffiliateScript } from "@/lib/affiliate";
+import { getVentorynSiteId, VENTORYN_ORIGIN } from "@/lib/ventoryn";
 import { isAppUserAgent } from "@/lib/app-shell";
 import { getMetaPixelId } from "@/lib/meta";
 import { getPhoto, photoAlt } from "@/lib/photos";
@@ -90,7 +91,12 @@ export default async function LocaleLayout({
   // CSP nonce needs (a prerendered page would carry no nonce and its scripts would
   // be blocked). The nonce itself is applied by Next.js (see src/proxy.ts).
   // The user agent tells the native apps apart (see lib/app-shell.ts).
-  const inApp = isAppUserAgent((await headers()).get("user-agent"));
+  const requestHeaders = await headers();
+  const inApp = isAppUserAgent(requestHeaders.get("user-agent"));
+  // Ventoryn Analytics (cookieless — not consent-gated; see lib/ventoryn.ts). The
+  // CSP is nonce + 'strict-dynamic', so the script carries this request's nonce.
+  const ventorynSite = getVentorynSiteId();
+  const nonce = requestHeaders.get("x-nonce") ?? undefined;
   const consentBanner = Boolean(partner || site.partnerWidgets || site.metaPixel);
 
   return (
@@ -99,16 +105,21 @@ export default async function LocaleLayout({
       className={`${heading.variable} ${body.variable}`}
       data-app={inApp ? "" : undefined}
     >
-      {partner && (
+      {(partner || ventorynSite) && (
         <head>
-          {/* Inert until the visitor consents (type=text/plain); see ConsentBanner. */}
-          <script
-            id={LOADER_ID}
-            type="text/plain"
-            data-consent="partners"
-            data-src={partner.src}
-            dangerouslySetInnerHTML={{ __html: partner.code }}
-          />
+          {ventorynSite && (
+            <script defer data-site={ventorynSite} src={`${VENTORYN_ORIGIN}/v.js`} nonce={nonce} />
+          )}
+          {partner && (
+            /* Inert until the visitor consents (type=text/plain); see ConsentBanner. */
+            <script
+              id={LOADER_ID}
+              type="text/plain"
+              data-consent="partners"
+              data-src={partner.src}
+              dangerouslySetInnerHTML={{ __html: partner.code }}
+            />
+          )}
         </head>
       )}
       <body className="flex min-h-dvh flex-col font-sans">
