@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@capacitor/android": "^8.5.3",
-    "@capacitor/cli": "^8.5.3",
+    "@capacitor/cli": "^8.6.0",
     "@capacitor/core": "^8.5.3",
     "@capacitor/ios": "^8.5.3",
     "@capacitor/preferences": "^8.0.1",
@@ -26,7 +26,7 @@
     "@gtp/ui": "*",
     "clsx": "2.1.1",
     "cobe": "^2.0.1",
-    "next": "16.4.0",
+    "next": "16.4.1",
     "next-intl": "4.14.9",
     "react": "19.3.0",
     "react-dom": "19.3.0",
