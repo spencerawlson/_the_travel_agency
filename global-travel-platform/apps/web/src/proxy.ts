@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";
 import { getAffiliateScript } from "./lib/affiliate";
 import { buildCsp } from "./lib/csp";
+import { cloudflareScheme } from "./lib/cloudflare";
 import { getMetaPixelId } from "./lib/meta";
 import { getVentorynSiteId } from "./lib/ventoryn";
 import { getWidgetIds } from "./lib/widgets";
@@ -44,6 +45,15 @@ export default function proxy(request: NextRequest) {
   });
   request.headers.set("x-nonce", nonce);
   request.headers.set("content-security-policy", csp);
+
+  // Real visitor scheme for next-intl's alternate-links Link header. Cloudflare
+  // terminates TLS at the edge, so the origin only ever sees plain HTTP (Nginx
+  // overwrites X-Forwarded-Proto with $scheme). Cloudflare sends the real scheme
+  // in the CF-Visitor header, which Nginx passes through untouched; hand it to
+  // next-intl via X-Forwarded-Proto so it builds https:// alternate links
+  // instead of http:// ones. Absent/malformed = leave the header alone.
+  const scheme = cloudflareScheme(request.headers.get("cf-visitor"));
+  if (scheme) request.headers.set("x-forwarded-proto", scheme);
 
   const response = intl(request);
   const detected = detectOrigin(request);
