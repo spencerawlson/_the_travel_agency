@@ -6,8 +6,10 @@ import { Photo } from "@/components/Photo";
 import { SearchForm } from "@/components/search/SearchForm";
 import { StarCountryCard } from "@/components/StarCountryCard";
 import { Link } from "@/i18n/navigation";
+import { safeJsonLd } from "@/lib/jsonld";
 import { getPhoto, photoAlt, type Mood } from "@/lib/photos";
 import { getDestinations, getOrigin, originCity } from "@/lib/server-api";
+import { getSiteConfig, siteUrl } from "@/lib/site";
 import { airhelpWidgetUrl, getWidgetIds, klookWidgetUrl } from "@/lib/widgets";
 
 const MOOD_PHOTOS: Record<Mood, string> = {
@@ -22,6 +24,36 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const tw = await getTranslations("widgets");
+  const meta = await getTranslations({ locale, namespace: "meta" });
+  const site = getSiteConfig();
+
+  // Structured data for search engines (the homepage had none): the site
+  // itself plus the organisation behind it, in the page's locale.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: site.name,
+        url: `${siteUrl()}/${locale}`,
+        inLanguage: locale,
+        description: meta("description"),
+      },
+      {
+        "@type": "Organization",
+        name: site.name,
+        url: `${siteUrl()}/${locale}`,
+        description: meta("description"),
+        inLanguage: locale,
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: site.contactEmail,
+          contactType: "customer service",
+          availableLanguage: ["en", "fr"],
+        },
+      },
+    ],
+  };
   const widgetIds = getWidgetIds();
   const destinations = await getDestinations(locale);
   const origin = await getOrigin();
@@ -52,6 +84,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }} />
       {/* ---------- Hero: photo carousel backdrop + headline + globe ---------- */}
       <section className="relative isolate z-10 overflow-x-clip border-b border-line/60">
         <HeroBackdrop slides={slides} />

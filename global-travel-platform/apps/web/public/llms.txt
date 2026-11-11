@@ -1,0 +1,19 @@
+# Farelune
+
+> Search and compare flight offers from travel partners, then book directly with the seller. Farelune is a flight comparison site in English and French, based in Montreal — "Connecting You to Everywhere".
+
+## Key pages
+
+- [Home (English)](https://farelune.com/en): Search and compare flight offers, destinations to fall in love with, and the country of the week.
+- [Accueil (français)](https://farelune.com/fr): Recherchez et comparez les offres de vols, les destinations et le pays de la semaine.
+- [Destinations](https://farelune.com/en/destinations): Every destination guide — history, culture, landmarks — with flight search. Same in French at https://farelune.com/fr/destinations.
+- [Deals](https://farelune.com/en/deals): Current flight deals from travel partners.
+- [About](https://farelune.com/en/about): What Farelune is and how it works.
+- [Contact](https://farelune.com/en/contact): How to reach Farelune.
+
+## Notes
+
+- Farelune compares flight offers; bookings happen directly with the seller (a travel partner), not with Farelune.
+- Flight offers come from travel partners (Travelpayouts); prices and availability are the seller's.
+- The site is in English and French; every page has both locale variants (https://farelune.com/en/... and https://farelune.com/fr/...).
+- The full sitemap is at https://farelune.com/sitemap.xml.
