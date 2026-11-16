@@ -62,6 +62,31 @@ describe("SearchForm", () => {
     expect(onSubmitValid).not.toHaveBeenCalled();
   });
 
+  it("carries required on the origin and destination inputs", () => {
+    renderWithIntl(<SearchForm fetchAirports={fetchAirports} />);
+    expect(screen.getByRole("combobox", { name: "From" })).toHaveAttribute("required");
+    expect(screen.getByRole("combobox", { name: "To" })).toHaveAttribute("required");
+  });
+
+  it("shows date errors and does not submit when dates are empty", async () => {
+    const user = userEvent.setup();
+    const onSubmitValid = vi.fn();
+    const base = {
+      ...defaultForm(),
+      origin: { iata: "YUL", label: "Montréal (YUL)" },
+      destination: { iata: "CDG", label: "Paris (CDG)" },
+      departDate: "",
+      returnDate: "",
+    };
+    renderWithIntl(
+      <SearchForm initial={base} onSubmitValid={onSubmitValid} fetchAirports={fetchAirports} />,
+    );
+    await user.click(screen.getByRole("button", { name: "Search flights" }));
+    expect(screen.getByText("Choose a departure date.")).toBeInTheDocument();
+    expect(screen.getByText("Choose a return date.")).toBeInTheDocument();
+    expect(onSubmitValid).not.toHaveBeenCalled();
+  });
+
   it("uses autocomplete and submits a valid search", async () => {
     const user = userEvent.setup();
     const onSubmitValid = vi.fn();

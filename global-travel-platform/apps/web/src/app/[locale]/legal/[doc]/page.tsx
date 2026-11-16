@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getLegalDocument, isLegalDoc } from "@/content/legal";
 import { getSiteConfig } from "@/lib/site";
-import { TextWithEmails } from "@/components/EmailLink";
+import { LegalDocumentView } from "@/components/LegalDocument";
 
 type Params = Promise<{ locale: string; doc: string }>;
 
@@ -15,6 +15,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return pageMetadata(locale, `/legal/${doc}`, { title: d.title, description: d.summary });
 }
 
+// Legacy alias: /[locale]/legal/[doc] renders the same document as the short
+// canonical routes (/[locale]/privacy, /[locale]/terms) via LegalDocumentView.
 export default async function LegalPage({ params }: { params: Params }) {
   const { locale, doc } = await params;
   if (!isLegalDoc(doc)) notFound();
@@ -24,31 +26,6 @@ export default async function LegalPage({ params }: { params: Params }) {
   const d = getLegalDocument(locale, doc, site);
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12">
-      <h1 className="font-display text-4xl font-semibold">{d.title}</h1>
-      <p className="mt-2 text-ink-muted">{d.summary}</p>
-      <p className="mt-1 text-sm text-ink-muted">
-        {t("lastUpdated", { date: site.legalLastUpdated })}
-      </p>
-      {d.sections.map((section) => (
-        <section key={section.heading} className="mt-8">
-          <h2 className="font-display text-2xl font-semibold">{section.heading}</h2>
-          {section.paragraphs.map((p) => (
-            <p key={p.slice(0, 40)} className="mt-3 leading-relaxed">
-              <TextWithEmails text={p} linkClassName="text-brand-600 underline" />
-            </p>
-          ))}
-          {section.list && (
-            <ul className="mt-3 list-disc space-y-2 pl-5">
-              {section.list.map((item) => (
-                <li key={item.slice(0, 40)}>
-                  <TextWithEmails text={item} linkClassName="text-brand-600 underline" />
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-      ))}
-    </article>
+    <LegalDocumentView doc={d} lastUpdated={t("lastUpdated", { date: site.legalLastUpdated })} />
   );
 }

@@ -256,6 +256,16 @@ export function SearchForm({
     />
   );
 
+  // Validation is custom, not native: the form carries noValidate and
+  // onSubmit runs validateSearch() (lib/search.ts), which checks that both
+  // airports were picked from the list, that the dates are real, in range
+  // and in order, and that the passenger counts are legal — checks native
+  // validation cannot express (the dates live in a button + calendar, not
+  // <input type="date">, and a typed airport name is not a valid choice).
+  // The airport inputs still carry `required` as a DOM-level hook. Covered
+  // by "shows validation errors and does not submit when empty" and the
+  // date-required test below; a live-browser empty-submit check is still
+  // owed (no browser in this environment).
   return (
     <form
       onSubmit={onSubmit}

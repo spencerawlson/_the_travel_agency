@@ -149,6 +149,13 @@ export function AirportCombobox({
         autoComplete="off"
         spellCheck={false}
         placeholder={t("airportPlaceholder")}
+        // Native hook for the requirement: the form stays noValidate (custom
+        // validateSearch() in lib/search.ts is authoritative — it also checks
+        // the airport was picked from the list, not just typed), so this
+        // never fires a browser bubble; it documents the requirement in the
+        // DOM and applies if noValidate is ever removed.
+        required
+        aria-required="true"
         aria-autocomplete="list"
         aria-expanded={showList}
         aria-controls={listId}

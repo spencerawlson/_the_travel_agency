@@ -4,7 +4,7 @@ import { routing } from "@/i18n/routing";
 import { siteUrl } from "@/lib/site";
 
 /** Static routes that should be indexed (locale-prefixed). */
-const STATIC_ROUTES = ["", "/destinations", "/deals", "/about", "/contact"];
+const STATIC_ROUTES = ["", "/destinations", "/deals", "/about", "/contact", "/privacy", "/terms"];
 
 /**
  * Sitemap for search engines. Destination URLs are the SEO crown jewels —
