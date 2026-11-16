@@ -2,8 +2,8 @@
   "paris": {
     "src": "/photos/paris-1600.webp",
     "srcSmall": "/photos/paris-800.webp",
-    "width": 1920,
-    "height": 1280,
+    "width": 1120,
+    "height": 746,
     "focus": "50% 40%",
     "alt": {
       "en": "The Eiffel Tower framed by spring blossoms in Paris",

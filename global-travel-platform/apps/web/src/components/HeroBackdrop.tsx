@@ -50,7 +50,7 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
 
   return (
     <>
-      <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden bg-surface-2">
+      <div className="absolute inset-0 -z-10 overflow-hidden bg-surface-2">
         {slides.map((s, i) =>
           i === index || i === next ? (
             // eslint-disable-next-line @next/next/no-img-element -- pre-optimised static WebP
@@ -59,7 +59,10 @@ export function HeroBackdrop({ slides }: { slides: BackdropSlide[] }) {
               src={s.src}
               srcSet={`${s.srcSmall} 800w, ${s.src} 1600w`}
               sizes="100vw"
-              alt=""
+              // Real alt, not "" : these are the hero photos (Paris, London, …)
+              // and the slide data already carries their description. The
+              // wrapper is no longer aria-hidden now the images are meaningful.
+              alt={s.alt}
               decoding="async"
               fetchPriority={i === 0 ? "high" : "low"}
               style={{ objectPosition: s.focus }}

@@ -35,8 +35,8 @@ export async function Footer({ site }: { site: SiteConfig }) {
         <FooterColumn
           title={t("legal")}
           links={[
-            ["/legal/privacy", legal("privacy")],
-            ["/legal/terms", legal("terms")],
+            ["/privacy", legal("privacy")],
+            ["/terms", legal("terms")],
             ["/legal/affiliate-disclosure", legal("affiliate")],
           ]}
         />
